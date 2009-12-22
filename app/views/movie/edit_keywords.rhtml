@@ -1,0 +1,24 @@
+<% content_for("title") do %>
+  <%= "Add Plot Keywords".t %>
+<% end %>
+
+<div class="content">
+  <div class="tabbed-content">
+
+    <%= render :partial => 'edit_keywords' %>
+    <div class="info-bar">
+      <h3 id="more-information-headline" class="closed"><%= link_to_function "More Information".t, 'toggleDetails()', :title => "click to receive more information".t %></h3>
+       <div id="more-information" style="display: none;">
+         <%= more_information_help_text %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button-bar">
+  <div id="ajax-status"></div>
+  <%= close_box_button "Close" %>
+</div>
+
+<script type="text/javascript">
+  $('filter_keywords').focus();
+</script>

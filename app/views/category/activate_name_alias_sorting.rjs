@@ -1,0 +1,3 @@
+page.sortable params[:type], :url => { :action => 'sort_name_aliases', :id => @category.id }, 
+                             :handle => 'handle'
+page.call "displaySortIcons('#{params[:type]}', '#{"done sorting".t}')"

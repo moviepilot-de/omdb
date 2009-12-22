@@ -1,0 +1,20 @@
+<div class="headline-box">
+  <%= link_to 'show full history'.t, { :action => :history }, :class => 'help-button no-right-border' %>
+  <h3><%= 'Editors'.t %></h3>
+</div>
+
+<div id="overview-editors" class="content-box">
+  <div class="fact">
+    <div class="title"><%= '%s created by' / object.class.to_s.t %>:</div>
+    <div class="value">
+      <%= user_of_log_entry( object.log_entries.last ) %>
+    </div>
+  </div>
+
+  <div class="fact">
+    <div class="title"><%= '%s last edited by' / object.class.to_s.t %>:</div>
+    <div class="value">
+      <%= user_of_log_entry( LogEntry.find_for_lang( object, @language ).first ) %>
+    </div>
+  </div>
+</div>

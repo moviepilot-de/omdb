@@ -1,0 +1,17 @@
+<% local_aliases = @movie.local_aliases( @language ) %>
+<% if local_aliases.empty? %>
+  <p>&nbsp;<%= 'There are no alternative keyword names defined'.t %></p>
+<% else %>
+  <h4><%= @language.english_name.t %></h4>
+  <ul class="sortable-list" id="name_aliases-category-<%= @movie.id %>">
+    <% local_aliases.each { |a| %>
+      <li id="name_alias_<%= a.id %>">
+        <%= sort_icon_div %>
+        <%= a.name %>
+      </li>
+    <% } %>
+  </ul>
+  <% if local_aliases.size < @movie.aliases.size -%>
+    <%= link_to_remote 'show all aliases'.t, { :url => { :action => :show_all_aliases } }, :class => 'more' %>
+  <% end -%>
+<% end -%>

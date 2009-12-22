@@ -1,0 +1,11 @@
+<% content_for :title do -%>
+  <%= @country ? @country.name : 'Countries'.t %>
+<% end -%>
+<% content_for("headline") do -%>
+  <%= render :partial => 'headline' %>
+<% end %>
+
+<% content_for('left_column') do -%>
+  <%= render :partial => 'common/image', :locals => { :object => @country.image } %>
+  <%= render :partial => 'page/additional_pages', :object => @country.pages.local(@language) %>
+<% end %>

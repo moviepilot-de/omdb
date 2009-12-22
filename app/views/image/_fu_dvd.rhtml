@@ -1,0 +1,26 @@
+<div class="review copyright">
+  <div class="header">
+    <div class="author"><%= "License Information".t %></div>
+    <h3><%= "Fair Use - DVD Cover".t %></h3>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <p>
+        <%= "This image is of dvd cover, and the copyright for it is most likely owned by either the publisher of the film or the studio which produced the film in question.".t %>
+        <%= "The image is used".t %></p>
+      <ul>
+        <li><%= "to identify the film in question (%s)" / link_to_object(@image.related_object) %></li>
+        <li><%= "to provide critical analysis of the poster content or artwork".t %></li>
+      </ul>
+      <p><%= "It is believed that".t %></p>
+      <ul>
+        <li><%= "the inclusion of the image does not limit the copyright owner's rights to market the film/dvd, or to market the movie poster itself, in any way.".t %></li>
+        <li><%= "the image cannot be used to replace the original market role of the film/dvd in question or of the movie poster itself.".t %></li>
+      </ul>
+      <p><%= "If you believe the above statement is not true, or if you are the copyright holder for this image and do not want this image to be published on omdb.org, please contact us and we will remove the image immediately.".t %></p>
+    </div>
+  </div>
+  <div class="footer"><%= "contact us via".t %> <a href="mailto:copyright-abuse@omdb.org?subject=Copyright Abuse (image <%= @image.id.to_s %>)">copyright-abuse@omdb.org</a></div>
+</div>
+
+<br />

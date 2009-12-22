@@ -1,0 +1,5 @@
+page['filter_companies'].value = ''
+page.delay(0.3) do
+  page['filter_companies'].value = @company.name
+end
+page.replace_html 'new-company', ''

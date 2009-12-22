@@ -1,0 +1,11 @@
+<% htmlId = "search-job-" + job.id.to_s %>
+<li class="select" id="<%= htmlId %>">
+  <% if search_name == 'merge' %>
+    <%= link_to_function job.flattened_name(@language), 
+            "add_job('#{job.id}', '#{job.local_name( @language ).gsub("'", "\\'")}')", { :onmouseover =>  "displayJobInformation(#{job.id});" }
+             %>
+  <% else %>
+    <%= link_to_function job.flattened_name(@language), "setJobParent('#{job.id}')" %>
+  <% end %>
+  <input type="hidden" name="search_result[]" value="<%= job.id %>"/>
+</li>

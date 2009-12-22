@@ -1,0 +1,11 @@
+<%= form_remote_tag :url    => { :action   => :register_vote,
+                                 :vote_for => @vote_for,
+                                 :id       => @vote_id },
+                    :loading => "Element.replace($('edit_vote_button'), '#{alternative_loading_image(:style => 'float: right; padding-top: 3px; padding-right: 10px;')}')" %>
+  <%= link_to_remote 'cancel'.t, { :url    => { :action   => 'refresh_overview_votes',
+                                                :controller => 'movie',
+                                                :id       => @vote_id } },
+                                   :class => 'edit-button' %>
+  <span id="edit_vote_button"><%= submit_tag('save'.t, :class => 'edit-button bold') %></span>
+  <%= select(:vote, :vote, [["Your Vote".t, ""]] + [['1 - worst'.t,1]] + (2..9).to_a.collect{|i| [i, i]} + [['10 - best'.t, 10]] ) %>
+<%= end_form_tag %>

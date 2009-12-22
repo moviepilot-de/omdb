@@ -1,0 +1,34 @@
+<div class="fact">
+  <div class="title"><%= 'Known Movies'.t %>:</div>
+  <div class="value">
+    <%= link_to @company.movies.size, :action => :movies %>
+    <% if not @company.chronological_movies.empty? %>
+      <%= " since ".t %>
+      <%= link_to(@company.chronological_movies.first.end.year.to_s, 
+                    :controller => 'year', :id => @company.chronological_movies.first.end.year) %>
+    <% end %>
+  </div>
+</div>
+
+<% if not @company.chronological_movies.empty? %>
+<div class="fact">
+  <div class="title"><%= 'First Movie'.t %>:</div>
+  <div class="value">
+    <%= link_to_object @company.chronological_movies.first  %>
+  </div>
+</div>
+<% end %>
+
+<% if not @company.highest_rated_movies.empty? %>
+<div class="fact">
+  <div class="title"><%= 'Highest Rated Movie'.t %>:</div>
+  <div class="value">
+    <%= link_to_object @company.highest_rated_movies.first %> (<%= movie_vote @company.highest_rated_movies.first %>)
+  </div>
+</div>
+<% end %>
+
+<div class="fact">
+  <div class="title"><%= 'Average Quality'.t %>:</div>
+  <div class="value"><%= average_votes @company.movies %></div>
+</div>

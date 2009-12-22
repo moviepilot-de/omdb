@@ -1,0 +1,9 @@
+<table>
+  <tr><th><%= 'Title'.t %></th>
+      <td><%= lightbox_edit_link @movie.name, :name %></td>
+  </tr>
+  <tr><th><%= 'Type'.t %></th>
+      <td><%= lightbox_edit_link @movie.class.to_s.t, :type %></td>
+  </tr>
+</table>
+

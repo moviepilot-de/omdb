@@ -1,0 +1,50 @@
+<div class="detail-box">
+  <div class="image">
+    <%= link_to thumbnail_image(movie.image), :id => movie.id, :controller => 'movie'  %><br />
+    <div class="minivote"><div style='width: <%= sprintf("%1.2f", movie.vote * 10 ) %>%'></div></div>
+  </div>
+
+  <div class="details">
+
+  <% if [ Movie, Episode ].include?( movie.class ) -%>
+
+    <h4>
+      <%= link_to_object movie %>
+      <% if movie.end %>
+        (<%= link_to movie.end.year, :controller => 'year', :id => movie.end.year %>)
+      <% end %>
+    </h4>
+    <p>
+      <%= "Director".t + ":" unless movie.directors.empty? %>
+      <%= movie.directors.uniq[0..2].collect { |d|
+            link_to_object d.person
+          }.join(", ") -%>
+    </p>
+    <p>
+      <%= "with".t + ":" unless movie.actors.empty? %>
+      <%= movie.actors.uniq[0..2].collect { |a|
+            link_to_object a.person
+          }.join(", ") -%>
+    </p>
+
+  <% else -%>
+
+    <h4><%= link_to_object movie %> (<%= production movie %>)</h4>
+    <% unless movie.children.empty? -%>
+    <div class="casts">
+      <p>
+        <%= "Consists of".t %>:
+        <%= movie.children.uniq[0..2].collect { |m|
+              link_to_object m
+            }.join(", ") -%><% if movie.children.length > 3 %>,
+          <%= link_to "more".t, :controller => 'movie', :id => movie.id, :action => :parts %>
+        <% end %>
+      </p>
+    </div>
+    <% end -%>
+
+  <% end -%>
+
+  </div>
+</div>
+

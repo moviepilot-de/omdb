@@ -1,0 +1,12 @@
+<div id="overview-abstract">
+  <% if not abstract.nil? and not abstract.data.nil? and abstract.data.any? -%>
+    <p id="abstract"><%= abstract.data  %></p>
+  <% else -%>
+    <p id="abstract" class="empty"><%= 'no abstract defined'.t %></p>
+  <% end -%>
+    <div>
+      <%= link_to_function "edit abstract".t, 
+                          lightbox( :action => 'set_abstract' ), :class => 'edit-button' %>
+    </div>
+</div>
+

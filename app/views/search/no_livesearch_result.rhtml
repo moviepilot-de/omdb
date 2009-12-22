@@ -1,0 +1,11 @@
+<% if other_categories.empty? %>
+  <% if params[:type] == Category.plot_keyword.id.to_s %>
+    <li class="empty" id="no_livesearch_result"><%= "nothing found, you might want to create a new plot keyword called %s" / link_to_function( CGI.unescape(@filter).sub(/=$/,''), "new_keyword('#{CGI.unescape(@filter).sub(/=$/,'')}')", :class => 'edit plain' )%></li>
+  <% else %>
+    <li class="empty" id="no_livesearch_result"><%= "nothing found".t %></li>
+  <% end %>
+<% else %>
+  <li class="empty"><%= "We did not find anything in this category, but in".t %>
+  <%= other_categories.collect { |c| link_to_category_tab( c ) }.join(" and ".t) %>
+  </li>
+<% end %>

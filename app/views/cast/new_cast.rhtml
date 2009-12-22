@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="wrapper">
+    <div id="new_cast_activity_indicator" style="display: none;"><%= loading_image %></div>
+    <h2><%= "New Cast Member".t %></h2>
+    <p>
+      <%= "To add somebody to the cast, search for the actor and select him/her from the drop down list.".t %>
+      <%= "If you can't find the actor in the list you can create him/her by selecting the last entry.".t %>
+      <%= "Next, please provide the name of the character played by the actor. Finish by clicking Ok.".t %>
+      <% if @movie.class == Episode %>
+        <%= "<br/>You can also assign a cast member to a season and inherit him/her to all episodes. This way you don't have to add the actor to each episode.".t %>
+        <%= "To do so, change to %s and edit the cast there. Make sure, \"inherit crew/cast\" is activated."/(link_to link_text_for_movie(@movie.parent), :controller => 'movie', :action => :cast, :id => @movie.parent.id, :edit_cast => true) unless @movie.parent.nil? %>
+      <% end %>
+      
+    </p>
+
+    <%= form_remote_tag :url     => {:controller => "cast", :action => :create_cast},
+                      :before  => "$('add_cast_button').disabled = true; Element.show('new_cast_activity_indicator'); Element.update('new_cast_status', '')",
+                      :loaded  => "Element.hide('new_cast_activity_indicator');",
+                      :success => "Element.show('new_cast_status'); Element.update('new_cast_status', '#{"Successfully added".t}'); Effect.Fade('new_cast_status', { delay: 2.5 });",
+                      :failure => "Element.show('new_cast_status'); Element.update('new_cast_status', '#{"Error adding cast".t}');" %>
+
+      <div class="content">
+      <div class="column">
+        <%= link_to_function 'search person'.t.downcase, 'startSearching()', :class => 'edit' %>
+        <label for="cast_person_autocomplete">Person</label>
+        <input type="text" name="person" id="cast_person_autocomplete" />
+        <div id="cast_person_autocomplete_results" class="auto-complete"></div>
+        <input type="hidden" name="cast[new_person]" id="new_cast_person" value="" />
+        <div class="small">
+          <%= "Selected:".t %> <span id="cast_selected_person" class="bold">-</span>
+          <input type="hidden" name="cast[person]" id="cast_person" value="" />
+        </div>
+      </div>
+
+      <div class="middle-column"><%= "playing".t %></div>
+
+      <div class="column">
+        <label for="job_autocomplete"><%= "Name of Character".t %></label>
+        <input type="text" name="cast[comment]" id="cast_comment" />
+        <input type="hidden" name="movie" value="<%= @movie.id.to_s %>" />
+        <div class="small">
+          <br />
+        </div>
+      </div>
+    </div>
+
+      <div class="button-bar">
+        <div class="wrapper">
+          <div id="new_cast_status" class="small bold">&nbsp;</div>
+
+          <%= submit_button 'Ok'.t, :id => 'add_cast_button', :disabled => true %>
+
+          <% close_script = update_element_function 'new-cast' do %>
+            <%= new_cast_link(@movie) %>
+            <br />
+          <% end %>
+      
+          <%= button_to_function 'Close'.t, close_script %>
+        </div>
+      </div>
+    <%= end_form_tag %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  addCastPerson = function() {
+    value = $('cast_person_autocomplete').value;
+    if (value == '') {
+      alert("Please enter a Name");
+      $('cast_person_autocomplete').focus();
+      return false;
+    }
+    $('cast_selected_person').firstChild.nodeValue = value + " (<%= 'will be created'.t %>)";
+    $('new_cast_person').value = value;
+    checkCastForm();
+  }
+  
+  $('cast_person_autocomplete').onkeyup = function(){ 
+    if (this.value == "") { 
+      $('cast_selected_person').firstChild.nodeValue = "-";
+      $('cast_person').value = "";
+      $('new_cast_person').value = "";
+    } 
+    checkCastForm();
+  }
+
+  $('cast_comment').onkeyup = function(){
+    checkCastForm();
+  }
+                          
+  var cast_autocomplete = new Ajax.Autocompleter('cast_person_autocomplete', 'cast_person_autocomplete_results', '/search/person_autocomplete',
+                                                { afterUpdateElement: setCastPerson, frequency: <%= livesearch_filter_frequency %>,
+                                                  minChars: 2, indicator: 'new_cast_activity_indicator' });
+
+  $('cast_person_autocomplete').focus();
+  
+  startSearching = function() {
+    $('cast_person_autocomplete').focus();
+    cast_autocomplete.hasFocus = true;
+    cast_autocomplete.onObserverEvent();
+  }
+  
+
+</script>

@@ -1,0 +1,4 @@
+update = "movie-" + @cast.class.to_s.underscore.pluralize
+page.replace_html update, :partial    => 'movie/cast', 
+                          :collection => @movie.send(@cast.class.to_s.underscore.pluralize)
+page.remove @person.id.to_s if not @person.nil?

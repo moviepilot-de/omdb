@@ -1,0 +1,39 @@
+MultipartPost integration test plugin
+=======================================
+
+This simple plugin implements multipart post 
+requests (that is, file uploads) for use in
+integration tests.
+
+The latest version of this plugin can always be found at:
+svn://projects.jkraemer.net/plugins/multipart_integration_test
+
+
+Usage:
+======
+
+open_session do |s|
+  s.extend(MultipartPost)
+  upload = fixture_file_upload '/files/dummy.jpg', 'image/jpeg'
+  s.multipart_post '/files/upload', :uploaded_data => upload 
+end
+
+
+Todo
+====
+if anybody knows how to include MultipartUpload in the testing session 
+class from init.rb, please drop me a line...
+
+
+License
+=======
+This plugin is licensed under the MIT license. Complete license text
+is included in the MIT-LICENSE file.
+
+
+Author
+======
+
+This plugin was created by Jens Kraemer <jk@jkraemer.net>. See 
+http://www.jkraemer.net/ for news.
+

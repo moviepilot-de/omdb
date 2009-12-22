@@ -1,0 +1,11 @@
+<!--[form:translate]-->
+<tr id="tr_row_<%= tr.id %>">
+<td style="padding: 2px;" width="50%" for="tr_<%= tr.id %>"><%=tr.tr_key%> <%= (tr.pluralization_index > 1) ? '<em>(plural)</em>' : '' %></td>
+<td style="padding: 2px;"><span id="tr_<%= tr.id %>">
+<%= render :partial => 'translation_text', :object => ((tr.text.nil? || tr.text.empty?) ? "[ no translation ]" : tr.text) %>
+<%= in_place_editor "tr_#{tr.id}", 
+    :url => { :action => :set_translation_text, :id => tr.id },
+    :load_text_url => url_for({ :action => :translation_text, :id => tr.id }) %>
+</span></td>
+<td>[<%= link_to_remote "delete".t, :url => { :action => :destroy, :id => tr.id } %>]</td>
+</tr>

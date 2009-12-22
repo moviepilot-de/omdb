@@ -1,0 +1,14 @@
+<div class="headline-box">
+  <h3><%= "Administration".t %></h3>
+</div>
+<div class="content-box">
+  <% if !@page.new_record? and @page.related_object %>
+    <%= button_to_function("Rename Page".t, 
+                            lightbox( :action => 'rename_page', :page => @page.page_name ),
+                            :class => "edit-button") %>
+  <% end %>
+  <%= button_to "Delete Page".t, 
+        { :action => "destroy_page", :page => @page.page_name }, 
+        { :class => "edit-button"  , :confirm => "Really delete?"} %>
+</div>
+

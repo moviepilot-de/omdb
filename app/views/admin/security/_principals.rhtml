@@ -1,0 +1,13 @@
+<%  intrinsic = []
+    custom = []
+    for principal in @principals
+      if principal.intrinsic?
+        intrinsic << principal
+      else
+        custom << principal
+      end
+    end -%>
+<%= render(:partial => "list_principals", :object => intrinsic) %>
+<hr />
+<%= render(:partial => "list_principals", :object => custom) %>
+

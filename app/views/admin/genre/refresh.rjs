@@ -1,0 +1,2 @@
+page.replace_html 'list', :partial => 'genres', :object => @genres
+page.replace_html 'form', :partial => 'genre', :object => @genre

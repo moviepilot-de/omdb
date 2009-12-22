@@ -1,0 +1,5 @@
+<% htmlId = "search-language-" + language.id.to_s -%>
+<li class="select" id="<%= htmlId %>">
+  <%= link_to_function language.local_name( @language ), "add_language('#{language.id}')" %>
+  <input type="hidden" name="search_result[]" value="<%= language.id %>"/>
+</li>

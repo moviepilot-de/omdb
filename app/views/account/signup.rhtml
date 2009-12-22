@@ -1,0 +1,41 @@
+<div class="content login">
+  <div id="login_form">
+    <div class="tabbed-content signup">
+    <p class="login_text">
+      <%= 'In order to become a registered OMDB user, simply complete the registration form below.'.t %>
+      <%= "Fields marked with * are obligatory".t %>
+    </p>
+
+    <% unless @user.errors.empty? -%>
+      <div id="error_messages">
+        <h4><%= 'Sorry, your signup request could not be processed'.t %></h4>
+        <p><%= 'Please review your input according to the error messages below.'.t %></p>
+      </div>
+    <% end -%>
+
+    <% labelled_form_for :user, @user do |f| %>
+      <%= f.text_field     :login,    :maxlength => 40, :label => 'Login Name', :required => true %>
+      <%= f.password_field :password, :maxlength => 40, :label => 'Password', :required => true %>
+      <%= f.password_field :password_confirmation, :maxlength => 40, :label => '(confirm)', :required => true %>
+      <%= f.text_field     :email,    :maxlength => 255, :size => 40, :label => 'Email', :required => true %>
+      <%= f.text_field     :name,     :maxlength => 255, :size => 40, :label => 'Real Name' %>
+<!--      <p><label><%= 'Date of Birth'.t %></label>
+        <%= f.date_select :date_of_birth, 
+                          :start_year => Time.now.year - 100,
+                          :order => [:day, :month, :year],
+                          :include_blank => true, :label => 'Date of Birth' %>
+      </p> -->
+<!--      <p><label for="user_country_id"><%= 'Country'.t %></label>
+        <% @countries = Country.find(:all, :order => "english_name") -%>
+        <%= f.collection_select :country_id, Country.find_all, :id, :english_name,
+                              { :include_blank => true },
+                              {:class => "country_select"} %>
+      </p> -->
+    <div class="button-bar" id="ajax-buttons">
+      <%= submit_button 'Signup'.t %>
+      <%= close_box_button if request.xhr? %>
+    </div>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,50 @@
+<% if collection.page_count != collection.first_page -%>
+<div class="pagination" id="pagination">
+  <ul>
+    <% if collection.previous_page? -%>
+      <li class="nextpage">
+        <%= link_to('&#171;' + ' ' + 'previous'.t, { :page => collection.previous_page }, :id => 'previouspage' ) %>
+      </li> 
+    <% else -%>
+      <li class="disablepage"><%= '&#171;' + ' ' + 'previous'.t %></li>
+    <% end -%>
+ 
+    <% last_page = 0 -%>
+    <% windowed_pagination_links(collection, :window_size => 2, :link_to_current_page => true, :always_show_anchors => true) do |n| -%>
+      <% if collection.page == n -%>
+        <li class="currentpage"><%= n %></li> 
+      <% else -%>
+        <li><%= "...&nbsp;" if last_page+1 < n %><%= link_to n, :id => params[:id], :page => n %></li>
+      <% end -%>
+      <% last_page = n -%>
+    <% end -%>
+    
+    <% if collection.next_page? -%>
+      <li class="nextpage">
+        <%=  link_to('next'.t + ' ' + '&#187;', { :page => collection.next_page }, :id => 'nextpage' ) %>
+      </li>
+    <% else -%>
+      <li class="disablepage"><%= 'next'.t + ' ' + '&#187;' %></li>
+    <% end -%>
+  </ul>
+</div>
+<% end -%>
+
+<% unless params[:action] == "contribs" or params[:action] == "history" or params[:action] == "changes" %>
+<script type="text/javascript">
+  <% if collection.next_page? %>
+  $('nextpage').onclick = function(){
+    $('nextpage').update( '<%= alternative_loading_image %>' );
+    new Ajax.Request('<%= url_for( :page => collection.next_page, :last_page => collection.page )%>', { method: 'get' } );
+  };
+  $('nextpage').href = "javascript:void(0);";
+  <% end %>
+  <% if collection.previous_page? %>
+  $('previouspage').onclick = function(){
+    $('previouspage').update( '<%= alternative_loading_image %>' );
+    new Ajax.Request('<%= url_for( :page => collection.previous_page, :last_page => collection.page )%>', { method: 'get' } );
+  };
+  $('previouspage').href = "javascript:void(0);";
+  <% end %>
+</script>
+<% end %>

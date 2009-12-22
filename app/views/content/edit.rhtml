@@ -1,0 +1,9 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+
+  <%= error_messages_for 'page' %>
+
+  <%= render :partial => "wiki/wiki" %>
+</div>

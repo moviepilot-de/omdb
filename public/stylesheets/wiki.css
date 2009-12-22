@@ -1,0 +1,118 @@
+/* TODO richtiger Platz hier ? */
+form em {
+  display: block;
+  color: red;
+  font-size: 80%;
+}
+#wiki-preview {
+  border: 1px solid black;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+div#wikitoolbar {
+  font-size: 1px;
+}
+#image-upload {
+  border: 1px solid black;
+  padding: 1em; 
+  margin-top: 1em;
+}
+#image-upload label {
+  display: inline; 
+  clear: none; 
+  float: none;
+}
+#wiki-comment {
+  padding-top: 1em; 
+  padding-bottom: 1em
+}
+
+a.new-page {
+  color: red;
+}
+
+.search-tab-active a:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+.search-tab-active a {
+  color: white;
+}
+.search-tab a {
+  color: black;
+}
+.search-tab a:hover {
+  cursor: pointer;
+}
+
+#movie-search {
+   position: absolute;
+   top: 300px;
+   left: 300px;
+   width: 652px;
+   height: 20em;
+/*   background: #bbbbbb;*/
+/*   z-index: 10;*/
+/*   border: 1px solid black;*/
+}
+
+#search-tabs {
+   border-bottom: 2px solid #ba5600;
+   padding-bottom: 0.2em;
+   padding-top: 0.3em;
+   padding-left: 3em;
+}
+
+.search-tab {
+   padding-right: 0.5em;
+   padding-left: 0.5em;
+   display: inline;
+   padding-bottom: 0.2em;
+   text-align: center;
+   padding-top: 0.5em;
+}
+
+.search-tab-active {
+   color: white;
+   padding-right: 0.5em;
+   padding-left: 0.5em;
+   display: inline;
+   padding-bottom: 0.2em;
+   padding-top: 0.5em;
+   background: #ba5600;
+   text-align: center;
+}
+
+#search-content {
+  background:#efefef;
+  width:100%;
+  height: 78%;
+  padding-top: 0.5em;
+  border: 1px solid black;
+  border-top: none;
+  margin-left: -1px;
+}
+
+.wiki-ajax-help {
+  position: absolute;
+  margin-left: 1em;
+  margin-top: 1em;
+  width: 20em;
+  z-index: 5;
+}
+
+#wiki-search-title {
+  width: 99%;
+  text-align: center;
+  background: #d4d4d4;
+  margin-left: 0.3em;
+}
+
+#wiki-search-field {
+  margin-right: 1em;
+  margin-top: 1em;
+  z-index: 2;
+  position: relative;
+}

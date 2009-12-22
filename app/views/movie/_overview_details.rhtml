@@ -1,0 +1,155 @@
+<% content_for :right_column do -%>
+<div id="overview-details">
+  <div id="overview-votes">
+    <%= render :partial => 'overview_votes' %>
+  </div>
+
+  <div class="headline-box">
+    <%= link_to_function 'edit'.t, lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutMovieFacts' }, :class => 'help-button' %>
+    <h3><%= 'Movie Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+  
+  <% if @movie.class.has_trailers? %>
+    <div class="headline-box">
+      <%= link_to_function( 'edit'.t, lightbox( :controller => 'trailer', :action => :edit_movie_trailers, :movie => @movie.id ), :class => 'edit-button' ) %>
+      <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutMovieTrailers' }, :class => 'help-button' %>
+      <h3><%= 'Trailers (%s)' / @language.english_name.t.downcase %></h3>
+    </div>
+    <div id="overview-trailers" class="content-box center">
+      <%= render :partial => 'overview_trailers', :locals => { :language => @language } %>
+    </div>
+  <% end %>
+  
+  <% if @movie.class.has_trailers? and @language != Locale.base_language and not @movie.trailers.local( Locale.base_language ).empty? %>
+    <div class="headline-box" id="overview-trailers-en-headline">
+      <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutMovieTrailers' }, :class => 'help-button no-right-border' %>
+      <h3><%= 'Trailers (%s)' / 'english'.t.downcase %></h3>
+    </div>
+    <div id="overview-trailers-en" class="content-box center">
+      <%= render :partial => 'overview_trailers', :locals => { :language => Locale.base_language } %>
+    </div>
+  <% elsif @movie.class.has_trailers? and @language != Locale.base_language %>
+  <div class="headline-box" id="overview-trailers-en-headline" style="display: none;">
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutMovieTrailers' }, :class => 'help-button no-right-border' %>
+    <h3><%= 'Trailers (%s)' / 'english'.t.downcase %></h3>
+  </div>
+  <div id="overview-trailers-en" class="content-box center" style="display: none;"></div>
+  <% end %>
+
+  <% if @movie.class.valid_children.any? %>
+  <div class="headline-box">
+    <%= link_to_function 'edit'.t, lightbox( :action => :edit_children ), :class => 'edit-button' %>
+    <%= link_to_function 'help'.t, lightbox( :action => :help_facts ), :class => 'help-button' %>
+    <h3><%= 'Parts'.t %></h3>
+  </div>
+  <div id="overview-children" class="content-box">
+    <ul id="movie-children">
+      <% if @movie.children.empty? %>
+        <div class="empty"><%= "no parts have been assigned yet.".t %></div>
+      <% else %>
+        <%= render :partial => "child", :collection => @movie.children[0..2] %>
+      <% end %>
+    </ul>
+    <% if @movie.children.length > 3 -%>
+    <% end -%>
+  </div>
+  <% end %>
+
+  <% unless [ MovieSeries, Series, Season ].include?(@movie.class) %>
+    <div class="headline-box">
+      <% if params[:action] == "cast" %>
+        <%= link_to_remote "add".t, { :update => 'new-crew', :url => { :controller => 'cast', :action => :new, :movie => @movie.id } }, :class => 'edit-button' %>
+      <% else %>
+      <%= link_to 'add'.t, { :action => :cast, :edit => :edit_crew }, :class => 'edit-button'  %>
+      <% end %>
+      <%= link_to 'show full crew'.t, { :action => 'cast' }, :class => 'help-button'  %>
+      <h3><%= 'Crew'.t %></h3>
+    </div>
+    <div id="overview-crew" class="content-box">
+      <%= render :partial => 'overview_crew' %>
+    </div>
+
+    <div class="headline-box">
+      <% if params[:action] == "cast" %>
+      <%= link_to_remote "add".t, { :update => 'new-cast', :url => { :controller => 'cast', :action => :new_cast, :movie => @movie.id } }, :class => 'edit-button' %>
+      <% else %>
+        <%= link_to 'add'.t, { :action => 'cast', :edit => :edit_cast }, :class => 'edit-button'  %>
+      <% end %>
+      <%= link_to 'show full cast'.t, { :action => :cast }, :class => 'help-button'  %>
+      <h3><%= 'Cast'.t %></h3>
+    </div>
+    <div id="overview-cast" class="content-box">
+      <ul>
+        <%= render :partial => "actor", :collection => @movie.actors[0..3] %>
+      </ul>
+      <% if @movie.actors.empty? -%>
+        <div class="empty"><%= "no actors have been entered yet.".t %></div>
+      <% end -%>
+    </div>
+  <% end %>
+  
+  <div class="headline-box">
+    <%= link_to_function 'add'.t, lightbox( :action => :edit_categories ), :class => 'edit-button'  %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutBoxCategories' }, :class => 'help-button' %>
+    <h3><%= 'Categories'.t %></h3>
+  </div>
+  <div id="overview-categories" class="content-box">
+    <%= render :partial => 'overview_categories' %>
+  </div>
+  <div id="overview-category-votes" class="content-box" style="display: none;">
+  </div>
+
+  <div class="headline-box">
+    <%= link_to_function 'add'.t,  lightbox( :action => :edit_keywords ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutBoxPlotKeywords' }, :class => 'help-button' %>
+    <h3><%= 'Plot Keywords'.t %></h3>
+  </div>
+  <div id="overview-keywords" class="content-box center">
+    <%= render :partial => 'overview_plot_keywords' %>
+  </div>
+  <div id="overview-keyword-votes" class="content-box" style="display: none;">
+  </div>
+  
+  <div class="headline-box">
+    <%= link_to_function 'add'.t, lightbox( :action => :edit_references ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:References' }, :class => 'help-button' %>
+    <h3><%= 'References'.t %></h3>
+  </div>
+  <div id="overview-references" class="content-box">
+    <%= render :partial => 'overview_references' %>
+  </div>
+
+  <% unless @movie.referencing_movies.empty? -%>
+  <div class="headline-box">
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:References' }, :class => 'help-button' %>
+    <h3><%= 'Referencing'.t %></h3>
+  </div>
+  <div id="overview-referencing" class="content-box">
+    <%= render :partial => 'overview_referencing' %>
+  </div>
+  <% end -%>
+
+  <%= render :partial => 'common/overview_aliases', :locals => { :object => @movie, :local_aliases_only => true } %>
+
+  <%= render :partial => 'common/overview_editors', :locals => { :object => @movie } if @movie.log_entries.any? %>
+
+  <%= render :partial => 'movie/embed_movie' %>
+
+  <%= render :partial => 'common/trackbacks', :locals => { :object => @movie } %>
+
+  <% if admin? %>
+  <div class="headline-box">
+    <h3><%= 'Administration'.t %></h3>
+  </div>
+  <div id="overview-administration" class="content-box">
+    <%= button_to "Delete Movie".t, { :action => "destroy" }, 
+          { :class => "edit-button"  , :confirm => "Really delete?"} %>
+  </div>
+  <% end %>
+
+</div>
+<% end %>

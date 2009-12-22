@@ -1,0 +1,25 @@
+<% if object.nil? %>
+
+  <%= image_tag 'no_cover185px', { :class => 'cover', :id => 'left_image' } -%>
+
+  <div class='cover_links'>
+    <% unless controller.controller_name == 'user' and current_user != @user %>
+      <%= link_to_function "upload image".t, lightbox(:action => :new_image), :class => 'edit-button' %>
+    <% end %>
+  </div>
+
+<% else %>
+
+  <%= db_image_tag object, {}, { :id => 'left_image' } %>
+  <div class='cover_links'>
+    <% unless controller.controller_name == 'user' and current_user != @user %>
+      <% unless object.attribute_frozen?(:self) %>
+        <%= link_to_function "change image".t , lightbox(:action => :new_image), :class => 'edit-button' %>
+      <% end %>
+      <%= edit_freeze_state( object, :self ) if admin? %>
+    <% end %>
+    <% if not object.nil? %>
+      <%= link_to "Copyright info".t, :action => :copyright, :controller => 'image', :id => object.id %>
+    <% end %>
+  </div>
+<% end %>

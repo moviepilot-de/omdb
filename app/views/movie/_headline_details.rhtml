@@ -1,0 +1,93 @@
+<div class="parent-breadcrumb">
+  <% if @movie.class == Episode -%>
+    <% if not @movie.parent.nil? %>
+      <div style="float: left; width:50%; text-align: center;">
+        <%= "Season".t %>
+      </div>
+      <div style="float: left; width:49%; text-align: center;">
+        <%= "Episode".t %>
+      </div>
+    <% end -%>
+  <% elsif @movie.class == Season %>
+    <% if not @movie.parent.nil? %>
+      <div style="float: left; width:50%;">&nbsp;</div>
+      <div style="float: left; width:49%; text-align: center;"><%= "Season".t %></div>
+    <% end -%>
+  <% elsif not @movie.parent.nil? and @movie.class.to_s == 'Movie' %>
+    <div style="float: left; width:50%;">&nbsp;</div>
+    <div style="float: left; width:49%; text-align: center;"><%= "Part".t %></div>
+  <% else %>
+    &nbsp;
+  <% end %>
+</div>
+
+<% if @movie.class.to_s == 'MovieSeries' || @movie.class.to_s == "Series" -%>
+  <div class="h2"><%= production %></div>
+<% elsif @movie.class.to_s == 'Season' || @movie.class.to_s == 'Movie' -%>
+  <div class="h2">
+    <div style= "float:left; width:50%;"><%= production %></div>
+    <div style= "float:left; width:49%; text-align:center;">
+      <% if not @movie.parent.nil? %>
+        <% if @movie.previous_part.nil? -%>
+          <span style="color: #ccc">&lt;</span>
+        <% else -%>
+          <%= link_to "&lt;", default_url( @movie.previous_part ), :title => local_title_for( @movie.previous_part ) %>
+        <% end -%>
+
+        <%= @movie.part_number %>
+
+        <% if @movie.next_part.nil? -%>
+          <span style="color: #ccc">&gt;</span>
+        <% else -%>
+          <%= link_to "&gt;", default_url( @movie.next_part ), :title => local_title_for( @movie.next_part ) %>
+        <% end -%>
+      <% else %>
+        &nbsp;
+      <% end %>
+    </div>
+  </div>
+<% elsif @movie.class.to_s == 'Episode' -%>
+  <div class="h2">
+    <div style= "float:left; width:50%; text-align:center;">
+      <% if not @movie.parent.nil? and @movie.parent.is_a?(Season) %>
+        <% if @movie.parent.previous_season.nil? -%>
+          <span style="color: #ccc">&lt;</span>
+        <% else -%>
+          <%= link_to "&lt;", default_url( @movie.parent.episode_for_previous_season(@movie) ), :title => local_title_for( @movie.parent.previous_season ) %>
+        <% end -%>
+
+        <%= @movie.parent.season_number %>
+
+        <% if @movie.parent.next_season.nil? -%>
+          <span style="color: #ccc">&gt;</span>
+        <% else -%>
+          <%= link_to "&gt;", default_url( @movie.parent.episode_for_next_season(@movie) ), :title => local_title_for( @movie.parent.next_season ) %>
+        <% end -%>
+      </div>
+      <div style= "float:left; width:49%; text-align:center;" >
+        <% if @movie.previous_episode.nil? -%>
+          <span style="color: #ccc">&lt;</span>
+        <% else -%>
+          <%= link_to "&lt;", default_url( @movie.previous_episode ), :title => local_title_for( @movie.previous_episode ) %>
+        <% end -%>
+
+        <%= sprintf( "%02d", @movie.episode_number ) %>
+
+        <% if @movie.next_episode.nil? -%>
+          <span style="color: #ccc">&gt;</span>
+        <% else -%>
+          <%= link_to "&gt;", default_url( @movie.next_episode ), :title => local_title_for( @movie.next_episode ) %>
+        <% end -%>
+      <% end -%>
+    </div>
+  </div>
+<% else -%>
+  <div class="h2">
+    <div style= "float:left; width:50%; text-align:center;">
+      <%= production %>
+    </div>
+    <div style= "float:left; width:49%; text-align:center;">&nbsp;</div>
+  </div>
+<% end -%>
+
+<div class="small"><%= @movie.countries.collect {|c| link_to c.code.upcase, default_url(c) }.join(", ") if @movie.class.to_s == "Movie" %>&nbsp;</div>

@@ -1,0 +1,8 @@
+New Category Created:
+
+The new Category <%= @category.aliases.collect {|a| a.name if a.language.to_s == 'English'}.to_s %> with the id <%= @category.id %> has been created. Take a look at:
+
+http://www.omdb.org/category/<%= @category.id %>
+
+Thank you,
+ your omdb email robot..

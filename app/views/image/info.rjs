@@ -1,0 +1,4 @@
+page.replace_html 'ajax-help', :partial => 'info'
+page.replace_html 'button-bar', button_to_function("Insert".t,
+                                "addItem('i_" + @image.id.to_s + "')") + " " +
+                                close_box_button

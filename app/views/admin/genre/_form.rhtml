@@ -1,0 +1,11 @@
+<table class="form" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <%= error_messages(:genre) %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><%= text_field(:genre, :name) %></td>
+  </tr>
+  <%= hidden_field(:genre, :parent_id) %>
+</table>

@@ -1,0 +1,32 @@
+xml.instruct!
+xml.rss :version => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+    if @page
+      xml.title "OMDB: Changes for page #{@page.page_name} of #{@object.name}"
+      xml.link h(url_for(@object.default_url(@page.page_name).update(:only_path => false)))
+    else
+      xml.title "OMDB: Changes for #{@object.name}"
+      xml.link h(url_for(@object.default_url.update(:only_path => false)))
+    end
+    xml.description "Changelog feed for Wiki content on www.omdb.org"
+    if @versions and @versions.any?
+      xml.pubDate CGI.rfc1123_date(@versions.first.created_at) 
+    else
+      xml.pubDate CGI.rfc1123_date(Time.now)
+    end
+    @versions.each do |version|
+      xml.item do
+        if version.comment.blank?
+          xml.title "Uncommented change"
+        else
+          xml.title h(version.comment)
+        end
+        xml.author h(version.user ? version.user.display_title : 'unknown')
+        xml.description display_wiki_content(version)
+        xml.link(uri = h(url_for(@object.default_url(version.page_name).update(:only_path => false, :rev => version.version))))
+        xml.guid uri
+        xml.pubDate CGI.rfc1123_date(version.created_at)
+      end
+    end
+  end
+end

@@ -1,0 +1,17 @@
+<% if edit_or_view_subpage %>
+  <div class="parent-breadcrumb"><%= link_to_object @company %></div>
+  <h2><%= @page.page_name %></h2>
+  <div class="small">&nbsp;</div>
+<% else %>
+  <div class="parent-breadcrumb">
+    <% if not @company.parent.nil? %>
+      <%= @company.ancestors.reverse.collect do |c| 
+            link_to_object c
+          end.join(" &gt; ") %>
+    <% else %>
+      &nbsp;
+    <% end %>
+  </div>
+  <h2><%= @company.name %></h2>
+  <div class="small">&nbsp;</div>
+<% end %>

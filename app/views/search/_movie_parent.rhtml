@@ -1,0 +1,10 @@
+<% movie = Movie.find(params[:for_movie]) %>
+<div class="select">
+  <div class="select-name">
+    <%= _( movie_parent.type.to_s ) %>
+  </div>
+  <div style="padding-left: 0.1em;">
+    <%= process_action @action.for(movie).targeting(movie_parent) %>
+  </div>
+</div>
+

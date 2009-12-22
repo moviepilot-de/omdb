@@ -1,0 +1,8 @@
+<li id="movie_company_<%= production_company.id %>" class="company">
+  <div class="handle"><%= sort_icon %></div>
+  <div class="actions">
+    <%= link_to_remote delete_icon, :url => { :action => 'delete_production_company',
+                                              :production_company => production_company.id } %>
+  </div>
+  <%= link_to_object production_company.company %>
+</li>

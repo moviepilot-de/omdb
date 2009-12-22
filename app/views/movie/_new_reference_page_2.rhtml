@@ -1,0 +1,69 @@
+
+
+<table class="list-add-box">
+  <tr>
+    <th>
+      <label style="width:auto;" for="filter_movies">
+      <%= reference_text %>
+      <span id="referenced_movie_title">...</span></label>
+      <%= text_field("filter", "movies", :size => 15) %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box one_column">
+        <ul id="searched_movies">
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= lightbox_form_tag :action => :create_reference %>
+
+  <input name="reference[movie]" value="" type="hidden" id="selected_movie" />
+  <%= hidden_field_tag "reference[class]", params[:reference_class] %>
+  <input name="create_reference" id="create_reference" disabled="true" value="<%= "Create Reference".t %>" style="float: right; clear: right; margin-top: 1px;" type="submit" />
+<%= end_form_tag %>
+<br /><br />
+
+<script type="text/javascript">
+  var movie;
+
+  add_movie = function(id) {
+    if ($(movie)) {
+      Element.removeClassName( movie, 'selected' );
+    }
+
+    movie = 'search-movie-' + id;
+    $('selected_movie').value = id;
+    $('referenced_movie_title').innerHTML = $(movie).getElementsByTagName('a')[0].innerHTML;
+    Element.addClassName( movie, 'selected' );
+    check_method();
+  }
+
+  check_method = function() {
+    if ($('selected_movie').value != "") {
+      $('create_reference').disabled = false;
+    } else {
+      $('create_reference').disabled = true;
+    }
+  }
+
+  unselect_movie = function() {
+    if ($(movie)) {
+      Element.removeClassName( movie, 'selected' );
+    }
+    $('selected_movie').value = '';
+  }
+  
+  $('filter_movies').focus();
+</script>
+
+<%= observe_field(:filter_movies,
+                  :frequency => 0.5,
+                  :update    => "searched_movies",
+                  :before    => "unselect_movie",
+                  :loading   => "Element.update('searched_movies', '<li class=\"empty loading\">&nbsp;</li>');",
+                  :url => { :action     => :find_movies, 
+                            :controller => 'search' }) %>

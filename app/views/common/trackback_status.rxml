@@ -1,0 +1,9 @@
+xml.instruct! :xml, :version=>"1.0", :encoding=>"UTF-8"
+xml.response do
+  if @trackback.valid?
+    xml.error(0)
+  else
+    xml.error(1)
+    xml.message(@trackback.errors.full_messages.join(", "))
+  end
+end

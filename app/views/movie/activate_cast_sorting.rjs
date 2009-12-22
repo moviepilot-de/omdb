@@ -1,0 +1,4 @@
+page.sortable params[:type], :url => { :action => 'sort_department', :id => @movie.id,
+                                       :department => params[:type].split(/-/).last  }, 
+                             :handle => 'handle'
+page.call "displaySortIcons('#{params[:type]}', '#{"done sorting".t}')"

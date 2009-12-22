@@ -1,0 +1,5 @@
+<ul> 
+  <% @character.movies.each { |m| -%>
+    <li><%= render :partial => 'movie/info', :locals => { :movie => m } %></li>
+  <% } %>
+</ul>

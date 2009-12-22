@@ -1,0 +1,11 @@
+<p>
+  You are about to upload a trailer for <strong><em><%= @movie.name %></em></strong> in <strong><%= @language.english_name.t.downcase %></strong>.
+</p>
+<%= form_tag( { :action => :upload }, :multipart => true ) %>
+  <%= hidden_field_tag :movie, @movie.id %>
+  
+  <label>File:</label> <%= file_field :trailer, :file %><br />
+  <label>Copyright:</label> <%= select :trailer, :company, @movie.companies.collect { |c| [ c.name, c.id ] } %><br />
+  <br />
+  <%= submit_button 'upload' %>
+<%= end_form_tag %>

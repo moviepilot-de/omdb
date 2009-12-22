@@ -1,0 +1,32 @@
+<% content_for("title") do %>
+  <%= 'Set Alias'.t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => "set_comment" },
+      :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')" %>
+  <div class="content">
+
+    <p><%= "Please enter the comment for this cast in english".t %></p>
+
+    <div id="error-messages" style="display: none">
+    </div>
+
+    <label for="cast_comment"><%= 'Comment'.t %></label>
+
+    <%= text_field("cast", "comment") %>
+    <div id="cast_comment_auto_complete" class="auto-complete"></div>
+
+    <%= comment_autocompletion_for @cast %>
+
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button %>
+  </div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('cast_comment').focus();
+</script>

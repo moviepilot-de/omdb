@@ -1,0 +1,13 @@
+--- 
+frozen_attributes_001: 
+  object_type: Person
+  object_id: "850"
+  attribute: |
+    --- :birthday
+
+frozen_attributes_002: 
+  object_type: Person
+  object_id: "850"
+  attribute: |
+    --- :name
+

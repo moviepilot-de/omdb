@@ -1,0 +1,64 @@
+<% unless request.xhr? %>
+<div class="headline-box">
+  <%= link_to_function 'edit'.t, lightbox( :action => :edit_aliases ), :class => 'edit-button'  %>
+  <%= link_to_function 'help'.t, lightbox( :action => :help_aliases ), :class => 'help-button' %>
+  <h3><%= "Alternative Names".t %></h3>
+</div>
+<% end %>
+<% name_aliases = object.name_aliases %>
+<% name_aliases_by_language = object.aliases_by_language %>
+<% if not name_aliases_by_language.empty? %>
+  <% name_aliases_for_current_language = object.aliases_by_language[@language] %>
+  <div id="overview-aliases" class="content-box">
+
+<!--  #sprache leer
+  if not name_aliases_by_language.empty?
+
+  #gibt es mehr als diese sprache?
+  if (name_aliases_by_language.size - 1) > name_aliases_by_language[@language].size
+
+  #gibt es insgesamt mehr aliases als null / eins?
+
+  #gibt es für diese sprache mehr als ein name alias? für objekte mit eigenem namen uninteressant
+  name_aliases_by_language[@language].size > 1 -->
+
+  <% if @all_languages  %>
+    <% name_aliases_by_language.each { |l, a| %>
+    <h4><%= l.english_name.t %></h4>
+    <ul class="sortable-list" id="name_aliases-category-<%= object.id %>">
+      <% a.each { |n| %>
+      <li id="name_alias_<%= n.id %>">
+        <%= sort_icon_div %>
+        <%= n.name %>
+      </li>
+      <% } %>
+      </ul> 
+    <% } %>
+    <% if name_aliases_by_language.size > 1 %>
+      <%= link_to_remote 'show less aliases'.t, { :url => { :action => :show_less_aliases } }, :class => 'more' %>
+    <% end %>
+  <% else %>
+    <!-- TODO change for movie-->
+    <% if not name_aliases_for_current_language.nil? and name_aliases_for_current_language.size > 0 %>
+      <% name_aliases_for_current_language.each { |a| %>
+      <h4><%= @language.english_name.t %></h4>
+      <ul class="sortable-list" id="name_aliases-category-<%= object.id %>">
+        <li id="name_alias_<%= a.id %>">
+          <%= sort_icon_div %>
+          <%= a.name %>
+        </li>
+        </ul> 
+      <% } %>
+      <% if name_aliases.size > name_aliases_for_current_language.size %>
+        <%= link_to_remote 'show all aliases'.t, { :url => { :action => :show_all_aliases } }, :class => 'more' %>
+      <% end %>
+    <% else %>
+      <p>&nbsp;<%= 'there are no alternative names defined for this language.'.t %></p>
+    <% end %>    
+  <% end %>
+  
+<% else %>
+  <p>&nbsp;<%= 'there are no alternative names defined.'.t %></p>  
+<% end %>
+  
+</div>

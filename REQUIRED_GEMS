@@ -1,0 +1,22 @@
+Required gems to run omdb.org
+-----------------------------
+
+Try to match the exact version number. To install a gem, simply run (e.g.):
+
+sudo gem --include-dependencies --version 0.11.14 ferret
+
+-----------
+
+Gems required: 
+  cached_model (1.3.1)
+  capistrano (1.99.3)
+  ferret (0.11.14)
+  gruff (0.2.8)
+  rails (1.1.6)
+  rcov (0.8.0.2)
+  rmagick (1.15.4)
+  
+Applications required:
+  mysql 5.0 or higher
+  memcached (optional)
+  

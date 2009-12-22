@@ -1,0 +1,11 @@
+<% if @job.local_aliases( @language ).empty? %>
+  <p>&nbsp;<%= 'There are no alternative job names defined'.t %></p>
+<% else %>
+  <ul id="job-aliases">
+    <% @job.local_aliases( @language ).each { |a| %>
+      <li id="alias_<%= a.id %>">
+        <%= a.name %>
+      </li>
+    <% } %>
+  </ul>
+<% end %>

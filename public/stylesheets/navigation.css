@@ -1,0 +1,119 @@
+/* navigation.css
+ *
+ * Style definitions for the top navigation (service and main) at the top
+ * of each page.
+ *
+ * Yes, this is valid CSS, don't mess with it. I'm sorry for all uncompliant
+ * browsers, hope your favorite company releases a browser update soon.
+ */
+ 
+
+ul#service-menu {
+  font-size:                0.7em;
+  display:                  block;
+  margin:                   0;
+  padding:                  0 0 0 15px;
+  float:                    right;
+  background-image:         url("/images/layout/service-menu.png");
+  background-position:      bottom left;
+  background-repeat:        no-repeat;
+  -moz-border-radius:       0px 0px 3px 3px;
+}
+
+ul#service-menu li {
+  display:                  block;
+  float:                    left;
+  margin:                   0;
+  padding:                  0 1px 0 0;
+  text-transform:           uppercase;
+  background-color:         white;
+  /* Disable standard background image for LI */
+  background-image:         none;
+}
+
+ul#service-menu li a {
+  padding:                  0px 10px;
+  display:                  block;
+  color:                    #60605e;
+  border-bottom:            2px solid #fff;
+  background-image:         url("/images/layout/bg-menu-separator.png");
+  background-repeat:        no-repeat;
+  background-position:      left center;
+}
+
+ul#service-menu li a:hover {
+  color:                    black;
+  text-decoration:          none;
+}
+
+ul#service-menu li.language a {
+  background-image:         url("/images/layout/bg-marker-dropdown.png");
+  background-repeat:        no-repeat;
+  background-position:      left center;
+}
+
+ul#service-menu div#language-select {
+  display: none;
+  position: absolute;
+  background-color: white;
+  
+}
+
+ul#service-menu li.language:hover div#language-select {
+  display: block;
+}
+
+ul#service-menu li.language:hover div#language-select a {
+  background-image: none;
+}
+
+ul#service-menu li a.login {
+  color:                    #D1701E;
+}
+
+
+/* Main Menu */
+
+ul#main-menu {
+  font-size:                0.75em;
+  display:                  block;
+  width:                    98%;
+  float:                    left;
+  margin:                   0;
+  margin-left:              5px;
+  padding:                  0;
+  padding-top:              35px;
+}
+
+ul#main-menu li {
+  display:                  block;
+  float:                    left;
+  margin:                   0px;
+  margin-right:             2px;
+  padding:                  0px;
+  text-transform:           capitalize;
+  background-image:         none;
+}
+
+ul#main-menu li a {
+  display:                  block;
+  color:                    #41658A;
+  padding:                  0.3em 1em 0 1.5em;
+  text-decoration:          none;
+  border-width:             0px;
+  border-right:             1px solid #9EA695;
+  background-image:         url("/images/layout/background-main-menu-tab.png");
+  background-repeat:        no-repeat;
+  font-weight:              bold;
+  font-family:              sans-serif;
+}
+
+
+ul#main-menu li.active {
+  border-bottom: 1px solid white;
+}
+
+ul#main-menu li a:hover,
+ul#main-menu li.active a {
+  color: black;
+}

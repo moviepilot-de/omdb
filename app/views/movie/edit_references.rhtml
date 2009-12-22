@@ -1,0 +1,51 @@
+<% content_for("title") do %>
+  <%= "Edit References".t %>
+<% end %>
+
+<script type="text/javascript">
+  var active_tab = 'new'
+
+  display_tab = function(id) {
+    Element.hide( 'edit_' + active_tab );
+    Element.removeClassName('tab_' + active_tab, 'active');
+
+    active_tab = id;
+
+    Element.show( 'edit_' + id );
+    Element.addClassName('tab_' + id, 'active');
+
+    if (id == 'new') {
+      $('filter_movies').focus();
+    }
+  }
+</script>
+
+<div class="content">
+  <ul class="small-tabs">
+    <% if not @movie.attribute_frozen?( :references )  %>
+      <li class="active" id="tab_new"><%= link_to_function "Create new Reference".t, "display_tab('new')", :accesskey => "1", :title => "Create new Reference".t %></li>
+    <% else %>
+      <li id="tab_new" class="active"><span><%= "Create new Reference".t %></span></li>
+    <% end %>
+    <li id="tab_references"><%= link_to_function "Current References".t, "display_tab('references')", :accesskey => "2", :title => "Edit current References".t %></li>
+  </ul>
+  <div id="edit_new" class="tabbed-content">
+    <% if not @movie.attribute_frozen?( :references )  %>
+      <%= render :partial => 'new_reference' %>
+    <% else %>
+      <div class="empty"><%= "Creating new reference is deactivated for this movie".t %></div>
+    <% end %>
+  </div>
+  <div id="edit_references" class="tabbed-content" style="display: none;">
+    <%= render :partial => 'edit_references' %>
+  </div>
+</div>
+<div class="button-bar">
+  <%= close_box_button "Close" %>
+</div>
+
+<script type="text/javascript">
+  <% if @movie.attribute_frozen?( :references ) %>
+    display_tab('references');
+  <% end %>
+</script>

@@ -1,0 +1,20 @@
+<% user_name = review.user.name.empty? ? review.user.login.humanize : review.user.name %>
+<div id="review_<%= review.id %>" class="review">
+  <div class="header">
+    <div class="author"><%= link_to user_name, {:controller => 'user', :action => 'index', :id => review.user} %></div>
+    <h3>
+      <%= review.page_name %>
+    </h3>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <%= display_wiki_content review %>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="rating_bar"><div style="width: <%= sprintf("%1.2f", review.vote(@movie,review.user_id) * 10 ) %>%;"></div></div>
+    arrow up
+    arrow down
+    <br />
+  </div>
+</div>

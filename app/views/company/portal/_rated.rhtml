@@ -1,0 +1,26 @@
+<div id="rated" style="display: none;">
+<% movies = Movie.highest_rated %>
+  <div class="top">
+    <%= thumbnail_image movies.first.cover, :medium %>
+    <h2><%= link_to_object movies.first %></h2>
+  </div>
+
+  <table>
+    <% counter = 2 %>
+    <% movies.slice(1,9).each{ |m| %>
+    <tr>
+      <td>
+        <%= counter.to_s %>
+      </td>
+      <td>
+        <strong><%= link_to_object m %></strong><br />
+        <div><%= m.categories.collect { |c| link_to_object c }.join(", ") %></div>
+      </td>
+      <td>
+        <div class="minivote"><div style='width: <%= sprintf("%1.2f", m.vote * 10 ) %>%'></div></div>&nbsp;<%= m.vote %>
+      </td>
+    </tr>
+    <% counter = counter + 1 -%>
+  <% } %>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<% @aliases = @item.aliases.local( @language ) if @aliases.nil? %>
+<div class="list_select_box big">
+  <ul>
+    <% @aliases.each { |a| %>
+      <li id="edit-alias-<%= a.id %>">
+        <%= edit_freeze_state a, :self %>
+        <div class="action">
+          <% if editor? -%>
+            <% # :TODO: Replace the link with a button %>
+            <%= link_to_remote "delete".t, 
+                  { :url       => { :action     => :destroy_alias, 
+                                    :alias      => a.id },
+                    :loading => "Element.update('delete-alias-#{a.id.to_s}', '<span class=\"loading\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>')",
+                    :confirm   => "Really delete?" },
+                  { :id    => "delete-alias-#{a.id.to_s}",
+                    :class => 'edit-button',
+                    :style => 'margin-right: 5px;' } unless a.attribute_frozen?(:self)%>
+          <% end -%>
+        </div>
+        <span><%= a.name %></span>
+      </li>
+    <% } %>
+  </ul>
+</div>
+

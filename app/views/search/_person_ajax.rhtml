@@ -1,0 +1,22 @@
+<% htmlId = "search_person_" + person_ajax.id.to_s %>
+
+<% url = { :action => :info,
+           :id => person_ajax.id,
+           :controller => 'person' }
+   url.update( { :movie => @movie.id } ) unless @movie.nil?
+%>
+
+
+<tr id="<%= htmlId %>">
+  <td>
+     <%= link_to_remote( person_ajax.name, 
+                         :url => url,
+                         :loading => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                         :loaded => "Element.update('ajax-activity-indicator','')" ) %></li>
+  </td>
+  <td>
+    <%= person_ajax.movies.uniq.slice(0,3).collect { |m|
+          link_to_object m
+        }.join("<br />") %>
+  </td>
+</tr>

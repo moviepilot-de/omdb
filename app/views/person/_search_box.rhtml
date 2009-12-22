@@ -1,0 +1,9 @@
+<div class="result-box">
+  <div class="image">
+    <%= link_to thumbnail_image(search_box.image, :medium), :action => :index, :id => search_box.id, :controller => 'person' %><br />
+  </div>
+  <div class="link">
+    <%= link_to_object search_box %>
+    <div class="small"><%= search_box.jobs.find(:all, :limit => 3).collect { |j| j.local_name( @language ) }.join(", ") %></div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<% 
+def fixture_data(name)
+  render_binary("#{RAILS_ROOT}/test/fixtures/#{name}")
+end
+
+def render_binary(filename)
+  data = File.open(filename,'rb').read
+  "!binary | #{[data].pack('m').gsub(/\n/,"\n    ")}\n"
+end %>
+image:
+  id: 1
+  content_type: image/jpeg
+  original_filename: bild.jpg
+  data: <%= fixture_data("images/1116.jpeg") %>
+  

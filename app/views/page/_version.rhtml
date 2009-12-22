@@ -1,0 +1,12 @@
+<!--
+TODO
+  translate at ... by ... 
+  format date according to user's date format 
+-->
+<li>
+  <%= link_to "#{'Revision'.t} #{version.version.to_s}", 
+        related_object.default_url(@page.page_name).merge(:rev => version.version) %>
+  at <%= version.created_at %> 
+  by <%= link_to_user(version.user) %>
+  <%= ": #{version.comment}" unless version.comment.to_s.blank? %>
+</li>

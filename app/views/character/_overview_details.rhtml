@@ -1,0 +1,36 @@
+<% content_for("right_column") do -%>
+<div id="overview-details">
+
+  <div class="headline-box">
+    <%= link_to_function 'edit'.t, lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutCharacterFacts' }, :class => 'help-button' %>
+
+    <h3><%= 'Character Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+
+  <%= render :partial => 'common/overview_editors', :locals => { :object => @character } if @character.log_entries.any? %>
+
+  <div class="headline-box">
+    <h3><%= 'Portrayed by'.t %></h3>
+  </div>
+  <div id="overview-cast" class="content-box">
+    <ul>
+      <%= render :partial => "actor", :collection => @character.people.uniq[0..3] %>
+    </ul>
+  </div>
+
+  <% if @character.people.uniq.size > 4 %>
+  <div class="actions">
+    <%= link_to 'All Actors'.t, { :action => 'portrayed' }, :class => 'more' %>
+  </div>
+  <% end %>
+
+  <%= render :partial => 'common/overview_top_movies', :locals => { :object => @character } %>
+  
+  <%= render :partial => 'common/overview_aliases', :locals => { :object => @character, :local_aliases_only => true } %>
+  
+</div>
+<% end %>

@@ -1,0 +1,71 @@
+/* Cover and Additional Pages Links */
+
+img.cover {
+  border:                   none;
+}
+
+div#column-one div.cover_links {
+  padding-top:              2px;
+  font-size:                8pt;
+}
+
+div#column-one div.cover_links a.edit-button {
+  margin-right:             0px;
+}
+
+div#column-one div.wikilist {
+  margin-top:              2em;
+  margin-bottom:           2em;
+}
+
+div#column-one div.wikilist h3 {
+  font-size:                10pt;
+  border-bottom:            1px solid #bbc1b5;
+  margin-bottom:            0.4em;
+}
+
+div#column-one div.wikilist ul {
+  margin-top:               0;
+  padding-top:              0;
+  font-size:                9pt;
+}
+
+div#column-one div.wikilist span.create {
+  float:                    right;
+  font-size:                0.8em;
+}
+
+div#column-one div.wikilist li a {
+  font-weight:              bold;
+}
+div#column-one div.wikilist li.active a {
+  color:                    #50503e;
+}
+
+div#add-movie,
+div#new-movie {
+  text-align:               center;
+  padding-bottom:           1.5em;
+  font-size:                0.9em;
+}
+
+div#new-movie div {
+  padding-top:              3px;
+  color:                    #bbc1b5;
+  font-size:                0.7em;
+}
+
+div#add-movie {
+  margin-top:               2em;
+  padding-bottom:           0;
+}
+
+div#add-movie a {
+  float:none;
+  padding:  2px 6px;
+  display: inline;
+}
+
+div#add-movie div.small {
+  padding-top:              3px;
+}

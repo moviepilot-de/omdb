@@ -1,0 +1,243 @@
+body {
+ background-image:      url("/images/startpage/background.png");
+ background-repeat:     repeat-x;
+}
+
+body.intro {
+ text-align:            center;
+}
+
+body.intro h1 {
+ display:               none;
+}
+
+div.intro_search {
+ position:  relative;
+
+}
+
+body.intro div.services {
+ text-align:        right;
+ font-size:                0.7em;
+ padding-top:               3px;
+
+}
+
+body.intro div.services a {
+  text-decoration:          none;
+  padding:                  0px 10px;
+  color:                    #60605e;
+  font-weight:              bold;
+
+  background-image:         url(/images/layout/bg-menu-separator.png);
+  background-repeat:        no-repeat;
+  background-position:      left center;
+  text-transform:           uppercase;
+}
+
+body.intro div.services a.first{
+  background-image:         none;
+}
+
+body.intro div.services a:hover{
+  text-decoration:          underline;
+  color:                    #30302c;
+}
+
+div.intro_search {
+ margin-top:                6em;
+ width:                     445px;
+ margin-left:               auto;
+ margin-right:              auto;
+ background-image:          url("/images/startpage/omdb-logo.png");
+ background-repeat:         no-repeat;
+ background-position:       top center;
+ height:                    115px;
+ color:#888;
+}
+
+div.login_box {
+  margin-top:               10em;
+  margin-left:              auto;
+  margin-right:             auto;
+  width:                    445px;
+  background-image:         url("/images/startpage/top1.gif");
+  background-repeat:        no-repeat;
+  background-position:      top left;
+}
+
+div.login_box p {
+  font-size:                10pt;  
+}
+
+div.login_box p.login_text {
+  text-align:               left;
+  padding:                  1em 1.5em;
+  background-image:         url("/images/startpage/top2.gif");
+  background-repeat:        no-repeat;
+  background-position:      top right;
+}
+
+div.login_box ul.small-tabs {
+  display:                  none;
+}
+
+div.login_box span.colon {
+  display:                  none;
+}
+
+div.login_box div.remember_me {
+  display:                  none;
+}
+
+div.login_box label {
+  display:                  block;
+  float:                    none;
+  margin-left:              55px;
+}
+
+div.login_box div.wrapper,
+div.login_box form {
+  background-image:         url("/images/startpage/bottom2.gif");
+  background-repeat:        no-repeat;
+  background-position:      bottom right;
+}
+
+div.login_box div.button-bar {
+  text-align:               right;
+  padding-right:            85px;
+  background-image:         url("/images/startpage/bottom1.gif");
+  background-repeat:        no-repeat;
+  background-position:      bottom left;
+  padding-bottom:           1.5em;
+}
+
+div.login_box div.button-bar input {
+  width:                    auto;
+  padding:                  0 10px;
+  font-size:                10pt;
+}
+
+
+body.intro div.login_box form input {
+  margin-top:              5px;
+}
+
+body.intro div.login_box div.signup p {
+  margin-left:              2em;
+  text-align:               left;  
+}
+
+body.intro div.login_box div.signup input,
+body.intro div.login_box div.signup label {
+  text-align:               left;
+  margin-left:              0;
+}
+
+div.intro_search form {
+ padding-top:               72px;
+ margin-left:               155px;
+ text-align:                left;
+ font-size:                 0.8em;
+}
+
+body.intro form input {
+  margin-top:               10px;
+  width:                    265px;
+  font-size:                1.2em;
+  color:                    rgb(80,80,62);
+  font-weight:              bold;
+  padding:                  3px 2px 2px 2px;
+}
+
+body.intro form input.submit {
+ width:                     65px;
+ margin-left:               220px; 
+ margin-top:                0;
+ border:                    none;
+ font-size:                 0.8em;
+ background-color:          transparent;
+}
+
+
+div.intro_search form p.examples {
+ color:             #AEB1A8;
+ padding-top:       0px;
+ font-size:         0.85em;
+ overflow:          hidden;
+ white-space:       nowrap;
+ margin-right:      20px;
+}
+
+
+div.intro_search div.mediatypes {
+  padding-bottom:          5px;
+}
+
+div.intro_search div.mediatypes a {
+  text-decoration:      none;
+  padding:              0px 5px;
+  border-bottom:        2px solid #fff;
+}
+
+div.intro_search div.mediatypes a.first {
+ padding-left:          0px;
+ background-image:      none;
+}
+
+
+div.intro_search div.mediatypes a:hover {
+ text-decoration:       underline;
+}
+
+
+div.intro_search div.mediatypes a.current {
+ color:                 #000;
+ font-weight:           bold;
+}
+
+div.intro_search div.mediatypes a.current:hover {
+ text-decoration:       none;
+}
+
+div.intro_search div.mediatypes span.disabled {
+  padding:              0px 5px;
+ color:                 #ccc;
+}
+
+
+
+div.intro_search a {
+ font-family:           tahoma;
+}
+
+div.intro_search div.tip {
+ border-top:            1px solid #A6A5A5;
+ font-size:             0.70em;
+ background-image:      url(/images/layout/icon_intro_tip.png);
+ text-align:            left;
+ background-repeat:     no-repeat;
+ padding-left:          40px;
+ padding-top:           5px;
+ margin-top:            50px;
+ margin-left:           115px;
+ margin-right:          10px;
+}
+
+
+div.intro_search div.tip a.add {
+ text-transform:        uppercase;
+ color:                 #D1701E;
+ padding-left:          12px;
+ margin-left:           2px;
+ background-image:      url(/images/layout/icon_link_add.png);
+ background-repeat:     no-repeat;
+ background-position:   left center;
+}
+
+/**
+* shadow
+*/
+div.extra {
+ display:               none;
+}

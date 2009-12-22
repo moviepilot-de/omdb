@@ -1,0 +1,13 @@
+puts @results.page
+page_number = params[:page] || 1
+last_page = params[:last_page]
+page << "if ($('search-listing-#{page_number}') == undefined) {"
+  page.insert_html :bottom, :results, content_tag( :div, "", :id => "search-listing-#{page_number}", :style => "float: left; overflow:hidden; display:none;" )
+  page.insert_html :bottom, "search-listing-#{page_number}", content_tag( :div, "", :id => "items-for-page-#{page_number}" )
+  page.insert_html :bottom, "items-for-page-#{page_number}", :partial => 'common/generic_search_box', :collection => @results.to_a.collect { |o| o.to_o }
+page << "}"
+page << "$('items-for-page-#{last_page}').style.width = $('items-for-page-#{last_page}').offsetWidth + 'px';"
+page << "$('items-for-page-#{page_number}').style.width = $('items-for-page-#{last_page}').offsetWidth + 'px';"
+page << "Effect.BlindUpFromRight('search-listing-#{last_page}');"
+page << "Effect.BlindDownFromRight('search-listing-#{page_number}');"
+page.replace :pagination, :partial => 'common/paginate', :locals => { :collection => @results }

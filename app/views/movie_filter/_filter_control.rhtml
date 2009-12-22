@@ -1,0 +1,7 @@
+<%= link_to_remote "apply filter".t, { :url     => { :controller => "movie_filter", 
+                                                     :action     => :show_filter_dialog,
+                                                     :from       => request.path_parameters["controller"],
+                                                     :id         => request.path_parameters["id"] },
+                                       :loading => "Element.show('movie_filter');" },
+                                       :id      => "filter_control",
+                                       :class   => 'edit-button apply_filter' %>

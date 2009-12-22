@@ -1,0 +1,132 @@
+<p>
+  <%= "Please enter the movie details.".t  %>
+  <%= "You can get more information about filling in this form in our help section \"%s\"" / link_to( 'Help:LayoutBoxFacts'.t, :controller => 'generic_page', :page => 'Help:LayoutBoxFacts', :action => :page ) %>
+</p>
+
+<div class="input">
+  <%= edit_freeze_state @movie, :name %>
+  <label for="movie_name"><%= "Original Title".t %></label>
+  <%= display_attribute :movie, :name %>
+</div>
+
+<div class="input">
+  <label for="movie_name"><%= "Original Title".t + " " + "(#{@language.english_name.t})" %></label>
+  <% if not @movie.official_translation(@language).empty? and @movie.official_translation(@language).first.frozen? %>
+    <%= edit_freeze_state @movie.official_translation(@language).first, :self %>
+    <%= content_tag 'span', @movie.official_translation(@language).first.name %>
+  <% else %>
+    <select name="select_alias" onchange="local_alias_check_method(this);">
+      <%= local_alias_select_options( @movie, @language ) %>
+    </select>
+    <div style="margin-left: 12em; clear: left;">
+      <input type="text" name="new_alias" value="" style="display: none;" id="new_alias_input"/>
+    </div>
+  <% end %>
+</div>
+
+<div class="input">
+  <%= edit_freeze_state @movie, :type %>
+  <label for="movie_type"><%= "Type".t %></label>
+  <% if @movie.attribute_frozen?( :type ) %>
+    <span><%= @movie.class.to_s.t %></span>
+  <% else %>
+    <select name="movie[type]">
+      <%= options_for_select Movie.valid_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.class.to_s %>
+    </select>
+  <% end %>  
+</div>
+
+<% if @movie.class.has_status? %>
+<div class="input">
+  <%= edit_freeze_state @movie, :status %>
+  <label for="movie_status"><%= "Status".t %></label>
+  <% if @movie.attribute_frozen?( :status ) %>
+    <span><%= @movie.status.t %></span>
+  <% else %>
+    <select name="movie[status]">
+      <%= options_for_select Movie.valid_status_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.status %>
+    </select>
+    <%= error_message_on :movie, :status %>
+  <% end %>
+</div>
+<% end %>
+
+<div class="input">
+  <%= edit_freeze_state @movie, :homepage %>
+  <label for="movie_homepage"><%= "International Homepage".t %></label>
+  <%= display_attribute :movie, :homepage %>
+  <%= error_message_on :movie, :homepage %>
+</div>
+
+<% if @movie.class.has_date? -%>
+<div class="input">
+  <%= edit_freeze_state @movie, :end %>
+  <label for="movie_end"><%= "Opening Night".t %></label>
+  <%= display_attribute :movie, :end, 'date', :size => 10 %>
+  <% if not @movie.attribute_frozen?( :end ) %>
+    <a id="movie_end_trigger" class="edit-button calendar-trigger"><%= "calendar".t %></a>
+  <% end %>
+  
+  <%= error_message_on :movie, :end %>
+</div>
+<% end %>
+
+<% if @movie.class.has_runtime? -%>
+<div class="input">
+  <%= edit_freeze_state @movie, :runtime %>
+  <label for="movie_runtime"><%= "Runtime".t %></label>
+  <%= display_attribute :movie, :runtime, 'string', :size => 4 %> <span><%= "Minutes".t %></span>
+  <%= error_message_on :movie, :runtime %>
+</div>
+<% end -%>
+
+<% if @movie.class.has_budget? -%>
+<div class="input">
+  <%= edit_freeze_state @movie, :budget %>
+  <label for="movie_runtime"><%= "Budget".t %></label>
+  <%= display_attribute :movie, :budget, 'string', :size => 10 %> <span><%= "US$".t %></span>
+  <%= error_message_on :movie, :budget %>
+</div>
+<% end -%>
+
+<% if @movie.class.has_budget? -%>
+<div class="input">
+  <%= edit_freeze_state @movie, :revenue %>
+  <label for="movie_runtime"><%= "Revenue".t %></label>
+  <%= display_attribute :movie, :revenue, 'string', :size => 10 %> <span><%= "US$".t %></span>
+  <%= error_message_on :movie, :revenue %>
+</div>
+<% end -%>
+
+<% if @movie.class.has_series_type? -%>
+  <% if @movie.attribute_frozen?( :series_type ) %>
+    <span><%= @movie.series_type.to_s.t %></span>
+  <% else %>
+    <select name="movie[series_type]">
+      <%= options_for_select Series.valid_series_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.series_type %>
+    </select>
+  <% end %>  
+<% end -%>
+
+<% if @movie.class.has_inheritable_cast? -%>
+<div class="input">
+  <%= edit_freeze_state @movie, :inherit_cast %>
+  <label for="movie_inherit_crew"><%= "Inherit Crew".t %></label>
+  <%= display_attribute :movie, :inherit_cast, 'enum', :choices => [ true, false ] %>
+</div>
+<% end -%>
+
+<% if not @movie.attribute_frozen?( :end ) and @movie.class.has_date? %>
+  <script type="text/javascript">
+    Calendar.setup(
+      {
+        inputField  : "movie_end",        // ID of the input field
+        align       : 'Br',
+        ifFormat    : "%Y-%m-%d",    // the date format
+        button      : "movie_end_trigger"       // ID of the button
+      }
+    );
+  </script>
+<% end %>
+
+<br />

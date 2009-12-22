@@ -1,0 +1,96 @@
+<% content_for("title") do %>
+  <%= "Edit Department".t %>
+<% end %>
+
+<script type="text/javascript">
+  var new_person_count = 0;
+
+  <%= create_add_function 'person', true %>
+  <%= create_add_new_function 'person' %>
+  <%= create_remove_function 'person' %>
+</script>
+
+<%= form_remote_tag :url => { :action => "update", :movie => @movie.id, :department => @department },
+                    :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                    :success => "box.deactivate()", :html => {:onKeyPress => 'return checkEnter(event)'} %>
+<div class="content">
+  <ul class="small-tabs">
+    <li class="active" id="tab_genre"><a><%= @department.local_name(@language) %></a></li>
+  </ul>
+  <div class="tabbed-content">
+    <p>
+      <%= "The right side provides an overview of all people which have been assigned to this department.".t %>
+      <%= "Names in gray have been locked by an administrator and cannot be changed anymore.".t %>
+      <%= "The assignment of a blue name to this film can be broken by clicking on it.".t %>
+      <%= "The name will switch to the left side. By clicking on OK you confirm the erasure.".t %>
+    </p>
+    <p>
+      <%= "You wish to add an actor or crew member to this movie? To do so please close this dialogue and use the appropriate function on the very top of the crew/cast site.".t %>
+    </p>
+    <table class="list-add-box">
+      <tr>
+        <th>
+          <%= text_field("filter", "people", :size => 15) %>
+          <div><%= "Search".t %></div>
+        </th>
+        <th>
+          <%= "Current employees:".t %>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <div class="list_select_box">
+            <ul id="searched_people" class="left">
+              <li class="empty"><%= "Please enter a search term".t %></li>
+            </ul>
+          </div>
+          <% if editor? %>
+            <%= link_to_function "create new person".t, "add_new_person();", :class => 'edit-button', :style => 'margin-top: 2px' %>
+          <% end %>
+        </td>
+        <td>
+          <div class="list_select_box">
+            <ul id="selected_people" class="right">
+              <% Cast.employees( @movie, @department ).each { |c| %>
+                <li id="movie-person-<%= c.id.to_s %>">
+                  <% if c.frozen? or c.movie_id != @movie.id %>
+                    <div class="frozen"><%= c.person.name %></div>
+                  <% else %>
+                    <%= link_to_function c.person.name, "remove_person('#{c.id}')", :class => 'select', 
+                                                         :onmouseover => "displayPersonInformation(#{c.person.id});" %>
+                    <input type="hidden" name="casts[]" value="<%= c.id %>"/>
+                  <% end %>
+                </li>
+              <% } %>
+            </ul>
+          </div>
+        </td>      
+      </tr>
+    </table>
+    <div class="info-bar">
+      <h3 id="more-information-headline" class="closed"><%= link_to_function "More Information".t, 'toggleDetails()' %></h3>
+      <div id="more-information" style="display: none;">
+        <%= more_information_help_text %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button-bar">
+  <%= submit_button %>
+  <%= close_box_button "Cancel" %>
+</div>
+
+<%= end_form_tag %>
+
+<%= observe_field('filter_people',
+      :frequency => 0.5,
+      :update    => "searched_people",
+      :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+      :loaded    => "Element.update('ajax-activity-indicator','')",
+      :url       => { :action => :find_people, 
+                      :controller => 'search',
+                      :movie  => @movie }) %>
+
+<script type="text/javascript">
+  $('filter_people').focus();
+</script>

@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <%= render :partial => 'movie/category', :collection => @movie.keywords.sort { |a,b| a.local_name( @language ) <=> b.local_name( @language ) } %>
+  </ul>
+  <p class="vote-text">
+    <%= link_to_remote 'done voting'.t, { :url => { :action => :display_keywords } }, :class => "edit" %>
+  </p>
+</div>

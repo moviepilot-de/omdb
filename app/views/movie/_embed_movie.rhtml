@@ -1,0 +1,26 @@
+<div class="headline-box">
+  <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:EmbedMovieInformation' }, :class => 'help-button no-right-border' %>
+  <h3><%= 'Embed Movie Information'.t %></h3>
+</div>
+<div id="overview-embed" class="content-box">
+  <%= tag :input, :value => ( 
+    content_tag :object, 
+      tag( :param, { :name => :movie, :value => url_for( :controller => 'flash', 
+                                                         :action     => 'movie_facts.swf', 
+                                                         :movie      => @movie.id, 
+                                                         :only_path  => false ) }, true ) +
+      "</param>" +
+      tag( :param, { :name => :wmode, :value => 'transparent' }, true ) +
+      "</param>" +
+      tag( :embed, { :src  => url_for( :controller => 'flash', 
+                                       :action     => 'movie_facts.swf', 
+                                       :movie      => @movie.id, 
+                                       :only_path  => false ), 
+                     :type => 'application/x-shockwave-flash',
+                     :wmode => 'transparent', :width => 440, :height => 420 }, true ) +
+      "</embed>",
+    :width => 440, :height => 420 ), 
+  :readonly => true,
+  :id       => 'embed_html',
+  :onclick  => "javascript:$('embed_html').focus(); $('embed_html').select();" %>
+</div>

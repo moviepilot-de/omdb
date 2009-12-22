@@ -1,0 +1,21 @@
+<%= render :partial => 'header' %>
+
+<% content_for("right_column") do -%>
+  <div id="overview-details">
+    <div id="overview-votes">
+      <%= render :partial => 'overview_votes' %>
+    </div>
+  </div>
+<% end %>
+
+<div id="content">
+  <%= render :partial => 'common/views' %>
+
+  <%= link_to_remote "Add Review".t,  :url => { :controller => "movie", :action => "new_review", :id => @movie.id }, :id => "add-review-button" %><br />  
+  <div id="add_review"></div>
+
+  <div class="review-list">
+    <%= render :partial => "review", :collection => @reviews %>
+  </div>
+  
+</div>

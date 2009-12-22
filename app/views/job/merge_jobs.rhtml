@@ -1,0 +1,29 @@
+<% content_for("title") do %>
+  <%= "Merge Jobs".t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => :merge_jobs },
+                    :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                    :success => "box.deactivate()" %>
+                    
+  <div class="content">
+    <h4 align="center">
+      <%= "Please select the Jobs you'd like to merge with: %s" / @job.name %><br>
+      <%= "Attention: see the documentation if you'd like to know what it does!".t %>
+    </h4>
+    <%= render :partial => 'edit_job_merging', :locals => { :type => :job, :display_options => false } %>
+    <div class="info-bar">
+      <h3 id="more-information-headline" class="closed"><%= link_to_function "More Information".t, 'toggleDetails()' %></h3>
+      <div id="more-information" style="display: none;">
+      </div>
+    </div>
+  </div>
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('filter_jobs').focus();
+</script>

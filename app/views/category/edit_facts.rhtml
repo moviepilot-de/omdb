@@ -1,0 +1,54 @@
+<% content_for("title") do %>
+  <%= "Edit Facts for".t + " " + @category.root.local_name( @language ) + ": " + @category.name  %>
+<% end %>
+
+<script type="text/javascript">
+  var active_tab = 'facts';
+
+  display_tab = function(id) {
+    Element.hide( 'edit_facts_' + active_tab );
+    Element.removeClassName('tab_' + active_tab, 'active');
+
+    active_tab = id;
+
+    Element.show( 'edit_facts_' + id );
+    Element.addClassName('tab_' + id, 'active');
+
+    if (id == 'parent') {
+      $('filter_categories').focus();
+    }
+  }
+</script>
+
+<%= lightbox_form_tag :action => :update_facts %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_facts"><%= link_to_function "Facts".t, "display_tab('facts')", :accesskey => "1", :title => "Edit Main Facts".t %></li>
+
+      <% if not @category.parent.nil? %>
+        <% if (not @category.attribute_frozen?( :parent ) and editor?) or admin? %>
+          <li id="tab_parent"><%= link_to_function "Parent".t, "display_tab('parent')", :accesskey => "2", :title => "Set Parent".t %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  
+    <div id="edit_facts_facts" class="tabbed-content">
+      <%= render :partial => 'edit_facts_facts' %>
+    </div>
+
+    <% if not @category.parent.nil? %>
+      <% if (not @category.attribute_frozen?( :parent ) and editor?) or admin? %>
+        <div id="edit_facts_parent" style="display: none;" class="tabbed-content">
+          <%= render :partial => 'edit_facts_parent' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>

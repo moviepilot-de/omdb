@@ -1,0 +1,34 @@
+<div class="fact">
+  <div class="title"><%= 'Status'.t %>:</div>
+  <div class="value"><%= @movie.status %></div>
+</div>
+
+<div class="fact">
+  <div class="title"><%= 'Premiered at'.t %>:</div>
+  <div class="value"><%= @movie.end.nil? ? "unknown".t : @movie.end %></div>
+</div>
+
+<div class="fact">
+  <div class="title"><%= 'Runtime'.t %>:</div>
+  <div class="value"><%= "%d Minutes" / @movie.runtime %></div>
+</div>
+
+<% if not @movie.parent.nil? -%>
+<div class="fact">
+  <div class="title"><%= 'Part of'.t %>:</div>
+  <div class="value"><%= link_to_object @movie.parent %></div>
+</div>
+<% end -%>
+
+<div class="fact">
+  <div class="title"><%= 'Languages (original)'.t %>:</div>
+  <div class="value">
+    <% if @movie.languages.empty? -%>
+      -
+    <% end -%>
+    <%= @movie.languages.collect { |l|
+          l.english_name.t
+        }.join(", ") %>
+  </div>
+
+</div>

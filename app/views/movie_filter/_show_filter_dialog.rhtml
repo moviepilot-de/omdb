@@ -1,0 +1,43 @@
+<div class="filter-box">
+  <%= form_remote_tag :url => { :action => :update_filter }, 
+                      :loading => "Element.show('ajax-activity-indicator')",
+                      :html => { :id => 'movie-filter-form' } %>
+    <table style="width: 100%;">
+      <thead>
+        <th colspan="3">
+          <p>
+            Show films, that matches the following elements:
+          </p>
+        </th>
+      </thead>
+      <tfoot>
+        <tr>
+          <td valign="bottom"><div id="ajax-activity-indicator" style="display: none;"><%= loading_image %></div></td>
+          <td></td>
+          <td style="text-align: right;">
+            <%= "add filter".t %>
+            <select id="add_filter" name="filters">
+              <option value=""></option>
+              <option value="person"><%= "Person".t %></option>
+              <option value="category"><%= "Category".t %></option>
+              <option value="keyword"><%= "Plot Keyword".t %></option>
+              <option value="country"><%= "Shot in".t %></option>
+              <option value="language"><%= "Language".t %></option>
+            </select>
+            <br />
+            <%= submit_tag 'apply filter', :id => 'apply_filter' %>
+          </td>
+        </tr>
+      </tfoot>
+      <tbody id="query_filter_table_body">
+      </tbody>
+    </table>
+  <%= end_form_tag %>
+  <div class="filter-box-end"><div class="container">&nbsp;</div></div>
+</div>
+
+<script type="text/javascript">
+  $('add_filter').onchange = function(){ filters.addFilter(this.options[this.selectedIndex].firstChild.data, this.value, '', ''); this.selectedIndex = 0; }
+
+  <%= start_filter %>
+</script>

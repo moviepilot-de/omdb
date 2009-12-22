@@ -1,0 +1,7 @@
+<li id="reference_<%= reference.id %>">
+  <% if @movie.id == reference.movie.id %>
+    <%= link_to_object reference.referenced_movie %> (<%= reference.class.to_s.t %>)
+  <% else %>
+    <%= link_to_object reference.movie %> (<%= "#{reference.class.to_s} of".t %>)
+  <% end %>
+</li>

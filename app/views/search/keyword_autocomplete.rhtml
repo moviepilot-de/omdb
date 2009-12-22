@@ -1,0 +1,6 @@
+<ul>
+  <% for keyword in @keywords -%>
+    <li id="category_autocomplete_<%= keyword.id %>"><span class="informal"><%= keyword.parent.flattened_name( @language ) %> &gt; </span><%= keyword.name %></li>
+  <% end %>
+  <% if @keywords.empty? %><li id="category_autocomplete_0" class="not_found"><span class="informal"><%= "no keyword found".t %></span></li><% end %>
+</ul>

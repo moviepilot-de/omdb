@@ -1,0 +1,516 @@
+--- 
+movies_020: 
+  status: Released
+  name: "\xC3\x80 bout de souffle"
+  inherit_genres: "0"
+  vote: "8"
+  type: 
+  end: "1960-03-16"
+  id: "269"
+  version: "1"
+  runtime: "87"
+  start: 
+  edit_status: To Check
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-09-11 12:04:23
+  popularity: "3"
+  revenue: "0"
+movies_009: 
+  status: Released
+  name: Domicile Conjugal
+  inherit_genres: "0"
+  vote: "5.5"
+  type: 
+  end: "1970-09-09"
+  id: "258"
+  version: "1"
+  runtime: "94"
+  start: 
+  edit_status: To Check
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-27 14:27:51
+  popularity: "1"
+  revenue: "0"
+movies_010: 
+  status: Released
+  name: "L'Amour en Fuite"
+  inherit_genres: "0"
+  vote: "7"
+  type: 
+  end: "1980-01-24"
+  id: "259"
+  version: "1"
+  runtime: "89"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-27 14:28:04
+  popularity: "1"
+  revenue: "0"
+the_39_steps: 
+  status: Released
+  name: The 39 Steps
+  inherit_genres: "0"
+  vote: "8"
+  type: 
+  end: "1935-08-01"
+  id: "260"
+  version: "1"
+  runtime: "87"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-27 22:41:19
+  popularity: "4"
+  revenue: "0"
+cat_on_a_hot_tin_roof: 
+  status: Released
+  name: Cat on a Hot Tin Roof
+  inherit_genres: "0"
+  vote: "8"
+  type: 
+  end: "2020-09-18"
+  id: "261"
+  version: "1"
+  runtime: "108"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "3000000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-30 11:36:55
+  popularity: "2"
+  revenue: "17000000"
+in_china_they_eat_dogs: 
+  status: Released
+  name: In China They Eat Dogs
+  inherit_genres: "0"
+  vote: "7"
+  type: Movie
+  end: "1999-09-10"
+  id: "250"
+  version: "1"
+  runtime: "91"
+  start: 
+  edit_status: Abandoned
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-21 22:13:40
+  popularity: "4"
+  revenue: "0"
+  creator_id: "1"
+king_of_comedy: 
+  status: Released
+  name: King of Comedy
+  inherit_genres: "0"
+  vote: "6"
+  type: 
+  end: "1983-02-18"
+  id: "262"
+  version: "1"
+  runtime: "109"
+  start: 
+  edit_status: Abandoned
+  homepage: ""
+  inherit_cast: "0"
+  budget: "20000000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-31 14:58:14
+  popularity: "20"
+  revenue: "0"
+ghost: 
+  status: Released
+  name: Ghost
+  inherit_genres: "0"
+  vote: "7"
+  type: 
+  end: "1990-07-13"
+  id: "251"
+  version: "1"
+  runtime: "128"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "22000000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-22 21:13:12
+  popularity: "1"
+  revenue: "505000000"
+batman_series: 
+  status: Released
+  name: Batman
+  inherit_genres: "0"
+  vote: "0"
+  type: MovieSeries
+  end: "1971-06-30"
+  id: "263"
+  version: "1"
+  runtime: "0"
+  start: 
+  edit_status: Abandoned
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-09-04 00:51:00
+  popularity: "5"
+  revenue: "0"
+willy_wonka: 
+  status: Released
+  name: Willy Wonka and the Chocolate Factory
+  inherit_genres: "0"
+  vote: "7"
+  type: 
+  end: "1971-06-30"
+  id: "252"
+  version: "1"
+  runtime: "100"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "2900000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-24 18:45:17
+  popularity: "2"
+  revenue: "4000000"
+movies_015: 
+  status: Released
+  name: Back to the Future
+  inherit_genres: "0"
+  vote: "0"
+  type: MovieSeries
+  end: "1971-06-30"
+  id: "264"
+  version: "1"
+  runtime: "0"
+  start: 
+  edit_status: Abandoned
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-09-04 11:50:58
+  popularity: "4"
+  revenue: "0"
+movies_004: 
+  status: Released
+  name: Live and Let Die
+  inherit_genres: "0"
+  vote: "0"
+  type: 
+  end: "1971-06-30"
+  id: "253"
+  version: "1"
+  runtime: "0"
+  start: 
+  edit_status: Abandoned
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-24 19:03:13
+  popularity: "1"
+  revenue: "0"
+lili_marleen: 
+  status: Released
+  name: Lili Marleen
+  inherit_genres: "0"
+  vote: "9"
+  type: 
+  end: "1981-01-14"
+  id: "265"
+  version: "1"
+  runtime: "120"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-09-05 15:17:26
+  popularity: "4"
+  revenue: "0"
+king_kong: 
+  status: Released
+  name: King Kong
+  inherit_genres: "0"
+  vote: "9"
+  type: 
+  end: "2005-12-14"
+  id: "254"
+  version: "1"
+  runtime: "187"
+  start: 
+  edit_status: Done
+  homepage: http://movies.uip.de/kingkong/
+  inherit_cast: "0"
+  budget: "207000000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-25 12:36:52
+  popularity: "1"
+  revenue: "550000000"
+movies_017: 
+  status: Released
+  name: "Le M\xC3\xA9pris"
+  inherit_genres: "0"
+  vote: "9"
+  type: 
+  end: "1963-10-29"
+  id: "266"
+  version: "1"
+  runtime: "103"
+  start: 
+  edit_status: In Progress
+  homepage: ""
+  inherit_cast: "0"
+  budget: "900000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-09-08 13:24:11
+  popularity: "5"
+  revenue: "0"
+movies_006: 
+  status: Released
+  name: "Baisers vol\xC3\xA9s"
+  inherit_genres: "0"
+  vote: "5"
+  type: 
+  end: "1968-08-14"
+  id: "255"
+  version: "1"
+  runtime: "96"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-25 19:26:51
+  popularity: "1"
+  revenue: "0"
+movies_018: 
+  status: Released
+  name: "Carne trem\xC3\xBAla"
+  inherit_genres: "0"
+  vote: "7"
+  type: 
+  end: "1997-10-29"
+  id: "267"
+  version: "1"
+  runtime: "103"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-09-09 13:14:59
+  popularity: "1"
+  revenue: "0"
+movies_007: 
+  status: Released
+  name: Antoine et Colette
+  inherit_genres: "0"
+  vote: "5"
+  type: Movie
+  end: "1962-06-22"
+  id: "256"
+  version: "1"
+  runtime: "29"
+  start: 
+  edit_status: Done
+  homepage: ""
+  inherit_cast: "0"
+  budget: "0"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-26 16:05:26
+  popularity: "1"
+  revenue: "0"
+batman: 
+  status: Released
+  name: Batman
+  inherit_genres: "0"
+  vote: "8"
+  type: 
+  end: "1989-06-23"
+  id: "268"
+  version: "1"
+  runtime: "126"
+  start: 
+  edit_status: Abandoned
+  homepage: ""
+  inherit_cast: "0"
+  budget: "35000000"
+  position: "9999"
+  parent_id: "263"
+  created_at: 2006-09-10 00:22:17
+  popularity: "15"
+  revenue: "413200000"
+oliver_twist: 
+  status: Released
+  name: Oliver Twist
+  inherit_genres: "0"
+  vote: "3.5"
+  type: Movie
+  end: "2005-09-23"
+  id: "257"
+  version: "1"
+  runtime: "130"
+  start: 
+  edit_status: Done
+  homepage: http://www.olivertwistthemovie.co.uk/
+  inherit_cast: "0"
+  budget: "50000000"
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-26 22:50:09
+  popularity: "4"
+  revenue: "42093706"
+star_trek:
+  status: Released
+  name: Star Trek - The Movie
+  inherit_genres: "0"
+  inherit_cast: "0"
+  vote: "8.0"
+  type:
+  end: "1971-06-30"
+  id: "289"
+  version: 1
+  runtime: "0"
+  start:
+  homepage: ""
+  budget:
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-26 22:50:09
+  popularity: "4"
+  revenue:
+star_trek_tng:
+  status: Released
+  name: Star Trek - The next Generation
+  inherit_genres: "0"
+  inherit_cast: "0"
+  vote: "8.0"
+  type: Series
+  end: "1971-06-30"
+  id: "290"
+  version: 1
+  runtime: "0"
+  start:
+  homepage: ""
+  budget:
+  position: "9999"
+  parent_id: 
+  created_at: 2006-08-26 22:50:09
+  popularity: "4"
+  revenue:
+star_trek_tng_season_one:
+  status: Released
+  name: Season One
+  inherit_genres: "0"
+  inherit_cast: "1"
+  vote: "8.0"
+  type: Season
+  end: "1971-06-30"
+  id: "291"
+  version: 1
+  runtime: "0"
+  start:
+  homepage: ""
+  budget:
+  position: "9999"
+  parent_id: "290"
+  created_at: 2006-08-26 22:50:09
+  popularity: "4"
+  revenue:
+star_wars:
+  status: Released
+  name: Star Wars
+  inherit_genres: "0"
+  inherit_cast: "1"
+  vote: "10.0"
+  type: Movie
+  end: "1979-10-10"
+  id: "292"
+  version: 1
+  runtime: "0"
+  start:
+  homepage: ""
+  budget: "0"
+  position: "9999"
+  parent_id: ""
+  created_at: 2006-08-26 22:50:09
+  popularity: "4"
+  revenue: "0"
+encounter_at_farpoint:
+  status: Released
+  name: Encounter at Farpoint
+  inherit_genres: "0"
+  inherit_cast: "1"
+  vote: "10.0"
+  type: Episode
+  end: "1971-06-30"
+  id: "299"
+  version: 1
+  runtime: "0"
+  start:
+  homepage: ""
+  budget:
+  position: "9999"
+  parent_id: "291"
+  created_at: 2006-08-26 22:50:09
+  popularity: "4"
+  revenue:
+big_lebowski:
+  status: Released
+  name: The Big Lebowski
+  inherit_genres: "0"
+  inherit_cast: "1"
+  vote: "10.0"
+  type: Movie
+  end: "1971-06-30"
+  id: "115"
+  version: 1
+  runtime: "0"
+  start:
+  homepage: ""
+  budget: 0
+  position: "9999"
+  parent_id: ""
+  created_at: 2006-08-26 22:50:10
+  popularity: "2"
+  revenue: 0

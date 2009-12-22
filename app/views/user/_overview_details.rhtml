@@ -1,0 +1,63 @@
+<div id="overview-details">
+  
+  <div class="headline-box">
+    <h3><%= 'User Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <div class="fact">
+      <div class="title"><%= 'joined omdb'.t %>:</div>
+      <div class="value">
+        <%= @user.created_at.to_date %>
+      </div>
+    </div>
+    <div class="fact">
+      <div class="title"><%= 'movies created'.t %>:</div>
+      <div class="value">
+        <% created = created_movies(@user) %>
+        <%= created %>
+      </div>
+    </div>
+    <div class="fact">
+      <div class="title"><%= 'movie changes'.t %>:</div>
+      <div class="value">
+        <% changed = movie_changes(@user) %>
+        <%= changed %>
+      </div>
+    </div>
+    <div class="fact">
+      <div class="title"><%= 'create/change ratio'.t %>:</div>
+      <div class="value">
+        <%= created == 0 ? 0 : sprintf("%.2f", changed / created.to_f) %>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  <div class="headline-box">
+    <h3><%= 'last movies edited'.t %></h3>
+  </div>
+  <div id="overview-last-movies" class="content-box">
+    <ul>
+    <% @user.last_edited_movies.each do |movie| %>
+      <li><%= render :partial => 'movie/info', :locals => { :movie => movie } %></li>
+    <% end %>
+    </ul>
+  </div>
+  
+  <% if (editor? || related_object.may_edit_pages(current_user)) and @page %>
+    <div class="headline-box">
+      <h3><%= "Administration".t %></h3>
+    </div>
+    <div class="content-box">
+      <% if not @page.nil? and not @page.new_record? and @page.related_object %>
+      <%= button_to_function("Rename Page".t, 
+            lightbox({ :action => "rename_page", :id => @page.id }), 
+            :class => "edit-button") unless @page.page_name == 'index' %>
+      <% end %>
+      <%= button_to "Delete Page".t, 
+            { :action => "destroy_page", :id => @page.id }, 
+            { :class => "edit-button"  , :confirm => "Really delete?".t } unless @page.page_name == 'index'%>
+    </div>
+  <% end %> 
+</div>

@@ -1,0 +1,69 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+Title : Lightbox CSS
+Author : Kevin Hale
+URL : http://particletree.com/features/lightbox-gone-wild/
+
+Created : January 13, 2006
+Modified : February 1, 2006
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+#lightbox{
+	display:                none;
+	position:               absolute;
+	top:                    40%;
+	left:                   50%;
+	z-index:                100;
+	width:                  700px;
+	height:                 auto;
+	margin:                 -220px 0 0 -326px;
+	text-align:             left;
+}
+#lightbox[id]{
+	position:               fixed;
+}
+
+#overlay{
+	display:                none;
+	position:               absolute;
+	top:                    0;
+	left:                   0;
+	width:                  100%;
+	height:                 100%;
+	z-index:                50;
+	background-color:       #666;
+	background-color:       rgb(220, 220, 220);
+	-moz-opacity: 0.8;
+	opacity:.80;
+}
+	
+	#overlay[id]{
+	position:fixed;
+}
+
+#lightbox.done #lbLoadMessage{
+	display:none;
+}
+#lightbox.done #lbContent{
+	display:block;
+}
+#lightbox.loading #lbContent{
+	display:none;
+}
+#lightbox.loading {
+  background-image:         none;
+}
+#lightbox.loading #lbLoadMessage {
+	display:                  block;
+	height:                   300px;
+	width:                    600px;
+	background-image:         url('/images/layout/ajax/loading_big.gif');
+	background-repeat:        no-repeat;
+	background-position:      center;
+}
+
+#lightbox.done img{
+	width:100%;
+	height:100%;
+}

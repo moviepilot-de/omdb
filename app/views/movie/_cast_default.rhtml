@@ -1,0 +1,29 @@
+<li id="<%= cast.class.to_s.downcase + "_" + cast.id.to_s %>">
+  <% if cast.movie_id == @movie.id %>
+    <%= sort_icon_div %>
+    <% if editor? %>
+      <%= edit_freeze_state cast, :self %>
+    <% end %>
+  <% else %>
+    <%= arrow_down_div @movie.parent %>
+  <% end %>
+  <div class="person"><strong><%= link_to_object cast.person %></strong></div>
+
+    <% if cast.class == Actor %>
+      <%= render :partial => 'movie/cast_actor', :locals => { :actor => cast } %>
+    <% else %>
+      <% if cast.frozen? %>
+        <%= link_to_object cast.job %> 
+      <% else %>
+        <%= link_to_function cast.job.local_name(@language), 
+                lightbox( :controller => 'cast',
+                          :action     => 'edit_job',
+                          :id         => cast.id ),
+              { :class => 'edit',
+                :title => "Edit the job of this cast".t } %>
+      <% end %>
+      <% if not cast.comment.empty? %>
+        (<%= cast.comment %>)
+      <% end %>
+    <% end %>
+</li>

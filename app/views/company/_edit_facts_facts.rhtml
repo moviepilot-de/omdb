@@ -1,0 +1,7 @@
+<p><%= "Please enter the official name of the company. Please provide it in the language of the country where the company's headquarters are located.".t %><p>
+
+<div class="input">
+  <%= edit_freeze_state @company, :name %>
+  <label for="company_name"><%= "Name".t %></label>
+  <%= display_attribute :company, :name %>
+</div>

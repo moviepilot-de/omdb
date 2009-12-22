@@ -1,0 +1,2 @@
+page.replace_html 'headline',         :partial => 'category/headline'
+page.replace_html 'overview-aliases', :partial => 'category/overview_aliases'

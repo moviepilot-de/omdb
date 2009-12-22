@@ -1,0 +1,34 @@
+<div class="content">
+  <ul class="small-tabs">
+    <li class="active" id="tab_link_upload"><%= link_to_function "Upload Trailer".t, "display_tab('upload')", :accesskey => "1", :title => "Upload new trailer".t %></li>
+    <li id="tab_link_edit"><%= link_to_function "Edit Trailers".t, "display_tab('edit')", :accesskey => "2", :title => "Edit current trailers".t %></li>
+  </ul>
+  
+  <div id="tab_upload" class="tabbed-content">
+    <iframe src="<%= url_for :controller => 'trailer', :action => :upload, :movie => @movie.id %>" style="border: none; width: 660px; height: 200px;">
+    </iframe>
+  </div>
+
+  <div id="tab_edit" class="tabbed-content" style="display: none;">
+    <div class="list_select_box big">
+      <ul>
+        <% @movie.trailers.each do |trailer| %>
+          <li style="padding: 5px;" id="edit-trailer-<%= trailer.id.to_s %>"><div class="action">
+              <%= button_to_remote( 'delete'.t, { :url => { :action => :destroy, :id => trailer.id, :controller => 'trailer' }, :confirm => 'Really delete?'.t }, 
+                                                { :class => 'edit-button', :style => 'margin-right: 5px;' } ) %>
+            </div>
+            <%= trailer.width.to_s + "x" + trailer.height.to_s + " (#{trailer.language.english_name.t.downcase})" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<div class="button-bar">
+  <%= close_box_button "Close" %>
+</div>
+
+<script type="text/javascript">
+  <%= create_small_tabs_navigation [ :upload, :edit ] %>
+</script>

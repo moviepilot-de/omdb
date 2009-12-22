@@ -1,0 +1,7 @@
+<% htmlId = "search-movie-" + movie.id.to_s %>
+<% options = { :onmouseover => "displayMovieInformation(#{movie.id});" } %>
+
+<li class="select" id="<%= htmlId %>">
+  <%= link_to_function link_text_for_movie(movie), "add_movie('#{movie.id}')", options %>
+  <input type="hidden" name="search_result[]" value="<%= movie.id %>"/>
+</li>

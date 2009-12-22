@@ -1,0 +1,105 @@
+/* layout.css
+ * 
+ * Place all properties for the visual-page-wrapper and the general layout
+ * of each page in this file.
+ *
+ * Yes, this is valid CSS, don't mess with it. I'm sorry for all uncompliant
+ * browsers, hope your favorite company releases a browser update soon.
+ */
+
+body {
+  background-image: url("/images/layout/background-left.png");
+  background-repeat: repeat-y;
+}
+
+div#visual-page-wrapper {
+  max-width: 64em;
+  background-image: url("/images/layout/background-header2.png");
+  background-repeat: no-repeat;
+  margin: 0 1em 0 0;
+  padding: 0;
+}
+
+/* Left Column */
+
+div#column-one {
+  width: 203px;
+  background-image:         url('/images/layout/bg-header-left.png');
+  
+  background-repeat:        no-repeat;
+  float: left;
+  z-index: 1;
+}
+
+/* OMDB Logo */
+
+div#column-one div.logo p.logo {
+  background:               url(/images/layout/omdb-logo.png);
+  background-repeat:        no-repeat;
+  height:                   97px;
+  width:                    174px;
+}
+
+div#column-one div.logo p.logo span {
+  display:                  none;
+}
+
+div#column-one div.logo form {
+  text-align: center;
+  padding-bottom:           1em;
+}
+
+div#column-one div.logo form input {
+  width:                    150px;
+  padding:                  2px 3px 1px 3px;
+  font-size:                10pt;
+  color:                    rgb(80, 80, 62);
+  font-weight:              bold;
+  text-align:               center;
+}
+
+div#column-one div#image-box-wrapper {
+  background-image:         url("/images/layout/background-left-bottom.png");
+  background-repeat:        no-repeat;
+  background-position:      bottom;
+  background-color:         white;
+  padding-bottom:           30px;
+}
+
+div#column-one div#image-box-wrapper div#image-box {
+  background-image:         url("/images/layout/background-left-top.png");
+  background-repeat:        no-repeat;
+  background-position:      left -190px;
+  padding-top:              30px;
+  padding-left:             5px;
+  overflow:                 auto;
+}
+
+
+/* Main Content Column */
+
+div#column-two {
+  margin-left:              203px;
+}
+
+div#content-wrapper {
+  background-color:         white;
+  padding-left:             15px;
+  float:                    left;
+  width:                    98%;
+}
+
+div#column-two div#header {
+  overflow: hidden;
+}
+
+div#column-two div.title-row {
+  padding: 0.8em 0;
+}
+
+/* Right Column */
+
+div.column-three {
+  float: right;
+  width: 16em;
+}

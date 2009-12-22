@@ -1,0 +1,9 @@
+<% if edit_or_view_subpage %>
+  <div class="parent-breadcrumb"><%= link_to_object @country %></div>
+  <h2><%= @page.page_name %></h2>
+  <div class="small">&nbsp;</div>
+<% else %>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= @country.local_name(@language) %></h2>
+  <div class="small">&nbsp;</div>
+<% end %>

@@ -1,0 +1,8 @@
+<% if params[:controller] != "content" %>
+<%= render :partial => 'header' %>
+<% end %>
+
+<%= render :partial => 'common/views' %>
+<div id="content">
+  <%= display_diff(@version1, @version2) %>
+</div>

@@ -1,0 +1,31 @@
+<% content_for("title") do %>
+  <%= 'Add a movie to the database'.t %>
+<% end %>
+
+<div class="content" id="new_movie_content">
+  <p>
+    <%= "Thank you for helping us extending our movie database.".t %>
+    <%= "Please choose, if you want to create a new movie, or if you want to create a new movie, season or episode in relation to the current one.".t %>
+  </p>
+
+  <br />
+  
+  <%= lightbox_form_tag :action => 'new' %>
+    <p class="center">
+      <%= hidden_field_tag "movie[class]", "Movie" %>
+      <%= submit_tag "Create a new movie".t %>
+    </p>
+  <%= end_form_tag %>
+  <br />
+  <%= lightbox_form_tag :action => 'new' %>
+    <p class="center">
+      <%= create_new_choice_button %>
+    </p>
+  <%= end_form_tag %>
+
+</div>
+
+<div class="button-bar" id="ajax-buttons">
+  <%= close_box_button %>
+</div>
+      

@@ -1,0 +1,8 @@
+<% htmlId = "search_character_" + character.id.to_s %>
+
+<li class="select" id="<%= htmlId %>">
+  <% link_text = character.name + "<div class=\"indent\">Character in: " + 
+        character.top_movies.slice(0,3).collect{ |m| title_for_movie m }.join(", ") + "</div>" %>
+  <%= link_to_function link_text, "add_character('#{character.id}')" %>
+  <input type="hidden" name="search_result[]" value="ch:<%= character.id %>" />
+</li>

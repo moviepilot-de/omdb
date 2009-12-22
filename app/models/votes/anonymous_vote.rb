@@ -1,0 +1,2 @@
+class AnonymousVote < Vote
+end

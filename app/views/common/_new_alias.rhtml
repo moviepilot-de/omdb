@@ -1,0 +1,21 @@
+<%= show_errors %>
+
+<p><%= "Please enter the alternative name.".t %></p>
+
+<br />
+
+<label for="alias_name"><%= 'Alternative Name'.t %></label>
+<%= text_field("alias", "name") %><br />
+
+<% if @language_independent %>
+  <input type="hidden" value="1" name="alias[language]" />
+<% else %>
+  <label for="alias_language"><%= 'Language'.t %></label>
+  <select name="alias[language]" id="alias_language">
+    <%= options_for_select active_languages_hash, @language.id %>
+  </select>
+<% end %>
+
+<script type="text/javascript">
+  $('alias_name').focus();
+</script>

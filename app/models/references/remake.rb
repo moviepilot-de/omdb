@@ -1,0 +1,2 @@
+class Remake < Reference
+end

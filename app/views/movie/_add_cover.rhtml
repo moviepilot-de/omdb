@@ -1,0 +1,27 @@
+<h4><%= _('CONTENT_ACTION_HEADLINE_NEW_COVER') %></h4>
+
+<%= _('CONTENT_ACTION_NEW_COVER_HELP') %>
+
+<%= show_errors %>
+
+<%= form_remote_tag(:update    => 'ajax-actions',
+                    :url       => { :action     => :add_alias, 
+                                    :id         => @movie.id,
+                                    :controller => 'movie' }) %>
+
+  <label for="alias_name"><%= _('CONTENT_ACTION_NEW_ALIAS_LABEL_NAME') %></label>
+  <div class="form-help"><%= _('CONTENT_ACTION_NEW_ALIAS_HELP_NAME') %></div>
+  <%= text_field("alias", "name") %><br />
+
+  <label for="alias_language"><%= _('CONTENT_ACTION_NEW_ALIAS_LABEL_LANGUAGE') %></label>
+  <div class="form-help"><%= _('CONTENT_ACTION_NEW_ALIAS_HELP_LANGUAGE') %></div>
+  <%= show_available_languages("alias") %><br />
+
+  <label for="alias_description"><%= _('CONTENT_ACTION_NEW_ALIAS_LABEL_DESCRIPTION') %></label>
+  <div class="form-help"><%= _('CONTENT_ACTION_NEW_ALIAS_HELP_DESCRIPTION') %></div>
+  <%= text_field("alias", "description") %><br />
+
+  <%= submit_tag("ok") %>
+  <input type="reset" onclick="Element.hide('ajax-actions')" value="cancel" />
+
+<%= end_form_tag %>

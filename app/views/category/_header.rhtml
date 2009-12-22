@@ -1,0 +1,11 @@
+<% content_for :title do -%>
+  <%= @category ? @category.local_name( @language ) : 'Categories'.t %>
+<% end -%>
+<% content_for("headline") do -%>
+  <%= render :partial => 'headline' %>
+<% end %>
+
+<% content_for('left_column') do -%>
+  <%= render :partial => 'common/image', :locals => { :object => @category.image } %>
+  <%= render :partial => 'page/additional_pages', :object => @category.pages.local(@language) %>
+<% end %>

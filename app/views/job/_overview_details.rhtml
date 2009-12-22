@@ -1,0 +1,28 @@
+<% content_for("right_column") do -%>
+<div id="overview-details">
+
+  <%= render :partial => 'common/overview_hierarchy', :locals => { :object => @job, 
+                 :title => "navigate %s" / "Jobs" } %>
+
+  <%= render :partial => 'common/overview_editors', :locals => { :object => @job } if @job.log_entries.any? %>
+
+  <%= render :partial => 'common/overview_aliases', :locals => { :object => @job, :local_aliases_only => true } %>
+
+  <% if admin? %>
+    <div class="headline-box">
+      <h3><%= 'Administration'.t %></h3>
+    </div>
+    <div id="overview-administration" class="content-box">
+      <%= button_to_function 'Merge Jobs'.t, lightbox( :action => :merge_jobs ) %>
+      <br /><br />
+      <% if not @job.root.nil? and @job.children.empty? %>
+        <%= button_to "Delete Job".t, { :action => "destroy" },
+              { :class => "edit-button"  , :confirm => "Really delete?"} %><br />
+      <% end %>
+      <%= button_to_function "Create Job".t, lightbox( :action => "new" ), 
+            { :class => "edit-button" } %>
+    </div>
+  <% end %>
+
+</div>
+<% end %>

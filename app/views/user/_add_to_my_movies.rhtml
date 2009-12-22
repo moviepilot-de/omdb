@@ -1,0 +1,4 @@
+<div id="add-movie">
+  <%= link_to_remote "add to my movies".t, { :url => add_to_my_movies_url( @movie ) }, :class => 'edit-button', :id => 'add-movie-button' %>
+  <% if flash[:add_movie] %><div class="small grey"><%= flash[:add_movie] %></div><% end %>
+</div>

@@ -1,0 +1,8 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+german_translated:
+  id: 1
+  language_id: 1556
+  pluralization_index: 1
+  tr_key: German
+  text: Deutsch
+  type: ViewTranslation

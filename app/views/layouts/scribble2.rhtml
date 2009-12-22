@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de"
+      lang="de">
+  <head>
+    <meta http-equiv="Content-Type"
+          content="text/html;charset=utf-8" />
+    <%= stylesheet_link_tag "html", :media => "all"  %>
+    <%= stylesheet_link_tag "screen", :media => "screen" %>
+
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag 'in_place_select_editor' %>
+    <%= javascript_include_tag 'calendar' %>
+    <%= javascript_include_tag 'lang/calendar-' + @language.code %>
+  </head>
+  <body>
+    <div id="visual-page-wrapper">
+      <table id="page-columns" cellspacing="0">
+        <tbody>
+          <tr>
+            <td id="column-one">
+              <div id="left-menu">
+                <div id="logo">
+                  &nbsp;
+                </div>
+                <div id="site-search">
+                  <%= render_component :controller => 'search',
+                                       :action     => 'quicksearch' %>
+                </div>
+                <div id="site-language">
+                    Current Language: <strong><%= @language.code %></strong><br />switch to: <%= link_to_remote 'de', :url => {:controller => 'session_ajax', :action => 'set_language', :language => 33 }%>, <%= link_to_remote 'en', :url => {:controller => 'session_ajax', :action => 'set_language', :language => 36} %>
+                </div>
+                <div id="site-navigation">
+                  <ul>
+                    <li><%= link_to 'New Movie', :controller => 'movie', :action => 'new', :id => nil %>
+                    <li>Help</li>
+                    <li>About</li>
+                    <li>Imprint</li>
+                  </ul>
+                </div>
+                <div class="separator">
+                </div>
+                <div id="content-navigation">
+                  <%= @content_for_menu %>
+                </div>
+              </div>
+            </td>
+            <td id="column-two">
+              <div id="main-navigation">
+                <ul>
+                  <li>Movies</li>
+                  <li>People</li>
+                  <li>Festivals</li>
+                  <li>Encyclopedia</li>
+                </ul>
+              </div>
+              <%= @content_for_layout %>
+              <br />
+              <hr />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+    </div>
+  </body>
+</html>

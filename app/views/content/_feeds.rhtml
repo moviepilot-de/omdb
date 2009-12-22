@@ -1,0 +1,5 @@
+<% if params[:action].eql?("wiki") and params[:page] %>
+<%= auto_discovery_link_tag :rss, { :action => "rss", :id => @object.id, :page => @page.page_name } %>
+<% elsif params[:action].eql?("wiki") and not params[:page] %>
+<%= auto_discovery_link_tag :rss, { :action => "rss", :id => @object.id } %>
+<% end %>

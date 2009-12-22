@@ -1,0 +1,12 @@
+<% htmlId = "cast_" + cast.id.to_s %>
+<div class="select" id="<%= htmlId %>">
+  <div class="select-name person">
+    <%= render_action add_ajax_ids(@assign_cast_action, cast, @character), cast %>
+  </div>
+  <div class="select-name person">
+    <%= cast.person.name %>
+  </div>
+  <div class="">
+    <%= local_title_for cast.movie %>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+<%= render :partial => 'language', :collection => @movie.languages %>
+<li class="actions"><%= link_to_function 'Add'.t, lightbox( :action => :new_language ), :class => 'edit' %></li>

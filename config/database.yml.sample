@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  database: omdb_dev 
+  encoding: utf8
+  username: rails
+  password: rails
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql
+  database: omdb_test
+  encoding: utf8
+  username: rails 
+  password: rails
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql
+  database: omdb_prod
+  encoding: utf8
+  username: rails
+  password: rails
+  socket: /var/run/mysqld/mysqld.sock

@@ -1,0 +1,52 @@
+<% content_for("title") do %>
+  <%= 'Add a movie to the database'.t %>
+<% end %>
+
+<%= lightbox_form_tag :action => 'new' %>
+  <div class="content" id="new_movie_content">
+    <p>
+      <%= "Thank you for helping us to extend our movie database.".t %>
+      <%= "All information on omdb is licensed under the terms of the %s." / link_to("Creative Commons Attribution-ShareAlike 2.0 License".t, :controller => "content", :action => :index, :page => "License:CC") %>
+      <%= "By adding a new movie you accept the terms of that license. More information can be found in the %s." / link_to("copyright section".t, :controller => "content", :action => :index, :page => "Copyright") %>
+    </p>
+      
+    <p>
+      <%= "To create a new %s, please enter its <strong>original title</strong>." / @movie.class.to_s.downcase.t %> 
+      <%= "If you do not know the original title, please check the checkbox \"I don't know the original title\", and enter the localized title in %s." / @language.english_name.t.downcase %>
+    </p>
+    
+    <% if not @movie.parent.nil? -%>
+    <p>
+      <%= "You have selected, that this %s will automatically be assigned to" / @movie.class.to_s.downcase %> 
+      <strong><%= link_text_for_movie @movie.parent %></strong>
+    </p>
+    <%= hidden_field_tag 'parent_movie', @movie.parent.id %>
+    <% end -%>
+
+    <p>
+      <label for="movie_name"><%= "Title of #{@movie.class.to_s.downcase}".t %></label>
+      <%= text_field :movie, :name, :size => 40 %>
+      <div style="padding-left: 8.65em; margin-top: -5px;">
+        <input type="checkbox" id="original_name_unknown" name="original_name_unknown" />
+        <label for="original_name_unknown" style="float: none; width: auto; display: inline;"><%= "I don't know the original title".t %></label>
+      </div>
+    </p>
+  </div>
+
+  <div class="button-bar" id="ajax-buttons">
+    <%= hidden_field :movie, :class %>
+    <%= submit_tag 'Next'.t, :disabled => true, :id => 'next_button' %>
+    <%= close_box_button %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('movie_name').focus();
+  $('movie_name').onkeyup = function(){
+    if ($('movie_name').value == "") {
+      $('next_button').disabled = true;
+    } else {
+      $('next_button').disabled = false;      
+    }
+  }
+</script>

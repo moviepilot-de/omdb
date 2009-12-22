@@ -1,0 +1,20 @@
+<%= render(:partial => 'header') unless params[:controller] == "content" %>
+
+<% content_for("right_column") do -%>
+  <div id="overview-details">
+    <div id="overview-votes">
+      <%= render :partial => 'overview_votes' %>
+    </div>
+  </div>
+<% end if @page.related_object.is_a? Movie %>
+
+<div id="content" class="wiki-page">
+  <%= render :partial => 'common/views' %>
+
+  <% @page.related_object.local_pages(@language).each do |page| %>
+    <% next if page.page_name == 'index' -%>
+    <div class="toc-entry"><%= render_wiki_content :content => page, :limit => 350 %>
+      <div class="actions"><%= link_to "more", default_url( page ) %></div>
+    </div>
+  <% end %>
+</div>

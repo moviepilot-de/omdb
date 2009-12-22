@@ -1,0 +1,2 @@
+#!/bin/bash
+for f in log/mongrel*pid; do kill -s 12 `cat $f`; done

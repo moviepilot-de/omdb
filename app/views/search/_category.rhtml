@@ -1,0 +1,26 @@
+<% type = (params[:type].nil? ? type : params[:type]) %>
+<% name = (params[:name].nil? ? name : params[:name]) %>
+<% htmlId = "search-#{name}-" + category.id.to_s %>
+
+<% if not category.assignable? or (!@movie.nil? and ( @movie.category_ids.include?( category.id ) )) %><li class="select"><span><%= category.flattened_name(@language) %></span></li><% else %><li class="select" id="<%= htmlId %>"><% if params[:wiki_search] == 'true'
+         link_text = category.full_flattened_name(@language)
+         method    = 'add_category'
+         options   = {}
+       elsif @category.nil?
+         link_text = category.flattened_name(@language)
+
+         if name.nil?
+           method    = "add_#{type}" 
+	       else
+           method    = "add_#{name}" 
+	       end
+         options   = { :onmouseover =>  "displayCategoryInformation(#{category.id});" }
+       else
+         link_text = category.full_flattened_name(@language)
+         method    = "setCategoryParent"
+         options   = { :onclick =>  "setCategoryParent(#{category.id}); return false;" }
+       end %><% if category.root_id == Category.plot_keyword.id %>
+      <%= link_to_function link_text, 
+              "#{method}('#{category.id}', '#{category.local_name( @language ).gsub("'", "\\'")}')", options %><% else %>
+      <%= link_to_function link_text, 
+              "#{method}('#{category.id}')", options %><% end %><input type="hidden" name="search_result[]" value="<%= category.id %>"/></li><% end -%>

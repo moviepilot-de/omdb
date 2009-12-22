@@ -1,0 +1,2 @@
+class Parody < Reference
+end

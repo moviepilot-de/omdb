@@ -1,0 +1,24 @@
+<% content_for("title") do %>
+  <%= "Edit Facts for %s" / @character.name  %>
+<% end %>
+
+<%= lightbox_form_tag :action => :update_facts %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_facts"><a><%= "Facts".t %></a></li>
+    </ul>
+    <div id="edit_facts_facts" class="tabbed-content">
+      <%= render :partial => 'edit_facts_facts' %>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('character_name').focus();
+</script>

@@ -1,0 +1,19 @@
+<% content_for("title") do %>
+  <%= 'Create Additional Page'.t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => "create_wiki" }  %>
+<div class="content">
+  <p>
+    You want to add a subpage to the current page. Please refer to the help section for more information.
+  </p>
+  <%= hidden_field_tag "type", @type %>
+  <%= hidden_field_tag @object.class.to_s.split('::').last.downcase, @object.id %>
+  <label for="name"><%= "Name".t %></label>
+  <%= text_field_tag "name" %>
+</div>
+<div class="button-bar">
+  <%= submit_tag 'Add'.t, :class => 'disabled', :id => 'add_button', :onclick => "this.disabled = true" %>
+  <%= close_box_button %>
+</div>
+<%= end_form_tag %>

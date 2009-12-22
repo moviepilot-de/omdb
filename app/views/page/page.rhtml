@@ -1,0 +1,16 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="<%= @page_style || 'wiki-page' %>">
+  <%= render :partial => 'common/views' %>
+  <% if @page.new_record? -%>
+    <p><%= 'This page does not exist yet. You may create it by clicking the <em>create page</em> button below.'.t %></p>
+  <% else -%>
+    <%= display_wiki_content @page %>
+  <% end -%>
+
+</div>
+
+<div id="wiki-actions">
+  <% # render :partial => 'page/history' if @page.version && !@page.new_record? %>
+  <%= render :partial => 'page/page_actions' %>
+</div>

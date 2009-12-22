@@ -1,0 +1,10 @@
+<%  for principal in list_principals 
+      dom_id = "#{principal.class}##{principal.id}"
+      if principal == @principal -%>
+<div id="<%= dom_id %>"><%= principal.title %></div>
+<%    else %>
+<%= link_to_remote(principal.title,
+      { :url => {:action => "select", :id => principal} },
+      { :id => dom_id } ) %>
+<%    end
+    end -%>

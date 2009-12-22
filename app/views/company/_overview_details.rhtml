@@ -1,0 +1,33 @@
+<% content_for("right_column") do -%>
+<div id="overview-details">
+  <div class="headline-box">
+    <%= link_to_function 'edit', lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutCompanyFacts' }, :class => 'help-button' %>
+    <h3><%= 'Company Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+
+  <%= render :partial => 'common/overview_editors', :locals => { :object => @company } if @company.log_entries.any? %>
+
+  <%= render :partial => 'common/overview_hierarchy', :locals => { :object => @company, :title => 'Subsidiaries'.t } %>
+
+  <%= render :partial => 'common/overview_last_movies', :locals => { :object => @company } %>
+
+  <%= render :partial => 'common/overview_top_movies', :locals => { :object => @company } %>
+
+  <%= render :partial => 'common/overview_aliases_lang_independent', :locals => { :object => @company } %>
+
+  <% if editor? -%>
+  <div class="headline-box">
+    <h3><%= 'Administration'.t %></h3>
+  </div>
+  <div id="overview-administration" class="content-box">
+    <%= button_to "Delete Company".t, { :action => "destroy" }, 
+          { :class => "edit-button"  , :confirm => "Really delete?"} %>
+  </div>
+  <% end %>
+
+</div>
+<% end %>

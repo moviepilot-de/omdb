@@ -1,0 +1,26 @@
+<div id="popular" style="display: display;">
+  <% companies = Company.popular %>
+  <div class="top">
+    <%= thumbnail_image companies.first.image, :medium %>
+    <h2><%= link_to_object companies.first %></h2>
+  </div>
+
+  <table>
+  <% counter = 2 %>
+  <% companies.slice(1,9).each{ |co| %>
+    <tr>
+      <td>
+        <%= counter.to_s %>
+      </td>
+      <td>
+        <strong><%= link_to_object co %></strong><br />
+        <div><%= co.movies.collect { |m| link_to_object m }.join(", ") %></div>
+      </td>
+      <td>
+		Votes here?
+      </td>
+    </tr>
+    <% counter += 1 -%>
+  <% } %>
+  </table>
+</div>

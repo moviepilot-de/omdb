@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  Element.hide('lbContent');
+  new Effect.Morph('overlay',{
+    style:'background:#333; opacity:1.0',
+    duration:1.5,
+    afterFinish: function(){ $('overlay').style.opacity = 1.0; }
+  });
+  Element.show('lbContent');
+</script>
+<div style="text-align:center;"><object width="500" height="400"><param name="movie" value="http://www.youtube.com/v/<%= @trailer.key %>"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/<%= @trailer.key %>" type="application/x-shockwave-flash" wmode="transparent" width="500" height="400"></embed></object>
+<br />
+<div style="text-align:center; margin-top: 2em"><%= button_to_function 'close'.t, 'closeTrailer()'; %></div>
+</div>

@@ -1,0 +1,26 @@
+<table class="tree" cellspacing="0">
+<% expanded = @expanded_genres[list_genre.id] 
+   has_children = list_genre.has_children? -%>
+<tr>
+<% if has_children %>
+  <td class="expander"><%= link_to_remote(image_tag(expanded ? "ic_collapse" : "ic_expand"), 
+          :url => {:action => "toggle_expanded", :id => list_genre}, 
+          :update => "Genre##{list_genre.id}" ) %></td>
+<% else %>
+  <td><%= image_tag("el_empty") %></td>
+<% end %>
+  <td class="selection_list"><%
+  if list_genre == @genre -%>
+<div class="movable"><%=h list_genre.name %></div>
+<% else -%>
+<%= link_to_remote(list_genre.name, 
+        { :url => {:action => "select", :id => list_genre} } ) %></td>
+<% end -%>
+</tr>
+<% if has_children && expanded -%>
+<tr>
+  <td></td>
+  <td><%= render(:partial => "genres", :object => list_genre.children) %></td>
+</tr>
+<% end %>
+</table>

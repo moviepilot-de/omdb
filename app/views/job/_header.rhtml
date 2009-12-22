@@ -1,0 +1,11 @@
+<% content_for :title do -%>
+  <%= @job ? @job.name : 'Jobs'.t %>
+<% end -%>
+<% content_for("headline") do -%>
+  <%= render :partial => 'headline' %>
+<% end %>
+
+<% content_for('left_column') do -%>
+  <%= render :partial => 'common/image', :locals => { :object => @job.image } %>
+  <%= render :partial => 'page/additional_pages', :object => @job.pages.local(@language) %>
+<% end %>

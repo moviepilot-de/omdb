@@ -1,0 +1,2 @@
+class Homage < Reference
+end

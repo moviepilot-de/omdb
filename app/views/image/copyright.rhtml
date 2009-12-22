@@ -1,0 +1,12 @@
+<%= render :partial => 'header' %>
+<%= render :partial => 'overview_details' %>
+
+<div id="content">
+  <%= render :partial => 'common/views' %>
+
+  <div class="wiki-content long-text">
+    <%= display_wiki_content @page, "please add a detailed rationale, as described on %s, as well as the source of the work and copyright information."/(link_to "Help:NoticeImages", :controller => 'generic_page', :page => 'Help:NoticeImages', :action => :page) %>
+  </div>
+  <%= render :partial => 'page/page_actions' %>
+  <%= image_license_info(@image) %>
+</div>

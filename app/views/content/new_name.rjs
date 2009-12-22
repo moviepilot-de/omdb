@@ -1,0 +1,6 @@
+if @content.errors.empty?
+  page.call "box.deactivate"
+  page.redirect_to page_action
+else
+  page.replace "error-messages", error_messages(:content)
+end

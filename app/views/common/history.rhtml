@@ -1,0 +1,20 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  <p>
+    <%= "The history site provides an overview of all changes that have been made on this omdb site.".t %>
+  </p>
+  <table id="filmography">
+    <div id="log-listing-<%= @log_entries.page %>" style="float: left; overflow:hidden;">
+      <div id="items-for-page-<%= @log_entries.page %>">
+        <% @log_entries.each do |log_entry| %>
+          <%= display_log_entry log_entry %>
+        <% end %>
+      </div>
+    </div>
+  </table>
+  
+  <%= render :partial => 'common/paginate', :locals => { :collection => @log_entries } %>
+  
+</div>

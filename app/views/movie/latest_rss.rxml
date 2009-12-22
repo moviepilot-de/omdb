@@ -1,0 +1,21 @@
+xml.instruct!
+xml.rss :version => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+    xml.title "OMDB: Latest Movies"
+    xml.link h(url_for(:action => 'latest', :type => nil, :only_path => false))
+    xml.description "Latest movies feed on www.omdb.org"
+    xml.pubDate CGI.rfc1123_date(@movies.first.created_at) 
+    @movies.each do |movie|
+      xml.item do
+        xml.title h(title_for_movie(movie).gsub('>', '-') + ( movie.end.nil? ? "" : " (#{movie.end.year})" ))
+        xml.author h(movie.creator ? movie.creator.display_title : 'unknown')
+        abstract = movie.abstract(@language)
+        xml.description(abstract ? abstract.data : '')
+        xml.link(uri = h(url_for(movie.default_url.update(:only_path => false))))
+        xml.guid uri
+        xml.pubDate CGI.rfc1123_date(movie.created_at)
+      end
+    end
+  end
+end
+

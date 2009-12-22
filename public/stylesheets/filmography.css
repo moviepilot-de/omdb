@@ -1,0 +1,36 @@
+table#filmography {
+
+}
+
+table#filmography td {
+  padding:                  3px;
+}
+
+table#filmography td.headline {
+  padding-top:              1em;
+}
+
+table#filmography td.year {
+  font-weight:              bold;
+  width:                    2.5em;
+}
+
+table#filmography td.rating {
+  text-align:               right;
+  width:                    3em;
+}
+
+table#filmography td.rating div {
+  margin-top: 0px;
+  
+}
+
+table#filmography td.actions {
+  width:                    2em;
+  float:                    none;
+}
+
+table#filmography h3 {
+  display:                  inline;
+}
+

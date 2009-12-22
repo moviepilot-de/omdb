@@ -1,0 +1,14 @@
+<% content_for("right_column") do -%>
+
+<div id="overview-details">
+  <div class="headline-box">
+    <%= link_to_function 'edit'.t, lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutImageFacts' }, :class => 'help-button' %>
+    <h3><%= 'Image Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+</div>
+
+<% end -%>

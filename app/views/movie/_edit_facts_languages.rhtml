@@ -1,0 +1,50 @@
+<script type="text/javascript">
+  <%= create_add_function :language %>
+  <%= create_remove_function :language %>
+</script>
+
+<%= edit_freeze_state @movie, :languages %>
+<p>
+  <%= "Please select those languages that are spoken in the original version of this movie (dubbing is not included here). To add a language, search for it, then click it.".t %>
+  <%= "More information can be found in \"%s\"." / link_to( "Help:FactsLanguages".t, :controller => 'generic_page', :page => 'Help:FactsLanguages' ) %>
+</p>
+
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= text_field("filter", "languages", :size => 15, :autocomplete => :off) %>
+      <label for="filter_languages"><%= "Search".t %></label>
+    </th>
+    <th>
+      <%= "Languages spoken in the original version".t %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_languages" class="left">
+          <li class="empty"><%= "please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="selected_languages" class="right">
+          <% @movie.languages.each { |l| %>
+          <li id="movie-language-<%= l.id %>">
+            <%= link_to_function l.english_name.t, "remove_language('#{l.id}')", :class => 'select' %>
+            <input type="hidden" name="languages[]" value="<%= l.id %>"/>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field(:filter_languages,
+                  :frequency => livesearch_filter_frequency,
+                  :update    => "searched_languages",
+                  :before    => "Element.update('searched_languages', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                  :url => { :action     => :filter_languages, 
+                            :controller => 'search' }) %>

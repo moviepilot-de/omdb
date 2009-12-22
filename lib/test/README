@@ -1,0 +1,5 @@
+= Test Coverage -- See which parts of your code are actually tested
+
+Tests ensure that the code we write works as expected. Ideally, every line of code should be executed at least once when all tests are run. Test Coverage helps you find out which parts of your code are actually covered by unit tests and how often individual lines were called.
+
+Test Coverage 

@@ -1,0 +1,24 @@
+<% if principal %>
+<%= form_tag %>
+
+  <%= render_partial("form") %>
+
+  <br />
+  <div id="actions" class="actions">
+  <% if @principal.new_record? -%>
+  <%= submit_button_to_remote("Save",
+        :url => { :action => "create"},
+        :update => {:failure => "form"} ) %>
+  <% else -%>
+  <%= submit_button_to_remote("Save",
+        :url => { :action => "save"},
+        :update => {:failure => "form"} ) %>
+  <%= link_to_remote("Delete", 
+        :url => { :action => "confirm_destroy"},
+        :update => "actions" ) unless principal.intrinsic? %>
+  <% end -%>
+  </div>
+
+<%= end_form_tag %>
+<% end %>
+

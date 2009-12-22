@@ -1,0 +1,19 @@
+<% if not @movie.references.empty? %>
+  <p><%= "This #{@movie.class.to_s.downcase} references to the following movies:".t %></p>
+  <% refs = references_by_type( @movie.references ) %>
+  <% Reference.valid_types.each do |type| %>
+    <% unless refs[type].empty? %>
+      <h4><%= type.to_s.t %></h4>
+      <ul>
+        <% refs[type].each do |ref| %> 
+	  <% next if ref.nil? or ref.referenced_movie.nil? %>
+          <li>
+            <%= link_to_object ref.referenced_movie %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+<% else %>
+  <div class="empty">&nbsp;<%= 'There are no references.'.t %></div>
+<% end %>

@@ -1,0 +1,9 @@
+<ul class="small-tabs">
+  <% [ "Movie", "Character", "Person", "Company", "Category" ].each_with_index { |t, i| %>
+    <% i = i + 1 %>
+    <li <%= "class=\"active\"" if i == 1 %>id="<%= "tab_#{t.pluralize.downcase}" %>">
+      <%= link_to_function t.pluralize.t, "display_tab('#{t.pluralize.downcase}')", 
+            :accesskey => i.to_s, :title => "Search for #{t.pluralize}".t %>
+    </li>
+  <% } %>
+</ul>

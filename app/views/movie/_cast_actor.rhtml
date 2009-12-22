@@ -1,0 +1,19 @@
+<% @cast = actor %>
+<%= 'as'.t  %>
+<% if @cast.character.nil? %>
+  <%= link_to_function (@cast.comment.strip.empty? ? "..." : @cast.comment ) , lightbox({
+                                      :controller => 'cast', 
+                                      :action     => 'edit_character', 
+                                      :id => @cast.id }), :class => 'edit' %>
+  <% if not @cast.aliases.local( @language ).empty? %>
+  (<%= link_to_function @cast.aliases.local( @language ).first.name,
+                          lightbox( { :controller => 'cast',
+                                      :action     => 'edit_alias',
+                                      :id         => @cast.id } ), :class => 'edit' %>)
+  <% end %>
+<% else %>
+  <%= link_to_object @cast.character %>
+  <span class="small">(<%= link_to_remote 'break character relation'.t, :url=> { :controller => 'cast', :action => :remove_character, :id => @cast.id } %>)</span>
+  <% if editor? %>
+  <% end %>
+<% end %>

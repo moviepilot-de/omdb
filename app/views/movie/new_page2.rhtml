@@ -1,0 +1,67 @@
+<% content_for("title") do %>
+  <%= 'Add a movie to the database'.t %>
+<% end %>
+
+<%= lightbox_form_tag :action => 'create' %>
+  <div class="content" id="new_movie_content">
+    <table class="list-add-box">
+      <tr>
+        <th>
+          <h3><%= 'Did you mean one of them?'.t %></h3>
+        </th>
+        <th>
+          <%= "Details".t %>
+        </th>
+      </tr>
+      <tr>
+        <td width="50%">
+          <div class="list_select_box">
+            <ul id="selected_movies" class="left">
+              <% @add_form_parameter = false %>
+              <% @movies.each do |movie| %>
+                <%= render :partial => 'search/movie', :object => movie %>
+              <% end %>
+            </ul>
+          </div>
+          <div style="margin-left: -4px; line-height: 1.7em; margin-top: 10px;">
+            <input id="continue_creation" type="checkbox" name="continue" onchange="check_method();" style="float: left;"><label for="continue_creation" style="float: none; display: inline;"><%= "%s I want to create is not on the list above." / "The #{@movie.class.to_s.downcase}".t %></label>
+          </div>
+        </td>
+        <td>
+          <div id="more-information">
+            <p style="padding: 3px;">
+              <%= 'We found at least one movie with a similar title in our database.'.t %>
+              <%= 'Please make sure the movie you want to add is not already in the list.'.t %>
+              <%= 'To see details of each movie in the list, move your mouse over the title.'.t %>
+              <%= 'If the movie you want to create is definitely not in the list on the left, tag the box and click the Create button.' / @movie.class.to_s.downcase %>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="button-bar" id="ajax-buttons">
+    <%= hidden_field :movie, :class %>
+    <%= hidden_field :movie, :name %>
+    <%= hidden_field_tag( :parent_movie, @movie.parent.id ) unless @movie.parent.nil? %>
+    <%= hidden_field_tag( :continue, true ) %>
+    <%= hidden_field_tag( :original_name_unknown, true ) if @original_name_unknown %>
+
+    <%= submit_tag 'Create'.t, :disabled => true, :id => 'next_button' %>
+    <%= close_box_button %>
+  </div>
+  
+<script type="text/javascript">
+  check_method = function() {
+    if ($("continue_creation").checked == true) {
+      $("next_button").disabled = false;
+    } else {
+      $("next_button").disabled = true;
+    }
+  }
+
+  add_movie = function(id) {
+    displayMovieInformation( id );
+  }
+</script>

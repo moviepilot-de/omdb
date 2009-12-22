@@ -1,0 +1,11 @@
+<div style="float: right; font-size: 0.8em; padding-top: 0.8em;">
+  [ 
+  <%= editable_attribute :movie, 
+                         :type,  
+                         'dropdown',
+                         @movie,
+                         url_for(:controller => "movie_ajax", :action => "set_movie_type", :id => @movie.id),
+                         :select_options => movie_class_options_for_select %>
+                                       
+  ]
+</div>

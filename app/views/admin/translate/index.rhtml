@@ -1,0 +1,30 @@
+<% content_for("headline") do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <% if Locale.base_language == @language  -%>
+    <h2>Please choose language for translation</h2>
+  <% else -%>
+    <h2><%= "Language: " + Locale.language.native_name %></h2>
+  <% end -%>
+<% end -%>
+
+<% #not_base_language do -%>
+<table>
+  <thead>
+    <tr>
+      <th style="border-bottom: 1px solid #ccc">English</th>
+      <th style="border-bottom: 1px solid #ccc"><%= @language.native_name %></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @translations.each do |tr| -%>
+    <%= render :partial => 'translation_form', :locals => {:tr => tr} %>
+  <% end -%>
+  </tbody>
+</table>
+<% #end  -%>
+
+<br />
+
+<%= pagination_links @translation_pages %>
+<br />
+<br />

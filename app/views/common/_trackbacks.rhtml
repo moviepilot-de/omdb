@@ -1,0 +1,33 @@
+<% object_url = h(url_for(object.default_url.update(:only_path => false))) %>
+<% object_title = h(object.local_name(@language)) %>
+<!-- 
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <rdf:Description
+    rdf:about="<%= object_url %>"
+    dc:identifier="<%= object_url %>"
+    dc:title="<%= object_title %>"
+    trackback:ping="<%= h(url_for(object.default_url.update(:action => :trackback, :language => @language.code , :only_path => false))) %>" />
+</rdf:RDF> 
+-->
+<div class="headline-box">
+  <%= link_to "trackback url", { :action => :trackback, :language => @language.code }, :class => 'help-button no-right-border' %>
+  <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:Trackback' }, :class => 'help-button no-right-border' %>
+  <h3><%= "Trackbacks".t %></h3>
+</div>
+
+<div id="overview-trackbacks" class="content-box">
+  <% if object.trackbacks.size > 0 %>
+    <ul id="trackbacks">
+      <%= render :partial => 'common/trackback', :collection => object.trackbacks( (params[:page] || 1), @language ) %>
+    </ul>
+  <% else %>
+    <div class="empty"><%= "no trackbacks yet" %></div>
+  <% end %>
+  <div style="float: right; padding-top: 1em;">
+    <%= link_to image_tag('icons/technorati'), "http://technorati.com/faves?add=#{object_url}" %>
+    <%= link_to image_tag('icons/delicious'), "http://del.icio.us/post?url=#{object_url};title=#{object_title}" %>
+    <%= link_to image_tag('icons/digg'), "http://digg.com/submit?phase=2&amp;url=#{object_url};title=#{object_title}" %>
+  </div>
+</div>

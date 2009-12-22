@@ -1,0 +1,16 @@
+<div class="fact">
+  <div class="title"><%= 'License'.t %>:</div>
+  <div class="value"><%= license_text @image %></div>
+</div>
+
+<% if not @image.license == Image::LICENSE_OWNWORK -%>
+<div class="fact">
+  <div class="title"><%= 'Uploaded by'.t %>:</div>
+  <div class="value"><%= @image.user.nil? ? "unknown".t : link_to_object( @image.user ) %></div>
+</div>
+<% end -%>
+
+<div class="fact">
+  <div class="title"><%= 'Source'.t %>:</div>
+  <div class="value"><%= link_to "View Source".t, :href => @image.source %></div>
+</div>

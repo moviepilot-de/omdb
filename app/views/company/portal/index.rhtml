@@ -1,0 +1,27 @@
+<%= render :partial => '/company/portal/header' %>
+<script type="text/javascript">
+  function display_tab(id) {
+    Element.hide('popular');
+    Element.hide('rated');
+    Element.hide('added');
+
+    Element.show(id);
+  }
+</script>
+
+<div id="content">
+  <div id="company-top-lists">
+    <div class="headline">
+      <ul>
+        <li><%= link_to_function "Popular".t, "display_tab('popular')" %></li>
+        <li><%= link_to_function "Highest Rated".t, "display_tab('rated')" %></li>
+        <li><%= link_to_function "Recently added".t, "display_tab('added')" %></li>
+      </ul>
+    </div>
+    <div class="details">
+      <%= render :partial => '/company/portal/popular' %>
+      <%= render :partial => '/company/portal/rated' %>
+      <%= render :partial => '/company/portal/added' %>
+    </div>
+  </div>
+</div>

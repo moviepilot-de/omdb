@@ -1,0 +1,6 @@
+<h2>Indexer Status</h2>
+<div id="status">
+  <%= render :partial => 'status' %>
+</div>
+<%= periodically_call_remote :url => { :action => 'status' }, :frequency => 5, :update => 'status' %>
+<%= link_to 'Rebuild index', { :action => 'rebuild_index' }, { :post => true, :confirm => 'Really rebuild the index?' } %>

@@ -1,0 +1,18 @@
+<% Job::CREW_MEMBERS.each do |member| -%>
+  <% unless @movie.send( member.to_s.pluralize ).empty? %>
+    <div class="fact">
+      <div class="title"><%= member.to_s.titleize.gsub("Of", "of").t %>:</div>
+      <div class="value">
+          <%= @movie.send( member.to_s.pluralize ).collect{ |c| c.person }.uniq[0..2].collect { |p|
+                link_to_object p
+              }.join(", ") -%>
+        </div>
+      </div>
+  <% end -%>
+<% end -%>
+
+<% if @movie.crew.empty? -%>
+  <div class="empty">
+    <%= "no crew members have been entered yet.".t %>
+  </div>
+<% end -%>

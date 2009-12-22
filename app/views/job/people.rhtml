@@ -1,0 +1,6 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  <%= render :partial => 'person/search_box', :collection => @job.popular_people %>
+</div>

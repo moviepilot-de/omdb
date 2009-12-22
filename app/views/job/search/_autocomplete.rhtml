@@ -1,0 +1,3 @@
+<li id="job_autocomplete_<%= job.id %>"><div class="detail-box"><h4><%= local_name( job, @language ) %></h4></div>
+  <% unless (@language == Locale.base_language) %><div class="small informal"><%= local_name( job, Locale.base_language ) %></div><% end %>
+</li>

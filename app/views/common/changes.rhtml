@@ -1,0 +1,17 @@
+<%= render :partial => '/common/portal_header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  
+  <p>
+    <%= "The changes page provides an overview of all changes to all #{@model.to_s.pluralize}.".t %>
+  </p>
+  
+  <table id="filmography">
+    <% @log_entries.each do |log_entry| %>
+      <%= display_log_entry_for_changes_page log_entry %>
+    <% end %>
+  </table>
+
+  <%= render :partial => 'common/paginate', :locals => { :collection => @log_entries } %>
+</div>

@@ -1,0 +1,18 @@
+xml.instruct!
+xml.rss :version => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+    xml.title h("#{@object.local_name(@language)} @ omdb - trackbacks")
+    xml.link h(url_for(:action => :trackback, :id => @object.id, :only_path => false))
+    xml.description h("Latest trackbacks for %s" / @object.local_name(@language))
+    xml.language @language.code
+    xml.pubDate CGI.rfc1123_date(@object.track_backs.last.created_at) unless @object.track_backs.empty?
+    @object.track_backs.find( :all, :limit => 10, :conditions => ['language_id = ?', @language.id]).reverse.slice(0, 10).each do |tb|
+      xml.item do
+        xml.title h(tb.title)
+        xml.link h(tb.url)
+        xml.description(tb.excerpt) unless tb.excerpt.nil? or tb.excerpt.empty?
+        xml.pubDate CGI.rfc1123_date(tb.created_at)
+      end
+    end
+  end
+end

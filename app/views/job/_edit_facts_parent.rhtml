@@ -1,0 +1,43 @@
+<%= edit_freeze_state @job, :parent %>
+<p>
+enter some text here, describing what to do.. 
+enter some text here, describing what to do.. 
+enter some text here, describing what to do.. 
+enter some text here, describing what to do.. 
+</p>
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= "Parent Job / Department".t %>
+    </th>
+    <th>
+      <label for="filter_jobs"><%= "Search Jobs".t %></label>
+      <%= text_field("filter", "jobs", :size => 15) %>
+    </th>
+  </tr>
+  <tr>
+    <td width="50%" style="padding: 2px;">
+      <div id="more-information">
+        <strong><%= @job.parent.local_name( @language ) %></strong>
+        <p><%= @job.parent.abstract( @language ).data %></p>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_jobs" class="right">
+          <li class="empty"><%= "Please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<input type="hidden" name="parent" value="<%= @job.parent.id %>" id="job_parent" />
+
+<%= observe_field(:filter_jobs,
+                  :frequency => 0.5,
+                  :update    => "searched_jobs",
+                  :loading   => "Element.update('searched_jobs', '<li class=\"empty loading\">&nbsp;</li>');",
+                  :url => { :action     => :find_jobs, 
+                            :job        => @job.id,
+                            :controller => 'search' }) %>

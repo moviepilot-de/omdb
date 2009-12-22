@@ -1,0 +1,8 @@
+<div>
+  <%= tag_cloud( @movie.keywords ) %>
+  <% if @movie.keywords.empty? -%>
+    <div class="empty"><%= "no plot keywords have been entered yet.".t %></div>
+  <% else -%>
+    <%= keyword_vote_icons_link if logged_in? %>
+  <% end -%>
+</div>

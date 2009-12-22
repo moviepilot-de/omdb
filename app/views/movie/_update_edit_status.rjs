@@ -1,0 +1,2 @@
+page.replace_html 'overview-status', @movie.edit_status
+page.call 'box.deactivate()'

@@ -1,0 +1,15 @@
+<% content_for :title do -%>
+  <%= @movie ? @movie.name : 'Movies'.t %>
+<% end -%>
+<% content_for :headline do -%>
+  <%= render :partial => 'headline' %>
+<% end %>
+<% content_for :headline_details do -%>
+  <%= render :partial => 'headline_details' %>
+<% end %>
+
+<% content_for :left_column do -%>
+  <%= render :partial => 'common/image', :locals => { :object => @movie.cover } %>
+  <%= render :partial => 'user/add_to_my_movies', :locals => { :movie => @movie } if logged_in? %>
+  <%= render :partial => 'page/additional_pages', :object => @movie.pages.local(@language) %>
+<% end %>

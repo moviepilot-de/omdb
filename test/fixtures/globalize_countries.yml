@@ -1,0 +1,2650 @@
+--- 
+globalize_countries_033: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: BW
+  number_grouping_scheme: western
+  english_name: Botswana
+  decimal_sep: .
+  id: "33"
+  currency_code: BWP
+  currency_format: 
+globalize_countries_114: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KM
+  number_grouping_scheme: western
+  english_name: Comoros
+  decimal_sep: 
+  id: "114"
+  currency_code: KMF
+  currency_format: 
+globalize_countries_140: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: MN
+  number_grouping_scheme: western
+  english_name: Mongolia
+  decimal_sep: .
+  id: "140"
+  currency_code: MNT
+  currency_format: 
+globalize_countries_221: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: UG
+  number_grouping_scheme: western
+  english_name: Uganda
+  decimal_sep: .
+  id: "221"
+  currency_code: UGS
+  currency_format: 
+globalize_countries_007: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AM
+  number_grouping_scheme: western
+  english_name: Armenia
+  decimal_sep: 
+  id: "7"
+  currency_code: AMD
+  currency_format: 
+globalize_countries_034: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: BY
+  number_grouping_scheme: western
+  english_name: Belarus
+  decimal_sep: .
+  id: "34"
+  currency_code: BYR
+  currency_format: 
+globalize_countries_060: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: DZ
+  number_grouping_scheme: western
+  english_name: Algeria
+  decimal_sep: .
+  id: "60"
+  currency_code: DZD
+  currency_format: 
+globalize_countries_115: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KN
+  number_grouping_scheme: western
+  english_name: St. Kitts and Nevis
+  decimal_sep: 
+  id: "115"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_141: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MO
+  number_grouping_scheme: western
+  english_name: Macao
+  decimal_sep: 
+  id: "141"
+  currency_code: MOP
+  currency_format: 
+globalize_countries_222: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: UM
+  number_grouping_scheme: western
+  english_name: United States Minor Outlying Islands
+  decimal_sep: 
+  id: "222"
+  currency_code: USD
+  currency_format: 
+globalize_countries_008: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AN
+  number_grouping_scheme: western
+  english_name: Netherlands Antilles
+  decimal_sep: 
+  id: "8"
+  currency_code: ANG
+  currency_format: 
+usa: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: US
+  number_grouping_scheme: western
+  english_name: United States of America
+  decimal_sep: .
+  id: "223"
+  currency_code: USD
+  currency_format: 
+globalize_countries_061: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: EC
+  number_grouping_scheme: western
+  english_name: Ecuador
+  decimal_sep: ","
+  id: "61"
+  currency_code: USD
+  currency_format: 
+globalize_countries_116: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KP
+  number_grouping_scheme: western
+  english_name: Korea
+  decimal_sep: 
+  id: "116"
+  currency_code: KPW
+  currency_format: 
+globalize_countries_142: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MP
+  number_grouping_scheme: western
+  english_name: Northern Mariana Islands
+  decimal_sep: 
+  id: "142"
+  currency_code: USD
+  currency_format: 
+globalize_countries_035: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BZ
+  number_grouping_scheme: western
+  english_name: Belize
+  decimal_sep: 
+  id: "35"
+  currency_code: BZD
+  currency_format: 
+globalize_countries_224: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: UY
+  number_grouping_scheme: western
+  english_name: Uruguay
+  decimal_sep: ","
+  id: "224"
+  currency_code: UYU
+  currency_format: 
+globalize_countries_062: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: EE
+  number_grouping_scheme: western
+  english_name: Estonia
+  decimal_sep: ","
+  id: "62"
+  currency_code: EEK
+  currency_format: 
+globalize_countries_117: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: KR
+  number_grouping_scheme: western
+  english_name: Korea
+  decimal_sep: .
+  id: "117"
+  currency_code: KRW
+  currency_format: 
+globalize_countries_143: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MQ
+  number_grouping_scheme: western
+  english_name: Martinique
+  decimal_sep: 
+  id: "143"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_009: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AO
+  number_grouping_scheme: western
+  english_name: Angola
+  decimal_sep: 
+  id: "9"
+  currency_code: AON
+  currency_format: 
+globalize_countries_036: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: CA
+  number_grouping_scheme: western
+  english_name: Canada
+  decimal_sep: .
+  id: "36"
+  currency_code: CAD
+  currency_format: 
+globalize_countries_225: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: UZ
+  number_grouping_scheme: western
+  english_name: Uzbekistan
+  decimal_sep: .
+  id: "225"
+  currency_code: UZS
+  currency_format: 
+globalize_countries_118: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: KW
+  number_grouping_scheme: western
+  english_name: Kuwait
+  decimal_sep: .
+  id: "118"
+  currency_code: KWD
+  currency_format: 
+globalize_countries_144: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MR
+  number_grouping_scheme: western
+  english_name: Mauritania
+  decimal_sep: 
+  id: "144"
+  currency_code: MRO
+  currency_format: 
+globalize_countries_170: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: PH
+  number_grouping_scheme: western
+  english_name: Philippines
+  decimal_sep: .
+  id: "170"
+  currency_code: PHP
+  currency_format: 
+globalize_countries_037: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CC
+  number_grouping_scheme: western
+  english_name: Cocos  Islands
+  decimal_sep: 
+  id: "37"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_063: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: EG
+  number_grouping_scheme: western
+  english_name: Egypt
+  decimal_sep: .
+  id: "63"
+  currency_code: EGP
+  currency_format: 
+globalize_countries_226: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: VA
+  number_grouping_scheme: western
+  english_name: Holy See
+  decimal_sep: 
+  id: "226"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_090: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GW
+  number_grouping_scheme: western
+  english_name: Guinea-Bissau
+  decimal_sep: 
+  id: "90"
+  currency_code: GWP
+  currency_format: 
+globalize_countries_145: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MS
+  number_grouping_scheme: western
+  english_name: Montserrat
+  decimal_sep: 
+  id: "145"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_171: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: PK
+  number_grouping_scheme: western
+  english_name: Pakistan
+  decimal_sep: .
+  id: "171"
+  currency_code: PKR
+  currency_format: 
+globalize_countries_038: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CD
+  number_grouping_scheme: western
+  english_name: Congo
+  decimal_sep: 
+  id: "38"
+  currency_code: 
+  currency_format: 
+globalize_countries_064: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: EH
+  number_grouping_scheme: western
+  english_name: Western Sahara
+  decimal_sep: 
+  id: "64"
+  currency_code: MAD
+  currency_format: 
+globalize_countries_227: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: VC
+  number_grouping_scheme: western
+  english_name: St. Vincent and the Grenadines
+  decimal_sep: 
+  id: "227"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_119: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KY
+  number_grouping_scheme: western
+  english_name: Cayman Islands
+  decimal_sep: 
+  id: "119"
+  currency_code: KYD
+  currency_format: 
+globalize_countries_146: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: MT
+  number_grouping_scheme: western
+  english_name: Malta
+  decimal_sep: .
+  id: "146"
+  currency_code: MTL
+  currency_format: 
+globalize_countries_172: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: PL
+  number_grouping_scheme: western
+  english_name: Poland
+  decimal_sep: ","
+  id: "172"
+  currency_code: PLN
+  currency_format: 
+globalize_countries_039: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CF
+  number_grouping_scheme: western
+  english_name: Central African Republic
+  decimal_sep: 
+  id: "39"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_065: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: ER
+  number_grouping_scheme: western
+  english_name: Eritrea
+  decimal_sep: .
+  id: "65"
+  currency_code: ERN
+  currency_format: 
+globalize_countries_091: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GY
+  number_grouping_scheme: western
+  english_name: Guyana
+  decimal_sep: 
+  id: "91"
+  currency_code: GYD
+  currency_format: 
+globalize_countries_228: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: VE
+  number_grouping_scheme: western
+  english_name: Venezuela
+  decimal_sep: ","
+  id: "228"
+  currency_code: VEB
+  currency_format: 
+globalize_countries_147: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MU
+  number_grouping_scheme: western
+  english_name: Mauritius
+  decimal_sep: 
+  id: "147"
+  currency_code: MUR
+  currency_format: 
+globalize_countries_173: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: PM
+  number_grouping_scheme: western
+  english_name: St. Pierre and Miquelon
+  decimal_sep: 
+  id: "173"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_066: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: ES
+  number_grouping_scheme: western
+  english_name: Spain
+  decimal_sep: ","
+  id: "66"
+  currency_code: EUR
+  currency_format: "%n \xE2\x82\xAC"
+globalize_countries_092: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: HK
+  number_grouping_scheme: western
+  english_name: Hong Kong
+  decimal_sep: .
+  id: "92"
+  currency_code: HKD
+  currency_format: HK$%n
+globalize_countries_148: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MV
+  number_grouping_scheme: western
+  english_name: Maldives
+  decimal_sep: 
+  id: "148"
+  currency_code: MVR
+  currency_format: 
+globalize_countries_174: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: PN
+  number_grouping_scheme: western
+  english_name: Pitcairn Island
+  decimal_sep: 
+  id: "174"
+  currency_code: NZD
+  currency_format: 
+globalize_countries_067: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: ET
+  number_grouping_scheme: western
+  english_name: Ethiopia
+  decimal_sep: .
+  id: "67"
+  currency_code: ETB
+  currency_format: 
+globalize_countries_093: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: HM
+  number_grouping_scheme: western
+  english_name: Heard and McDonald Islands
+  decimal_sep: 
+  id: "93"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_229: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: VG
+  number_grouping_scheme: western
+  english_name: British Virgin Islands
+  decimal_sep: 
+  id: "229"
+  currency_code: USD
+  currency_format: 
+globalize_countries_175: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: PR
+  number_grouping_scheme: western
+  english_name: Puerto Rico
+  decimal_sep: .
+  id: "175"
+  currency_code: USD
+  currency_format: 
+globalize_countries_068: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: FI
+  number_grouping_scheme: western
+  english_name: Finland
+  decimal_sep: ","
+  id: "68"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_094: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: HN
+  number_grouping_scheme: western
+  english_name: Honduras
+  decimal_sep: .
+  id: "94"
+  currency_code: HNL
+  currency_format: 
+globalize_countries_149: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MW
+  number_grouping_scheme: western
+  english_name: Malawi
+  decimal_sep: 
+  id: "149"
+  currency_code: MWK
+  currency_format: 
+globalize_countries_176: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: PS
+  number_grouping_scheme: western
+  english_name: Palestinian Territory
+  decimal_sep: 
+  id: "176"
+  currency_code: 
+  currency_format: 
+globalize_countries_069: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: FJ
+  number_grouping_scheme: western
+  english_name: Fiji
+  decimal_sep: 
+  id: "69"
+  currency_code: FJD
+  currency_format: 
+globalize_countries_095: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: HR
+  number_grouping_scheme: western
+  english_name: Hrvatska
+  decimal_sep: ","
+  id: "95"
+  currency_code: HRK
+  currency_format: 
+globalize_countries_096: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: HT
+  number_grouping_scheme: western
+  english_name: Haiti
+  decimal_sep: 
+  id: "96"
+  currency_code: HTG
+  currency_format: 
+globalize_countries_177: 
+  date_format: 
+  currency_decimal_sep: $
+  thousands_sep: .
+  code: PT
+  number_grouping_scheme: western
+  english_name: Portugal
+  decimal_sep: $
+  id: "177"
+  currency_code: EUR
+  currency_format: "%n \xE2\x82\xAC"
+globalize_countries_097: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: HU
+  number_grouping_scheme: western
+  english_name: Hungary
+  decimal_sep: ","
+  id: "97"
+  currency_code: HUF
+  currency_format: 
+globalize_countries_178: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: PW
+  number_grouping_scheme: western
+  english_name: Palau
+  decimal_sep: 
+  id: "178"
+  currency_code: USD
+  currency_format: 
+globalize_countries_098: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: ID
+  number_grouping_scheme: western
+  english_name: Indonesia
+  decimal_sep: ","
+  id: "98"
+  currency_code: IDR
+  currency_format: 
+globalize_countries_179: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: PY
+  number_grouping_scheme: western
+  english_name: Paraguay
+  decimal_sep: ","
+  id: "179"
+  currency_code: PYG
+  currency_format: 
+globalize_countries_099: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: IE
+  number_grouping_scheme: western
+  english_name: Ireland
+  decimal_sep: .
+  id: "99"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_100: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: IL
+  number_grouping_scheme: western
+  english_name: Israel
+  decimal_sep: .
+  id: "100"
+  currency_code: ILS
+  currency_format: "%n \xE2\x82\xAA"
+globalize_countries_020: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: BE
+  number_grouping_scheme: western
+  english_name: Belgium
+  decimal_sep: ","
+  id: "20"
+  currency_code: EUR
+  currency_format: "%n \xE2\x82\xAC"
+globalize_countries_101: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: IN
+  number_grouping_scheme: indian
+  english_name: India
+  decimal_sep: .
+  id: "101"
+  currency_code: INR
+  currency_format: Rs.%n
+globalize_countries_021: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BF
+  number_grouping_scheme: western
+  english_name: Burkina Faso
+  decimal_sep: 
+  id: "21"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_102: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: IO
+  number_grouping_scheme: western
+  english_name: British Indian Ocean Territory
+  decimal_sep: 
+  id: "102"
+  currency_code: GBP
+  currency_format: 
+globalize_countries_022: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: BG
+  number_grouping_scheme: western
+  english_name: Bulgaria
+  decimal_sep: ","
+  id: "22"
+  currency_code: BGL
+  currency_format: 
+globalize_countries_103: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: IQ
+  number_grouping_scheme: western
+  english_name: Iraq
+  decimal_sep: .
+  id: "103"
+  currency_code: IQD
+  currency_format: 
+globalize_countries_210: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TK
+  number_grouping_scheme: western
+  english_name: Tokelau
+  decimal_sep: 
+  id: "210"
+  currency_code: NZD
+  currency_format: 
+globalize_countries_023: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: BH
+  number_grouping_scheme: western
+  english_name: Bahrain
+  decimal_sep: .
+  id: "23"
+  currency_code: BHD
+  currency_format: 
+globalize_countries_104: 
+  date_format: 
+  currency_decimal_sep: !binary |
+    2as=
+
+  thousands_sep: !binary |
+    2aw=
+
+  code: IR
+  number_grouping_scheme: western
+  english_name: Iran
+  decimal_sep: !binary |
+    2as=
+
+  id: "104"
+  currency_code: IRR
+  currency_format: 
+globalize_countries_130: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: LV
+  number_grouping_scheme: western
+  english_name: Latvia
+  decimal_sep: ","
+  id: "130"
+  currency_code: LVL
+  currency_format: 
+globalize_countries_211: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TL
+  number_grouping_scheme: western
+  english_name: Timor-Leste
+  decimal_sep: 
+  id: "211"
+  currency_code: 
+  currency_format: 
+globalize_countries_024: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BI
+  number_grouping_scheme: western
+  english_name: Burundi
+  decimal_sep: 
+  id: "24"
+  currency_code: BIF
+  currency_format: 
+globalize_countries_050: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CU
+  number_grouping_scheme: western
+  english_name: Cuba
+  decimal_sep: 
+  id: "50"
+  currency_code: CUP
+  currency_format: 
+globalize_countries_105: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: IS
+  number_grouping_scheme: western
+  english_name: Iceland
+  decimal_sep: ","
+  id: "105"
+  currency_code: ISK
+  currency_format: 
+globalize_countries_131: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: LY
+  number_grouping_scheme: western
+  english_name: Libyan Arab Jamahiriya
+  decimal_sep: .
+  id: "131"
+  currency_code: LYD
+  currency_format: 
+globalize_countries_212: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TM
+  number_grouping_scheme: western
+  english_name: Turkmenistan
+  decimal_sep: 
+  id: "212"
+  currency_code: TMM
+  currency_format: 
+globalize_countries_025: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BJ
+  number_grouping_scheme: western
+  english_name: Benin
+  decimal_sep: 
+  id: "25"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_051: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CV
+  number_grouping_scheme: western
+  english_name: Cape Verde
+  decimal_sep: 
+  id: "51"
+  currency_code: CVE
+  currency_format: 
+globalize_countries_106: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: IT
+  number_grouping_scheme: western
+  english_name: Italy
+  decimal_sep: ","
+  id: "106"
+  currency_code: EUR
+  currency_format: "\xE2\x82\xAC %n"
+globalize_countries_132: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: MA
+  number_grouping_scheme: western
+  english_name: Morocco
+  decimal_sep: .
+  id: "132"
+  currency_code: MAD
+  currency_format: 
+globalize_countries_213: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: TN
+  number_grouping_scheme: western
+  english_name: Tunisia
+  decimal_sep: .
+  id: "213"
+  currency_code: TND
+  currency_format: 
+globalize_countries_026: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BM
+  number_grouping_scheme: western
+  english_name: Bermuda
+  decimal_sep: 
+  id: "26"
+  currency_code: BMD
+  currency_format: 
+globalize_countries_052: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CX
+  number_grouping_scheme: western
+  english_name: Christmas Island
+  decimal_sep: 
+  id: "52"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_107: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: JM
+  number_grouping_scheme: western
+  english_name: Jamaica
+  decimal_sep: 
+  id: "107"
+  currency_code: JMD
+  currency_format: 
+globalize_countries_133: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MC
+  number_grouping_scheme: western
+  english_name: Monaco
+  decimal_sep: 
+  id: "133"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_214: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TO
+  number_grouping_scheme: western
+  english_name: Tonga
+  decimal_sep: 
+  id: "214"
+  currency_code: TOP
+  currency_format: 
+globalize_countries_027: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BN
+  number_grouping_scheme: western
+  english_name: Brunei Darussalam
+  decimal_sep: 
+  id: "27"
+  currency_code: BND
+  currency_format: 
+globalize_countries_053: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CY
+  number_grouping_scheme: western
+  english_name: Cyprus
+  decimal_sep: 
+  id: "53"
+  currency_code: CYP
+  currency_format: 
+globalize_countries_134: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MD
+  number_grouping_scheme: western
+  english_name: Moldova
+  decimal_sep: 
+  id: "134"
+  currency_code: MDL
+  currency_format: 
+globalize_countries_160: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: "NO"
+  number_grouping_scheme: western
+  english_name: Norway
+  decimal_sep: ","
+  id: "160"
+  currency_code: NOK
+  currency_format: kr %n
+globalize_countries_215: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: TR
+  number_grouping_scheme: western
+  english_name: Turkey
+  decimal_sep: ","
+  id: "215"
+  currency_code: TRL
+  currency_format: 
+globalize_countries_028: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: BO
+  number_grouping_scheme: western
+  english_name: Bolivia
+  decimal_sep: ","
+  id: "28"
+  currency_code: BOB
+  currency_format: 
+globalize_countries_054: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: CZ
+  number_grouping_scheme: western
+  english_name: Czech Republic
+  decimal_sep: ","
+  id: "54"
+  currency_code: CZK
+  currency_format: 
+globalize_countries_080: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GI
+  number_grouping_scheme: western
+  english_name: Gibraltar
+  decimal_sep: 
+  id: "80"
+  currency_code: GIP
+  currency_format: 
+globalize_countries_108: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: JO
+  number_grouping_scheme: western
+  english_name: Jordan
+  decimal_sep: .
+  id: "108"
+  currency_code: JOD
+  currency_format: 
+globalize_countries_135: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MG
+  number_grouping_scheme: western
+  english_name: Madagascar
+  decimal_sep: 
+  id: "135"
+  currency_code: MGF
+  currency_format: 
+globalize_countries_161: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: NP
+  number_grouping_scheme: western
+  english_name: Nepal
+  decimal_sep: .
+  id: "161"
+  currency_code: NPR
+  currency_format: 
+globalize_countries_216: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TT
+  number_grouping_scheme: western
+  english_name: Trinidad and Tobago
+  decimal_sep: 
+  id: "216"
+  currency_code: TTD
+  currency_format: 
+globalize_countries_029: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: BR
+  number_grouping_scheme: western
+  english_name: Brazil
+  decimal_sep: ","
+  id: "29"
+  currency_code: BRR
+  currency_format: R$%n
+globalize_countries_055: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: DE
+  number_grouping_scheme: western
+  english_name: Germany
+  decimal_sep: ","
+  id: "55"
+  currency_code: EUR
+  currency_format: "%n \xE2\x82\xAC"
+globalize_countries_081: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: GL
+  number_grouping_scheme: western
+  english_name: Greenland
+  decimal_sep: ","
+  id: "81"
+  currency_code: DKK
+  currency_format: 
+globalize_countries_109: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: JP
+  number_grouping_scheme: western
+  english_name: Japan
+  decimal_sep: .
+  id: "109"
+  currency_code: JPY
+  currency_format: "\xC2\xA5%n"
+globalize_countries_136: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MH
+  number_grouping_scheme: western
+  english_name: Marshall Islands
+  decimal_sep: 
+  id: "136"
+  currency_code: USD
+  currency_format: 
+globalize_countries_162: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NR
+  number_grouping_scheme: western
+  english_name: Nauru
+  decimal_sep: 
+  id: "162"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_217: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TV
+  number_grouping_scheme: western
+  english_name: Tuvalu
+  decimal_sep: 
+  id: "217"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_056: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: DJ
+  number_grouping_scheme: western
+  english_name: Djibouti
+  decimal_sep: 
+  id: "56"
+  currency_code: DJF
+  currency_format: 
+globalize_countries_082: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GM
+  number_grouping_scheme: western
+  english_name: Gambia
+  decimal_sep: 
+  id: "82"
+  currency_code: GMD
+  currency_format: 
+globalize_countries_137: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: MK
+  number_grouping_scheme: western
+  english_name: Macedonia
+  decimal_sep: ","
+  id: "137"
+  currency_code: MKD
+  currency_format: 
+globalize_countries_163: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NU
+  number_grouping_scheme: western
+  english_name: Niue
+  decimal_sep: 
+  id: "163"
+  currency_code: NZD
+  currency_format: 
+globalize_countries_057: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: DK
+  number_grouping_scheme: western
+  english_name: Denmark
+  decimal_sep: ","
+  id: "57"
+  currency_code: DKK
+  currency_format: 
+globalize_countries_083: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GN
+  number_grouping_scheme: western
+  english_name: Guinea
+  decimal_sep: 
+  id: "83"
+  currency_code: GNS
+  currency_format: 
+globalize_countries_138: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: ML
+  number_grouping_scheme: western
+  english_name: Mali
+  decimal_sep: 
+  id: "138"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_164: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: NZ
+  number_grouping_scheme: western
+  english_name: New Zealand
+  decimal_sep: .
+  id: "164"
+  currency_code: NZD
+  currency_format: 
+globalize_countries_190: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: SG
+  number_grouping_scheme: western
+  english_name: Singapore
+  decimal_sep: .
+  id: "190"
+  currency_code: SGD
+  currency_format: 
+globalize_countries_218: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: TW
+  number_grouping_scheme: western
+  english_name: Taiwan
+  decimal_sep: .
+  id: "218"
+  currency_code: TWD
+  currency_format: NT$%n
+globalize_countries_058: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: DM
+  number_grouping_scheme: western
+  english_name: Dominica
+  decimal_sep: 
+  id: "58"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_084: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GP
+  number_grouping_scheme: western
+  english_name: Guadaloupe
+  decimal_sep: 
+  id: "84"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_139: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MM
+  number_grouping_scheme: western
+  english_name: Myanmar
+  decimal_sep: 
+  id: "139"
+  currency_code: 
+  currency_format: 
+globalize_countries_165: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: OM
+  number_grouping_scheme: western
+  english_name: Oman
+  decimal_sep: .
+  id: "165"
+  currency_code: OMR
+  currency_format: 
+globalize_countries_191: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SH
+  number_grouping_scheme: western
+  english_name: St. Helena
+  decimal_sep: 
+  id: "191"
+  currency_code: SHP
+  currency_format: 
+globalize_countries_219: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TZ
+  number_grouping_scheme: western
+  english_name: Tanzania
+  decimal_sep: 
+  id: "219"
+  currency_code: TZS
+  currency_format: 
+globalize_countries_059: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: DO
+  number_grouping_scheme: western
+  english_name: Dominican Republic
+  decimal_sep: .
+  id: "59"
+  currency_code: DOP
+  currency_format: 
+globalize_countries_085: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GQ
+  number_grouping_scheme: western
+  english_name: Equatorial Guinea
+  decimal_sep: 
+  id: "85"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_166: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: PA
+  number_grouping_scheme: western
+  english_name: Panama
+  decimal_sep: .
+  id: "166"
+  currency_code: PAB
+  currency_format: 
+globalize_countries_192: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: SI
+  number_grouping_scheme: western
+  english_name: Slovenia
+  decimal_sep: ","
+  id: "192"
+  currency_code: SIT
+  currency_format: 
+globalize_countries_086: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: GR
+  number_grouping_scheme: western
+  english_name: Greece
+  decimal_sep: ","
+  id: "86"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_167: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: PE
+  number_grouping_scheme: western
+  english_name: Peru
+  decimal_sep: .
+  id: "167"
+  currency_code: PEI
+  currency_format: 
+globalize_countries_193: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SJ
+  number_grouping_scheme: western
+  english_name: Svalbard & Jan Mayen Islands
+  decimal_sep: 
+  id: "193"
+  currency_code: NOK
+  currency_format: 
+globalize_countries_087: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GS
+  number_grouping_scheme: western
+  english_name: South Georgia and the South Sandwich Islands
+  decimal_sep: 
+  id: "87"
+  currency_code: GBP
+  currency_format: 
+globalize_countries_168: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: PF
+  number_grouping_scheme: western
+  english_name: French Polynesia
+  decimal_sep: 
+  id: "168"
+  currency_code: XPF
+  currency_format: 
+globalize_countries_194: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: !binary |
+    wqA=
+
+  code: SK
+  number_grouping_scheme: western
+  english_name: Slovakia
+  decimal_sep: ","
+  id: "194"
+  currency_code: SKK
+  currency_format: 
+globalize_countries_088: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: GT
+  number_grouping_scheme: western
+  english_name: Guatemala
+  decimal_sep: .
+  id: "88"
+  currency_code: GTQ
+  currency_format: 
+globalize_countries_169: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: PG
+  number_grouping_scheme: western
+  english_name: Papua New Guinea
+  decimal_sep: 
+  id: "169"
+  currency_code: PGK
+  currency_format: 
+globalize_countries_195: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SL
+  number_grouping_scheme: western
+  english_name: Sierra Leone
+  decimal_sep: 
+  id: "195"
+  currency_code: SLL
+  currency_format: 
+globalize_countries_089: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GU
+  number_grouping_scheme: western
+  english_name: Guam
+  decimal_sep: 
+  id: "89"
+  currency_code: USD
+  currency_format: 
+globalize_countries_196: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SM
+  number_grouping_scheme: western
+  english_name: San Marino
+  decimal_sep: 
+  id: "196"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_197: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SN
+  number_grouping_scheme: western
+  english_name: Senegal
+  decimal_sep: 
+  id: "197"
+  currency_code: XOF
+  currency_format: 
+somalia: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SO
+  number_grouping_scheme: western
+  english_name: Somalia
+  decimal_sep: 
+  id: "198"
+  currency_code: SOS
+  currency_format: 
+globalize_countries_199: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SR
+  number_grouping_scheme: western
+  english_name: Suriname
+  decimal_sep: 
+  id: "199"
+  currency_code: SRG
+  currency_format: 
+globalize_countries_010: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AQ
+  number_grouping_scheme: western
+  english_name: Antarctica
+  decimal_sep: 
+  id: "10"
+  currency_code: NOK
+  currency_format: 
+globalize_countries_011: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: AR
+  number_grouping_scheme: western
+  english_name: Argentina
+  decimal_sep: ","
+  id: "11"
+  currency_code: ARA
+  currency_format: 
+globalize_countries_200: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: ST
+  number_grouping_scheme: western
+  english_name: Sao Tome and Principe
+  decimal_sep: 
+  id: "200"
+  currency_code: STD
+  currency_format: 
+globalize_countries_012: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AS
+  number_grouping_scheme: western
+  english_name: American Samoa
+  decimal_sep: 
+  id: "12"
+  currency_code: USD
+  currency_format: 
+globalize_countries_201: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: SV
+  number_grouping_scheme: western
+  english_name: El Salvador
+  decimal_sep: .
+  id: "201"
+  currency_code: SVC
+  currency_format: 
+globalize_countries_013: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: AT
+  number_grouping_scheme: western
+  english_name: Austria
+  decimal_sep: ","
+  id: "13"
+  currency_code: EUR
+  currency_format: "\xE2\x82\xAC %n"
+globalize_countries_120: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KZ
+  number_grouping_scheme: western
+  english_name: Kazakhstan
+  decimal_sep: 
+  id: "120"
+  currency_code: KZT
+  currency_format: 
+globalize_countries_202: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: SY
+  number_grouping_scheme: western
+  english_name: Syrian Arab Republic
+  decimal_sep: .
+  id: "202"
+  currency_code: SYP
+  currency_format: 
+globalize_countries_014: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: AU
+  number_grouping_scheme: western
+  english_name: Australia
+  decimal_sep: .
+  id: "14"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_040: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CG
+  number_grouping_scheme: western
+  english_name: Congo
+  decimal_sep: 
+  id: "40"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_121: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: LA
+  number_grouping_scheme: western
+  english_name: Lao People's Democratic Republic
+  decimal_sep: .
+  id: "121"
+  currency_code: LAK
+  currency_format: 
+globalize_countries_203: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SZ
+  number_grouping_scheme: western
+  english_name: Swaziland
+  decimal_sep: 
+  id: "203"
+  currency_code: SZL
+  currency_format: 
+globalize_countries_015: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AW
+  number_grouping_scheme: western
+  english_name: Aruba
+  decimal_sep: 
+  id: "15"
+  currency_code: AWG
+  currency_format: 
+globalize_countries_041: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: "'"
+  code: CH
+  number_grouping_scheme: western
+  english_name: Switzerland
+  decimal_sep: ","
+  id: "41"
+  currency_code: CHF
+  currency_format: SFr. %n
+globalize_countries_122: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: LB
+  number_grouping_scheme: western
+  english_name: Lebanon
+  decimal_sep: .
+  id: "122"
+  currency_code: LBP
+  currency_format: 
+globalize_countries_230: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: VI
+  number_grouping_scheme: western
+  english_name: US Virgin Islands
+  decimal_sep: 
+  id: "230"
+  currency_code: USD
+  currency_format: 
+globalize_countries_016: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: AZ
+  number_grouping_scheme: western
+  english_name: Azerbaijan
+  decimal_sep: .
+  id: "16"
+  currency_code: AZM
+  currency_format: 
+globalize_countries_042: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CI
+  number_grouping_scheme: western
+  english_name: Cote D'Ivoire
+  decimal_sep: 
+  id: "42"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_123: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: LC
+  number_grouping_scheme: western
+  english_name: St. Lucia
+  decimal_sep: 
+  id: "123"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_204: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TC
+  number_grouping_scheme: western
+  english_name: Turks and Caicos Islands
+  decimal_sep: 
+  id: "204"
+  currency_code: USD
+  currency_format: 
+globalize_countries_231: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: VN
+  number_grouping_scheme: western
+  english_name: Viet Nam
+  decimal_sep: ","
+  id: "231"
+  currency_code: VND
+  currency_format: 
+globalize_countries_017: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: BA
+  number_grouping_scheme: western
+  english_name: Bosnia and Herzegovina
+  decimal_sep: ","
+  id: "17"
+  currency_code: BAM
+  currency_format: 
+globalize_countries_043: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CK
+  number_grouping_scheme: western
+  english_name: Cook Islands
+  decimal_sep: 
+  id: "43"
+  currency_code: NZD
+  currency_format: 
+globalize_countries_124: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: LI
+  number_grouping_scheme: western
+  english_name: Liechtenstein
+  decimal_sep: 
+  id: "124"
+  currency_code: CHF
+  currency_format: 
+globalize_countries_150: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: MX
+  number_grouping_scheme: western
+  english_name: Mexico
+  decimal_sep: .
+  id: "150"
+  currency_code: MXN
+  currency_format: 
+globalize_countries_205: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TD
+  number_grouping_scheme: western
+  english_name: Chad
+  decimal_sep: 
+  id: "205"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_232: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: VU
+  number_grouping_scheme: western
+  english_name: Vanuatu
+  decimal_sep: 
+  id: "232"
+  currency_code: VUV
+  currency_format: 
+globalize_countries_018: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BB
+  number_grouping_scheme: western
+  english_name: Barbados
+  decimal_sep: 
+  id: "18"
+  currency_code: BBD
+  currency_format: 
+globalize_countries_044: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: CL
+  number_grouping_scheme: western
+  english_name: Chile
+  decimal_sep: ","
+  id: "44"
+  currency_code: CLF
+  currency_format: 
+globalize_countries_070: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: FK
+  number_grouping_scheme: western
+  english_name: Falkland Islands
+  decimal_sep: 
+  id: "70"
+  currency_code: FKP
+  currency_format: 
+globalize_countries_125: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: LK
+  number_grouping_scheme: western
+  english_name: Sri Lanka
+  decimal_sep: 
+  id: "125"
+  currency_code: LKR
+  currency_format: 
+globalize_countries_151: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: MY
+  number_grouping_scheme: western
+  english_name: Malaysia
+  decimal_sep: .
+  id: "151"
+  currency_code: MYR
+  currency_format: 
+globalize_countries_206: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TF
+  number_grouping_scheme: western
+  english_name: French Southern Territories
+  decimal_sep: 
+  id: "206"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_233: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: WF
+  number_grouping_scheme: western
+  english_name: Wallis and Futuna Islands
+  decimal_sep: 
+  id: "233"
+  currency_code: XPF
+  currency_format: 
+globalize_countries_019: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: BD
+  number_grouping_scheme: western
+  english_name: Bangladesh
+  decimal_sep: .
+  id: "19"
+  currency_code: BDT
+  currency_format: 
+globalize_countries_045: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CM
+  number_grouping_scheme: western
+  english_name: Cameroon
+  decimal_sep: 
+  id: "45"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_071: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: FM
+  number_grouping_scheme: western
+  english_name: Micronesia
+  decimal_sep: 
+  id: "71"
+  currency_code: USD
+  currency_format: 
+globalize_countries_126: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: LR
+  number_grouping_scheme: western
+  english_name: Liberia
+  decimal_sep: 
+  id: "126"
+  currency_code: LRD
+  currency_format: 
+globalize_countries_152: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: MZ
+  number_grouping_scheme: western
+  english_name: Mozambique
+  decimal_sep: 
+  id: "152"
+  currency_code: MZM
+  currency_format: 
+globalize_countries_234: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: WS
+  number_grouping_scheme: western
+  english_name: Samoa
+  decimal_sep: 
+  id: "234"
+  currency_code: WST
+  currency_format: 
+globalize_countries_046: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: CN
+  number_grouping_scheme: western
+  english_name: China
+  decimal_sep: .
+  id: "46"
+  currency_code: CNY
+  currency_format: Y%n
+globalize_countries_072: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: FO
+  number_grouping_scheme: western
+  english_name: Faeroe Islands
+  decimal_sep: ","
+  id: "72"
+  currency_code: DKK
+  currency_format: 
+globalize_countries_127: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: LS
+  number_grouping_scheme: western
+  english_name: Lesotho
+  decimal_sep: 
+  id: "127"
+  currency_code: LSL
+  currency_format: 
+globalize_countries_153: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NA
+  number_grouping_scheme: western
+  english_name: Namibia
+  decimal_sep: 
+  id: "153"
+  currency_code: NAD
+  currency_format: 
+globalize_countries_207: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: TG
+  number_grouping_scheme: western
+  english_name: Togo
+  decimal_sep: 
+  id: "207"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_235: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: YE
+  number_grouping_scheme: western
+  english_name: Yemen
+  decimal_sep: .
+  id: "235"
+  currency_code: 
+  currency_format: 
+globalize_countries_047: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: CO
+  number_grouping_scheme: western
+  english_name: Colombia
+  decimal_sep: ","
+  id: "47"
+  currency_code: COP
+  currency_format: 
+france: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: FR
+  number_grouping_scheme: western
+  english_name: France
+  decimal_sep: ","
+  id: "73"
+  currency_code: EUR
+  currency_format: "%n \xE2\x82\xAC"
+globalize_countries_128: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: LT
+  number_grouping_scheme: western
+  english_name: Lithuania
+  decimal_sep: ","
+  id: "128"
+  currency_code: LTL
+  currency_format: 
+globalize_countries_154: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NC
+  number_grouping_scheme: western
+  english_name: New Caledonia
+  decimal_sep: 
+  id: "154"
+  currency_code: XPF
+  currency_format: 
+globalize_countries_180: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: QA
+  number_grouping_scheme: western
+  english_name: Qatar
+  decimal_sep: .
+  id: "180"
+  currency_code: QAR
+  currency_format: 
+globalize_countries_208: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: TH
+  number_grouping_scheme: western
+  english_name: Thailand
+  decimal_sep: .
+  id: "208"
+  currency_code: THB
+  currency_format: 
+globalize_countries_236: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: YT
+  number_grouping_scheme: western
+  english_name: Mayotte
+  decimal_sep: 
+  id: "236"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_048: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: CR
+  number_grouping_scheme: western
+  english_name: Costa Rica
+  decimal_sep: .
+  id: "48"
+  currency_code: CRC
+  currency_format: 
+globalize_countries_074: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GA
+  number_grouping_scheme: western
+  english_name: Gabon
+  decimal_sep: 
+  id: "74"
+  currency_code: XAF
+  currency_format: 
+globalize_countries_129: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: LU
+  number_grouping_scheme: western
+  english_name: Luxembourg
+  decimal_sep: ","
+  id: "129"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_155: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NE
+  number_grouping_scheme: western
+  english_name: Niger
+  decimal_sep: 
+  id: "155"
+  currency_code: XOF
+  currency_format: 
+globalize_countries_181: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: RE
+  number_grouping_scheme: western
+  english_name: Reunion
+  decimal_sep: 
+  id: "181"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_209: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: TJ
+  number_grouping_scheme: western
+  english_name: Tajikistan
+  decimal_sep: .
+  id: "209"
+  currency_code: TJR
+  currency_format: 
+globalize_countries_237: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: ZA
+  number_grouping_scheme: western
+  english_name: South Africa
+  decimal_sep: .
+  id: "237"
+  currency_code: ZAR
+  currency_format: 
+globalize_countries_049: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: CS
+  number_grouping_scheme: western
+  english_name: Serbia and Montenegro
+  decimal_sep: 
+  id: "49"
+  currency_code: CSD
+  currency_format: 
+uk: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: GB
+  number_grouping_scheme: western
+  english_name: United Kingdom
+  decimal_sep: .
+  id: "75"
+  currency_code: GBP
+  currency_format: "\xC2\xA3%n"
+globalize_countries_156: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NF
+  number_grouping_scheme: western
+  english_name: Norfolk Island
+  decimal_sep: 
+  id: "156"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_182: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: RO
+  number_grouping_scheme: western
+  english_name: Romania
+  decimal_sep: ","
+  id: "182"
+  currency_code: ROL
+  currency_format: 
+globalize_countries_238: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: ZM
+  number_grouping_scheme: western
+  english_name: Zambia
+  decimal_sep: 
+  id: "238"
+  currency_code: ZMK
+  currency_format: 
+globalize_countries_076: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GD
+  number_grouping_scheme: western
+  english_name: Grenada
+  decimal_sep: 
+  id: "76"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_157: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: NG
+  number_grouping_scheme: western
+  english_name: Nigeria
+  decimal_sep: 
+  id: "157"
+  currency_code: NGN
+  currency_format: 
+globalize_countries_183: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: RU
+  number_grouping_scheme: western
+  english_name: Russian Federation
+  decimal_sep: .
+  id: "183"
+  currency_code: RUB
+  currency_format: 
+globalize_countries_239: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: ZW
+  number_grouping_scheme: western
+  english_name: Zimbabwe
+  decimal_sep: .
+  id: "239"
+  currency_code: ZWD
+  currency_format: 
+globalize_countries_077: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: GE
+  number_grouping_scheme: western
+  english_name: Georgia
+  decimal_sep: ","
+  id: "77"
+  currency_code: GEL
+  currency_format: 
+globalize_countries_158: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: NI
+  number_grouping_scheme: western
+  english_name: Nicaragua
+  decimal_sep: .
+  id: "158"
+  currency_code: NIC
+  currency_format: 
+globalize_countries_184: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: RW
+  number_grouping_scheme: western
+  english_name: Rwanda
+  decimal_sep: 
+  id: "184"
+  currency_code: RWF
+  currency_format: 
+globalize_countries_078: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GF
+  number_grouping_scheme: western
+  english_name: French Guiana
+  decimal_sep: 
+  id: "78"
+  currency_code: EUR
+  currency_format: 
+globalize_countries_159: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: NL
+  number_grouping_scheme: western
+  english_name: Netherlands
+  decimal_sep: ","
+  id: "159"
+  currency_code: EUR
+  currency_format: "\xE2\x82\xAC %n"
+globalize_countries_185: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: SA
+  number_grouping_scheme: western
+  english_name: Saudi Arabia
+  decimal_sep: .
+  id: "185"
+  currency_code: SAR
+  currency_format: 
+globalize_countries_079: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: GH
+  number_grouping_scheme: western
+  english_name: Ghana
+  decimal_sep: 
+  id: "79"
+  currency_code: GHC
+  currency_format: 
+globalize_countries_186: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SB
+  number_grouping_scheme: western
+  english_name: Solomon Islands
+  decimal_sep: 
+  id: "186"
+  currency_code: SBD
+  currency_format: 
+globalize_countries_187: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: SC
+  number_grouping_scheme: western
+  english_name: Seychelles
+  decimal_sep: 
+  id: "187"
+  currency_code: SCR
+  currency_format: 
+globalize_countries_188: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: SD
+  number_grouping_scheme: western
+  english_name: Sudan
+  decimal_sep: .
+  id: "188"
+  currency_code: SDP
+  currency_format: 
+globalize_countries_189: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: 
+  code: SE
+  number_grouping_scheme: western
+  english_name: Sweden
+  decimal_sep: ","
+  id: "189"
+  currency_code: SEK
+  currency_format: "%n kr"
+globalize_countries_001: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AD
+  number_grouping_scheme: western
+  english_name: Andorra
+  decimal_sep: 
+  id: "1"
+  currency_code: EUR
+  currency_format: 
+uae: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: ","
+  code: AE
+  number_grouping_scheme: western
+  english_name: United Arab Emirates
+  decimal_sep: .
+  id: "2"
+  currency_code: AED
+  currency_format: 
+globalize_countries_003: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AF
+  number_grouping_scheme: western
+  english_name: Afghanistan
+  decimal_sep: 
+  id: "3"
+  currency_code: AFA
+  currency_format: 
+globalize_countries_110: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KE
+  number_grouping_scheme: western
+  english_name: Kenya
+  decimal_sep: 
+  id: "110"
+  currency_code: KES
+  currency_format: 
+globalize_countries_004: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AG
+  number_grouping_scheme: western
+  english_name: Antigua and Barbuda
+  decimal_sep: 
+  id: "4"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_030: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BS
+  number_grouping_scheme: western
+  english_name: Bahamas
+  decimal_sep: 
+  id: "30"
+  currency_code: BSD
+  currency_format: 
+globalize_countries_111: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KG
+  number_grouping_scheme: western
+  english_name: Kyrgyz Republic
+  decimal_sep: 
+  id: "111"
+  currency_code: KGS
+  currency_format: 
+globalize_countries_005: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: AI
+  number_grouping_scheme: western
+  english_name: Anguilla
+  decimal_sep: 
+  id: "5"
+  currency_code: XCD
+  currency_format: 
+globalize_countries_031: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BT
+  number_grouping_scheme: western
+  english_name: Bhutan
+  decimal_sep: 
+  id: "31"
+  currency_code: BTN
+  currency_format: 
+globalize_countries_112: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KH
+  number_grouping_scheme: western
+  english_name: Cambodia
+  decimal_sep: 
+  id: "112"
+  currency_code: KHR
+  currency_format: 
+globalize_countries_006: 
+  date_format: 
+  currency_decimal_sep: ","
+  thousands_sep: .
+  code: AL
+  number_grouping_scheme: western
+  english_name: Albania
+  decimal_sep: ","
+  id: "6"
+  currency_code: ALL
+  currency_format: 
+globalize_countries_032: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: BV
+  number_grouping_scheme: western
+  english_name: Bouvet Island
+  decimal_sep: 
+  id: "32"
+  currency_code: NOK
+  currency_format: 
+globalize_countries_113: 
+  date_format: 
+  currency_decimal_sep: 
+  thousands_sep: 
+  code: KI
+  number_grouping_scheme: western
+  english_name: Kiribati
+  decimal_sep: 
+  id: "113"
+  currency_code: AUD
+  currency_format: 
+globalize_countries_220: 
+  date_format: 
+  currency_decimal_sep: .
+  thousands_sep: 
+  code: UA
+  number_grouping_scheme: western
+  english_name: Ukraine
+  decimal_sep: .
+  id: "220"
+  currency_code: UAH
+  currency_format: 

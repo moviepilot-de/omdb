@@ -1,0 +1,27 @@
+<% content_for("title") do %>
+  <%= "Merge Categories/Plot Keywords".t %>
+<% end %>
+
+<%= form_tag :action => :merge %>
+                    
+  <div class="content">
+    <h4 align="center">
+      <%= "Please select the Categories you'd like to merge with: %s" / @category.local_name(@language) %><br>
+      <%= "Attention: see the documentation if you'd like to know what it does!".t %>
+    </h4>
+    <%= render :partial => 'edit_category_merging', :locals => { :type => :category, :display_options => false } %>
+    <div class="info-bar">
+      <h3 id="more-information-headline" class="closed"><%= link_to_function "More Information".t, 'toggleDetails()' %></h3>
+      <div id="more-information" style="display: none;">
+      </div>
+    </div>
+  </div>
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('filter_categories').focus();
+</script>

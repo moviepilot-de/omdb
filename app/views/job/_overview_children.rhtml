@@ -1,0 +1,6 @@
+<% if not @job.children.empty? %>
+  <%= @job.children.sort { |a,b|
+        a.local_name( @language ) <=> b.local_name( @language ) }.collect { |job|
+          link_to_object job
+      }.join(", ") %>
+<% end %>

@@ -1,0 +1,33 @@
+<% content_for("title") do %>
+  <%= "Create new Job".t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => :create },
+                    :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                    :success => "box.deactivate()" %>
+
+<div class="content">
+
+  <div class="input">
+    <label for="alias_name"><%= "Name".t %></label>
+    <%= display_attribute :alias, :name %>
+  </div>
+
+  <% if @language != Locale.base_language %>
+    <div class="input">
+      <label for="base_alias_name"><%= "Name (english)".t %></label>
+      <%= display_attribute :base_alias, :name %>
+    </div>
+  <% end %>
+</div>
+
+<div class="button-bar">
+  <%= submit_button %>
+  <%= close_box_button "Cancel" %>
+</div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('alias_name').focus();
+</script>

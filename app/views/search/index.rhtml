@@ -1,0 +1,19 @@
+<% content_for("headline") do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= "Results for: %s" / session[:last_search] %></h2>
+<% end %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+
+  <div id="results">
+    <div id="search-listing-<%= @results.page %>" style="float: left; overflow:hidden;">
+      <div id="items-for-page-<%= @results.page %>">
+        <% @results.each do |result| %>
+          <%= render :partial => "common/generic_search_box", :locals => { :generic_search_box => result } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= render :partial => 'common/paginate', :locals => { :collection => @results } %>
+</div>

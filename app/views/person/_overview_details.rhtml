@@ -1,0 +1,45 @@
+<% content_for("right_column") do -%>
+<div id="overview-details">
+
+  <div class="headline-box">
+    <%= link_to_function 'edit', lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutPersonFacts' }, :class => 'help-button' %>
+    <h3><%= 'Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+
+  <%= render :partial => 'common/overview_editors', :locals => { :object => @person } if @person.log_entries.any? %>
+
+  <%= render :partial => 'common/overview_aliases_lang_independent', :locals => { :object => @person } %>
+  
+  <%= render :partial => 'common/overview_upcoming_movies', :locals => { :object => @person } %>
+
+  <%= render :partial => 'common/overview_last_movies', :locals => { :object => @person } %>
+
+  <%= render :partial => 'common/overview_top_movies', :locals => { :object => @person } %>
+
+  <% unless @person.upcoming_movies.empty? -%>
+  <div class="headline-box">
+    <%= link_to 'show all movies'.t, { :action => :filmography }, :class => 'help-button no-right-border'  %>
+    <h3><%= 'Upcoming Movies'.t %></h3>
+  </div>
+  <div id="overview-upcoming-movies" class="content-box">
+  </div>
+  <% end -%>
+
+  <% if admin? %>
+  <div class="headline-box">
+    <h3><%= 'Administration'.t %></h3>
+  </div>
+  <div id="overview-administration" class="content-box">
+    <%= button_to "Delete Person".t, { :action => "destroy" }, 
+          { :class => "edit-button"  , :confirm => "Really delete?"} %><br />
+    <br />
+    <%= button_to_function 'merge people'.t, lightbox( :action => :merge_people ), :class => "edit-button" %><br />
+  </div>
+  <% end %>
+
+</div>
+<% end %>

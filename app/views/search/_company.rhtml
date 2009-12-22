@@ -1,0 +1,9 @@
+<% htmlId = "search-company-" + company.id.to_s %>
+<li class="select" id="<%= htmlId %>">
+  <% if @company.nil? %>
+    <%= link_to_function company.name, "add_company('#{company.id}')" %>
+  <% else %>
+    <%= link_to_function company.name, "setCompanyParent('#{company.id}'); return false;" %>
+  <% end %>
+  <input type="hidden" name="search_result[]" value="<%= company.id %>" />
+</li>

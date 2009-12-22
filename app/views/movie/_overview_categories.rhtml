@@ -1,0 +1,19 @@
+<div>
+  <% category_type_hash.each { |root, cats| %>
+    <h4><%= root.local_name(@language) %></h4>
+    <ul id="movie-categories-<%= root.name.downcase %>">
+      <%= render :partial => 'movie/category', :collection => cats %>
+    </ul>
+  <% } %>
+  <% if @movie.categories.empty? -%>
+    <div class="empty"><%= "no categories have been entered yet.".t %></div>
+  <% else -%>
+    <% if @vote_icons -%>
+      <p class="vote-text">
+        <%= link_to_remote 'done voting'.t, { :url => { :action => :display_categories } }, :class => "edit" %>
+      </p>
+    <% else -%>
+      <%= category_vote_icons_link if logged_in? %>
+    <% end -%>
+  <% end -%>
+</div>

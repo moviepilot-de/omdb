@@ -1,0 +1,152 @@
+--- 
+companies_028: 
+  name: "Imp\xC3\xA9ria"
+  id: "179"
+  parent_id: 
+  popularity: "0"
+companies_017: 
+  name: Fida cinematografica
+  id: "130"
+  parent_id: 
+  popularity: "0"
+tri_star: 
+  name: Tri Star
+  id: "61"
+  parent_id: 
+  popularity: "1"
+companies_018: 
+  name: Embassy International
+  id: "145"
+  parent_id: 
+  popularity: "0"
+companies_007: 
+  name: "France 3 Cin\xC3\xA9ma S.A."
+  id: "81"
+  parent_id: 
+  popularity: "1"
+companies_019: 
+  name: Gaumont British Production
+  id: "148"
+  parent_id: 
+  popularity: "1"
+el_deseo: 
+  name: El Deseo
+  id: "92"
+  parent_id: 
+  popularity: "1"
+avon_production: 
+  name: Avon Production
+  id: "166"
+  parent_id: 
+  popularity: "0"
+films_carrosse: 
+  name: Les Films du Carrosse
+  id: "101"
+  parent_id: 
+  popularity: "0"
+companies_021: 
+  name: Roxy Film
+  id: "167"
+  parent_id: 
+  popularity: "0"
+companies_010: 
+  name: "Les Productions Artistes Associ\xC3\xA9s"
+  id: "121"
+  parent_id: 
+  popularity: "0"
+companies_022: 
+  name: CJD
+  id: "168"
+  parent_id: 
+  popularity: "0"
+companies_011: 
+  name: Ulysse Production
+  id: "122"
+  parent_id: 
+  popularity: "0"
+companies_023: 
+  name: Rialto Film
+  id: "169"
+  parent_id: 
+  popularity: "0"
+companies_012: 
+  name: Town
+  id: "123"
+  parent_id: 
+  popularity: "0"
+paramount: 
+  name: Paramount Pictures
+  id: "4"
+  parent_id: 
+  popularity: "1"
+companies_024: 
+  name: Ciby 2000
+  id: "172"
+  parent_id: 
+  popularity: "0"
+unitec_films: 
+  name: Unitec Films
+  id: "124"
+  parent_id: 
+  popularity: "0"
+wingnut: 
+  name: WingNut Films
+  id: "17"
+  parent_id: 
+  popularity: "1"
+companies_025: 
+  name: Concordia
+  id: "176"
+  parent_id: 
+  popularity: "0"
+companies_014: 
+  name: Big Primate Pictures
+  id: "125"
+  parent_id: 
+  popularity: "1"
+warner_bros: 
+  name: Warner Bros.
+  id: "25"
+  parent_id: 
+  popularity: "1"
+companies_026: 
+  name: Compagnia Cinematografica Champion
+  id: "177"
+  parent_id: 
+  popularity: "0"
+companies_015: 
+  name: MFPV Film
+  id: "126"
+  parent_id: 
+  popularity: "0"
+companies_004: 
+  name: Metro-Goldwyn-Mayer
+  id: "29"
+  parent_id: 
+  popularity: "1"
+companies_027: 
+  name: Rome Paris Films
+  id: "178"
+  parent_id: 
+  popularity: "0"
+companies_016: 
+  name: Valoria Films
+  id: "129"
+  parent_id: 
+  popularity: "0"
+universal: 
+  name: Universal Pictures
+  id: "44"
+  parent_id: 
+  popularity: "1"
+benq: 
+  name: BenQ
+  id: "45"
+  parent_id: 
+  popularity: "1"
+chinacorp:
+  name: Chinacorp Movies
+  id: "1000"
+  parent_id: 
+  popularity: "1"
+

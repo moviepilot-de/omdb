@@ -1,0 +1,8 @@
+<ul>
+  <% for language in @languages -%>
+    <li id="language_autocomplete_<%= language.id %>"><div class="detail-box"><h4><%= language.local_name( @language ) %></h4></div></li>
+  <% end %>
+  <% if @languages.empty? %>
+    <li id="language_autocomplete_0" class="not_found"><span class="informal"><%= "nothing found".t %></span></li>
+  <% end %>
+</ul>

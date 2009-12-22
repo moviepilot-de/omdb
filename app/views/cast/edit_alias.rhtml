@@ -1,0 +1,28 @@
+<% content_for("title") do %>
+  <%= 'Set Alias'.t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => "set_alias" } %>
+  <div class="content">
+
+    <p><%= "Please enter the name for this cast in #{@language}".t %></p>
+
+    <div id="error-messages" style="display: none">
+    </div>
+
+    <label for="alias_name"><%= 'Name'.t %></label>
+
+    <%= text_field("alias", "name") %>
+
+  </div>
+
+  <div class="button-bar">
+    <%= submit_tag( 'Okay'.t ) %>
+    <%= close_box_button %>
+  </div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('alias_name').focus();
+</script>

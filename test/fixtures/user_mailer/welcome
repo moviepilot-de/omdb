@@ -1,0 +1,3 @@
+UserMailer#welcome
+
+Find me in app/views/user_mailer/welcome.rhtml

@@ -1,0 +1,27 @@
+<p>some text</p>
+
+<% if @user == current_user %>
+<script type="text/javascript">
+  FotoFooWidget.Configuration = {
+    flashVars: [
+        "upload_url=<%= url_for( :controller => 'account', :action => :picture, :only_path => false ) %>",
+        "js_callback=uploadDone"
+    ]
+  }
+  if(FotoFooWidget.isFlashApplicable()){
+    $('tab_foto_foo').style.visibility = 'visible';
+  } else {
+    alert('noe');
+  }
+  function uploadDone(param){
+    try {
+      data = eval("(" + param[0].data + ")");
+      if (data['status'] == 'ok') {
+        $('left_image').src = data['url'];
+      }
+    }
+    catch(exception){}
+  }
+</script>
+<% end %>
+<%= javascript_tag 'FotoFooWidget.render()' %>

@@ -1,0 +1,24 @@
+<% content_for :title do -%>
+  <%= @user ? @user.login : 'Users'.t %>
+<% end -%>
+<% content_for :headline do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= @user.login %></h2>
+  <div class="small">&nbsp;</div>
+<% end -%>
+
+<% content_for :headline_details do -%>
+<% end -%>
+
+<% content_for :left_column do -%>
+  <%= render :partial => 'common/image', :locals => { :object => @user.image } %>
+  <%= render :partial => 'page/additional_pages', 
+             :object  => @user.pages.local(@language) %>
+<% end -%>
+
+<% unless request.path_parameters['action'] =~ /(contribs|movies|created|edit_page)/  %>
+  <% content_for :right_column do -%>
+    <%= render :partial => 'overview_details' %>
+  <% end -%>
+<% end %>
+

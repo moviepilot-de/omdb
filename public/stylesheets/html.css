@@ -1,0 +1,128 @@
+/*
+ sort alphabetically!
+*/
+
+* {
+  font-family:              sans-serif;
+}
+
+a,
+a * {
+  color:                    #4165ba;
+  text-decoration:          none;
+}
+
+a:hover {
+  text-decoration:          underline;
+}
+
+body, html {
+  padding:                  0;
+  margin:                   0;
+  color:                    #50503e;  
+}
+
+button {
+  padding:                  2px 10px;
+}
+
+hr {
+  height:                   1px;
+  border:                   none;
+  border-bottom:            1px solid #ddd;
+}
+
+img {
+  border:                   none;
+}
+
+input[type=text] {
+  padding:                  1px 2px;
+}
+
+li {
+  padding-bottom:           0.2em;
+  padding-left:             10px;
+}
+
+ul li {
+  background-image:         url(/images/layout/li.gif);
+  background-position:      left 5px;
+  background-repeat:        no-repeat;
+}
+
+div.wiki-page ul li,
+div.wiki-content ul li {
+  background-image:         url(/images/layout/li_new.gif);  
+}
+
+td,table,form,div,span, p {
+  margin:                   0px;
+  padding:                  0px;
+}
+
+textarea {
+  font-family:              monospace;
+  border:                   1px solid #8cacbb;
+  width:                    99.5%;
+  padding:                  0.2em;
+}
+
+p {
+  line-height:              1.5em;
+  margin-bottom:            0.6em;
+}
+
+
+label {
+  width:                    9em;
+  display:                  block;
+  float:                    left;
+  clear:                    left;
+}
+
+blockquote {
+  background-image:         url("/images/layout/quote.png");
+  background-repeat:        no-repeat;
+  background-position:      0.7em 5px;
+  margin:                   0;
+  margin-top:               1em;
+  margin-bottom:            1em;
+  padding-left:             3em;
+  padding-right:            3em;
+  font-style:               italic;
+
+}
+
+table {
+  width:                    100%;
+}
+
+td {
+  vertical-align:           top;
+  text-align:               left;
+}
+
+th {
+  vertical-align:           top;
+  text-align:               left;
+}
+
+ul {
+  line-height:              1.4em;
+  list-style:               none;
+  margin-top:               0.5em;
+  margin-left:              0;
+  padding:                  0px;
+}
+
+/* Global Classes */
+
+.actions {
+  float:                    right;
+  clear:                    right;
+}
+
+.orange {
+  color:                    #d1701e;
+}

@@ -1,0 +1,62 @@
+<% content_for("title") do %>
+  <%= 'Upload Image'.t %>
+<% end %>
+
+<%= form_tag( { :action => :upload_image }, { :multipart => true } ) %>
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_link_upload">
+        <%= link_to_function "Upload".t, "display_tab('upload')", :accesskey => "1", :title => "Edit Main Facts".t %>
+      </li>
+      <li id="tab_link_licenses"><%= link_to_function "License Information".t, "display_tab('licenses')", :accesskey => "2", :title => "View License Information".t %></li>
+      <% if @foto_foo and show_foto_foo %>
+        <li id="tab_link_foto_foo"><%= link_to_function "Foto Foo".t, "display_tab('foto_foo')", :accesskey => "3", :title => "Take a picture of yourself".t %></li>
+      <% end %>
+    </ul>
+    
+    <div class="tabbed-content" id="tab_upload">
+      Foo: <%= @foto_foo.to_s %>
+      
+      <%= render :partial => "common/new_image_upload" %>
+    </div>
+    
+    <div class="tabbed-content" id="tab_licenses" style="display: none;">
+      <%= render :partial => "common/new_image_licenses" %>
+    </div>
+    
+    <% if @foto_foo and show_foto_foo %>
+    <div class="tabbed-content" id="tab_foto_foo" style="display: none;">
+      <%= render :partial => "common/foto_foo" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button 'Upload'.t, :disabled => true %>
+    <%= close_box_button %>
+  </div>
+<%= end_form_tag %>
+
+
+<script type="text/javascript">
+  <%= (@foto_foo and show_foto_foo) ? 
+          create_small_tabs_navigation([ :upload, :licenses, :foto_foo ]) : 
+          create_small_tabs_navigation([ :upload, :licenses ]) %>
+  
+  checkImageUploadForm = function() {
+    if ($('image_license').value < 12 && $('image_license').value > 0) {
+      Effect.Appear('invalid_license');
+    } else {
+      Effect.Fade('invalid_license');      
+    }
+    if ($('image_license').value > 11) {
+      $('add_button').disabled = false;
+    } else {
+      $('add_button').disabled = true;
+    }
+  }
+  
+  $('image_license').onchange = function(){ checkImageUploadForm(); }
+  $('image_source').onkeyup = function(){ checkImageUploadForm(); }
+  $('image_summary').onkeyup = function(){ checkImageUploadForm(); }
+</script>

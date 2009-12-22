@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+  <title>omdb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="">
+
+  <link href="stylesheets/html.css" media="all" rel="Stylesheet" type="text/css">
+  <link href="stylesheets/intro.css" media="all" rel="Stylesheet" type="text/css">
+  <link href="stylesheets/screen.css" media="screen" rel="Stylesheet" type="text/css">
+  <link href="search_files/lightbox.css" media="screen" rel="Stylesheet" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/stylesheets/iefix.css" media="screen" rel="Stylesheet" type="text/css" />
+  <![endif]-->
+  
+  <script src="/javascripts/prototype.js" type="text/javascript"></script>
+
+  <body class="intro">
+    <div id="visual-page-wrapper">
+      <h1>omdb.org</h1>
+      <div class="intro_search">
+        <div class="services">
+          <a class=first href="/content/Imprint">Imprint</a>
+          <a href="/content/About">About</a>
+          <a href="/content/API">Api</a>
+          <a href="/content/Help">Help</a>
+        </div>
+        <div>
+          <form action="/search" method="post">
+            <input name="search[text]" id="search_text" /><br/>
+            <div style="padding-top: 4px; float: left;"><a href="/movie/random">jump to a random movie</a></div>
+            <input class="submit" type=submit value="Search" />
+          </form>
+        </div>
+      </div>
+    <script type="text/javascript">
+      $('search_text').focus();
+    </script>
+  </body>
+</html>

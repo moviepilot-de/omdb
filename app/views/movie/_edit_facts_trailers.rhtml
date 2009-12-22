@@ -1,0 +1,17 @@
+<p>
+  lala
+</p>
+
+<div class="input">
+  <%= edit_freeze_state @trailer, :self %>
+  <label for="movie_trailer"><%= "Trailer (%s)" / @language.english_name.t.downcase %></label>
+  <%= display_attribute :trailer, :key, 'string', :size => 10 %> <span>(YouTube ID)</span>
+</div>
+
+<% if @language.code != Locale.base_language.code %>
+  <% @english_trailer = @movie.trailer( Locale.base_language ) %>
+  <div class="input">
+    <label for="movie_trailer"><%= "Trailer (%s)" / Locale.base_language.english_name.t.downcase %></label>
+    <%= display_attribute :english_trailer, :key, 'string', :size => 10 %> <span>(YouTube ID)</span>
+  </div>
+<% end %>

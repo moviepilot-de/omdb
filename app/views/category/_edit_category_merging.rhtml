@@ -1,0 +1,42 @@
+<script type="text/javascript">
+  var new_<%= type %>_count = 0;
+  <%= create_add_function type %>
+  <%= create_add_new_function type %>
+  <%= create_remove_function type %>
+</script>
+
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= text_field("filter", "categories", :size => 15) %>
+      <div style="float: right; padding-right: 4px; color: white;">Search</div>
+    </th>
+    <th>
+      <%= "Selected #{type.to_s.pluralize.humanize} for MERGING".t %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_categories" class="left">
+            <li class="empty"><%= "please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="selected_categories" class="right">
+
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field("filter_categories",
+                  :frequency => 0.5,
+                  :before    => "Element.update('searched_categories', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                  :update    => "searched_categories",
+                  :url       => { :action     => :find_categories,
+                                  :name       => type,
+                                  :controller => 'search' }) %>

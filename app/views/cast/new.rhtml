@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="wrapper">
+    <div id="new_crew_activity_indicator" style="display: none;"><%= loading_image %></div>
+    <h2><%= "New Crew Member".t %></h2>
+    <p><%= "To add somebody to the crew search for the person's name and select him/her from the drop down list.".t %>
+       <%= "If you can't find the person in the list you can create him/her by selecting the last entry.".t %>
+       <%= "Next, search for the person's job and select it from the drop down list. Finish by clicking Ok. ".t %>
+       <% if @movie.class == Episode %>
+         <%= "<br />You can also assign a crew member to a season and inherit him/her to all episodes. This way you don't have to add the crew member to each episode.".t %>
+         <%= "To do so, change to %s and edit the crew there."/(link_to link_text_for_movie(@movie.parent), :controller => 'movie', :action => :cast, :id => @movie.parent.id, :edit_crew => true) unless @movie.parent.nil? %>
+       <% end %>
+    </p>
+
+    <%= form_remote_tag :url     => {:controller => "cast", :action => :create},
+                        :before  => "$('add_crew_button').display = true; Element.show('new_crew_activity_indicator'); Element.update('new_crew_status', '');",
+                        :loaded  => "Element.hide('new_crew_activity_indicator');",
+                        :success => "Element.show('new_crew_status'); Element.update('new_crew_status', '#{"Successfully added".t}'); Effect.Fade('new_crew_status', { delay: 2.5 });",
+                        :failure => "Element.show('new_crew_status'); Element.update('new_crew_status', '#{"Error adding crew".t}');",
+                        :html => { :onKeyPress => 'return checkEnter(event);' } %>
+      <div class="content">
+        <div class="column">
+          <%= link_to_function 'search person'.t.downcase, 'startSearching()', :class => 'edit' %>
+          <label for="crew_person_autocomplete">Person</label>
+          <input type="text" name="person" id="crew_person_autocomplete" />
+          <div id="crew_person_autocomplete_results" class="auto-complete"></div>
+          <input type="hidden" name="crew[new_person]" id="new_crew_person" value="" />
+          <div class="small">
+            <%= "Selected:".t %> <span id="crew_selected_person" class="bold">-</span>
+            <input type="hidden" name="crew[person]" id="crew_person" value="" />
+          </div>
+        </div>
+
+        <div class="middle-column"><%= "working as".t %></div>
+
+        <div class="column">
+          <%= link_to_function( 'create new job'.t, 'addJob()', :class => 'edit' ) if editor? %>
+          <label for="job_autocomplete"><%= "Job".t %></label>
+          <input type="text" name="job" id="job_autocomplete" />
+          <div id="job_autocomplete_results" class="auto-complete no-padding" style="display: absolute; z-index: 9999;"></div>
+          <input type="hidden" name="movie" value="<%= @movie.id.to_s %>" />
+          <div class="small">
+            <%= "Selected:".t %> <span id="selected_job" class="bold">-</span>
+            <input type="hidden" name="crew[job]" id="crew_job" value="" />
+            <input type="hidden" name="crew[new_job]" id="new_crew_job" value="" />
+          </div>
+        </div>
+      </div>
+      
+      <div class="button-bar">
+        <div class="wrapper">
+          <div id="new_crew_status" class="small bold">&nbsp;</div>
+          <%= submit_button 'Ok'.t, :id => 'add_crew_button', :disabled => true %>
+
+          <% close_script = update_element_function 'new-crew' do %>
+            <%= new_crew_link(@movie) %>
+            <br />
+          <% end %>
+      
+          <%= button_to_function 'Close'.t, close_script %>
+        </div>
+      </div>
+    <%= end_form_tag %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  addJob = function() {
+    value = $('job_autocomplete').value;
+    $('selected_job').firstChild.nodeValue = value + " (<%= 'will be created'.t %>)";
+    $('new_crew_job').value = value;
+    checkCrewForm();
+  }
+
+  addCrewPerson = function() {
+    value = $('crew_person_autocomplete').value;
+    if (value == '') {
+      alert("Please enter a Name");
+      $('crew_person_autocomplete').focus();
+      return false;
+    }
+    $('crew_selected_person').firstChild.nodeValue = value + " (<%= 'will be created'.t %>)";
+    $('new_crew_person').value = value;
+    checkCrewForm();
+  }
+
+  $('crew_person_autocomplete').onkeyup = function(){
+    if (this.value == "") {
+      $('crew_selected_person').firstChild.nodeValue = "-";
+      $('crew_person').value = "";
+      $('new_crew_person').value = "";
+    } 
+    checkCrewForm(); 
+  }
+
+  $('job_autocomplete').onkeyup = function(){ 
+    if (this.value == "") { 
+      $('selected_job').firstChild.nodeValue = "-";
+      $('crew_job').value = "";
+      $('new_crew_job').value = "";
+    }
+    checkCrewForm();
+  }
+
+  var crew_autocomplete = new Ajax.Autocompleter('crew_person_autocomplete', 'crew_person_autocomplete_results', '/search/person_autocomplete',
+                         { afterUpdateElement: setCrewPerson, minChars: 2, frequency: <%= livesearch_filter_frequency %>, 
+                           indicator: 'new_crew_activity_indicator' });
+
+  var job_autocomplete = new Ajax.Autocompleter('job_autocomplete', 'job_autocomplete_results', '/search/job_autocomplete',
+                         { afterUpdateElement: setJob, minChars: 2, frequency: <%= livesearch_filter_frequency %>,
+                           indicator: 'new_crew_activity_indicator' });
+                           
+  startSearching = function() {
+    $('crew_person_autocomplete').focus();
+    crew_autocomplete.hasFocus = true;
+    crew_autocomplete.onObserverEvent();
+  }
+
+  $('crew_person_autocomplete').focus();
+
+</script>

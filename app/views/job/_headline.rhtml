@@ -1,0 +1,15 @@
+<% if edit_or_view_subpage %>
+  <div class="parent-breadcrumb"><%= link_to_object @job %></div>
+  <h2><%= @page.page_name %></h2>
+  <div class="small">&nbsp;</div>
+<% else %>
+  <div class="parent-breadcrumb">
+    <% if not @job.parent.nil? %>
+      <%= @job.ancestors.reverse.collect do |j| 
+            link_to_object j
+          end.join(" &gt; ") %>
+    <% end %>
+  </div>
+  <h2><%= @job.local_name @language %></h2>
+  <div class="small">&nbsp;</div>
+<% end %>

@@ -1,0 +1,31 @@
+--- 
+king_kong_review: 
+  rating: "8"
+  updated_at: 2006-07-30 17:12:52
+  movie_id: "254"
+  id: "1"
+  user_id: "1"
+  created_at: 2006-07-30 17:11:24
+  data: "I really like this movie and would recommend it to you.. "
+  language_id: "1819"
+reviews_002: 
+  rating: "3"
+  updated_at: 2006-08-14 22:11:47
+  movie_id: "206"
+  id: "2"
+  user_id: "6"
+  created_at: 2006-08-14 22:11:47
+  data: "Zumindest wei\xC3\x9F ich jetzt, dass Paul Gauguin ein faszinierender Mensch gewesen sein muss. Um so mehr verwundert es mich, wie man in einer filmischen Umsetzung seines Lebens so grandios scheitern kann. \n\n\
+    \"Paradise Found\" schwelgt in besch\xC3\xB6nigender Darstellung von S\xC3\xBCdsee-Inseln oder all zu glatt anmutenden Dialogen \xC3\xBCber die Rolle des K\xC3\xBCnstlers als Retter der Unwissenden. Der eigentlich vielschichte, oft nicht nachvollziehbare Mensch Gauguin wirkt hier flach und geradlinig. Ich \"werde die Malerei revolutionieren.\" - bei solchen Dialogen kann auch Kiefer Sutherland nichts mehr retten. \n\n\
+    Mir kommt es so vor, als lie\xC3\x9F sich Mario Andreacchio von spontanen Ideen verleiten, anstatt eine konsiste Erz\xC3\xA4hlsprache zu entwickeln. Als er schlie\xC3\x9Flich am Ende des Films auf einen Offsprecher zur\xC3\xBCckgreift, bin ich g\xC3\xA4nzlich verwirrt: Der Titel von Gauguins letzem gro\xC3\x9Fen  Bild \"Woher kommen wir? Wer sind wir? Wohin gehen wir?\" - wikt so einfach nur l\xC3\xA4cherlich.\n\n\
+    Ein wunderbares Thema schlecht erz\xC3\xA4hlt. Wirklich schade.\n"
+reviews_003: 
+  rating: "2"
+  updated_at: 2006-08-17 09:25:39
+  movie_id: "175"
+  id: "3"
+  user_id: "6"
+  created_at: 2006-08-17 09:25:39
+  data: |-
+    Gibt es schon eine Kategorie "Langweiligster Film aller Zeiten"? Zumindest bietet "The Big Blue" eine gute Diskussionsgrundlage. Und die Traumszene mit dem Wasser ist ganz nett.
+    Rating 2 / 10

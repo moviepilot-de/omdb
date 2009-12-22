@@ -1,0 +1,8 @@
+<div class="parent-breadcrumb">&nbsp;</div>
+<div class="h2">
+  <% if @person.birth_year.is_a? Numeric %>
+    <%= link_to @person.birth_year, :controller => 'year', :id => @person.birth_year %>
+  <% else %>
+    <%= @person.birth_year %>
+  <% end %>
+</div>

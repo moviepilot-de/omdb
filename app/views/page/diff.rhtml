@@ -1,0 +1,31 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="<%= @page_style || 'wiki-page' %>">
+  <%= render :partial => 'common/views' %>
+  <div id="wiki-diff-help">
+    <h3><% "Change Information".t %></h3>
+    <div class="wrapper">
+      <div class="content">
+        <div style="float:left; margin-left: 1em">
+          <%= link_to_if @version1.version > 1, "<< earlier version".t, :action => 'view_diff', 
+                                                                :id => related_object.id,
+                                                                :page => @page.current.page_name, 
+                                                                :from => (@version1.version - 1), 
+                                                                :to => @version2.version %>
+        </div>
+        <div style="float: right; margin-right: 1em;">
+          <%= link_to_if @page.current.version > @version2.version, "later version >>".t, { :action => 'view_diff', 
+                                    :id => related_object.id,
+                                    :page => @page.current.page_name, 
+                                    :from => @version1.version, :to => @version2.version + 1 } %>
+        </div>
+        <br /><br />
+        <p><%= sprintf 'Showing changes from version %d (%s, by %s) to %d (%s, by %s).'.t, @version1.version, @version1.created_at.to_date, (@version1.user.nil? ? "unknown".t : link_to_object( @version1.user )), @version2.version, @version2.created_at.to_date, ( @version2.user.nil? ? "unknown".t : link_to_object(@version2.user) )  %></p>
+        <p><%= 'Changes are displayed like this'.t %>:</p>
+        <p><ins><%= 'added'.t %></ins> / <del><%= 'removed'.t %></del></p>
+      </div>
+    </div>
+  </div>
+  <%= display_diff(@version1, @version2) %>
+
+</div>

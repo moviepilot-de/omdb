@@ -1,0 +1,8 @@
+  <%# if @page && @page.generic? -%>
+    <%#= auto_discovery_link_tag :rss, { :action => "rss", :page => @page.page_name } %>
+  <%# elsif respond_to?(:related_object) && related_object -%>
+    <%#= auto_discovery_link_tag :rss, { :action => "rss", :id => related_object.id } %>
+  <%# end %>
+
+  <%= auto_discovery_link_tag :rss, { :controller => 'movie', :action => "latest", :type => 'rss' } %>
+

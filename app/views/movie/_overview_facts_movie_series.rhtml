@@ -1,0 +1,24 @@
+<div class="fact">
+  <div class="title"><%= 'Known Parts'.t %>:</div>
+  <div class="value">
+    <%= link_to @movie.all_children.size.to_s, :action => :parts %>
+  </div>
+</div>
+<% if not @movie.all_children.empty? -%>
+<div class="fact">
+  <div class="title"><%= 'Highest Rated Part'.t %>:</div>
+  <div class="value">
+    <% movie = @movie.all_children.sort{ |a,b| a.vote <=> b.vote }.last %>
+    <%= link_to_object movie %> (<%= movie_vote movie %>)
+  </div>
+</div>
+<% end -%>
+
+<% if not @movie.homepage.empty? -%>
+<div class="fact">
+  <div class="title"><%= 'Official Homepage'.t %>:</div>
+  <div class="value">
+    <a href="<%= @movie.homepage %>" title="<%= @movie.homepage %>"><%= "Visit Homepage".t %></a>
+  </div>
+</div>
+<% end -%>

@@ -1,0 +1,6 @@
+page.replace @cast.class.to_s.downcase + '_' + @cast.id.to_s,
+             :partial => 'movie/cast_default', :locals => { :cast => @cast }
+
+if defined?(close_box) and close_box == true
+  page.call("box.deactivate")
+end

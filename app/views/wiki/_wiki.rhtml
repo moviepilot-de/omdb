@@ -1,0 +1,59 @@
+<div id="content" class="broadpage">
+<% if @page.locked? %>
+<%= flash[:error] %>
+<% else %>
+
+<%= javascript_include_tag "wiki_editor" %>
+<%= stylesheet_link_tag "wiki" %>
+
+<div id="wiki-preview" style="<%= "display: none;" if flash[:notice].nil? and flash[:errors].nil? and flash[:error].nil? %>">
+  <%= flash[:notice] if not flash[:notice].nil? %>
+  <%= flash[:errors].collect { |attr, msg| msg } if not flash[:errors].nil? %>
+  <%= flash[:error] if flash[:error] %>
+  <%= content_tag( :div, alternative_loading_image, :class => 'center' ) if flash[:notice].nil? and flash[:errors].nil? and flash[:error].nil? %>
+</div>
+
+<div id="wiki-editor">
+  <%= render_action @wiki_submit_action %>
+  <input type="hidden" name="type" value="Page" />
+  <%= hidden_field_tag "page[name]", @page.page_name %>
+  <div id="inner-wiki-editor">
+    <%= render :partial => "wiki/toolbar" %>
+    <%= text_area_tag 'content[data]', @page.data, :size => "x25", :id => 'wiki_text' %>
+  </div>
+
+  <div id="image-upload" style="border: 1px solid black; padding: 1em; margin-top: 1em; display: none">
+    <div id="upload-form">
+      <label for="picture" style="display: inline; clear: none; float: none;"><%= "Image".t %>:</label> <%= file_field_tag "picture" %><br />
+      <label for="description" style="display: inline; clear: none; float: none;"><%= "Description".t %>:</label> <%= text_field_tag "description" %>
+      <label for="source" style="display: inline; clear: none; float: none;"><%= "Source".t %>:</label> <%= text_field_tag "source" %>
+      <%= submit_tag "Upload".t, :id => "form-upload", :onclick => "return checkImageSource()" %>
+    </div>
+    <%= loading_image :style => "display:none", :id => "upload-indicator" %>
+  </div>
+
+  <div id="wiki-comment">
+    <%= check_box 'content', 'accept_license' %>
+    <label for="content_accept_license" style="width: auto; float: none; clear: none; display: inline"><%= "I accept the terms and conditions of the GNU Free Documentation License".t %></label>
+    <br />
+    <br />
+    <label for="content_comment" style="width: auto; float: none; clear: none; padding-bottom: 2px;">
+      <%= link_to( "Edit Summary".t, :controller => 'content', :action => :view, :page => "Help:EditSummary" ) + " " + "(briefly describe the changes you have made):".t %>
+    </label>
+    <%= text_field_tag "content[comment]", @comment, :style => "clear: left; display: inline; width:80%;" %>
+  </div>
+
+  <p><a href="/content/view?page=Help" target="_blank"><%= "Wiki Syntax Help".t %></a></p>
+
+
+
+  <div class="button-bar">
+    <%= submit_tag "Save changes".t, :id => "form-submit", :onclick => "return checkImageSource()" %>
+    <%= button_to_function "Preview".t, "preview('" + url_for(:controller => "content", :action => "preview", :id => @page.id) + "')" %>
+    <%= link_to "Cancel".t, @cancel_action %>
+  </div>
+  <%= end_form_tag %>
+
+</div>
+<% end %>
+</div>

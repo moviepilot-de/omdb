@@ -1,0 +1,89 @@
+15-10-2006
+  * Merged back the source from Rails edge. (manfred)
+
+* 1.8.4 tables also work in 1.8.5, dropped marshal versioning. (manfred)
+* Instead of dropping broken utf-8 characters we now try to recover them. Code contributed by Sam Ruby. (manfred)
+* Fixed Windows unicode table loading - patch by Oleg Dashevskii <be9@be9.ru> and Mi.Sky (manfred)
+* Added unicode tables for ruby 1.8.5 (manfred)
+* UTF8Handler loads unicode tables for a specific ruby version because the marshal format is different for every version (manfred)
+* The generator generates unicode tables for a specific ruby version (manfred)
+* Added script and Rake task to create a activesupport patch from the plugin (manfred)
+* Reworked the codebase to resemble the easier patch generation (manfred)
+
+15-09-2006: Splitting ActiveSupport::Multibyte and ActionPack code
+
+* Slice now returns a codepoint on singular slices ie. "é".chars[0] #=> 223 (manfred)
+* Renamed lib/db_unicode_client to lib/setup_unicode_client (manfred)
+* Moved all the code regarding controllers to actionpack_mb/lib/action_controller/unicode.rb (manfred)
+* Moved all the tests out of test/, put all the common testcode in test/test_helper.rb (manfred)
+* Slice on an index now returns a codepoint instead of falling back on bytes (manfred)
+* Added a handler test for capitalize. (manfred)
+* Changed the Rakefile, we now have test_actionpack, test_activesupport and test_conformance (manfred)
+* Refactored the multibyte tests, tests for Chars, handlers and conformance are now separated (manfred)
+* Removed the old overrides (manfred)
+* Removed the Pure2 handler, fixed all the tests and the performance script (manfred)
+* All the normalize_* methods should now be called as nomalize(:kc) (manfred)
+* Merged utf8_handler_pure2 into utf8_handler, removed handler loading code (manfred)
+* Removed the AS_MULTIBYTE_SKIP_HANDLING_TESTS environment checking and divided the tests up in the Rakefile (manfred)
+* Renamed the normalization forms from string constants to symbols (manfred)
+* Moved all the string functions over to the handler, clearing up Chars as much as possible (manfred)
+* Removed all handler backends except Pure2 and Proc (manfred)
+* Parameter normalization should not damage non-string immediate values such as integers (julik)
+* If you define an env variable called AS_MULTIBYTE_SKIP_HANDLING_TESTS (duh!) UTF-8 handling tests will be skipped (julik)
+* Pure2 handler now does grapheme cluster length instead of codepoints length (manfred)
+* Updated the pure2 handler tables to unicode 5.0.0 (manfred)
+* Fixes the Normalization plugin to use Controller#params (julik)
+* Urgent fixes to cope with the new Dependency code from edge (julik)
+* Changes to the docs - uppercase French withouth accents is not trendy (julik)
+* Added info on the version of the standard (julik)
+* Fixed assertions for upcase so that we lose composed ligatures and ßuch (julik)
+* Excising extraneous normalization code from filters and preventing an exception (julik)
+* Minor changes (julik)
+* Non-match should return nil (julik)
+* Fixed the test imports so they work in rails 1.1.4 (manfred)
+* Actually move the pure2 generator. Fixed paths in the script (manfred)
+* Renaming normalize_params to normalize_unicode_params (julik)
+* Normalizing filter will skip normalization for improper UTF sequences (julik)
+* Made changes to the normalization filter (julik)
+    * Normalization filter is a class method, as per docs
+    * Accepts the :form option
+    * Default form option is KC
+    * Bails on unknown options
+    * The Chars has normalize and normalize! that accepts the form parameter
+    * The controller normalization is inheritable, and will define the accessor for form on the controller.
+    * Defining the normalize_params setting many times will only override the form, not duplicate the filter
+    * Added module-wide parameter DEFAULT_NORMALIZATION_FORM, used all over the place
+    * Moved normalization filter into a potential ActionPack extraction
+* More changes to the PRIMER and reformatted it for fixed length (please don't reflow!) - (julik)
+* Moved stuff around to adhere to ActiveSupport and preparing the merger (julik)
+    * Table generator moved to multibyte/generators
+    * Tables moved to values
+    * Performance script moved to test
+* Small changes to README and UNICODE_PRIMER (manfred)
+* Integrated LICENSE into Rdocs (julik)
+* Added a license file (manfred)
+* Removed implicit normalization everywhere (manfred)
+* Small corrections to the README (julik)
+* Removed a level of redirection (handler_for) because we only have utf-8 handlers right now (manfred)
+* The multibyte handler is now kept in a class variable (manfred)
+* Change defaults in the {upper,lower}case_mapping to speed up upcase/downcase (manfred)
+* Every handler now has a 'decompose' method which does NFD. (manfred)
+* Removed test for 'Unicode' loading, we have pure ruby normalization (manfred)
+* Added new pure ruby handler (manfred)
+* Added normalize_KC methods in utf8_handler.rb where the documentation and the tests said it should normalize: reverse and size (manfred)
+* utf8_handling_test renamed, it can now be run seperately (manfred)
+* Quick block to skip normalization tests to shorten testing (julik)
+* Added explicit bypass to gsub to Chars, because each object has gsub from Kernel (julik)
+* Fixed small spelling and documentation errors (manfred)
+* Fixed the t_controller tests; you can't have more that one post, get or xhr in one test (manfred)
+* Made ActiveSupport::Multibyte::StringExtensions#u an alias for #chars instead of a method (manfred)
+* Handler implemented based on UTF8Proc (julik)
+* Return an array of Chars from #split (julik)
+* We have a pure Ruby normalizer backported from utf8_proc (thx meadow.nick)
+* TEMPORARY swappable Handlers for testing, to test agains Unicode conformance cases and benchmarking (julik)
+* Added tests from Unicode Consortium to the testing harness - downloaded when the test is ran (julik)
+* Began work a testing harness to check Unicode implementations (julik)
+* Whoops, had to return explicitly (julik)
+* Testing checkin from fingertips (julik)
+* Calling setup_unicode_client only if it's available, SQLite adapter does not inherit from abstracts (thx David Marko)  (julik)
+* Changed regexes for leaders and trailers to anchor properly to strings instead of lines (julik)

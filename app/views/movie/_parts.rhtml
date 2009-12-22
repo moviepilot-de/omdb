@@ -1,0 +1,21 @@
+<% movies = movies_by_type @movie -%>
+<% current_year = 0 -%>
+<% @movie.class.valid_children.each do |klass| -%>
+  <% unless movies[klass].nil? or movies[klass].empty? %>
+    <div class="list-view-headline"><h3><%= klass.to_s.pluralize.t %></h3></div>
+    <table id="filmography">
+      <% movies[klass].each do |child| %>
+        <tr>
+          <td class="year"><%= child.start.nil? ? (child.end.year unless child.end.nil? or child.end.year == current_year) : (child.start.year unless child.start.year == current_year )%></td>
+          <td>- <%= link_to_object child %></td>
+          <td class="rating"><div class="minivote"><div style='width: <%= sprintf("%1.2f", child.vote * 10 ) %>%'></div></div></td>
+          <% if editor? -%>
+            <td class="actions"><%= edit_freeze_state child, :parent %></td>
+
+          <% end -%>
+          <% current_year = child.end.nil? ? "" : (child.start.nil? ? child.end.year : child.start.year) %>
+        </tr>
+      <% end -%>
+    </table>
+  <% end -%>
+<% end -%>

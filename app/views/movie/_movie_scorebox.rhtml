@@ -1,0 +1,56 @@
+<% movie_median_rating = @movie.median_rating %>
+
+
+  <div id="review_stats_movie_<%= @movie.id %>" class="review-stats-container">
+    <div class="review-stats-content">
+      <div class="headline-box">
+        <h3><%= 'Movie Ratings'.t %></h3>
+      </div>
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_by_rating, :movie => @movie.id %>" /><div class="clear"></div><br/>
+      <div class="headline-box">
+        <h3><%= 'Male / Female Ratings'.t %></h3>
+      </div>
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_rating_by_gender, :movie => @movie.id, :gender => 0 %>" />
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_rating_by_gender, :movie => @movie.id, :gender => 1 %>" /><div class="clear"></div><br/>
+
+      <div class="headline-box">
+        <h3><%= 'Europe / US Ratings'.t %></h3>
+      </div>
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_rating_by_continent, :movie => @movie.id, :continent => 'europe' %>" />
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_rating_by_continent, :movie => @movie.id, :continent => 'us' %>" /><div class="clear"></div><br/>
+      
+      <div class="headline-box">
+        <h3><%= 'Ratings per Week'.t %></h3>
+      </div>
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_voting_per_week, :movie => @movie.id %>" /><div class="clear"></div><br/>
+      <div class="headline-box">
+        <h3><%= 'Popularity by Week'.t %></h3>
+      </div>
+      <img src="<%= url_for :controller => 'statistic', :action => :movie_popularity_per_week, :movie => @movie.id %>" /><div class="clear"></div><br/>
+
+      <div class="clear"></div>
+
+      <div>
+        <div class="statistics-legend">
+          <div class="headline-box">
+            <h3><%= 'Rating Statistics:'.t %></h3>
+          </div>
+          <% i = 0
+             ratings = @movie.movie_by_rating.reverse
+             @movie.movie_by_rating_percentage.reverse.each do |p| %>
+              <% unless (ratings[i] == 0) %>
+              <b class="rtop">
+                <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
+              </b>
+                <span style="color: <%= review_vote_color(i, true) %>;" class="legend-score-text"><%= Review.score_text(i, true).t %>: </span>
+                <span class="legend-percentage"><%= sprintf("%1.2f%% ",p*100) %></span>
+                <span class="legend-ratings-count"><%= "(" + ratings[i].to_s + ")"%></span>
+
+              <% end %>
+              <% i += 1%>
+          <% end %>
+        </div>
+      </div>
+    
+    </div>
+  </div>

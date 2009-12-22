@@ -1,0 +1,24 @@
+<% aliases = object.aliases %>
+
+<% if !request.xhr? %>
+<div class="headline-box">
+  <%= link_to_function 'edit'.t, lightbox( :action => :edit_aliases ), :class => 'edit-button' %>
+  <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:EditSynonym' }, :class => 'help-button' %>
+  <h3><%= "also known as".t %></h3>
+</div>
+<% end %>
+
+<div id="overview-aliases" class="content-box">
+  <% if aliases.empty? %>
+    <div class="empty"><%= 'There are no alternative names defined'.t %></div>
+  <% else %>
+    <ul class="sortable-list" id="name_aliases_<%= object.id %>_0">
+    <% aliases.each do |a| %>
+      <li id="name_alias_<%= a.id %>">
+        <%= sort_icon_div %>
+        <%= a.name %>
+      </li>
+    <% end %>
+    </ul>
+  <% end -%>
+</div>

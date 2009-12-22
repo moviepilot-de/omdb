@@ -1,0 +1,12 @@
+<div id="ajax-action-box">
+  <div class="headline ajax_box_headline" id="ajax_box_headline">
+    <div id="ajax-activity-indicator" style="display: none;"><%= loading_image %></div>
+    <div id="window-actions">
+      <%= link_to_function "&nbsp;", 'box.deactivate();' %>
+    </div>
+    <h3><%= yield :title %></h3>
+  </div>
+  <div id="ajaxbox-contents">
+    <%= yield %>
+  </div>
+</div>

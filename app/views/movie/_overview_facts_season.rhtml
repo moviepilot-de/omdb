@@ -1,0 +1,65 @@
+<div class="fact">
+  <div class="title"><%= 'Status'.t %>:</div>
+  <div class="value"><%= @movie.status %></div>
+</div>
+
+<% if not @movie.homepage.empty? %>
+<div class="fact">
+  <div class="title"><%= 'Official Homepage'.t %>:</div>
+  <div class="value">
+    <a href="<%= @movie.homepage %>" title="<%= @movie.homepage %>"><%= "Visit Homepage".t %></a>
+  </div>
+</div>
+<% end %>
+
+<div class="fact">
+  <div class="title"><%= 'Known Episodes'.t %>:</div>
+  <div class="value">
+    <%= link_to @movie.children.size.to_s, :action => :parts %>
+  </div>
+</div>
+
+<% if @movie.status == "Released" %>
+<div class="fact">
+  <div class="title"><%= 'Total Runtime'.t %>:</div>
+  <div class="value"><%= runtime_for_season(@movie).to_s + " " + "Minutes".t %></div>
+</div>
+<% end %>
+
+<div class="fact">
+  <div class="title"><%= 'Production Companies'.t %>:</div>
+  <div class="value">
+    <% if @movie.companies.empty? %>
+      -
+    <% end %>
+  <%= @movie.companies.collect { |c|
+        link_to_object c
+      }.join(", ") %>
+  </div>
+</div>
+
+<div class="fact">
+  <div class="title"><%= 'Budget'.t %>:</div>
+  <div class="value">
+    <% if @movie.budget.to_i > 0 %>
+	  <% Currency.no_cents=true %>
+	  <%= Currency.new( @movie.budget.to_i * 100) %>
+    <% else %>
+      <%= "unknown".t %>
+    <% end %>
+  </div>
+</div>
+
+<% if @movie.status == "Released" %>
+<div class="fact">
+  <div class="title"><%= 'Revenue'.t %>:</div>
+  <div class="value">
+    <% if @movie.revenue.to_i > 0 %>
+	  <% Currency.no_cents=true %>
+      <%= Currency.new( @movie.revenue.to_i * 100 ) %>
+    <% else %>
+      <%= "unknown".t %>
+    <% end %>
+  </div>
+</div>
+<% end %>

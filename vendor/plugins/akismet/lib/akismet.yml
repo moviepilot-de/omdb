@@ -1,0 +1,2 @@
+akismetBlog: "http://www.omdb.org/"   # Home URL of the instance making the request
+akismetKey: "9365397abcc9"    # Your API key from WordPress

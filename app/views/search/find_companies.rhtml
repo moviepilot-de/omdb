@@ -1,0 +1,9 @@
+<% @companies.each do |company| %>
+  <%= render :partial => 'company', :object => company %>
+<% end %>
+
+<% if not @movie.nil? %>
+  <script type="text/javascript">
+    $('create_new_company').style.visibility = 'visible';
+  </script>
+<% end %>

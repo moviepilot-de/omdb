@@ -1,0 +1,44 @@
+<% content_for("title") do %>
+  <%= "Edit Trailer Video IDs for %s" / (@movie.class.to_s.t + ": " + @movie.name) %>
+<% end %>
+
+<%= lightbox_form_tag :action => :update_movie_trailers, :movie => @movie.id %>
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_link_facts"><%= link_to_function "Trailer IDs".t, "display_tab('facts')", :accesskey => "1", :title => "Edit Trailer IDs".t %></li>
+    </ul>
+  
+    <div id="tab_facts" class="tabbed-content">
+      <p>
+        <%= "Please enter the youtube video id for the trailer of %s." / @movie.local_name(@language) %>
+        <%= "The video is located at the end of a youtube url, e.g. http://www.youtube.com/watch?v=<strong>iIytlCIqjGY</strong>." %>
+        <%= "The youtube video id would be \"iIytlCIqjGY\". "%>
+      </p>
+
+      <div class="input">
+        <%= edit_freeze_state @trailer, :key %>
+        <label for="trailer_key"><%= "Trailer (%s)" / @language.english_name.t.downcase %></label>
+        <%= display_attribute :trailer, :key, 'string', :size => 10 %> <span> (YouTube ID)</span>
+        <%= error_message_on :trailer, :key %>
+      </div>
+
+      <% if @language.code != Locale.base_language.code %>
+        <div class="input">
+          <%= edit_freeze_state @english_trailer, :key %>
+          <label for="english_trailer_key"><%= "Trailer (%s)" / Locale.base_language.english_name.t.downcase %></label>
+          <%= display_attribute :english_trailer, :key, 'string', :size => 10 %><span>(YouTube ID)</span>
+          <%= error_message_on :english_trailer, :key %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  <%= create_small_tabs_navigation [ :facts ], { :facts => 'trailer_key' } %>
+</script>

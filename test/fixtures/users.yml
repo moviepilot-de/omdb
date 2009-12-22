@@ -1,0 +1,53 @@
+quentin:
+  id: 1
+  login: quentin
+  language_id: 1556 # german
+  email: quentin@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  activated_at: <%= 5.days.ago.to_s :db %> # only if you're activating new signups
+  permalink: 'quentin'
+aaron:
+  id: 2
+  login: aaron
+  email: aaron@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  activation_code: aaronscode # only if you're activating new signups
+  created_at: <%= 1.days.ago.to_s :db %>
+admin:
+  id: 3
+  is_admin: 1
+  is_editor: 1
+  is_chiefeditor: 1
+  login: admin
+  email: admin@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  activated_at: <%= 5.days.ago.to_s :db %> # only if you're activating new signups
+anonymous:
+  id: 4
+  login: anonymous
+  created_at: <%= 5.days.ago.to_s :db %>
+editor:
+  id: 5
+  is_editor: 1
+  login: editor
+  email: editor@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 4.days.ago.to_s :db %>
+  activated_at: <%= 4.days.ago.to_s :db %> # only if you're activating new signups
+franz:
+  id: 6
+  is_editor: 0
+  login: franz
+  email: franz@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 4.days.ago.to_s :db %>
+  activated_at: <%= 4.days.ago.to_s :db %> # only if you're activating new signups  
+  language_id: 1556
+  

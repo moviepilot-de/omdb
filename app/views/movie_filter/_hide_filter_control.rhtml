@@ -1,0 +1,5 @@
+<%= link_to_remote "hide filter".t, { :url     => { :controller => "movie_filter", 
+                                                     :action     => :hide_filter_dialog } },
+                                      :id      => "hide_filter_control",
+                                      :class   => 'edit-button apply_filter',
+                                      :style   => 'display: none;' %>

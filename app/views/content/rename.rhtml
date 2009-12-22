@@ -1,0 +1,27 @@
+<% content_for("title") do %>
+  <%= 'Rename Page'.t %>
+<% end %>
+<%= form_remote_tag :url => { :action => "new_name" } %>
+  <div class="content">
+
+    <p><%= "Please enter the new name for the page.".t %></p>
+
+    <div id="error-messages" style="display: hidden">
+    </div>
+
+    <label for="page_page_name"><%= 'Page Name'.t %></label>
+
+    <%= text_field_tag "page[page_name]", @content.page_name %>
+
+  </div>
+
+  <div class="button-bar">
+    <%= submit_tag( 'Okay'.t ) %>
+    <%= close_box_button %>
+  </div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('page_page_name').focus();
+</script>

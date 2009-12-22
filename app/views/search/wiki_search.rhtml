@@ -1,0 +1,79 @@
+<% content_for("title") do %>
+  <%= "Wiki Search".t %>
+<% end %>
+
+<script type="text/javascript" charset="utf-8">
+  check_method = function() {
+    $('add_button').disabled = false;
+  }
+
+  var active_tab = 'movies';
+
+  display_tab = function(id) {
+    Element.hide( 'search_' + active_tab );
+    Element.removeClassName('tab_' + active_tab, 'active');
+
+    old_tab = active_tab;
+    active_tab = id;
+
+    Element.show( 'search_' + id );
+    Element.addClassName('tab_' + id, 'active');
+
+    if (id == 'movies') {
+      $('filter_movies').value = $('filter_' + old_tab).value
+      $('filter_movies').focus();
+    } else if (id == 'characters') {
+      $('filter_characters').value = $('filter_' + old_tab).value
+      $('filter_characters').focus();
+    } else if (id == 'people') {
+      $('filter_people').value = $('filter_' + old_tab).value
+      $('filter_people').focus();
+    } else if (id == 'companies') {
+      $('filter_companies').value = $('filter_' + old_tab).value
+      $('filter_companies').focus();
+    } else if (id == 'categories') {
+      $('filter_categories').value = $('filter_' + old_tab).value
+      $('filter_categories').focus();
+    } /*else if (id == 'images') {
+      $('filter_images').value = $('filter_' + old_tab).value
+      $('filter_images').focus();
+    }*/
+  }
+
+  addToEditor = function(identifier) {
+    addItem(identifier);
+  }
+</script>
+
+<div class="content">
+
+  <%= render :partial => 'search_tabs' %>
+
+  <div id="search_movies" class="tabbed-content">
+    <%= render :partial => 'search_tab', :locals => { :search_for => "movie" } %>
+  </div>
+
+  <div id="search_characters" style="display: none;" class="tabbed-content">
+    <%= render :partial => 'search_tab', :locals => { :search_for => "character" } %>
+  </div>
+
+  <div id="search_companies" style="display: none;" class="tabbed-content">
+    <%= render :partial => 'search_tab', :locals => { :search_for => "company" } %>
+  </div>
+
+  <div id="search_categories" style="display: none;" class="tabbed-content">
+    <%= render :partial => 'search_tab', :locals => { :search_for => "category" } %>
+  </div>
+
+  <div id="search_people" style="display: none;" class="tabbed-content">
+    <%= render :partial => 'search_tab', :locals => { :search_for => "person" } %>
+  </div>
+</div>
+
+<div id="button-bar" class="button-bar">
+  <%= close_box_button %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $('filter_movies').focus();
+</script>

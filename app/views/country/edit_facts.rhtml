@@ -1,0 +1,36 @@
+<% content_for("title") do %>
+  <%= "Edit Facts for Country:".t + " " + @country.name  %>
+<% end %>
+
+<%= lightbox_form_tag :action => :update_facts %>
+
+  <div class="content">
+	<ul class="small-tabs">
+      <li class="active" id="tab_facts"><%= link_to "Facts".t, "#", :accesskey => "1", :title => "Edit Main Facts".t %></li>
+    </ul>
+    
+    <div id="edit_facts_facts" class="tabbed-content">
+      <div class="input">
+        <label for="alias_name"><%= "Name".t %></label>
+        <%= display_attribute :alias, :name %>
+      </div>
+
+      <div class="input">
+        <label for="base_alias_name"><%= "Name (english)".t %></label>
+        <% if admin? %>
+          <%= display_attribute :base_alias, :name %>
+        <% else %>
+          <%= @base_alias.name %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+</script>

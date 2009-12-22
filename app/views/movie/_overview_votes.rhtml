@@ -1,0 +1,26 @@
+<% if @movie.class.has_votes? and @movie.status == "Released" -%>
+  <%= link_to_remote "vote".t, { :update => 'overview-votes',
+                               :url    =>  { :action     => 'vote',
+                                             :controller => 'vote',
+                                             :vote_for   => 'movie',
+                                             :id         => @movie.id } },
+                               :title  => 'Vote for this movie'.t,
+                               :class  => 'edit-button' %>
+<% elsif @movie.class.has_votes? and @movie.status != "Released" %>
+  <div style="padding-top: 0.3em; float: right;"><%= "not released".t %></div>
+<% end -%>
+
+<% if @movie.vote > 0 and not (@movie.status != "Released" and @movie.class.has_votes?) -%>
+  <div class="rating_bar"><div style='width: <%= sprintf("%1.2f", @movie.vote * 10 ) %>%'></div>
+    <span class="small" style="margin-top: 3px;">
+    <% if @movie.class.has_votes? -%>
+     (<%= ('%d votes'/ @movie.votes_count)  %>)
+    <% else -%>
+     (<%= "average".t %>)
+    <% end %>
+    </span>
+  </div>
+  <strong><%= movie_vote @movie %></strong>
+<% else -%>
+  <div class="rating_bar"><span class="small"><%= "no votes yet".t %></span></div>
+<% end -%>

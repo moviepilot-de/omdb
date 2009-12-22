@@ -1,0 +1,41 @@
+<% if local_aliases_only == true %>
+  <% aliases = { @language => object.local_aliases( @language ) } %>
+<% else %>
+  <% aliases = object.aliases_by_language %>
+<% end %>
+
+<% if !request.xhr? %>
+<div class="headline-box">
+  <%= link_to_function 'edit'.t, lightbox( :action => :edit_aliases ), :class => 'edit-button' %>
+  <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:EditSynonym' }, :class => 'help-button' %>
+  <h3><%= "Alternate Titles".t %></h3>
+</div>
+<% end %>
+
+<div id="overview-aliases" class="content-box">
+  <% if object.non_official_translations( @language ).empty? and local_aliases_only %>
+    <div class="empty"><%= 'There are no alternative names defined for this language'.t %></div>
+  <% else %>
+    <% aliases.each do |lang, names| %>
+      <% official_translation = object.official_translation( lang ) %>
+      <h4><%= lang.english_name.t %></h4>
+      <ul class="sortable-list" id="name_aliases_<%= object.id %>_<%= lang.code %>">
+        <% names.each do |a| %>
+          <li id="name_alias_<%= a.id %>">
+            <%= sort_icon_div %>
+            <% if official_translation.any? and a.id == official_translation.first.id %>
+              <%= content_tag :strong, a.name %>
+            <% else %>
+              <%= a.name %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end -%>
+  <% end -%>
+  <% if (object.non_official_translations(@language).size < object.non_official_aliases(@language).size) and local_aliases_only -%>
+    <%= link_to_remote 'show all aliases'.t, { :url => { :action => :show_all_aliases } }, :class => 'more' %>
+  <% elsif !local_aliases_only %>
+    <%= link_to_remote 'show local aliases only'.t, { :url => { :action => :show_less_aliases } }, :class => 'more' %>
+  <% end -%>
+</div>

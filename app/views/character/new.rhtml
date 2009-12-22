@@ -1,0 +1,58 @@
+<% content_for("title") do %>
+  <%= 'Create Character'.t %>
+<% end %>
+
+<script type="text/javascript">
+  object_unselected();
+
+  check_method = function() {
+    if (is_object_selected()) {
+      $("add_button").disabled = false;
+    } else {
+      $("add_button").disabled = true;
+    }
+  }
+</script>
+
+<%= render_action @character_assign_cast_action %>
+<div class="content">
+
+  <div id="ajax-help">
+    <h4><%= 'How to assign a character to a cast'.t %></h4>
+    <p><%= 'THIS TEXT IS MISSING :)'.t %></p>
+  </div>
+
+  <div class="input">
+    <label for="filter_characters"><%= 'Character Name'.t %></label>
+    <%= text_field("filter", "characters") %>
+  </div>
+
+
+  <div id="ajax-select">
+
+    <%= observe_field('filter_characters',
+                    :frequency => 0.3,
+                    :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                    :loaded    => "Element.update('ajax-activity-indicator','')",
+                    :update    => "filtered",
+                    :url       => { :action => :find_characters, 
+                                    :controller => 'search', 
+                                    :cast       => @cast.id,
+                                    :allow_creation => true, 
+                                    :movie => @movie } )%>
+
+    <div id="filtered">
+    </div>
+  </div>
+</div>
+
+<div class="button-bar" id="ajax-buttons">
+  <%= submit_tag 'Assign'.t, :disabled => true, :class => 'disabled', :id => 'add_button' %>
+  <%= close_box_button %>
+</div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('filter_characters').value = '<%= @cast.character_name %>';
+</script>

@@ -1,0 +1,18 @@
+<div class="list-view-headline">
+  <% if show_edit_links %>
+    <%= sort_cast_link department %>
+    <%= link_to_function "edit".t, lightbox( :action => :edit,
+                                             :controller => 'cast',
+                                             :movie => @movie,
+                                             :department => department.id ),
+                                   :class => 'edit-button',
+                                   :title => "edit".t %>
+  <% end %>
+  <h3><%= department.local_name @language %></h3>
+</div>
+
+<ul id="movie-<%= department.id %>" class="sortable-list">
+  <% Cast.employees( @movie, department ).each { |cast| -%>
+    <%= render :partial => 'movie/cast_default', :locals => { :cast => cast } %>
+  <% } %>
+</ul>

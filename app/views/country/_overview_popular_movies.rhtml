@@ -1,0 +1,5 @@
+<ul>
+<% @country.movies.slice(0,5).each { |m| %>
+  <li><%= render_component :controller => 'movie', :action => :info, :id => m.id %></li>
+<% } %>
+</ul>

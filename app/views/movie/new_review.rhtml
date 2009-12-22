@@ -1,0 +1,24 @@
+<% content_for("title") do %>
+  <%= 'Add Review'.t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => "create_review", :id => @movie.id } %>
+<div class="content">
+  <div id="errors">
+    <% if flash[:error] %>
+    <%= flash[:error] %>
+    <% end %>
+  </div>
+  <% if not flash[:error] %>
+  <%= hidden_field_tag :id, @movie.id %>
+  <%= text_area_tag 'review[data]', @review.data, :id => 'review_text', :style => "width: 530px; height: 200px"  %><br />
+  <label for="rating" style="padding-left:3em; display:inline"><%= "Rating".t %>:</label> <%= select_tag "review[rating]", options_for_select(1..10), :style => "display:inline" %>
+    
+  <% end %>
+</div>
+
+<div class="button-bar">
+  <%= submit_tag( 'Add'.t ) if not flash[:error] %>
+  <%= close_box_button %>
+</div>
+<%= end_form_tag %>

@@ -1,0 +1,56 @@
+<script type="text/javascript">
+  var new_company_count = 0;
+
+  <%= create_add_function :company %>
+  <%= create_add_new_function :company %>
+  <%= create_remove_function :company %>
+</script>
+
+<%= edit_freeze_state @movie, :companies %>
+<p>
+  <%= "Please select all companies that were involved in the production of this movie. To add a company, search for it, then click it.".t %>
+  <%= "Get more information in \"%s\"." / link_to( "Help:FactsProductionCompanies".t, :controller => 'generic_page', :page => 'Help:FactsProductionCompanies' ) %>
+</p>
+
+<table class="list-add-box">
+  <tr>
+    <th>
+      <% if editor? %>
+        <div class="create-link"><%= link_to_function 'Create new Company'.t, 'add_new_company()', :class => 'edit' %></div>
+      <% end %>
+      <%= text_field("filter", "companies", :size => 15) %>
+      <label for="filter_companies"><%= "Search".t %></label>
+    </th>
+    <th>
+      <%= "Companies that produced this movie".t %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_companies" class="left">
+          <li class="empty"><%= "please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="selected_companies" class="right">
+          <% @movie.companies.each { |c| %>
+            <li id="movie-company-<%= c.id %>">
+              <%= link_to_function c.name, "remove_company('#{c.id}')", :class => 'select no-edit' %>
+              <input type="hidden" name="companies[]" value="<%= c.id %>" />
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field(:filter_companies,
+                  :frequency => livesearch_filter_frequency,
+                  :update    => "searched_companies",
+                  :before    => "Element.update('searched_companies', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                  :url       => { :action     => :find_companies, 
+                                  :controller => 'search' }) %>

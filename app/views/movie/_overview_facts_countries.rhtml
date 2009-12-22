@@ -1,0 +1,2 @@
+<%= render :partial => 'country', :collection => @movie.countries %>
+<li class="actions"><%= link_to_function 'Add'.t, lightbox( :action => :new_country ), :class => 'edit' %></li>

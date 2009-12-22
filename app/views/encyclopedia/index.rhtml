@@ -1,0 +1,44 @@
+<%= render :partial => 'common/portal_header' %>
+
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  
+  <p>
+    <%= "All relevant information in omdb is sorted according to popularity and shown here. You can get for example an overview of which genre or plot keyword recently gathered the most hits.".t + "Since this portal only shows an extract of the full omdb encyclopedia, use the search function (left top corner) to look for specific entries.".t %>
+  </p>
+
+  <div>
+    <div style="float: left; width: 48%; padding-right: 1%;">
+      <h2><%= Category.genre.local_name( @language ) %></h2>
+      <p><%= Category.genre.abstract( @language ).data %></p>
+      <div class="cloud">
+        <%= tag_cloud Category.popular_genres %>
+      </div>
+    </div>
+    <div style="float: left; width: 48%; padding-left: 1%;">
+      <h2><%= Category.term.local_name( @language ) %></h2>
+      <p><%= Category.term.abstract( @language ).data %></p>
+      <div class="cloud">
+        <%= tag_cloud Category.popular_terms %>
+      </div>
+    </div>
+  </div>
+
+  <div style="clear: left;">
+    <div style="float: left; width: 48%; padding-right: 1%;">
+      <h2><%= Category.plot_keyword.local_name( @language ) %></h2>
+      <p><%= Category.plot_keyword.abstract( @language ).data %></p>
+      <div class="cloud">
+        <%= tag_cloud Category.popular_plot_keywords %>
+      </div>
+    </div>
+    <div style="float: left; width: 48%; padding-left: 1%;">
+      <h2><%= "Job".t %></h2>
+      <p><%= "Jobs explain the respective function of the persons involved in a film production.".t %></p>
+      <div class="cloud">
+        <%= tag_cloud Job.popular %>
+      </div>
+    </div>
+  </div>
+</div>

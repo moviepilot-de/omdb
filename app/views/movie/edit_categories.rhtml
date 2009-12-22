@@ -1,0 +1,69 @@
+<% content_for("title") do %>
+  <%= "Edit Categories".t %>
+<% end %>
+
+<%= lightbox_form_tag( { :action => :update_categories }, { :update => nil } ) %>
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_link_genre"><%= link_to_function Category.genre.local_name( @language ), "display_tab('genre')", :accesskey => "1", :title => "Edit %s" / Category.genre.local_name( @language ) %></li>
+      <li id="tab_link_production"><%= link_to_function Category.production.local_name( @language ), "display_tab('production')", :accesskey => "2", :title => "Edit %s" / Category.genre.local_name( @language ) %></li>
+      <li id="tab_link_audience"><%= link_to_function Category.audience.local_name( @language ), "display_tab('audience')", :accesskey => "3", :title => "Edit %s" / Category.audience.local_name( @language ) %></li>
+      <li id="tab_link_standing"><%= link_to_function Category.standing.local_name( @language ), "display_tab('standing')", :accesskey => "4", :title => "Edit %s" / Category.standing.local_name( @language ) %></li>
+      <li id="tab_link_type"><%= link_to_function Category.type.local_name( @language ), "display_tab('type')", :accesskey => "5", :title => "Edit %s" / Category.type.local_name( @language ) %></li>
+      <li id="tab_link_source"><%= link_to_function Category.source.local_name( @language ), "display_tab('source')", :accesskey => "6", :title => "Edit %s" / Category.source.local_name( @language ) %></li>
+      <li id="tab_link_epoch"><%= link_to_function Category.epoch.local_name( @language ), "display_tab('epoch')", :accesskey => "7", :title => "Edit %s" / Category.epoch.local_name( @language ) %></li>
+      <li id="tab_link_term"><%= link_to_function Category.term.local_name( @language ), "display_tab('term')", :accesskey => "8", :title => "Edit %s" / Category.epoch.local_name( @language ) %></li>
+    </ul>
+
+    <div id="tab_genre" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :genre, :display_options => false, :description => "Please select one or more genres. This assigns the movie to a general group of movies, e.g.".t + " " + [ link_to_object( Category.find(18) ), link_to_object( Category.find(37) ), link_to_object( Category.find(878) ) ].join(", ") + "." } %>
+    </div>
+
+    <div id="tab_production" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :production, :display_options => true, :description => "Please select the type of the production.".t + tag(:br) + tag(:br) } %>
+    </div>
+
+    <div id="tab_audience" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :audience, :display_options => true, :description => "Please select the major consumer groups the film appeals to. If the movie is of general interest please do not select any audience group.".t } %>
+    </div>
+
+    <div id="tab_standing" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :standing, :display_options => true, :description => "Please select the appropriate term denoting the general public opinion about this movie.".t + tag(:br) + tag(:br)  } %>
+    </div>
+
+    <div id="tab_type" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :type, :display_options => true, :description => "Please select a realization type for this movie.".t + tag(:br) + tag(:br) } %>
+    </div>
+
+    <div id="tab_source" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :source, :display_options => true, :description => "Please select the source of inspiration for this movie.".t + tag(:br) + tag(:br) } %>
+    </div>
+
+    <div id="tab_epoch" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :epoch, :display_options => false, :description => "Please select the school that the makers of this movie were inspired by. Make sure to select a certain film school and do not simply select a continent or country.".t } %>
+    </div>
+
+    <div id="tab_term" style="display: none;" class="tabbed-content">
+      <%= render :partial => 'edit_category_type', :locals => { :type => :term, :display_options => false, :description => "Please select those terms that you think appropriate for the movie. You can choose camera perspectives, character specifics, lighting effects, etc.".t } %>
+    </div>
+
+    <div class="info-bar">
+      <h3 id="more-information-headline" class="open"><%= link_to_function "More Information".t, 'toggleDetails()' %></h3>
+      <div id="more-information">
+        <%= more_information_help_text %>
+      </div>
+    </div>
+  </div>
+  <div class="button-bar">
+    <%= submit_tag %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+<%= create_small_tabs_navigation [ :genre, :production, :audience, :standing, :type, :source, :epoch, :term ],
+                                    { :genre => 'filter_genres', :production => 'filter_productions', 
+                                      :audience => 'filter_audiences', :standing => 'filter_standings',
+                                      :type => 'filter_types', :source => 'filter_sources', :epoch => 'filter_epoches',
+                                      :term => 'filter_terms'} %>
+</script>

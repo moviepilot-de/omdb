@@ -1,0 +1,52 @@
+<% content_for("title") do %>
+  <%= "Edit Image Facts".t %>
+<% end %>
+
+<%= lightbox_form_tag :action => :update_facts %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_link_facts"><%= link_to "Image Facts".t, "#", :accesskey => "1", :title => "Edit Image Facts".t %></li>
+    </ul>
+  
+    <div id="tab_facts" class="tabbed-content">
+      <div class="input">
+        <label for="image_license"><%= "License".t %></label>
+        <%= license_select_box false, :image %>
+        <div id="invalid_license" class="formError" style="display: none;">
+          <%= "This type of license is not allowed, because it might not be legal to use this image.".t %>
+        </div>
+      </div>
+
+      <div class="input">
+        <label for="image_source"><%= "Source (URL)".t %></label>
+        <%= text_field :image, :source %>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  <%= create_small_tabs_navigation [ :upload, :licenses ] %>
+  
+  checkImageUploadForm = function() {
+    if ($('image_license').value < 12 && $('image_license').value > 0) {
+      Effect.Appear('invalid_license');
+    } else {
+      Effect.Fade('invalid_license');      
+    }
+    if ($('image_license').value > 11) {
+      $('add_button').disabled = false;
+    } else {
+      $('add_button').disabled = true;
+    }
+  }
+  
+  $('image_license').onchange = function(){ checkImageUploadForm(); }
+  $('image_source').onkeyup = function(){ checkImageUploadForm(); }
+</script>

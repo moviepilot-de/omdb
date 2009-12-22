@@ -1,0 +1,9 @@
+<br />
+<br />
+<h3 class="underline"><%= "also consider".t %></h3>
+<div style="padding-left: 2px;">
+  <% @movie.similar_movies.each do |movie| %>
+    <%= link_to db_image_tag(movie.image, {:action => :medium}, :alt => title_for_movie(movie)), movie.default_url, 
+        :title => title_for_movie(movie), :style => "margin: 2px; float: left;" %>
+  <% end %>
+</div>

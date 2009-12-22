@@ -1,0 +1,3 @@
+<% @jobs.each do |job| %>
+  <%= render :partial => 'job', :object => job, :locals => {:search_name => @search_name.to_s} %>
+<% end %>

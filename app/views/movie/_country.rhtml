@@ -1,0 +1,8 @@
+<li id="movie_country_<%= country.id %>">
+  <div class="handle"><%= sort_icon %></div>
+  <div class="actions">
+    <%= link_to_remote delete_icon, :url => { :action     => 'delete_country',
+                                              :country    => country.id } %>
+  </div>
+  <%= link_to_object country %>
+</li>

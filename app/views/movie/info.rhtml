@@ -1,0 +1,5 @@
+<%= render :partial => 'info', :locals => { :movie => @movie } -%>
+
+<% if @wiki_request %>
+ <%= button_to_function "insert".t, "addToEditor('m_#{@movie.id}');" %>
+<% end %>

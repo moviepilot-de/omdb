@@ -1,0 +1,6 @@
+if flash[:error]
+page[:errors].update flash[:error]
+else
+#page.call "box.deactivate()"
+page.call "location.reload(true)"
+end

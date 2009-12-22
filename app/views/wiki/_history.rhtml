@@ -1,0 +1,29 @@
+<% if not @page.version.nil? %>
+<% @view_wiki_action ||= :wiki %>
+<div class="small">
+  <% if @object %>
+    <%= link_to "Changelog".t, :action => "changelog", :page => @page.current.page_name, @object.class.base_class.to_s.downcase.to_sym => @object.id %> |
+  <% else %>
+    <%= link_to "Changelog".t, :action => :changelog, :page => @page.page_name %> |
+  <% end %>
+
+  <% if @page.version > 1 %>
+    <%= link_to "Back in time".t, :action => @view_wiki_action, :page => @page.page_name, :rev => (@page.version - 1) %>
+    <%= link_to "(Diff to previous)".t, :controller => "content", :action => :view_diff, :from => @page.version, :to => (@page.version - 1), :id => @page.current.id %>
+  <% end %>
+  
+  <% if @page.version < @page.current_version %>
+    |
+    <% if @object %>
+      <%= link_to "Rollback".t, :action => :edit, :rev => (@page.version), :page => @page.page_name, @object.class.base_class.to_s.downcase.to_sym => @object.id %>
+    <% else %>
+      <%= link_to "Rollback".t, :action => :edit, :rev => (@page.version), :page => @page.page_name %>
+    <% end %>
+  <% end %>
+  
+  <% if @page.version < (@page.current_version) %>
+    | <%= link_to "Diff to next".t, :controller => "content", :action => :view_diff, :from => @page.version, :to => (@page.version + 1), :id => @page.current.id %>
+    <%= link_to "(Forward in time)".t, :action => @view_wiki_action, :page => @page.page_name, :rev => (@page.version + 1) %>
+  <% end %>
+</div>
+<% end %>

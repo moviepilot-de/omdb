@@ -1,0 +1,26 @@
+<div class="input">
+  <label for="alias_name"><%= "Name".t %></label>
+  <%= display_attribute :alias, :name %>
+</div>
+<% if not @language == Locale.base_language %>
+<div class="input">
+  <label for="base_alias_name"><%= "Name (english)".t %></label>
+  <%= display_attribute :base_alias, :name %>
+</div>
+<% end %>
+
+<% if admin? -%>
+<div class="input">
+  <label for="category_slug"><%= "Slug".t %></label>
+  <%= display_attribute :category, :slug %>
+</div>
+<div class="input">
+  <%= edit_freeze_state @category, :assignable %>
+  <label for="category_assignable"><%= "Assignable?".t %></label>
+  <%= display_attribute :category, :assignable, 'enum', :choices => [ true, false ] %>
+</div>
+<% end -%>
+
+<script type="text/javascript">
+  $('alias_name').focus();
+</script>

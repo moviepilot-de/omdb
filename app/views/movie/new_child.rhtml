@@ -1,0 +1,62 @@
+<% content_for("title") do %>
+  <%= 'Add Movies to this Series'.t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => "assign_child", :id => @movie.id },
+       :loading => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+       :loaded  => "Element.update('ajax-activity-indicator','')",
+       :success => "box.deactivate();" %>
+<div class="content">
+    <p><%= 'To add a new child movie or episode, simply search for the movie you wish to reference to. After you found the right movie, click it and press the add button. This dialog will stay open to allow you to add more movies. You can close this dialog via the close button when you\'re finished.'.t %></p>
+
+
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= text_field("filter", "movies", :size => 15) %>
+    </th>
+    <th>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_movies" class="left">
+          <li class="empty"><%= "Please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+    <td width="50%" style="padding: 2px;">
+      <div id="more-information">
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field('filter_movies',
+                :frequency => 0.3,
+                :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                :loaded    => "Element.update('ajax-activity-indicator','')",
+                :update    => "searched_movies",
+                :url       => { :action => :find_good_children, 
+                                :controller => 'search', 
+                                :movie => @movie } )%>
+
+</div>
+
+<div class="button-bar" id="ajax-buttons">
+  <input name="movie"  id="new_child" type="hidden" value="" />
+  <%= submit_tag 'Add'.t, :disabled => true, :class => 'disabled', :id => 'add_button' %>
+  <%= close_box_button %>
+</div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  add_movie = function(id) {
+    displayMovieInformation(id);
+    $('new_child').value = id;
+    $('add_button').disabled = false;
+  }
+  $('filter_movies').focus();
+</script>
+

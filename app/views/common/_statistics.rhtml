@@ -1,0 +1,13 @@
+<%= render :partial => 'header' %>
+<%= render :partial => 'overview_details' %>
+
+<div id="content">
+  <h2><%= "Movies per year".t %></h2>
+  <div style="text-align: center;">
+    <img src="<%= url_for :controller => 'statistic', :action => :movies_per_year, object.class.to_s.split('::').last.downcase => object.id %>" />
+  </div>
+  <h2><%= "Quality per year".t %></h2>
+  <div style="text-align: center;">
+    <img src="<%= url_for :controller => 'statistic', :action => :quality_per_year, object.class.to_s.split('::').last.downcase => object.id %>" />
+  </div>
+</div>

@@ -1,0 +1,1 @@
+<li id="person_autocomplete_<%= person.id %>"><div class="detail-box"><div class="image"><%= thumbnail_image(person.image) %><br /></div><h4><%= person.name %></h4><div class="small informal"><%= person.jobs.uniq.slice(0,3).collect { |j| j.local_name(@language) }.join(", ") %></div></div></li>

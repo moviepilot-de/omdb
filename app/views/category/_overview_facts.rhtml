@@ -1,0 +1,29 @@
+<div class="fact">
+  <div class="title"><%= 'Known Movies'.t %>:</div>
+  <div class="value">
+    <%= @category.movies.size %>
+  </div>
+</div>
+
+<% unless @category.chronological_movies.empty? %>
+<div class="fact">
+  <div class="title"><%= 'First Movie'.t %>:</div>
+  <div class="value">
+    <%= link_to_object @category.chronological_movies.first %> (<%= @category.chronological_movies.first.end.year %>)
+  </div>
+</div>
+<% end %>
+
+<% unless @category.highest_rated_movies.empty? %>
+<div class="fact">
+  <div class="title"><%= 'Highest Rated Movie'.t %>:</div>
+  <div class="value">
+    <%= link_to_object @category.highest_rated_movies.first %> (<%= movie_vote @category.highest_rated_movies.first %>)
+  </div>
+</div>
+<% end %>
+
+<div class="fact">
+  <div class="title"><%= 'Average Quality'.t %>:</div>
+  <div class="value"><%= average_votes @category.movies %></div>
+</div>

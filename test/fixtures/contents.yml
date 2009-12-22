@@ -1,0 +1,315 @@
+starwars_index:
+  id: 1
+  related_object_id: 1
+  related_object_type: Movie 
+  language_id: "1819"
+  language_id: 1
+  page_name: index
+  type: Page
+  data: Hello World
+
+starwars_abstract:
+  id: 2
+  related_object_id: 292
+  related_object_type: Movie
+  language_id: "1819"
+  page_name: ""
+  type: Abstract
+  data: This is the Star Wars Abstract
+
+king_kong_additional_page:
+  id: 3
+  related_object_id: 254
+  related_object_type: Movie
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: Star Wars Abstract
+
+first_page:
+  id: 4
+  page_name: my_page
+  data: Hello World
+  version: 1
+  type: Page
+  related_object_id: 1
+  related_object_type: Category 
+  language_id: "1819"
+ 
+movie_page:
+  id: 5
+  page_name: my_other_page
+  data: Goodbye World
+  version: 1
+  type: Page
+  related_object_id: 251
+  related_object_type: Movie 
+  language_id: "1819"
+ 
+movie_index_page:
+  id: 6
+  page_name: index
+  data: Index!
+  version: 1
+  type: Page
+  related_object_id: 258
+  related_object_type: Movie 
+  language_id: "1819"
+ 
+wiki_wiki_page:
+  id: 7
+  page_name: WikiPage
+  name: WikiPage
+  data: "[[WikiWiki]]"
+  version: 1
+  type: Page
+  related_object_id: 258
+  related_object_type: Movie
+  language_id: "1819"
+ 
+imprint:
+  id: 8
+  page_name: Imprint
+  name: Imprint
+  data: This is a movie database.
+  version: 1
+  type: Page
+  language_id: "1819"
+ 
+existing_movie_page:
+  id: 9
+  page_name: Testpage
+  name: Testpage
+  data: "This is a test page that shouldn't be found"
+  version: 1
+  type: Page
+  language_id: "1819"
+  related_object_id: 251
+  related_object_type: Movie
+
+action_abstract:
+  id: 10
+  page_name: ""
+  name:
+  data: This is the abstract for the category action
+  type: Abstract
+  version: 1
+  language_id: "1819"
+  related_object_id: 28
+  related_object_type: Category
+
+usa_abstract:
+  id: 11
+  page_name: ""
+  name:
+  data: The Land of the Free
+  type: Abstract
+  version: 1
+  language_id: "1819"
+  related_object_id: 223
+  related_object_type: Globalize::Country
+
+tri_star_abstract:
+  id: 12
+  page_name: ""
+  name:
+  data: Tri Star Pictures Abstract
+  type: Abstract
+  version: 1
+  language_id: "1819"
+  related_object_id: 61
+  related_object_type: Company
+
+naomi_watts_abstract:
+  id: 13
+  page_name: ""
+  name:
+  data: "Hi. I'm Naomi and I'm cute."
+  type: Abstract
+  version: 1
+  language_id: "1819"
+  related_object_id: 3489
+  related_object_type: Person
+
+star_wars_movie_page:
+  id: 14
+  page_name: another_interesting_page
+  data: Something about World
+  version: 1
+  type: Page
+  language_id: "1819"
+  related_object_id: 292
+  related_object_type: Movie
+
+james_kirk_additional_page:
+  id: 15
+  page_name: Additional Page 1
+  data: Another page about James T. Kirk
+  version: 1
+  type: Page
+  language_id: 1819
+  related_object_id: 15
+  related_object_type: Character
+
+category_592_additional_page:
+  id: 16
+  page_name: Additional Page 1
+  data: Another page about category 592
+  version: 1
+  type: Page
+  language_id: 1819
+  related_object_id: 592
+  related_object_type: Category
+  
+indiana_jones_abstract:
+  id: 17
+  data: Indiana Jones Abstract Data
+  version: 1
+  type: Abstract
+  language_id: 1819
+  related_object_type: Character
+  related_object_id: 14
+
+quentins_additional_page:
+  id: 18
+  related_object_id: 1
+  related_object_type: User
+  language_id: 1819
+  page_name: "Additional Page 1"
+  type: Page
+  data: Quentins additional page.
+
+naomi_watts_additional_page:
+  id: 19
+  related_object_id: 3489
+  related_object_type: Person
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: Naomi Watts Wiki page
+
+naomi_watts_index:
+  id: 20
+  related_object_id: 3489
+  related_object_type: Person
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: Naomi Watts index page
+
+usa_index:
+  id: 21
+  related_object_id: 223
+  related_object_type: Globalize::Country
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: usa index page
+  
+usa_additional:
+  id: 22
+  related_object_id: 223
+  related_object_type: Globalize::Country
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: usa additional page
+
+tristar_index:
+  id: 23
+  related_object_id: 61
+  related_object_type: Company
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: tri star index page
+  
+tristar_additional:
+  id: 24
+  related_object_id: 61
+  related_object_type: Company
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: tri star additional page
+
+indy_index:
+  id: 25
+  related_object_id: 14
+  related_object_type: Character
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: indiana jones index page
+  
+indy_additional:
+  id: 26
+  related_object_id: 14
+  related_object_type: Character
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: indiana jones additional page
+  
+author_index:
+  id: 27
+  related_object_id: 13
+  related_object_type: Job
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: author job index page
+  
+author_additional:
+  id: 28
+  related_object_id: 13
+  related_object_type: Job
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: author job additional page
+  
+action_index:
+  id: 29
+  related_object_id: 28
+  related_object_type: Category
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: action index page
+  
+action_additional:
+  id: 30
+  related_object_id: 28
+  related_object_type: Category
+  language_id: "1819"
+  page_name: "Additional Page 1"
+  type: Page
+  data: action additional page
+
+king_kong_index:
+  id: 31
+  related_object_id: 254
+  related_object_type: Movie
+  language_id: "1819"
+  page_name: "index"
+  type: Page
+  data: kingkong index page
+
+quentins_index:
+  id: 32
+  related_object_id: 1
+  related_object_type: User
+  language_id: 1819
+  page_name: index
+  type: Page
+  data: Quentins index page.
+
+director_abstract:
+  id: 33
+  related_object_id: 21
+  related_object_type: Job
+  language_id: "1819"
+  page_name: ""
+  type: Abstract
+  data: The director is very important

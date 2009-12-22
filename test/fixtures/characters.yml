@@ -1,0 +1,346 @@
+--- 
+characters_056: 
+  name: " \tTheodore Donald Kerabatsos"
+  id: "56"
+  version: "22"
+  popularity: "0"
+indiana_jones: 
+  name: Indiana Jones
+  id: "14"
+  version: "86"
+  popularity: "2"
+characters_035: 
+  name: Aragorn
+  id: "35"
+  version: "23"
+  popularity: "0"
+characters_015: 
+  name: " James T. Kirk"
+  id: "15"
+  version: "242"
+  popularity: "1"
+characters_036: 
+  name: Arwen
+  id: "36"
+  version: "24"
+  popularity: "0"
+characters_057: 
+  name: Danny Ocean
+  id: "57"
+  version: "91"
+  popularity: "1"
+characters_037: 
+  name: Legolas
+  id: "37"
+  version: "23"
+  popularity: "0"
+characters_058: 
+  name: Rusty Ryan
+  id: "58"
+  version: "20"
+  popularity: "0"
+characters_016: 
+  name: " Spock"
+  id: "16"
+  version: "194"
+  popularity: "1"
+characters_060: 
+  name: Terry Benedict
+  id: "60"
+  version: "20"
+  popularity: "0"
+characters_059: 
+  name: Linus Caldwell
+  id: "59"
+  version: "20"
+  popularity: "0"
+characters_017: 
+  name: " \tDr. Leonard \"Bones\" McCoy"
+  id: "17"
+  version: "196"
+  popularity: "1"
+characters_040: 
+  name: Saruman
+  id: "40"
+  version: "23"
+  popularity: "0"
+characters_038: 
+  name: Gimli
+  id: "38"
+  version: "23"
+  popularity: "0"
+characters_061: 
+  name: Tess Ocean
+  id: "61"
+  version: "91"
+  popularity: "1"
+characters_020: 
+  name: Pavel Chekov
+  id: "20"
+  version: "137"
+  popularity: "1"
+characters_018: 
+  name: " Montgomery \"Scotty\" Scott"
+  id: "18"
+  version: "175"
+  popularity: "1"
+characters_041: 
+  name: Samweis 'Sam' Gamdschie
+  id: "41"
+  version: "24"
+  popularity: "0"
+characters_039: 
+  name: Boromir
+  id: "39"
+  version: "23"
+  popularity: "0"
+characters_062: 
+  name: Virgil Malloy
+  id: "62"
+  version: "20"
+  popularity: "0"
+characters_021: 
+  name: Uhura
+  id: "21"
+  version: "169"
+  popularity: "1"
+characters_019: 
+  name: Hikaru Sulu
+  id: "19"
+  version: "143"
+  popularity: "1"
+characters_042: 
+  name: Peregrin 'Pippin' Tuk
+  id: "42"
+  version: "25"
+  popularity: "0"
+characters_063: 
+  name: Turk Malloy
+  id: "63"
+  version: "20"
+  popularity: "0"
+characters_001: 
+  name: Luke Skywalker
+  id: "1"
+  version: "84"
+  popularity: "1"
+dracula: 
+  name: Dracula
+  id: "22"
+  version: "142"
+  popularity: "2"
+characters_043: 
+  name: Meriadoc 'Merry' Brandybuck
+  id: "43"
+  version: "23"
+  popularity: "0"
+characters_064: 
+  name: Saul Bloom
+  id: "64"
+  version: "20"
+  popularity: "0"
+characters_023: 
+  name: Captain Jean-Luc Picard
+  id: "23"
+  version: "187"
+  popularity: "1"
+characters_044: 
+  name: Elrond
+  id: "44"
+  version: "23"
+  popularity: "0"
+characters_065: 
+  name: Basher Tarr
+  id: "65"
+  version: "20"
+  popularity: "0"
+characters_002: 
+  name: Han Solo
+  id: "2"
+  version: "158"
+  popularity: "2"
+characters_045: 
+  name: Galadriel
+  id: "45"
+  version: "23"
+  popularity: "0"
+characters_066: 
+  name: Frank Catton
+  id: "66"
+  version: "20"
+  popularity: "0"
+characters_003: 
+  name: Leia Organa
+  id: "3"
+  version: "57"
+  popularity: "1"
+characters_024: 
+  name: Commander William T. Riker
+  id: "24"
+  version: "118"
+  popularity: "1"
+characters_067: 
+  name: Reuben Tishkoff
+  id: "67"
+  version: "20"
+  popularity: "0"
+characters_004: 
+  name: C-3PO
+  id: "4"
+  version: "46"
+  popularity: "1"
+characters_025: 
+  name: " \tLt. Commander Data"
+  id: "25"
+  version: "118"
+  popularity: "1"
+characters_046: 
+  name: Bilbo Beutlin
+  id: "46"
+  version: "24"
+  popularity: "0"
+characters_068: 
+  name: Livingston Dell
+  id: "68"
+  version: "20"
+  popularity: "0"
+characters_026: 
+  name: Lt. Commander Geordi LaForge
+  id: "26"
+  version: "119"
+  popularity: "1"
+characters_047: 
+  name: Sauron
+  id: "47"
+  version: "23"
+  popularity: "0"
+characters_069: 
+  name: Yen
+  id: "69"
+  version: "37"
+  popularity: "0"
+characters_005: 
+  name: ...James
+  id: "5"
+  version: "60"
+  popularity: "1"
+characters_048: 
+  name: Gollum
+  id: "48"
+  version: "40"
+  popularity: "0"
+characters_006: 
+  name: "...Ad\xC3\xA8le"
+  id: "6"
+  version: "23"
+  popularity: "0"
+worf: 
+  name: Lt. Commander Worf
+  id: "27"
+  version: "150"
+  popularity: "1"
+characters_050: 
+  name: Charlie Bucket
+  id: "50"
+  version: "77"
+  popularity: "1"
+characters_007: 
+  name: ...Rowan
+  id: "7"
+  version: "23"
+  popularity: "0"
+characters_030: 
+  name: Guinan
+  id: "30"
+  version: "27"
+  popularity: "1"
+characters_028: 
+  name: Dr. Beverly Crusher
+  id: "28"
+  version: "158"
+  popularity: "1"
+characters_051: 
+  name: Violet Beauregarde
+  id: "51"
+  version: "18"
+  popularity: "0"
+characters_049: 
+  name: Willy Wonka
+  id: "49"
+  version: "56"
+  popularity: "1"
+characters_010: 
+  name: ...Sarah
+  id: "10"
+  version: "23"
+  popularity: "0"
+characters_008: 
+  name: ...Dafydd
+  id: "8"
+  version: "23"
+  popularity: "0"
+characters_031: 
+  name: Grand Moff Tarkin
+  id: "31"
+  version: "50"
+  popularity: "1"
+characters_029: 
+  name: Commander Deanna Troi
+  id: "29"
+  version: "137"
+  popularity: "1"
+characters_052: 
+  name: Veruca Salt
+  id: "52"
+  version: "18"
+  popularity: "0"
+characters_011: 
+  name: R2-D2
+  id: "11"
+  version: "53"
+  popularity: "1"
+characters_009: 
+  name: ...Ebrill
+  id: "9"
+  version: "74"
+  popularity: "1"
+characters_032: 
+  name: Dr. Zefram Cochrane
+  id: "32"
+  version: "112"
+  popularity: "1"
+characters_053: 
+  name: " \tJeffrey Lebowski - The Dude"
+  id: "53"
+  version: "58"
+  popularity: "0"
+characters_012: 
+  name: Captain Jack Sparrow
+  id: "12"
+  version: "89"
+  popularity: "1"
+characters_033: 
+  name: Frodo Beutlin
+  id: "33"
+  version: "24"
+  popularity: "0"
+characters_054: 
+  name: " \tJeffrey Lebowski"
+  id: "54"
+  version: "84"
+  popularity: "1"
+characters_034: 
+  name: Gandalf
+  id: "34"
+  version: "24"
+  popularity: "0"
+characters_055: 
+  name: Walter Sobchak
+  id: "55"
+  version: "22"
+  popularity: "0"
+characters_013: 
+  name: Homer J. Simpson
+  id: "13"
+  version: "25"
+  popularity: "0"

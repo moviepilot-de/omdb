@@ -1,0 +1,11 @@
+  <dl>
+    <dt>Objects in queue<dt><dd><%= @status[:objects_in_queue] %></dd>
+    <% if @status[:reindexing_since] -%>
+      <dt>reindexing since</dt><dd><%= @status[:reindexing_since] %></dd>
+      <% if @status[:last_reindexing_time] -%>
+        <dt>percent done</dt><dd><%= @status[:percentage] %></dd>
+        <dd>(based on the last indexing run that took
+            <%= distance_of_time_in_words @status[:last_reindexing_time] %>)</dd>
+      <% end %>
+    <% end -%>
+  </dl>

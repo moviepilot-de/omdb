@@ -1,0 +1,19 @@
+<div class="list_select_box big">
+  <ul>
+    <% @character.aliases.local( @language ).each { |a| %>
+      <li id="character-alias-<%= a.id %>" class="actions">
+        <div class="action">
+          <%= link_to_remote "delete".t, 
+                { :url       => { :action     => :destroy_alias, 
+                                  :alias      => a.id },
+                  :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                  :complete  => "Element.update('ajax-activity-indicator','')",
+		  :confirm   => "Really delete?" },
+                { :class => 'edit-button' } %>
+        </div>
+        <span><%= a.name %></span>
+      </li>
+    <% } %>
+  </ul>
+</div>
+

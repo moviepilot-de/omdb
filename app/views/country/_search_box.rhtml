@@ -1,0 +1,9 @@
+<div class="result-box">
+  <div class="image">
+    <%= link_to thumbnail_image(@country.image, :medium), :controller => 'country', :id => @country.id %>
+  </div>
+  <div class="link">
+    <%= link_to_object @country %>
+    <div class="small"><%= "Country".t %></div>
+  </div>
+</div>

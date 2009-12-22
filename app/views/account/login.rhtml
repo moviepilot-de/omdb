@@ -1,0 +1,28 @@
+<% content_for("title") do %>
+  <%= 'Login'.t %>
+<% end %>
+
+<%= lightbox_form_tag( { :action => 'login' }, { :update => nil, :html => nil }) if request.xhr? %>
+<%= form_tag( :action => 'login' ) if not request.xhr? %>
+<div class="content login">
+  <ul class="small-tabs">
+    <li class="active"><a href="#"><%= "Login".t %></a></li>
+  </ul>
+  <div id="login_form">
+    <%= render :partial => 'login_form' %>
+  </div>
+</div>
+<div class="button-bar" id="ajax-buttons">
+  <div style="float: left;" class="remember_me">
+  <%= check_box_tag 'remember_me' %>
+  <label for="remember_me" style="float: none; width: auto; display: inline;"><%= "Remember me".t %></label>
+  </div>
+
+  <%= submit_button 'Login'.t %>
+  <%= close_box_button if request.xhr? %>
+</div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('login').focus();
+</script>

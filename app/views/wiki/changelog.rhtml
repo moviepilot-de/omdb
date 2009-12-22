@@ -1,0 +1,21 @@
+<% if params[:controller] != "content" %>
+<%= render :partial => 'header' %>
+<% end %>
+
+<%= render :partial => 'common/views' %>
+
+<div id="content">
+  <ul>
+<% @versions.each do |version| %>
+<li>
+  <% if @object %>
+  <%= link_to "Revision".t + " #{version[:version].to_s}", :action => "wiki", :id => @object.id, :page => @page.page_name, :rev => version[:version] %>
+  <% else %>
+  <%= link_to "Revision".t + " #{version[:version].to_s}", :action => "view", :page => @page.page_name, :rev => version[:version] %>
+  <% end %>
+  at <%= version[:updated_at] %> 
+  by <%= link_to_user version[:user] %><%= ": #{version[:comment]}" unless version[:comment].to_s.blank? %>
+</li>
+<% end %>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<% if object.top_movies.any? -%>
+
+<div class="headline-box">
+  <%= link_to 'show all movies'.t, { :action => movie_method( object ) }, :class => 'help-button no-right-border'  %>
+  <h3><%= 'Selected Movies'.t %></h3>
+</div>
+<div id="overview-top-movies" class="content-box">
+  <ul> 
+    <% object.top_movies.each do |movie| %>
+      <li><%= render :partial => 'movie/info', :locals => { :movie => movie } %></li>
+    <% end %>
+  </ul>
+</div>
+
+<% end -%>

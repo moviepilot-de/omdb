@@ -1,0 +1,42 @@
+<%= edit_freeze_state @category, :parent %>
+<% if @category.attribute_frozen?( :parent ) %>
+<p>locked, unlock and try again</p>
+<% else %>
+<p>
+<%= "To add this site to a category or plot keyword of a higher level, enter the name of the category/the plot keyword and choose by clicking on it in the list. Remember that you can only define the nearest upper level by indicating a parent.".t %>
+</p>
+<table class="list-add-box">
+  <tr>
+    <th>
+      <label for="filter_categories"><%= "Parent Category".t + ": #{@category.parent.full_flattened_name(@language)}" %></label>
+      <%= text_field("filter", "categories", :size => 15) %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box one_column">
+        <ul id="searched_categories" class="right">
+          <li class="empty"><%= "Please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<div class="info-bar">
+  <h3 id="more-information-headline" class="open"><%= link_to_function "Selected".t, 'toggleDetails()' %></h3>
+  <div id="more-information">
+    <%= more_information_help_text %>
+  </div>
+</div>
+
+<input type="hidden" name="parent" value="<%= @category.parent.id %>" id="category_parent" />
+
+<%= observe_field(:filter_categories,
+                  :frequency => 0.5,
+                  :update    => "searched_categories",
+                  :loading   => "Element.update('searched_categories', '<li class=\"empty loading\">&nbsp;</li>');",
+                  :url => { :action     => :find_categories, 
+                            :category   => @category.id,
+                            :controller => 'search' }) %>
+<% end %>

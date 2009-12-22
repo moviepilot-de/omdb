@@ -1,0 +1,2 @@
+page.replace_html 'headline',         :partial => 'job/headline'
+page.replace_html 'overview-aliases', :partial => 'job/overview_aliases'

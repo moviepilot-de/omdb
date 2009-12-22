@@ -1,0 +1,41 @@
+<table class="source" cellspacing="0">
+<tr>
+  <th colspan="2"><%= path_links(@path) %></th>
+</tr>
+<% if @coverage 
+    @coverage.lines.each_with_index do |line, i|
+      covered = line.calls > 0
+      style = covered ? "normal" : text_class(line.source) -%>
+<tr>
+  <td class="no"><pre><%= i += 1 %></pre></td>
+  <td class="<%= 'un' unless covered %>covered"><pre class="<%= style %>"><%= line.source %></pre></td>
+</tr>
+<%  end -%>
+</table>
+<% else -%>
+<tr>
+  <td class="covered">
+  <br />
+<%  path = @path
+    path += "/" if path.size > 0
+      
+    for dir in @directories %>
+  <%=  link_to(dir, :action => "coverage", :path => "#{path}#{dir}") %>/<br />
+<%  end 
+
+    if @directories.size > 0 
+    %><br /><% 
+    end
+    
+    for file in @files 
+%><%= link_to(file, :action => "coverage", :path => "#{path}#{file}") %><br /><%
+    end 
+
+  end 
+  
+  if @files.size > 0 
+    %><br /><%
+  end -%>  
+  </td>
+</tr>
+</table>

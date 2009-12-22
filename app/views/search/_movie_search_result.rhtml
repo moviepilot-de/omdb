@@ -1,0 +1,12 @@
+<li style="clear: both;"><h5><%= movie_search_result.name %> <span style="display: none;">(<%= movie_search_result.id %>)</span></h5>
+  <div style="overflow: auto" class="informal">
+    <div style="float: left; width: 55px;">
+      <%= image_tag movie_search_result.class.to_s.downcase, { :style => "width: 50px;" } %>
+    </div>
+    <div>
+      <% movie_search_result.name_aliases.each { |a| %>
+        <em style="font-size: 0.8em; line-height: 1em;"><%= a.name %></em><br />
+      <% } %>
+    </div>
+  </div>
+</li>

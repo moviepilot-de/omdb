@@ -1,0 +1,41 @@
+<% content_for("title") do %>
+  <%= "Edit Alternative Names".t %>
+<% end %>
+
+<script type="text/javascript">
+  var active_tab = 'new'
+
+  display_tab = function(id) {
+    Element.hide( 'edit_' + active_tab );
+    Element.removeClassName('tab_' + active_tab, 'active');
+
+    active_tab = id;
+
+    Element.show( 'edit_' + id );
+    Element.addClassName('tab_' + id, 'active');
+  }
+</script>
+
+<%= lightbox_form_tag :action => :create_alias %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_new"><%= link_to_function "Create new Name".t, "display_tab('new')", :accesskey => "1", :title => "Create new Name".t %></li>
+      <li id="tab_aliases"><%= link_to_function "Current Names".t, "display_tab('aliases')", :accesskey => "2", :title => "Edit current Name".t %></li>
+    </ul>
+
+    <div id="edit_new" class="tabbed-content">
+      <%= render :partial => 'common/new_alias' %>
+    </div>
+    <div id="edit_aliases" class="tabbed-content" style="display: none;">
+      <%= render :partial => 'common/edit_aliases' %>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button %>
+  </div>
+
+<%= end_form_tag %>
+

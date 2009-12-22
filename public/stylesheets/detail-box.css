@@ -1,0 +1,190 @@
+div.search-result {
+}
+
+div.detail-box div.content {
+  padding:                  3px;
+}
+
+div.detail-box div.image {
+  float:                    left;
+  padding-right:            4px;
+  padding-bottom:           4px;
+  padding-left:             4px;
+}
+
+div.detail-box div.image img {
+  /*border:                   1px solid #ddd;*/
+  margin-top:               0.27em;
+}
+
+div.detail-box div.image a {
+  border:                   none;
+}
+
+div.detail-box div.image img.minivote {
+  border:                   none;
+  padding-top:              0.15em;
+  padding-bottom:           0.5em;
+}
+
+div.detail-box h4 {
+  padding:                   0;
+  margin:                    0;
+  font-size:                 10pt;
+}
+
+div.detail-box div.details {
+  padding-left:             58px;
+  padding-top:              2px;
+}
+
+div.search-result div.details {
+  padding-left:             100px;
+}
+
+div.detail-box p  {
+  line-height:1.3em;
+}
+
+div.detail-box div.rating_bar {
+  height:                   10px;
+  width:                    80px;
+  float:                    right;
+  margin-top:              2px;
+}
+
+div.detail-box div.rating_bar div {
+  height:                   10px;
+}
+
+div.minivote,
+div.mediumvote {
+ height:6px;
+ border:1px solid #868881;
+ padding:1px;
+ float:left;
+ margin-bottom: 0.5em;
+ margin-top: 3px;
+}
+
+div.minivote {
+ width:43px;
+}
+
+div.mediumvote {
+ width:                     88px;
+ float:                     none;
+ padding:                   1px;
+}
+
+div.minivote div,
+div.mediumvote div {
+  background:               #8399A7; 
+  background-image:         url(/images/layout/bg_vote_bar.png);
+  height:                   6px;
+}
+
+div.result-box {
+  width:                    170px;
+  float:                    left;
+  margin-right:             20px;
+  margin-left:              10px;
+  margin-bottom:            0.5em;
+}
+
+div.result-box div.delete {
+  float:                    right;
+  padding-top:              4px;
+  padding-right:            5px;
+}
+
+div.result-box div.image {
+  background-image:         url("/images/startpage/background-result-top.png");
+  background-repeat:        no-repeat;
+  min-height:               165px;
+  padding:                  12px 2px 2px 6px;
+  text-align:               center;
+}
+
+div.result-box div.image div.votebar {
+  text-align:               left;
+}
+
+div.result-box div.link {
+  background-image:         url("/images/startpage/background-result-bottom.png");
+  background-repeat:        no-repeat;
+  text-align:               center;
+  padding:                  5px;
+  padding-top:              15px;
+  min-height:               4em;
+}
+
+div.result-box div.link div.small {
+  color:                    rgb(153, 153, 153);
+}
+
+div.result-box div.mediumvote {
+  margin-top:               -2px;
+  margin-left:              33px;
+  background-color:         white;
+}
+
+div.result-box img {
+  border:                   1px solid #ccc;
+}
+
+div.detail-box div.image a {
+ border:none;
+}
+
+div.detail-box div.image img {
+ border:                   1px solid #ddd;
+}
+
+div.detail-box div.image img:hover {
+ border:1px solid #900;
+}
+
+div.detail-box div.headline {
+  background-repeat:        no-repeat;
+  background-color:         #dde4d6;
+  overflow:                 auto;
+}
+
+div.detail-box div.headline div.type {
+  font-weight:              bold;
+  float:                    right;
+  font-size:                8pt;
+  padding-right:            3px;
+}
+
+div.search-result {
+  width:                    250px;
+  height:                   179px;
+  float:                    left;
+  margin-right:             10px;
+  margin-bottom:            10px;
+  border-left:              1px solid #dde4d6;
+  border-bottom:            1px solid #dde4d6;
+}
+
+div.search-result div.small {
+  line-height:              1.1em;
+}
+
+
+/* Detail Box for Autocompletion */
+
+div.auto-complete div.detail-box h4 {
+  padding-left:             58px;  
+}
+
+div.auto-complete div.detail-box div.informal {
+  padding-left:             58px; 
+  margin-bottom:            3px;
+}
+
+div.auto-complete.no-padding div.detail-box div.informal,
+div.auto-complete.no-padding div.detail-box h4 {
+  padding-left:             0px;
+}

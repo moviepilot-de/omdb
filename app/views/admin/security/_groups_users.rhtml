@@ -1,0 +1,3 @@
+<% for group in groups_users %>
+  <div><%= check_box_tag("groups[]", group.id, group.member?(@principal)) %><%= group.title %></div>
+<% end %>

@@ -1,0 +1,43 @@
+<% content_for("right_column") do -%>
+<div id="overview-details">
+
+  <div class="headline-box">
+    <%= link_to_function 'edit'.t, lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutCategoryFacts' }, :class => 'help-button' %>
+    <h3><%= 'Facts' %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+
+  <%= render :partial => 'common/overview_editors', :locals => { :object => @category } if @category.log_entries.any? %>
+
+  <%= render :partial => 'common/overview_hierarchy', :locals => { :object => @category, 
+                 :title => "hierarchy".t } %>
+
+  <%= render :partial => 'common/overview_upcoming_movies', :locals => { :object => @category } %>
+
+  <%= render :partial => 'common/overview_last_movies', :locals => { :object => @category } %>
+
+  <%= render :partial => 'common/overview_top_movies', :locals => { :object => @category } %>
+
+  <%= render :partial => 'common/overview_aliases', :locals => { :object => @category, :local_aliases_only => true } %>
+
+  <% if editor? && @category.root -%>
+  <div class="headline-box">
+    <h3><%= 'Administration'.t %></h3>
+  </div>
+  <div id="overview-administration" class="content-box">
+    <p>
+      <%= button_to_function 'merge categories'.t, lightbox( :action => :merge_categories ) %><br />
+      <br />
+      <%= button_to_function 'create category'.t, lightbox( :action => :new ) %><br />
+      <br />
+      <%= button_to "delete category".t, { :action => "destroy" }, 
+            { :class => "edit-button"  , :confirm => "Really delete the category %s"/@category.local_name(@language) } %><br />
+    </p>
+  </div>
+  <% end -%>
+
+</div>
+<% end %>

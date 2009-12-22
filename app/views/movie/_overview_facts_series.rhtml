@@ -1,0 +1,20 @@
+<div class="fact">
+  <div class="title"><%= 'Status'.t %>:</div>
+  <div class="value"><%= @movie.status %></div>
+</div>
+
+<% if not @movie.homepage.empty? %>
+<div class="fact">
+  <div class="title"><%= 'Official Homepage'.t %>:</div>
+  <div class="value">
+    <a href="<%= @movie.homepage %>" title="<%= @movie.homepage %>"><%= "Visit Homepage".t %></a>
+  </div>
+</div>
+<% end %>
+
+<div class="fact">
+  <div class="title"><%= 'Known Seasons'.t %>:</div>
+  <div class="value">
+    <%= link_to @movie.children.size.to_s, :action => :parts %>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+page.remove @cast.class.to_s.downcase + '_' + @cast.id.to_s

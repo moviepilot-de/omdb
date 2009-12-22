@@ -1,0 +1,77 @@
+<% content_for("title") do %>
+  <%= "Edit Facts for %s" / (@movie.class.to_s.t + ": " + @movie.name) %>
+<% end %>
+
+<%= lightbox_form_tag :action => :update_facts %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_link_facts"><%= link_to_function "Facts".t, "display_tab('facts')", :accesskey => "1", :title => "Edit Main Facts".t %></li>
+
+      <% if @movie.class.has_languages? %>
+        <% if not @movie.attribute_frozen?( :languages ) or editor? %>
+          <li id="tab_link_languages"><%= link_to_function "Languages".t, "display_tab('languages')", :accesskey => "2", :title => "Edit Languages".t %></li>
+        <% else %>
+          <li id="tab_link_languages"><span><%= "Languages".t %></span></li>
+        <% end %>
+      <% end %>
+
+      <% if @movie.class.has_countries? %>
+        <% if not @movie.attribute_frozen?( :countries ) or editor? %>
+          <li id="tab_link_countries"><%= link_to_function "Production Countries".t, "display_tab('countries')", :accesskey => "3", :title => "Edit Production Countries".t %></li>
+        <% else %>
+          <li id="tab_link_countries"><span><%= "Countries".t %></span></li>
+        <% end %>
+      <% end %>
+
+      <% if @movie.class.has_production_companies? %>
+        <% if not @movie.attribute_frozen?( :companies ) or editor? %>
+          <li id="tab_link_companies"><%= link_to_function "Production Companies".t, "display_tab('companies')", :accesskey => "4", :title => "Edit Production Companies".t %></li>
+        <% else %>
+          <li id="tab_link_companies"><span><%= "Companies".t %></span></li>
+        <% end %>
+      <% end %>
+
+    </ul>
+  
+    <div id="tab_facts" class="tabbed-content">
+      <%= render :partial => 'edit_facts_facts' %>
+    </div>
+
+    <% if @movie.class.has_languages? %>
+      <% if not @movie.attribute_frozen?( :languages ) or editor? %>
+        <div id="tab_languages" style="display: none;" class="tabbed-content">
+          <%= render :partial => 'edit_facts_languages' %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if @movie.class.has_countries? %>
+      <% if not @movie.attribute_frozen?( :countries ) or editor? %>
+        <div id="tab_countries" style="display: none;" class="tabbed-content">
+          <%= render :partial => 'edit_facts_countries' %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if @movie.class.has_production_companies? %>
+      <% if not @movie.attribute_frozen?( :companies ) or editor? %>
+        <div id="tab_companies" style="display: none;" class="tabbed-content">
+          <%= render :partial => 'edit_facts_companies' %>
+        </div>
+      <% end %>
+    <% end %>
+    
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  <%= create_small_tabs_navigation [ :facts, :countries, :languages, :companies ],
+                                      { :facts => 'movie_name', :countries => 'filter_countries', 
+                                        :languages => 'filter_languages', :companies => 'filter_companies'} %>
+</script>

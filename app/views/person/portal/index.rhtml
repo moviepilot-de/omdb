@@ -1,0 +1,31 @@
+<%= render :partial => '/common/portal_header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+
+  <div class="column-three">
+    <div id="overview-details">
+      <h2 style="border: none;"><%= 'Popular'.t %></h2>
+      <ul>
+      <% Person.popular_actors.slice(0,10).each_with_index do |person, index| %>
+        <li><%= render :partial => 'person/info', :locals => { :person => person } %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+  
+  <% unless Person.of_the_day.nil? %>
+    <%= render :partial => '/person/portal/portal_person', :locals => { :title => "Person of the day".t, :person => Person.of_the_day }%>
+  <% end %>
+
+  <br />
+  
+  <% unless Person.born_today.nil? %>
+    <% years = Person.born_today.keys.first %>
+    <% person = Person.born_today.values.first %>
+    <%= render :partial => '/person/portal/portal_person', :locals => { :title => "Born today, %d years ago"/(years), :person => person }%>
+  <% else %>
+    <%= render :partial => '/person/portal/portal_person', :locals => { :title => "Popular today".t, :person => Person.popular.first }%>   
+  <% end %>
+  
+</div>

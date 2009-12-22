@@ -1,0 +1,25 @@
+input {
+  padding: 0 5px;
+}
+
+div#overlay {
+   filter: alpha(opacity=80);
+}
+
+div#visual-page-wrapper {
+  min-width: 60em;
+}
+
+div#overview-votes form input.edit-button {
+  padding: 0;
+  font-weight: normal;
+}
+
+div#new-cast, div#new-crew {
+  min-height: 1.2em;
+  position: relative;
+}
+
+div#new-cast p, div#new-crew p {
+    position: relative;
+}

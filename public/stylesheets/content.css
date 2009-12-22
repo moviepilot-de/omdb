@@ -1,0 +1,233 @@
+/* Main Content */
+
+div#content {
+  margin:                   0 17.5em 0 0;
+}
+
+div#content.wiki-page,
+div#content.broadpage {
+  margin-right:             0;
+}
+
+div#content.wiki-page div.image-anchor {
+  float:                    right;
+  clear:                    right;
+  position:                 relative;
+  width:                    1px;
+  min-height:               180px;
+}
+
+div#content.wiki-page div.image-box {
+  position:                 absolute;
+  padding:                  2px;
+  margin:                   0px;
+  margin-left:              2em;
+  border:                   1px solid #ddd;
+}
+
+div#content * {
+  font-size:                10pt;
+}
+
+div#content h3 *,
+div#content h2 * {
+  font-size:                inherit;
+}
+
+div.wiki-content {
+  padding-top:              1em;
+}
+
+div#content a.edit-button {
+  font-size:                8pt;
+}
+
+div#content div.person {
+  width:                    15em;
+  float:                    left;
+}
+
+div#content div.small,
+div#content div.small * {
+  font-size:                8pt;
+}
+
+div#content h2 {
+  font-size:                135%;
+  color:                    rgb(78, 78, 77);
+  padding:                  0px;
+  margin:                   0px;
+  margin-top:               0.6em;
+  margin-bottom:            0.4em;
+  padding-bottom:           0.1em;
+  border-bottom:            1px solid #bbc1b5;
+}
+
+div#content h3 {
+  font-size:                115%;
+  color:                    rgb(78, 78, 77);
+  padding:                  0px;
+  margin:                   0px;
+  margin-bottom:            0.2em;
+  margin-top:               0.7em;
+}
+
+div#content h3.underline {
+  padding-bottom:           1px;
+  border-bottom:            1px solid #bbc1b5;  
+}
+
+div#wiki-actions {
+  margin-left:              1em;
+  color:                    #999;
+}
+
+div#wiki-actions a {
+  margin-right:             1em;
+}
+
+/* Overview Page Content */
+
+div#overview-abstract {
+  padding:                  0px;
+  margin:                   0px;
+  font-weight:              bold;
+  overflow:                 auto;
+}
+
+div#overview-abstract p {
+  margin-bottom:            2px;
+}
+
+div.wiki-content p.empty,
+div#overview-abstract p.empty {
+  text-align:               center;
+  font-weight:              bold;
+  color:                    rgb(153, 153, 153);
+}
+div#overview-abstract p.empty {
+  line-height:              4em;
+}
+div.wiki-content p.empty {
+  margin-top: 2em;
+}
+div.wiki-content.long-text p.empty {
+  padding-top:              1.5em;
+  padding-bottom:           1.5em;
+  line-height:              1.4em;
+}
+
+div#content div.spoiler {
+  padding-left:             43px;
+  background-image:         url("/images/icons/spoiler.png");
+  background-repeat:        no-repeat;
+}
+
+div.toc-entry {
+  margin-bottom:            3em;
+}
+
+
+/* Movie Stub Box */
+
+div#stub {
+  background-image:       url('/images/layout/background-big-top.png');
+  background-repeat:      no-repeat;
+  margin-top:             3em;
+}
+
+div#stub div.container {
+  background-image:       url('/images/layout/background-big-end.png');
+  background-repeat:      no-repeat; 
+  background-position:    bottom left;
+  padding-left:           12px;
+}
+
+div#stub div.container div.content {
+  background-image:       url('/images/layout/background-big-top.png');
+  background-repeat:      no-repeat;
+  background-position:    top right;
+}
+
+div#stub div.container em {
+  display:                block;
+  padding:                12px 12px 0 0;
+}
+
+div#stub div.container ol {
+  background-image:       url('/images/layout/background-big-end.png');
+  background-repeat:      no-repeat;
+  background-position:    bottom right;
+  padding-bottom:         15px;
+}
+
+div.trackbacks {
+  margin-top:             4em;
+}
+
+ul#trackbacks li {
+  background-image:       none;
+  line-height:            1.2em;
+}
+
+#content del,
+#content del * {
+  text-decoration: line-through;
+  color: #ebb;
+}
+
+#content del a:hover {
+  text-decoration: underline;
+}
+
+#content ins {
+  text-decoration: none;
+  color: #484;
+}
+
+
+#content div#wiki-diff-help {
+  float:              right;
+  width:              19em;
+  background-color:   white;
+  background-image:   url('/images/startpage/top1.gif');
+  background-repeat:  no-repeat;
+  border-left:        1em solid white;
+  margin-bottom:      0.2em;
+}
+
+#content div#wiki-diff-help h3 {
+  padding:            1em;
+  text-align:         center;
+  margin:             0;
+  background-image:   url('/images/startpage/top2.gif');
+  background-repeat:  no-repeat;
+  background-position: top right;
+}
+
+#content div#wiki-diff-help p {
+  padding:            0 1em;
+}
+
+#content div#wiki-diff-help div.wrapper {
+  background-image:   url('/images/startpage/bottom2.gif');
+  background-repeat:  no-repeat;
+  background-position: bottom right;
+}
+
+#content div#wiki-diff-help div.content {
+  background-image:   url('/images/startpage/bottom1.gif');
+  background-repeat:  no-repeat;
+  background-position: bottom left;
+  padding-bottom:     0.3em;
+}
+
+#content li#views_tab_foto_foo {
+  visibility:         hidden;
+}
+
+#content div.comment {
+  font-style:               italic;
+  color:                    rgb(153, 153, 153);
+  margin:                   0.2em 0;
+}

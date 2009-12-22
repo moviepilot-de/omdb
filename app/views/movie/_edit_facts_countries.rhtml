@@ -1,0 +1,50 @@
+<script type="text/javascript">
+  <%= create_add_function :country %>
+  <%= create_remove_function :country %>
+</script>
+
+<%= edit_freeze_state @movie, :countries %>
+<p>
+  <%= "Please select the countries where the movie was shot. To add a country, search for it, then click it.".t %>
+  <%= "Get more information in \"%s\"." / link_to( "Help:FactsProductionCountries".t, :controller => 'generic_page', :page => 'Help:FactsProductionCountries' ) %>
+</p>
+
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= text_field("filter", "countries", :size => 15, :autocomplete => :off) %>
+      <label for="filter_countries"><%= "Search".t %></label>
+    </th>
+    <th>
+      <%= "Filmed in".t %>:
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_countries" class="left">
+          <li class="empty"><%= "please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="selected_countries" class="right">
+          <% @movie.countries.each { |c| %>
+          <li id="movie-country-<%= c.id %>">
+            <%= link_to_function c.english_name.t, "remove_country('#{c.id}')", :class => 'select no-edit' %>
+            <input type="hidden" name="countries[]" value="<%= c.id %>" />
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field(:filter_countries,
+                  :frequency => livesearch_filter_frequency,
+                  :update => "searched_countries",
+                  :before    => "Element.update('searched_countries', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                  :url => { :action     => :filter_countries, 
+                            :controller => 'search' }) %>

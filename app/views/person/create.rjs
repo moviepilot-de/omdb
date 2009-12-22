@@ -1,0 +1,4 @@
+page['filter_people'].value = ''
+page.delay(0.3) do
+  page['filter_people'].value = @person.name.strip
+end

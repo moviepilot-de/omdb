@@ -1,0 +1,2 @@
+#!/bin/sh
+pen -r 8009 localhost:8010:1 localhost:8011:1 localhost:8012:1

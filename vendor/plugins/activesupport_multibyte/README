@@ -1,0 +1,5 @@
+= ActiveSupport::Multibyte
+
+ActiveSupport::Multibyte introduces Unicode handling for Ruby strings through the use of the String#chars accessor. The method works as a proxy for the standard Ruby string functions. This proxy will allow you to use the string as if it was a character array, the underlying implementation preserves the encoded byte string for maximum interoperability.
+
+You can find more information about how this works on ActiveSupport::Multibyte::Chars and ActiveSupport::Multibyte::Handlers::UTF8Handler.

@@ -1,0 +1,33 @@
+<div class="list_select_box big">
+  <ul>
+	<% @movie.plot_keywords.each {|keyword| %>
+	  <ul id="movie-categories">
+		<li id="movie_category_<%= keyword.id %>">
+		  <div class="actions">  
+			<% if logged_in? %>
+			<%= link_to_remote "agree".t, 
+                { :url       => { :controller => 'movie',
+								  :action     => 'add_category', 
+                                  :category   => keyword.id,
+ 								  :movie      => @movie.id },
+                  :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+		          :complete  => "Element.update('ajax-activity-indicator','')"},
+		                { :class => 'vote-button' } unless has_voted(current_user.id, @movie, keyword, 1) %>		
+		
+			<%= link_to_remote "disagree".t, 
+                { :url       => { :controller => 'movie',
+								  :action     => 'delete_category', 
+                                  :category   => keyword.id,
+ 								  :movie      => @movie.id },
+                  :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+		          :complete  => "Element.update('ajax-activity-indicator','')"},
+		                { :class => 'vote-button' } unless has_voted(current_user.id, @movie, keyword, -1) %>
+		    <% end %>
+		  </div>
+		  <span style="line-height: 0.7em;"><%= keyword.full_flattened_name(@language) %>
+		  </span>
+		</li>
+	  </ul>
+	<% } %>
+  </ul>
+</div>

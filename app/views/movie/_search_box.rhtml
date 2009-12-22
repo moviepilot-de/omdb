@@ -1,0 +1,19 @@
+<div id="movie_search_result_<%= search_box.id.to_s %>" class="result-box">
+  <% if @my_movies %>
+  <div class="delete"><%= link_to_remote 'x', { :url => delete_from_my_movies_url( search_box ) }, :href => delete_from_my_movies_url( search_box ) %></div>
+  <% end %>
+  <div class="image">
+    <%= link_to thumbnail_image(search_box.image, :medium), :id => search_box.id, :controller => 'movie' %>
+    <br />
+    <div class="votebar"><div class="mediumvote"><div style='width: <%= sprintf("%1.2f", search_box.vote * 10 ) %>%'></div></div></div>
+  </div>
+  <div class="link">
+    <%= link_to_object search_box %>
+    <% year = search_box.production_year %>
+    <% if year.is_a? Range %>
+      <div class="small"><%= year.first %> - <%= year.last %></div>
+    <% else %>
+      <div class="small"><%= year unless year.nil? %></div>
+    <% end %>
+  </div>
+</div>

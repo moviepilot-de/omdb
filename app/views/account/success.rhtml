@@ -1,0 +1,29 @@
+<div class="wrapper">
+<div class="content login">
+  <div id="login_form">
+    <div class="tabbed-content">
+      <p class="login_text"><strong><%= "Thanks for signing up with omdb".t %></strong></p>
+
+      <p style="padding: 0 1.5em;"><%= "Your account has not been activated yet. We've sent a confirmation email to <strong>%s</strong>." / @user.email %>
+         <%= "Please follow the instructions given in that email in order to activate your account.".t %></p>
+
+      <p style="padding: 0 1.5em;"><%= "Delivery of the confirmation email usually takes only a couple of minutes.".t %></p>
+      <p style="padding: 0 1.5em;">
+         <%= "If you do not receive a confirmation email within the next 24 hours, please contact %s." / mail_to("info-#{@language.code}@omdb.org") %>
+         <%= "Please include the login name and email address which you used for signup and we'll activate your account manually.".t %>
+      </p>
+      <p style="padding: 0 1.5em; text-align: center; padding-bottom: 1em;">
+        <%= link_to "jump to a random movie".t, :controller => 'movie', :action => :random, :id => nil %><br />
+        <%= link_to( "back to where you came from".t, session[:login_referer] ) unless session[:login_referer].nil? %>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<style type="text/css">
+  p {
+    padding: 0 1.5em;
+    text-align: left;
+  }
+</style>

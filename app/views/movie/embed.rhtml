@@ -1,0 +1,51 @@
+<div id="content">
+  <div class="embed" style="margin-right: 17.5em;  width: 460px;">
+    <div class="review">
+      <div class="header">
+        <h3><%= link_to_object @movie %></h3>
+      </div>
+      <div class="content-wrapper">
+        <div class="content" style="padding-bottom: 5px;">
+          <div id="tab_info">
+            <div class="image" style="float: left; margin-right: 1em;"><%= link_to thumbnail_image( @movie.image, :embed ), @movie.default_url %></div>
+            <p><%= @movie.abstract(@language).data %></p>
+            <p><%= "with".t %>: <%= @movie.actors.slice(0,3).collect{ |a| link_to_object a.person }.join(", ") %></p>
+            <p><%= @movie.genres.slice(0,4).collect{ |g| link_to_object g }.join(", ") %></p>
+          </div>
+          <div id="tab_cast" style="display: none;">
+            <% Job::CREW_MEMBERS.each do |member| -%>
+              <% unless @movie.send( member.to_s.pluralize ).empty? %>
+                <div class="fact">
+                  <div class="title"><%= member.to_s.titleize.gsub("Of", "of").t %>:</div>
+                  <div class="value">
+                      <%= @movie.send( member.to_s.pluralize ).collect{ |c| c.person }.uniq[0..2].collect { |p|
+                            link_to_object p
+                          }.join(", ") -%>
+                    </div>
+                  </div>
+              <% end -%>
+            <% end -%>
+            <div class="fact">
+              <div class="title"><%= "Cast".t %></div>
+              <div class="value">
+                <%= @movie.actors.slice(0,10).collect{ |c| c.person }.uniq.collect {|p| link_to_object p }.join(", ") %>
+              </div>
+            </div>
+          </div>
+            <div id="tab_trailer" style="display: none;">
+            <object width="425" height="280"><param name="movie" value="http://www.youtube.com/v/wZm52UrkDpA"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/wZm52UrkDpA" type="application/x-shockwave-flash" wmode="transparent" width="425" height="280"></embed></object>
+          </div>
+        </div>
+      </div>
+      <div class="footer" style="padding-top:0; padding-bottom: 5px;">
+        <div style="float: left;"><p style="font-size: 0.8em; color: #ccc; padding-top:0.5em">omdb.org - copyright</p></div>
+        <p>
+          <%= link_to_function "Information", "live_tabs.click('info')", :id => 'tab_link_info' %> |
+          <%= link_to_function "Cast", "live_tabs.click('cast')", :id => 'tab_link_cast' %> |
+          <%= link_to_function "Trailer", "live_tabs.click('trailer')", :id => 'tab_link_trailer' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_tag "var live_tabs = new LiveTabs('info')" %>

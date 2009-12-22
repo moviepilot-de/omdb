@@ -1,0 +1,24 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="broadpage">
+  <table>
+    <thead>
+      <tr>
+        <th>Pos</th>
+        <th>Movie</th>
+        <th>Companies</th>
+        <th>Worldwide Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @movies.each_with_index { |movie, index| %>
+        <tr>
+          <td><%= (index + 1).to_s %></td>
+          <td><strong><%= link_to_object movie %></strong></td>
+          <td><%= movie.companies.slice(0, 2).collect { |c| link_to_object c }.join(", ") %></td>
+          <td><%= Currency.new( movie.revenue.to_i * 100 ) %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

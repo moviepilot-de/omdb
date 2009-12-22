@@ -1,0 +1,3 @@
+<%= render :partial => 'production_company', :collection => @movie.production_companies %>
+
+<li class="actions"><%= link_to_function 'Add'.t, lightbox( :action => :new_company ), :class => 'edit' %></li>

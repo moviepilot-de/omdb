@@ -1,0 +1,13 @@
+# Logrotate for the omdb-popularity log
+/var/log/apache2/www.omdb.org/popularity_log {
+    daily
+    rotate 2
+    nocompress
+    missingok
+    ifempty
+    size 0
+    postrotate
+      /bin/killall -HUP apache2
+    endscript
+}
+

@@ -1,0 +1,65 @@
+<p>
+  <%= "Please provide details for this person. Please give a homepage only if this person has its own official website.".t %>
+</p>
+
+<div class="input">
+  <%= edit_freeze_state @person, :name %>
+  <label for="person_name"><%= "Name".t %></label>
+  <%= display_attribute :person, :name %>
+</div>
+
+<div class="input">
+  <%= edit_freeze_state @person, :homepage %>
+  <label for="person_homepage"><%= "Homepage".t %></label>
+  <%= display_attribute :person, :homepage %>
+</div>
+
+<div class="input">
+  <%= edit_freeze_state @person, :birthday %>
+  <label for="person_birthday"><%= "Birthday".t %></label>
+  <%= display_attribute :person, :birthday, 'date', :size => 10 %>
+  <% if not @person.attribute_frozen?( :birthday ) %>
+    <a id="person_birthday_trigger" class="edit-button calendar-trigger"><%= "calendar".t %></a>
+  <% end %>
+</div>
+
+<div class="input">
+  <%= edit_freeze_state @person, :birthplace %>
+  <label for="person_birthplace"><%= "Place of Birth".t %></label>
+  <%= display_attribute :person, :birthplace %>
+</div>
+
+<div class="input">
+  <%= edit_freeze_state @person, :deathday %>
+  <label for="person_deathday"><%= "Day of Death".t %></label>
+  <%= display_attribute :person, :deathday, 'date', :size => 10 %>
+  <% if not @person.attribute_frozen?( :deathday ) %>
+    <a id="person_deathday_trigger" class="edit-button calendar-trigger"><%= "calendar".t %></a>
+  <% end %>
+</div>
+
+<% if not @person.attribute_frozen?( :birthday ) %>
+  <script type="text/javascript">
+    Calendar.setup(
+      {
+        inputField  : "person_birthday",        // ID of the input field
+        align       : 'Br',
+        ifFormat    : "%Y-%m-%d",               // the date format
+        button      : "person_birthday_trigger" // ID of the button
+      }
+    );
+  </script>
+<% end %>
+
+<% if not @person.attribute_frozen?( :deathday ) %>
+  <script type="text/javascript">
+    Calendar.setup(
+      {
+        inputField  : "person_deathday",        // ID of the input field
+        align       : 'Br',
+        ifFormat    : "%Y-%m-%d",               // the date format
+        button      : "person_deathday_trigger" // ID of the button
+      }
+    );
+  </script>
+<% end %>

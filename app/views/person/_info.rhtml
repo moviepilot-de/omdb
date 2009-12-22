@@ -1,0 +1,9 @@
+<div class="detail-box">
+  <div class="image">
+    <%= link_to thumbnail_image(person.image), :action => :index, :id => person.id %><br />
+  </div>
+  <div class="details">
+    <h4><%= link_to_object person %></h4>
+    <div class="small" style="padding-left: 1px; margin-bottom: 3px;"><%= person.jobs.uniq.slice(0,3).collect { |j| j.local_name(@language) }.join(", ") %></div>
+</div>
+

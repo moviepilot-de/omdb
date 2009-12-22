@@ -1,0 +1,8 @@
+page.replace_html 'overview-facts', :partial => 'overview_facts'
+page.replace_html 'headline', :partial => 'headline'
+page.replace_html 'headline_details', :partial => 'headline_details'
+
+
+if :close_box
+  page.call('box.deactivate')
+end

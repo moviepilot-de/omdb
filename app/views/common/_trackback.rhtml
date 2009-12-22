@@ -1,0 +1,4 @@
+<li>
+  <%= link_to trackback.title, trackback.url, :class => 'external' %>
+  <%= " @ " + trackback.blog_name unless trackback.blog_name.nil? or trackback.blog_name.empty? %>
+</li>

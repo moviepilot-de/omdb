@@ -1,0 +1,41 @@
+<div class="small">
+  <%= link_to "Changelog".t, :action => 'changelog', 
+                             :page => @page.current.page_name, 
+                             :id => related_object.id %>
+
+  <% if @page.version > 1 %>
+    |
+    <%= link_to "Back in time".t, :action => 'page', 
+                                  :id => related_object.id,
+                                  :page => @page.current.page_name, 
+                                  #:page => @page.page_name, 
+                                  :rev => (@page.version - 1) %>
+    |
+    <%= link_to "(Diff to previous)".t, :action => 'view_diff', 
+                                        :id => related_object.id,
+                                        :page => @page.current.page_name, 
+                                        :from => @page.version, 
+                                        :to => (@page.version - 1) %>
+  <% end %>
+  
+  <% if @page.version < @page.current_version %>
+    |
+    <%= link_to "Rollback".t, :action => 'edit_page', 
+                              :rev  => @page.version, 
+                              :page => @page.page_name, 
+                              :id => related_object.id %>
+  
+    | 
+    <%= link_to "(Diff to next)".t, :action => 'view_diff', 
+                                    :id   => related_object.id,
+                                    :page => @page.current.page_name, 
+                                    :from => @page.version, 
+                                    :to => (@page.version + 1) %>
+    |
+    <%= link_to "Forward in time".t, :action => 'page', 
+                                     :id   => related_object.id,
+                                     :page => @page.current.page_name, 
+                                     :rev => (@page.version + 1) %>
+  <% end %>
+</div>
+

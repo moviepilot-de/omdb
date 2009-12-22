@@ -1,0 +1,8 @@
+<strong><%= @job.local_name( @language ) %></strong>
+<p>
+  <%= @job.abstract( @language ).data %>
+</p>
+
+<% if @wiki_request %>
+  <%= button_to_function "insert".t, "addToEditor('j_#{@category.id}');" %>
+<% end %>

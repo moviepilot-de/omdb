@@ -1,0 +1,16 @@
+<% content_for :title do -%>
+  <%= @person ? @person.name : 'People'.t %>
+<% end -%>
+
+<% content_for("headline") do -%>
+  <%= render :partial => 'headline' %>
+<% end -%>
+
+<% content_for("headline_details") do -%>
+  <%= render :partial => 'headline_details' %>
+<% end -%>
+
+<% content_for('left_column') do -%>
+  <%= render :partial => 'common/image', :locals => { :object => @person.image } %>
+  <%= render :partial => 'page/additional_pages', :object => @person.pages.local(@language) %>
+<% end -%>

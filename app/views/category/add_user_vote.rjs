@@ -1,0 +1,1 @@
+page.replace_html "overview-categories", :partial => "movie/overview_categories", :locals => { :voted => true }

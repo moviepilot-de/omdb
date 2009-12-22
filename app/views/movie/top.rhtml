@@ -1,0 +1,27 @@
+<%= render :partial => '/common/portal_header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+
+  <table id="filmography">
+  <% @movies.each_with_index do |movie, counter| %>
+    <tr>
+      <td><%= counter + 1 %>.</td>
+      <td>
+        <% if movie.is_a?( Season ) %>
+          <%= link_to_object movie.parent unless movie.parent.nil? %>
+          &gt; <%= link_to_object movie %>
+        <% elsif movie.is_a?( Episode ) %>
+          <%= link_to_object movie.parent.parent if not movie.parent.parent.nil? and movie.parent.parent.is_a?(Series) %>
+          &gt;<%= link_to_object movie.parent unless movie.parent.nil? %>
+          &gt;<%= link_to_object movie %>
+        <% else %>
+          <%= link_to_object movie %>
+        <% end %>
+      </td>
+      <td><%= sprintf("%1.2f", movie.vote ) %></td>
+      <td class="rating"><div class="minivote"><div style='width: <%= sprintf("%1.2f", movie.vote * 10 ) %>%'></div></div></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

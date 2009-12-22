@@ -1,0 +1,29 @@
+<%= render :partial => 'header' %>
+<%= render :partial => 'overview_details' %>
+
+<div id="content">
+  <%= render :partial => 'common/views' %>
+  
+  <% work = {} %>
+  <% @person.casts.each { |c|
+       type = c.job 
+       work[type] = [] if work[type].nil? 
+       work[type].push(c.movie) unless work[type].include?(c.movie)
+     } %>
+  <table id="filmography">
+    <% work.keys.sort{ |a,b| a.department.id <=> b.department.id }.each { |type| %>
+      <% @current_year = 0 %>
+      <% if not work[type].nil? and not work[type].empty? %>
+      <tr><td colspan="6" class="headline">
+        <a name="job_<%= type.id %>"></a>
+        <div style="float: right; padding-top: 1.3em;">
+          <%= "%d movies since" / work[type].length + " " + (!work[type].last.end.nil? ? work[type].last.end.year.to_s : "") %>
+        </div>
+        <h2><%= type.local_name( @language ) %></h2>
+      </td></tr>
+      <% movies = work[type].sort { |a,b| a.end.nil? ? -1 : (b.end.nil? ? 1 : (a.end <=> b.end) )  } %>
+      <%= render :partial => 'movie', :collection => movies.reverse, :locals => { :type => type } %>
+      <% end %>
+    <% } %>
+  </table>
+</div>

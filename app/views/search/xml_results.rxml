@@ -1,0 +1,6 @@
+xml.instruct!
+xml.results do
+  @results.each do |result|
+    result.to_search_result_xml xml, @language
+  end
+end

@@ -1,0 +1,39 @@
+<%= render :partial => 'header', :locals => { :skip_right_col => true } %>
+<%= render :partial => 'overview_details' %>
+
+<div id="content" class="list-view">
+  <%= render :partial => 'common/views' %>
+
+  <div id="new-cast" class="new-cast">
+    <% if (params['edit'] == 'edit_cast') %>
+      <%= render 'cast/new_cast' %>
+    <% else %>
+      <%= new_cast_link @movie %>
+      <br />
+    <% end %>
+  </div>
+
+  <div id="new-crew" class="new-cast">
+    <% if (params['edit'] == 'edit_crew') %>
+      <%= render 'cast/new' %>
+    <% else %>
+      <%= new_crew_link @movie %>
+      <br />
+    <% end %>
+  </div>
+  
+  <% Department.departments.each { |dep| %>
+    <div class="list" id="movie-list-<%= dep.id %>">
+      <% if not Cast.employees( @movie, dep ).empty? %>
+        <%= render :partial => 'cast', :locals => { :department => dep, :show_edit_links => true } %>
+      <% end %>
+    </div>
+  <% } %>
+  
+  <% if @movie.stub? %>
+    <div id="stub">
+      <%= render :partial => 'movie_stub' %>
+    </div>
+  <% end %>
+  
+</div>

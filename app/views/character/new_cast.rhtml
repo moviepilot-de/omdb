@@ -1,0 +1,18 @@
+<h4><%= _('CHARACTER_NEW_CAST_TITLE') %></h4>
+<p><%= _('CHARACTER_NEW_CAST_HELP') %></p>
+
+<div class="table-header">
+  <div class="select-name border-right">
+    <%=_('CHARACTER_NAME') %>
+  </div>
+  <div class="select-name border-right" style="padding-left: 0.1em;">
+    &nbsp;<%= _('PORTRAYED_BY') %>
+  </div>
+  <div style="padding-left: 0.1em;">
+    &nbsp;<%= _('MOVIE') %>
+  </div>
+</div>
+
+<div id="filtered" class="short">
+  <%= render :partial => 'cast', :collection => find_casts %>
+</div>

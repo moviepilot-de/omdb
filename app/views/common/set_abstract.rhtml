@@ -1,0 +1,30 @@
+<% class_string = @abstract.related_object.class.base_class.to_s.split('::').last.downcase %>
+<% content_for("title") do %>
+  <%= 'Edit Abstract'.t %>
+<% end %>
+
+<%= lightbox_form_tag( { :action => :set_abstract }, { :update => nil } ) %>
+  <div class="content">
+
+    <p><%= "Please enter an abstract for this %s" / class_string.t %></p>
+
+    <div style="float: right;"><%= "Characters left:".t %> <input type="text" size="3" disabled="true" id="abstract_size_counter" class="counter" value=""/></div>
+    <label for="<%= class_string %>_abstract"><%= 'Abstract'.t %></label>
+    <textarea name="<%= class_string %>[abstract]" id="<%= class_string %>_abstract"><%= @abstract.data %></textarea>
+  </div>
+
+  <div class="button-bar">
+    <div class="formError" id="abstract_errors" style="float: left;"></div>
+    <%= submit_button 'ok'.t, :id => 'abstract_submit' %>
+    <%= close_box_button %>
+  </div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  Event.observe( '<%= class_string %>_abstract', 'keyup', function(e){ limitTextSize('<%= class_string %>_abstract', 'abstract_size_counter', 400); } )
+  Event.observe( '<%= class_string %>_abstract', 'keydown', function(e){ limitTextSize('<%= class_string %>_abstract', 'abstract_size_counter', 400); } )
+  limitTextSize('<%= class_string %>_abstract', 'abstract_size_counter', 400);
+  $('<%= class_string %>_abstract').focus();
+</script>
+

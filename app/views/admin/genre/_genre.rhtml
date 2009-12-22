@@ -1,0 +1,22 @@
+<% if genre %>
+<%= form_tag %>
+
+  <%= render_partial("form") %>
+
+  <div id="actions" class="actions">
+  <% if @genre.new_record? -%>
+  <%= submit_button_to_remote("Save",
+        :url => { :action => "create"},
+        :update => {:failure => "form"} ) %>
+  <% else -%>
+  <%= submit_button_to_remote("Save",
+        :url => { :action => "save"},
+        :update => {:failure => "form"} ) %>
+  <%= link_to_remote("Delete", 
+        :url => { :action => "confirm_destroy"},
+        :update => "actions" ) %>
+  <% end -%>
+  </div>
+
+<%= end_form_tag %>
+<% end %>

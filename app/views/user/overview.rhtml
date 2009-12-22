@@ -1,0 +1,11 @@
+<%= render :partial => 'header' %>
+<%#= render :partial => 'overview_details' %>
+
+<div id="content">
+  <%= render :partial => 'common/views' %>
+  
+  <div class="wiki-content">
+    <%= display_wiki_content @page, ( @user == current_user ? 'this is your personal page'.t : "%s did not create a personal page yet."/(@user.login) ) %>
+    <%= render :partial => 'page/page_actions' %>
+  </div>
+</div>

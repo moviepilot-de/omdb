@@ -1,0 +1,8 @@
+<p style="clear:right">
+<div id="wiki-images">
+  <%= form_tag({ :controller => "image", :action => "upload"}, { :multipart => true })  %>
+    <label for="picture">Add image:</label> <%= file_field_tag "picture" %><br />
+    <label for="description">Description:</label> <%= text_field_tag "description" %><br />
+    <%= submit_tag "Upload" %>
+  <%= end_form_tag %>
+</div>

@@ -1,0 +1,19 @@
+<% uniqueId = "#{type.id.to_s}_#{movie.id.to_s}" %>
+<tr>
+  <td class="year"><%= movie.end.year unless movie.end.nil? or movie.end.year == @current_year %></td>
+  <td style="width: 8px;">-</td>
+  <td>
+    <% if movie.is_a?( Season ) %>
+      <%= link_to_object movie.parent unless movie.parent.nil? %>
+      &gt; <%= link_to_object movie %>
+    <% elsif movie.is_a?( Episode ) %>
+    <%= link_to_object movie.parent.parent if not movie.parent.nil? and not movie.parent.parent.nil? and movie.parent.parent.is_a?(Series) %>
+    &gt; <%= link_to_object movie.parent unless movie.parent.nil? %>
+    &gt; <%= link_to_object movie %>
+    <% else %>
+      <%= link_to_object movie %>
+    <% end %>
+  </td>
+  <td class="rating"><div class="minivote"><div style='width: <%= sprintf("%1.2f", movie.vote * 10 ) %>%'></div></div></td>
+</tr>
+<% @current_year = movie.end.year if movie.end %>

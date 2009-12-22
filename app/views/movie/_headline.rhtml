@@ -1,0 +1,37 @@
+<div class="parent-breadcrumb">
+
+<% if edit_or_view_subpage %>
+    <% if not @movie.parent.nil? %>
+      <%= @movie.ancestors.reverse.collect {|m|
+            link_to_object m
+            }.join(" &gt; ") %>
+      &gt;
+    <% end %>
+    <%= link_to_object @movie %>
+  </div>
+  <h2><%= @page.page_name %></h2>
+  <div class="small">&nbsp;</div>
+<% else %>
+    <% if @movie.parent %>
+      <% path_links = @movie.ancestors.reverse.collect {|m|
+           link_to_object m
+         } %>
+    <% else %>
+      <% path_links = [] %>
+    <% end %>
+    <% path_links << @movie.class.to_s.t if [ MovieSeries, Series ].include?( @movie.class ) %>
+    <%= path_links.join(" &gt; ") %>&nbsp;
+  </div>
+  <% @translation = @movie.official_translation( @language ).first.name if @movie.official_translation( @language ).any? %>
+  <% if @translation %>
+    <h2><%= @translation %></h2>
+  <% else %>
+    <h2><%= @movie.name %></h2>
+  <% end %>
+  <% if @translation %>
+    <h3><%= @movie.name %></h3>
+  <% else %>
+    <div class="small">&nbsp;</div>
+  <% end %>
+<% end %>
+

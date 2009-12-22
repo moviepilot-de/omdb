@@ -1,0 +1,81 @@
+<p>
+<%= "This dialog allows you to create relations between movies.".t %>
+<%= "Please select the type of the relation you want to create, and then select the movie, you want to relate to.".t %>
+</p>
+
+<div id="new-reference-wizard">
+  <table>
+    <tr>
+      <td class="center padding">
+        <%= form_remote_tag :url => { :action => :create_reference }, 
+                            :loading => "Element.show('ajax-activity-indicator');", :loaded  => "Element.hide('ajax-activity-indicator');" %>
+          <%= hidden_field_tag :reference_class, Influence.to_s.underscore %>
+          <%= submit_tag 'Influence'.t, :class => 'edit-button' %>
+        <%= end_form_tag %>
+        <p class="grey" id="reference_type_influence">
+          <%= sprintf("%s %s was influenced by another movie,".t, "The #{@movie.class.to_s.downcase}".t, title_for_movie(@movie) ) %>
+          <%= "like Star Wars was influenced by Akira Kurosawa's The Hidden Fortress".t %>
+        </p>
+      </td>
+      <td class="center padding">
+        <%= form_remote_tag :url => { :action => :create_reference }, 
+                            :loading => "Element.show('ajax-activity-indicator');", :loaded  => "Element.hide('ajax-activity-indicator');" %>
+          <%= hidden_field_tag :reference_class, Reference.to_s.underscore %>
+          <%= submit_tag 'Reference'.t, :class => 'edit-button' %>
+        <%= end_form_tag %>
+        <p class="grey" id="reference_type_reference">
+          <%= sprintf("%s %s contains references to another movie.".t, "The #{@movie.class.to_s.downcase}".t, title_for_movie(@movie) ) %>
+          
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center padding">
+        <%= form_remote_tag :url => { :action => :create_reference }, 
+                            :loading => "Element.show('ajax-activity-indicator');", :loaded  => "Element.hide('ajax-activity-indicator');" %>
+          <%= hidden_field_tag :reference_class, Remake.to_s.underscore %>
+          <%= submit_tag 'Remake'.t, :class => 'edit-button' %>
+        <%= end_form_tag %>
+        <p class="grey" id="reference_type_remake">
+          <%= sprintf("%s %s is a remake of another movie,".t, "The #{@movie.class.to_s.downcase}".t, title_for_movie(@movie) ) %>
+          <%= "like Peter Jackson's King Kong was to the original King Kong from 1933.".t %>
+        </p>
+      </td>
+      <td class="center padding">
+        <%= form_remote_tag :url => { :action => :create_reference }, 
+                            :loading => "Element.show('ajax-activity-indicator');", :loaded  => "Element.hide('ajax-activity-indicator');" %>
+          <%= hidden_field_tag :reference_class, SpinOff.to_s.underscore %>
+          <%= submit_tag 'Spin Off'.t, :class => 'edit-button' %>
+        <%= end_form_tag %>
+        <p class="grey" id="reference_type_spinoff">
+          <%= sprintf("%s %s is a spin off of another movie or series,".t, "The #{@movie.class.to_s.downcase}".t, title_for_movie(@movie) ) %>
+          <%= "like Joey was a spin-off of Friends.".t %>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center padding">
+        <%= form_remote_tag :url => { :action => :create_reference }, 
+                            :loading => "Element.show('ajax-activity-indicator');", :loaded  => "Element.hide('ajax-activity-indicator');" %>
+          <%= hidden_field_tag :reference_class, Parody.to_s.underscore %>
+          <%= submit_tag 'Parody'.t, :class => 'edit-button' %>
+        <%= end_form_tag %>
+        <p class="grey" id="reference_type_parody">
+          <%= sprintf("%s %s is a parody of another movie,".t, "The #{@movie.class.to_s.downcase}".t, title_for_movie(@movie) ) %>
+          <%= "like Austin Powers is a parody of the James Bond movies.".t %>
+        </p>
+      </td>
+      <td class="center padding">
+        <%= form_remote_tag :url => { :action => :create_reference }, 
+                            :loading => "Element.show('ajax-activity-indicator');", :loaded  => "Element.hide('ajax-activity-indicator');" %>
+          <%= hidden_field_tag :reference_class, Homage.to_s.underscore %>
+          <%= submit_tag 'Homage'.t, :class => 'edit-button' %>
+        <%= end_form_tag %>
+        <p class="grey" id="reference_type_homage">
+          <%= sprintf("%s %s is a homage to another movie,".t, "The #{@movie.class.to_s.downcase}".t, title_for_movie(@movie) ) %>
+          <%= "like _EXAMPLE MISSING_ :)" %>
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>

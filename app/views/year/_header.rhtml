@@ -1,0 +1,7 @@
+<% content_for :title do -%>
+  <%= params[:id] %>
+<% end -%>
+
+<% content_for("headline") do -%>
+  <%= render :partial => 'headline' %>
+<% end %>

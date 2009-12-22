@@ -1,0 +1,5 @@
+page.replace_html 'headline', :partial => 'headline'
+
+if :close_box
+  page.call('box.deactivate')
+end

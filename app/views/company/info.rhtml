@@ -1,0 +1,10 @@
+<div class="detail-box">
+  <h4><%= link_to_object @company %></h4>
+  <p>
+    <%= @company.abstract( @language ).data %>
+  </p>
+</div>
+
+<% if @wiki_request %>
+  <%= button_to_function "insert".t, "addToEditor('co_#{@company.id}');" %>
+<% end %>

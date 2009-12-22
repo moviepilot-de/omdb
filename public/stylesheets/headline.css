@@ -1,0 +1,61 @@
+div.title-row div.headline {
+  min-height:               2em;
+  overflow:                 auto;
+}
+
+div.headline h2,
+div.headline div.h2 {
+  padding-bottom:           0.3em;
+  font-size:                16pt;
+  font-weight:              normal;
+}
+
+div.headline div.h2 {
+  padding-bottom:           0;
+}
+
+div.headline h2,
+div.headline h3 {
+  padding:                  0px;
+  margin:                   0px;
+  color:                    #4E4E4D;
+}
+
+div.headline h2 a,
+div.headline h3 a {
+  border-bottom-width:      0px;
+  color:                    #4E4E4D
+}
+
+div.headline h3 {
+  font-size:                9pt;
+  padding-left:             1px;
+  margin-bottom:            1px;
+}
+
+
+div.headline div.small {
+  font-size:                0.75em;
+  border-bottom-width:      0px;
+  padding-left:             2px;
+  font-weight:              bold;
+}
+
+div.parent-breadcrumb {
+  line-height:              1.2em;
+  font-size:                9pt;
+  padding-bottom:           0.2em;
+  padding-left:             1px;
+}
+
+div.episode-control {
+  line-height:              1.2em;
+  font-size:                9pt;
+  padding-bottom:           0.2em;
+  padding-left:             1px;
+}
+
+div#headline_details div.big {
+  border: 1px solid red;
+}
+

@@ -1,0 +1,20 @@
+<% content_for :title do -%>
+  <%= 'welcome'.t %>
+<% end -%>
+<% content_for("headline") do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= "Welcome to omdb.org".t %></h2>
+  <div class="small">
+    <%= "the free movie database that %s." / link_to('anyone can edit'.t, :controller => 'generic_page', :action => :page, :page => "Help:BecomeAuthor") %>
+  </div>
+  <div class="small">&nbsp;</div>
+<% end %>
+<% content_for :additional_header_content do -%>
+  <style type="text/css">
+    div#content-wrapper {
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-image: url('/images/portal_backgrounds/background-<%= (rand(9)+1).to_s %>.png');
+    }
+  </style>
+<% end %>

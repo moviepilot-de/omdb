@@ -1,0 +1,39 @@
+<%= edit_freeze_state @company, :parent %>
+<p>
+  <%= "Is this company a subsidiary of another enterprise? If so, please enter the name of the parent company and choose by clicking in the list. Finish with OK.".t %>
+</p>
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= "Parent Company".t %>
+    </th>
+    <th>
+      <%= text_field("filter", "companies", :size => 15) %>
+    </th>
+  </tr>
+  <tr>
+    <td width="50%" style="padding: 2px;">
+      <div id="more-information">
+        <strong><%= @company.parent.nil? ? "-" : @company.parent.name %></strong>
+        <p><%= @company.parent.abstract( @language ).data unless @company.parent.nil? %></p>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_companies" class="right">
+          <li class="empty"><%= "Please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<input type="hidden" name="parent" value="<%= @company.parent.id unless @company.parent.nil? %>" id="company_parent" />
+
+<%= observe_field(:filter_companies,
+                  :frequency => 0.5,
+                  :update    => "searched_companies",
+                  :loading   => "Element.update('searched_companies', '<li class=\"empty loading\">&nbsp;</li>');",
+                  :url => { :action     => :find_companies, 
+                            :company    => @company.id,
+                            :controller => 'search' }) %>

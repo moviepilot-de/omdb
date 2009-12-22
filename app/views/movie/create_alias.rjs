@@ -1,0 +1,2 @@
+page.replace_html 'headline',         :partial => 'movie/headline'
+page.replace_html 'overview-aliases', :partial => 'movie/overview_aliases'

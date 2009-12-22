@@ -1,0 +1,45 @@
+<% if not @person.movies.empty? %>
+<div class="fact">
+  <div class="title"><%= 'Known Movies'.t %>:</div>
+  <div class="value">
+    <%= link_to(@person.movies.uniq.size.to_s, :action => :filmography) %>
+    <% if not @person.chronological_movies.empty? %>
+      <%= " since ".t %>
+      <%= link_to(@person.chronological_movies.first.end.year.to_s, 
+                    :controller => 'year', :id => @person.chronological_movies.first.end.year) %>
+    <% end %>
+  </div>
+</div>
+<% end %>
+
+<div class="fact">
+  <div class="title"><%= 'Birthday'.t %>:</div>
+  <div class="value">
+      <%= @person.birthday %>
+  </div>
+</div>
+
+<div class="fact">
+  <div class="title"><%= 'Place of Birth'.t %>:</div>
+  <div class="value">
+      <%= @person.birthplace.empty? ? "-" : @person.birthplace %>
+  </div>
+</div>
+
+<% if not @person.deathday.nil? %>
+  <div class="fact">
+      <div class="title"><%= 'Day of Death'.t %>:</div>
+    <div class="value">
+        <%= @person.deathday %>
+    </div>
+  </div>
+<% end %>
+
+<% if not @person.homepage.empty? %>
+<div class="fact">
+  <div class="title"><%= 'Official Homepage'.t %>:</div>
+  <div class="value">
+    <a href="<%= @person.homepage %>" title="<%= @person.homepage %>"><%= "Visit Homepage".t %></a>
+  </div>
+</div>
+<% end %>

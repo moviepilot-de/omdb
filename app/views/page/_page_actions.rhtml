@@ -1,0 +1,3 @@
+<%= destroy_link if @page.may_destroy?(current_user) %>
+<%= rename_link if @page.may_rename?(current_user) %>
+<%= edit_link if related_object.may_edit_pages(current_user) %>

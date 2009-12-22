@@ -1,0 +1,19 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  
+  <% if flash[:error].nil? %>
+    <%= display_wiki_content @page %>
+    <%= render :partial => "wiki/history" %>
+  <% else %>
+    <%= flash[:error] %>
+  <% end %>
+
+  <% if admin? %>
+  <div style="text-align: right; font-size: 0.8em;" id="edit-wiki-control">
+    <%= render_action @edit_wiki_action %>
+  </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,92 @@
+<p>
+  <%= "Please select keywords with the greatest relevance in <strong>describing the plot</strong> of this film.".t  %>
+  <%= "If there are several occurrences of one keyword select the one with the appropriate contextual meaning. Be as exact as possible.".t %>
+  <%= "You can also create a new keyword if you cannot find it in our database.".t %>
+</p>
+<table class="list-add-box">
+  <tr>
+    <th>
+      <label for="filter_keywords"><%= "Search".t %></label>
+      <%= text_field("filter", "keywords", :size => 25, :onkeypress => "return checkEnter(event);") %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box one_column">
+        <ul id="searched_keywords">
+          <li class="empty"><%= "please enter a search term".t %></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field("filter_keywords",
+                  :frequency => 1.0,
+                  :before    => "Element.update('searched_keywords', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                  :complete  => "add_creation_link();",
+                  :update    => "searched_keywords",
+                  :url       => { :action     => :find_categories, 
+                                  :movie      => @movie.id,
+                                  :name       => 'keyword',
+                                  :type       => Category.plot_keyword.id,
+                                  :controller => 'search' }) %>
+                                  
+<script type="text/javascript">
+  add_keyword = function(id, name){
+    Element.show('ajax-activity-indicator');
+    htmlId = 'search-keyword-' + id;
+    Effect.Fade( htmlId );
+    url = "<%= url_for :action => :add_category, :id => @movie.id, :category => '_id_', :create => true %>";
+    url = url.replace(/_id_/, id);
+    var opts = {
+      method: 'post',
+      onSuccess: function(t){
+        Element.update('ajax-status', '<%= 'Successfully added Plot Keyword'.t %> ' + name);
+        Element.hide('ajax-activity-indicator');
+        Effect.Pulsate('ajax-status', { pulses: 2 });
+      },
+      onFailure: function(t){
+        Effect.Appear( htmlId );
+        Element.update('ajax-status', 'Error adding Plot Keyword' + name);
+        Element.hide('ajax-activity-indicator');
+      }
+    }
+    new Ajax.Request(url, opts);
+  }
+  
+  add_creation_link = function(){
+    prefix = '<%= "Create a new Plot Keyword: Other > ".t %>';
+    name = $('filter_keywords').value;
+    if ((name.length > 2) && ($('no_livesearch_result') == undefined)) {
+      item = create_li('new-keyword');
+      link = create_a(document.createTextNode( prefix + " " + name ));
+      link.className = 'edit';
+      link.onclick = function(){ new_keyword(name); return false; };
+      item.appendChild(link);
+      $('searched_keywords').appendChild(item);
+    }
+  }
+  
+  new_keyword = function( name ){
+    Element.show('ajax-activity-indicator');
+    Element.update('searched_keywords', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');
+    var url = "<%= url_for :action => :add_new_keyword, :id => @movie.id, :create => true %>";
+    var opts = {
+      method: 'post',
+      postBody: name,
+      onSuccess: function(t){
+        Element.update('ajax-status', '<%= "Successfully created and added Plot Keyword".t %> ' + name);
+        Effect.Pulsate('ajax-status', { pulses: 2 });
+        $('filter_keywords').value = '';
+        Element.hide('ajax-activity-indicator');
+        $('filter_keywords').focus();
+      },
+      onFailure: function(t){
+        Element.update('ajax-status', 'Error creating Plot Keyword' + name);
+        Element.hide('ajax-activity-indicator');
+      }
+    }
+    new Ajax.Request(url, opts);
+  }
+</script>

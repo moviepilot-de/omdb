@@ -1,0 +1,9 @@
+<div class="result-box">
+  <div class="image">
+    <%= link_to thumbnail_image(search_box.image, :medium), :action => :index, :id => search_box.id, :controller => 'character' %><br />
+  </div>
+  <div class="link">
+    <%= link_to_object search_box %>
+    <div class="small"><%= "Character".t %></div>
+  </div>
+</div>

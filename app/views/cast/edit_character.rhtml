@@ -1,0 +1,46 @@
+<% content_for("title") do %>
+  <%= "Edit Character".t %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => :update_character },
+                    :loading => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                    :loaded  => "Element.update('ajax-activity-indicator','')" %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_character_name"><%= link_to_function "Name".t, "display_tab('character_name')", :accesskey => "1", :title => "Edit Character Name".t %></li>
+      <li id="tab_character"><%= link_to_function "Character".t, "display_tab('character')", :accesskey => "2", :title => "Set Character".t %></li>
+    </ul>
+
+    <div id="edit_character_name" class="tabbed-content">
+      <%= render :partial => 'edit_character_name' %>
+    </div>
+
+    <div id="edit_character" class="tabbed-content" style="display: none;">
+      <%= render :partial => 'edit_character' %>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  var active_tab = 'character_name'
+
+  display_tab = function(id) {
+    Element.hide( 'edit_' + active_tab );
+    Element.removeClassName('tab_' + active_tab, 'active');
+
+    active_tab = id;
+
+    Element.show( 'edit_' + id );
+    Element.addClassName('tab_' + id, 'active');
+  }
+
+  $('cast_comment').focus();
+</script>
+

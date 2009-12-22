@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+  xmlns="http://www.google.com/schemas/sitemap/0.84"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84
+                      http://www.google.com/schemas/sitemap/0.84/siteindex.xsd">
+ <sitemap>
+  <loc>http://www.omdb.org/sitemap.xml.gz</loc>
+  <lastmod>2009-12-22T01:34:34Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://www.omdb.org/sitemap1.xml.gz</loc>
+  <lastmod>2009-12-22T01:34:34Z</lastmod>
+ </sitemap>
+</sitemapindex>

@@ -1,0 +1,25 @@
+<p><%= "Thank you for helping us to extend our database. You can upload JPEG and PNG images from your local hard drive.".t + " " + "If you do not provide detailed information about the source and the license of the image you are about to upload, we will unfortunately have to <strong>delete your file</strong>.".t %></p>
+<p><%= "If you're unsure about the license, we will help you provide the right information. Generally speaking, images that you found somewhere on the internet are not allowed to be uploaded.".t + " " + "Please see the <a href=\"javascript:display_tab('licenses');\">License Information</a> tab for more information.".t %></p>
+
+<div class="input">
+  <label for="image_file"><%= "File".t %></label>
+  <%= file_field :file, :data, :accept => %w(image/jpg, image/jpeg, image/png) %>
+</div>
+
+<div class="input">
+  <label for="image_license"><%= "License".t %></label>
+  <%= license_select_box %>
+  <div id="invalid_license" class="formError" style="display: none;">
+    <%= "This type of license is not allowed, because it might not be legal to use this image.".t %>
+  </div>
+</div>
+
+<div class="input">
+  <label for="image_source"><%= "Source (URL)".t %></label>
+  <%= text_field :image, :source %>
+</div>
+
+<div class="input">
+  <label for="image_summary" style="float:none; width: auto;"><%= "Summary (author, fair use rationale if applicable, copyright holder if applicable, etc.)".t %></label>
+  <textarea id="image_summary" name="image_summary"></textarea>
+</div>

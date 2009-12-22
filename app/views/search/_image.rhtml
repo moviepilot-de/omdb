@@ -1,0 +1,14 @@
+<% url = { :action     => :info,
+           :id         => image.id,
+           :controller => 'image' }
+   url.update( { :movie => @movie.id } ) unless @movie.nil?
+%>
+<% htmlId = "search-image-" + image.id.to_s %>
+
+<div class="select" id="<%= htmlId %>">
+  <div>
+    <%= link_to_remote( image.description(@language), :url => url, 
+           :loading => "Element.update('ajax-activity-indicator','" + loading_image + "')", 
+           :loaded => "Element.update('ajax-activity-indicator','')") %>
+  </div>
+</div>

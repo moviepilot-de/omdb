@@ -1,0 +1,26 @@
+<% content_for("title") do %>
+  <%= "Create new subcategory underneath category %s" / @category.parent.local_name( @language ) %>  
+<% end %>
+
+<%= lightbox_form_tag :action => :create %>
+
+  <div class="content">
+    <ul class="small-tabs">
+      <li class="active" id="tab_facts"><%= link_to_function "Category Facts".t, "display_tab('facts')", :accesskey => "1", :title => "Edit Main Facts".t %></li>
+    </ul>
+    
+    <div id="edit_facts_facts" class="tabbed-content">
+      <p>
+        <%= "This is to create a new category or plot keyword underneath the category/plot keyword you were just editing. The new one will hierarchically depend of this one. The right setting for assignibility is usually \"true\".".t %>
+      </p>
+      
+      <%= render :partial => 'edit_facts_facts' %>
+    </div>
+  </div>
+  
+  <div class="button-bar">
+    <%= hidden_field_tag :parent, @category.parent.id %>
+    <%= submit_button %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>

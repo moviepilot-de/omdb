@@ -1,0 +1,3005 @@
+--- 
+no_language:
+  pluralization:
+  macro_language: "0"
+  native_name:
+  scope: L
+  rfc_3066:
+  iso_639_1: xx
+  iso_639_2: xxx
+  english_name: No Language
+  iso_639_3: xxx
+  id: "1"
+  native_name_locale:
+  native_name_modifier:
+  direction: ltr
+  english_name_locale:
+  english_name_modifier:
+globalize_languages_167: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ts
+  iso_639_2: tso
+  english_name: Tsonga
+  iso_639_3: tso
+  id: "6467"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_139: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: A
+  rfc_3066: 
+  iso_639_1: sa
+  iso_639_2: san
+  english_name: Sanskrit
+  iso_639_3: san
+  id: "5581"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_082: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    0prQsNC30LDSmw==
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: kk
+  iso_639_2: kaz
+  english_name: Kazakh
+  iso_639_3: kaz
+  id: "2776"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_054: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: gu
+  iso_639_2: guj
+  english_name: Gujarati
+  iso_639_3: guj
+  id: "2226"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_025: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ce
+  iso_639_2: che
+  english_name: Chechen
+  iso_639_3: che
+  id: "1246"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_168: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: tk
+  iso_639_2: tuk
+  english_name: Turkmen
+  iso_639_3: tuk
+  id: "6513"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_083: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: km
+  iso_639_2: khm
+  english_name: Khmer
+  iso_639_3: khm
+  id: "2939"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_055: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ht
+  iso_639_2: hat
+  english_name: Haitian; Haitian Creole
+  iso_639_3: hat
+  id: "2304"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_110: 
+  pluralization: 
+  macro_language: "1"
+  native_name: Bahasa melayu
+  scope: L
+  rfc_3066: 
+  iso_639_1: ms
+  iso_639_2: msa
+  english_name: Malay
+  iso_639_3: msa
+  id: "4184"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: generic
+  english_name_modifier: 
+globalize_languages_026: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: A
+  rfc_3066: 
+  iso_639_1: cu
+  iso_639_2: chu
+  english_name: Slavic
+  iso_639_3: chu
+  id: "1261"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: Church
+globalize_languages_169: 
+  pluralization: c = 1
+  macro_language: "0"
+  native_name: "T\xCF\x8Brk\xC3\xA7e"
+  scope: L
+  rfc_3066: 
+  iso_639_1: tr
+  iso_639_2: tur
+  english_name: Turkish
+  iso_639_3: tur
+  id: "6519"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_084: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ki
+  iso_639_2: kik
+  english_name: Kikuyu
+  iso_639_3: kik
+  id: "2963"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_056: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Hausa
+  scope: L
+  rfc_3066: 
+  iso_639_1: ha
+  iso_639_2: hau
+  english_name: Hausa
+  iso_639_3: hau
+  id: "2305"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_111: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: my
+  iso_639_2: mya
+  english_name: Burmese
+  iso_639_3: mya
+  id: "4338"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_027: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: cv
+  iso_639_2: chv
+  english_name: Chuvash
+  iso_639_3: chv
+  id: "1262"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_140: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: si
+  iso_639_2: sin
+  english_name: Sinhalese
+  iso_639_3: sin
+  id: "5738"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_085: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Kinyarwanda
+  scope: L
+  rfc_3066: 
+  iso_639_1: rw
+  iso_639_2: kin
+  english_name: Kinyarwanda
+  iso_639_3: kin
+  id: "2966"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_028: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: kw
+  iso_639_2: cor
+  english_name: Cornish
+  iso_639_3: cor
+  id: "1372"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_141: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c%10>=2 && c%10<=4 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: "Sloven\xC4\x8Dina"
+  scope: L
+  rfc_3066: 
+  iso_639_1: sk
+  iso_639_2: slk
+  english_name: Slovak
+  iso_639_3: slk
+  id: "5800"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_086: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    0JrRi9GA0LPRi9C3
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ky
+  iso_639_2: kir
+  english_name: Kirghiz
+  iso_639_3: kir
+  id: "2970"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_057: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: sh
+  iso_639_2: 
+  english_name: Serbo-Croatian
+  iso_639_3: hbs
+  id: "2315"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_112: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: na
+  iso_639_2: nau
+  english_name: Nauru
+  iso_639_3: nau
+  id: "4406"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_029: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: co
+  iso_639_2: cos
+  english_name: Corsican
+  iso_639_3: cos
+  id: "1373"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_170: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: tw
+  iso_639_2: twi
+  english_name: Twi
+  iso_639_3: twi
+  id: "6546"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_142: 
+  pluralization: "c%100==1 ? 1 : c%100==2 ? 2 : c%100==3 || c%100==4 ? 3 : 4"
+  macro_language: "0"
+  native_name: "Sloven\xC5\xA1\xC4\x8Dina"
+  scope: L
+  rfc_3066: 
+  iso_639_1: sl
+  iso_639_2: slv
+  english_name: Slovenian
+  iso_639_3: slv
+  id: "5810"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_087: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: kv
+  iso_639_2: kom
+  english_name: Komi
+  iso_639_3: kom
+  id: "3117"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_058: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: !binary |
+    16LXkdeo15nXqg==
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: he
+  iso_639_2: heb
+  english_name: Hebrew
+  iso_639_3: heb
+  id: "2323"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: rtl
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_113: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: nv
+  iso_639_2: nav
+  english_name: Navajo
+  iso_639_3: nav
+  id: "4407"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_171: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ug
+  iso_639_2: uig
+  english_name: Uighur
+  iso_639_3: uig
+  id: "6630"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_143: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: se
+  iso_639_2: sme
+  english_name: Northern Sami
+  iso_639_3: sme
+  id: "5819"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_001: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: aa
+  iso_639_2: aar
+  english_name: Afar
+  iso_639_3: aar
+  id: "15"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_059: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: hz
+  iso_639_2: her
+  english_name: Herero
+  iso_639_3: her
+  id: "2329"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_114: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: nr
+  iso_639_2: nbl
+  english_name: Ndebele
+  iso_639_3: nbl
+  id: "4423"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: South
+globalize_languages_088: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: kg
+  iso_639_2: kon
+  english_name: Kongo
+  iso_639_3: kon
+  id: "3118"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_172: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c%10>=2 && c%10<=4 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: !binary |
+    0KPQutGA0LDRl9C90YHRjNC60LA=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: uk
+  iso_639_2: ukr
+  english_name: Ukrainian
+  iso_639_3: ukr
+  id: "6640"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_144: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: sm
+  iso_639_2: smo
+  english_name: Samoan
+  iso_639_3: smo
+  id: "5828"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_115: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: nd
+  iso_639_2: nde
+  english_name: Ndebele
+  iso_639_3: nde
+  id: "4463"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: North
+globalize_languages_030: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: cr
+  iso_639_2: cre
+  english_name: Cree
+  iso_639_3: cre
+  id: "1397"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_089: 
+  pluralization: c = 1
+  macro_language: "0"
+  native_name: !binary |
+    7ZWc6rWt7Ja0
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ko
+  iso_639_2: kor
+  english_name: Korean
+  iso_639_3: kor
+  id: "3122"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_173: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    2KfYsdiv2Yg=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ur
+  iso_639_2: urd
+  english_name: Urdu
+  iso_639_3: urd
+  id: "6679"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_116: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ng
+  iso_639_2: ndo
+  english_name: Ndonga
+  iso_639_3: ndo
+  id: "4473"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_002: 
+  pluralization: 
+  macro_language: "0"
+  native_name: "\xD0\xB0\xD2\xA7\xD1\x81\xD1\x83\xD0\xB0 \xD0\xB1\xD1\x8B\xD0\xB7\xD1\x88\xD3\x99\xD0\xB0"
+  scope: L
+  rfc_3066: 
+  iso_639_1: ab
+  iso_639_2: abk
+  english_name: Abkhazian
+  iso_639_3: abk
+  id: "33"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_031: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Cymraeg
+  scope: L
+  rfc_3066: 
+  iso_639_1: cy
+  iso_639_2: cym
+  english_name: Welsh
+  iso_639_3: cym
+  id: "1481"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_174: 
+  pluralization: 
+  macro_language: "1"
+  native_name: o'zbek
+  scope: L
+  rfc_3066: 
+  iso_639_1: uz
+  iso_639_2: uzb
+  english_name: Uzbek
+  iso_639_3: uzb
+  id: "6719"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_145: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: sn
+  iso_639_2: sna
+  english_name: Shona
+  iso_639_3: sna
+  id: "5840"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_117: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ne
+  iso_639_2: nep
+  english_name: Nepali
+  iso_639_3: nep
+  id: "4499"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_060: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    4KS54KS/4KSC4KSm4KWA
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: hi
+  iso_639_2: hin
+  english_name: Hindi
+  iso_639_3: hin
+  id: "2343"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_032: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: Dansk
+  scope: L
+  rfc_3066: 
+  iso_639_1: da
+  iso_639_2: dan
+  english_name: Danish
+  iso_639_3: dan
+  id: "1499"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_003: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Afrikaans
+  scope: L
+  rfc_3066: 
+  iso_639_1: af
+  iso_639_2: afr
+  english_name: Afrikaans
+  iso_639_3: afr
+  id: "114"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_175: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ve
+  iso_639_2: ven
+  english_name: Venda
+  iso_639_3: ven
+  id: "6744"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_146: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: sd
+  iso_639_2: snd
+  english_name: Sindhi
+  iso_639_3: snd
+  id: "5843"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_118: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: Nederlands
+  scope: L
+  rfc_3066: 
+  iso_639_1: nl
+  iso_639_2: nld
+  english_name: Dutch
+  iso_639_3: nld
+  id: "4628"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_061: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ho
+  iso_639_2: hmo
+  english_name: Hiri Motu
+  iso_639_3: hmo
+  id: "2370"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+german: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: Deutsch
+  scope: L
+  rfc_3066: 
+  iso_639_1: de
+  iso_639_2: deu
+  english_name: German
+  iso_639_3: deu
+  id: "1556"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_004: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ak
+  iso_639_2: aka
+  english_name: Akan
+  iso_639_3: aka
+  id: "191"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_176: 
+  pluralization: 
+  macro_language: "0"
+  native_name: "Ti\xC3\xAA\xCC\x81ng Vi\xC3\xAA\xCC\xA3t"
+  scope: L
+  rfc_3066: 
+  iso_639_1: vi
+  iso_639_2: vie
+  english_name: Vietnamese
+  iso_639_3: vie
+  id: "6751"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_147: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Somali
+  scope: L
+  rfc_3066: 
+  iso_639_1: so
+  iso_639_2: som
+  english_name: Somali
+  iso_639_3: som
+  id: "5876"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_119: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: nn
+  iso_639_2: nno
+  english_name: Norwegian Nynorsk
+  iso_639_3: nno
+  id: "4682"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_062: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c%10>=2 && c%10<=4 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: Hrvatski
+  scope: L
+  rfc_3066: 
+  iso_639_1: hr
+  iso_639_2: hrv
+  english_name: Croatian
+  iso_639_3: hrv
+  id: "2418"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_034: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: dv
+  iso_639_2: div
+  english_name: Divehi
+  iso_639_3: div
+  id: "1607"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_005: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    4Yqg4Yib4Yit4Yqb
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: am
+  iso_639_2: amh
+  english_name: Amharic
+  iso_639_3: amh
+  id: "247"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_090: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: kj
+  iso_639_2: kua
+  english_name: Kuanyama
+  iso_639_3: kua
+  id: "3260"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_177: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: C
+  rfc_3066: 
+  iso_639_1: vo
+  iso_639_2: vol
+  english_name: "Volap\xC3\xBCk"
+  iso_639_3: vol
+  id: "6800"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_148: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: st
+  iso_639_2: sot
+  english_name: Sotho
+  iso_639_3: sot
+  id: "5882"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: Southern
+globalize_languages_063: 
+  pluralization: c = 1
+  macro_language: "0"
+  native_name: Magyar
+  scope: L
+  rfc_3066: 
+  iso_639_1: hu
+  iso_639_2: hun
+  english_name: Hungarian
+  iso_639_3: hun
+  id: "2443"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_006: 
+  pluralization: 
+  macro_language: "1"
+  native_name: !binary |
+    2KfZhNi52LHYqNmK2Kk=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ar
+  iso_639_2: ara
+  english_name: Arabic
+  iso_639_3: ara
+  id: "340"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: rtl
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_091: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ku
+  iso_639_2: kur
+  english_name: Kurdish
+  iso_639_3: kur
+  id: "3276"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_149: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: "Espa\xC3\xB1ol"
+  scope: L
+  rfc_3066: 
+  iso_639_1: es
+  iso_639_2: spa
+  english_name: Spanish
+  iso_639_3: spa
+  id: "5889"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_064: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    1YDVodW11aXWgNWl1bY=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: hy
+  iso_639_2: hye
+  english_name: Armenian
+  iso_639_3: hye
+  id: "2466"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_035: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: dz
+  iso_639_2: dzo
+  english_name: Dzongkha
+  iso_639_3: dzo
+  id: "1760"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_007: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: an
+  iso_639_2: arg
+  english_name: Aragonese
+  iso_639_3: arg
+  id: "346"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_092: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: lo
+  iso_639_2: lao
+  english_name: Lao
+  iso_639_3: lao
+  id: "3428"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_178: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: wa
+  iso_639_2: wln
+  english_name: Walloon
+  iso_639_3: wln
+  id: "6911"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_120: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: nb
+  iso_639_2: nob
+  english_name: "Norwegian Bokm\xC3\xA5l"
+  iso_639_3: nob
+  id: "4695"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_065: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ig
+  iso_639_2: ibo
+  english_name: Igbo
+  iso_639_3: ibo
+  id: "2480"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_036: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: !binary |
+    zpXOu867zrfOvc65zrrOrA==
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: el
+  iso_639_2: ell
+  english_name: Greek
+  iso_639_3: ell
+  id: "1793"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: Modern (1453-)
+globalize_languages_008: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: as
+  iso_639_2: asm
+  english_name: Assamese
+  iso_639_3: asm
+  id: "376"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_093: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: A
+  rfc_3066: 
+  iso_639_1: la
+  iso_639_2: lat
+  english_name: Latin
+  iso_639_3: lat
+  id: "3433"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_179: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Wolof
+  scope: L
+  rfc_3066: 
+  iso_639_1: wo
+  iso_639_2: wol
+  english_name: Wolof
+  iso_639_3: wol
+  id: "6952"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_121: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "1"
+  native_name: Norsk
+  scope: L
+  rfc_3066: 
+  iso_639_1: "no"
+  iso_639_2: nor
+  english_name: Norwegian
+  iso_639_3: nor
+  id: "4709"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_066: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: C
+  rfc_3066: 
+  iso_639_1: io
+  iso_639_2: ido
+  english_name: Ido
+  iso_639_3: ido
+  id: "2494"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+english: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: en
+  iso_639_2: eng
+  english_name: English
+  iso_639_3: eng
+  id: "1819"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_009: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: av
+  iso_639_2: ava
+  english_name: Avaric
+  iso_639_3: ava
+  id: "438"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_094: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c != 0 ? 2 : 3"
+  macro_language: "0"
+  native_name: "Latvie\xC5\xA1u"
+  scope: L
+  rfc_3066: 
+  iso_639_1: lv
+  iso_639_2: lav
+  english_name: Latvian
+  iso_639_3: lav
+  id: "3435"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_150: 
+  pluralization: 
+  macro_language: "1"
+  native_name: shqip
+  scope: L
+  rfc_3066: 
+  iso_639_1: sq
+  iso_639_2: sqi
+  english_name: Albanian
+  iso_639_3: sqi
+  id: "5910"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_122: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ny
+  iso_639_2: nya
+  english_name: Chichewa; Nyanja
+  iso_639_3: nya
+  id: "4821"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_038: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: 
+  scope: C
+  rfc_3066: 
+  iso_639_1: eo
+  iso_639_2: epo
+  english_name: Esperanto
+  iso_639_3: epo
+  id: "1831"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_095: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: li
+  iso_639_2: lim
+  english_name: Limburgish
+  iso_639_3: lim
+  id: "3546"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: Limburger
+globalize_languages_067: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ii
+  iso_639_2: iii
+  english_name: Yi
+  iso_639_3: iii
+  id: "2519"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: Sichuan
+globalize_languages_151: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: sc
+  iso_639_2: srd
+  english_name: Sardinian
+  iso_639_3: srd
+  id: "5921"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_039: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: Eesti
+  scope: L
+  rfc_3066: 
+  iso_639_1: et
+  iso_639_2: est
+  english_name: Estonian
+  iso_639_3: est
+  id: "1851"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_096: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ln
+  iso_639_2: lin
+  english_name: Lingala
+  iso_639_3: lin
+  id: "3547"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_180: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: xh
+  iso_639_2: xho
+  english_name: Xhosa
+  iso_639_3: xho
+  id: "7078"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_152: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Srpski
+  scope: L
+  rfc_3066: 
+  iso_639_1: sr
+  iso_639_2: srp
+  english_name: Serbian
+  iso_639_3: srp
+  id: "5933"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_123: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: oc
+  iso_639_2: oci
+  english_name: Occitan
+  iso_639_3: oci
+  id: "4867"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: post 1500
+  english_name_modifier: 
+globalize_languages_097: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c%10>=2 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: "Lietuvi\xC5\xA1kai"
+  scope: L
+  rfc_3066: 
+  iso_639_1: lt
+  iso_639_2: lit
+  english_name: Lithuanian
+  iso_639_3: lit
+  id: "3553"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_010: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: A
+  rfc_3066: 
+  iso_639_1: ae
+  iso_639_2: ave
+  english_name: Avestan
+  iso_639_3: ave
+  id: "441"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_068: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: iu
+  iso_639_2: iku
+  english_name: Inuktitut
+  iso_639_3: iku
+  id: "2532"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_181: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: yi
+  iso_639_2: yid
+  english_name: Yiddish
+  iso_639_3: yid
+  id: "7324"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_153: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ss
+  iso_639_2: ssw
+  english_name: Swati
+  iso_639_3: ssw
+  id: "5964"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_124: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: oj
+  iso_639_2: oji
+  english_name: Ojibwa
+  iso_639_3: oji
+  id: "4891"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_098: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: lb
+  iso_639_2: ltz
+  english_name: Letzeburgesch
+  iso_639_3: ltz
+  id: "3687"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_011: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ay
+  iso_639_2: aym
+  english_name: Aymara
+  iso_639_3: aym
+  id: "483"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_069: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: C
+  rfc_3066: 
+  iso_639_1: ie
+  iso_639_2: ile
+  english_name: Interlingue
+  iso_639_3: ile
+  id: "2539"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_182: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: za
+  iso_639_2: zha
+  english_name: Zhuang
+  iso_639_3: zha
+  id: "7481"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_154: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: su
+  iso_639_2: sun
+  english_name: Sundanese
+  iso_639_3: sun
+  id: "6002"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_125: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: or
+  iso_639_2: ori
+  english_name: Oriya
+  iso_639_3: ori
+  id: "4965"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_040: 
+  pluralization: 
+  macro_language: "0"
+  native_name: euskera
+  scope: L
+  rfc_3066: 
+  iso_639_1: eu
+  iso_639_2: eus
+  english_name: Basque
+  iso_639_3: eus
+  id: "1865"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_099: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: lu
+  iso_639_2: lub
+  english_name: Luba-Katanga
+  iso_639_3: lub
+  id: "3689"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_012: 
+  pluralization: 
+  macro_language: "1"
+  native_name: "az\xC9\x99rbaycan"
+  scope: L
+  rfc_3066: 
+  iso_639_1: az
+  iso_639_2: aze
+  english_name: Azerbaijani
+  iso_639_3: aze
+  id: "496"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_183: 
+  pluralization: 
+  macro_language: "1"
+  native_name: !binary |
+    5Lit5paH
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: zh
+  iso_639_2: zho
+  english_name: Chinese
+  iso_639_3: zho
+  id: "7484"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_155: 
+  pluralization: 
+  macro_language: "1"
+  native_name: Kiswahili
+  scope: L
+  rfc_3066: 
+  iso_639_1: sw
+  iso_639_2: swa
+  english_name: Swahili
+  iso_639_3: swa
+  id: "6021"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: generic
+  english_name_modifier: 
+globalize_languages_126: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: om
+  iso_639_2: orm
+  english_name: Oromo
+  iso_639_3: orm
+  id: "4967"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_041: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    xpDKi8mb
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ee
+  iso_639_2: ewe
+  english_name: Ewe
+  iso_639_3: ewe
+  id: "1869"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_184: 
+  pluralization: 
+  macro_language: "0"
+  native_name: isiZulu
+  scope: L
+  rfc_3066: 
+  iso_639_1: zu
+  iso_639_2: zul
+  english_name: Zulu
+  iso_639_3: zul
+  id: "7594"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_127: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: os
+  iso_639_2: oss
+  english_name: Ossetian; Ossetic
+  iso_639_3: oss
+  id: "4984"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_042: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: fo
+  iso_639_2: fao
+  english_name: Faroese
+  iso_639_3: fao
+  id: "1886"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_013: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ba
+  iso_639_2: bak
+  english_name: Bashkir
+  iso_639_3: bak
+  id: "512"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_070: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: C
+  rfc_3066: 
+  iso_639_1: ia
+  iso_639_2: ina
+  english_name: Interlingua
+  iso_639_3: ina
+  id: "2556"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: International Auxiliary Language Association
+  english_name_modifier: 
+globalize_languages_156: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: svenska
+  scope: L
+  rfc_3066: 
+  iso_639_1: sv
+  iso_639_2: swe
+  english_name: Swedish
+  iso_639_3: swe
+  id: "6024"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_128: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: pa
+  iso_639_2: pan
+  english_name: Panjabi
+  iso_639_3: pan
+  id: "5031"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_043: 
+  pluralization: 
+  macro_language: "1"
+  native_name: !binary |
+    2YHYp9ix2LPbjA==
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: fa
+  iso_639_2: fas
+  english_name: Persian
+  iso_639_3: fas
+  id: "1889"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_014: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Bamanankan
+  scope: L
+  rfc_3066: 
+  iso_639_1: bm
+  iso_639_2: bam
+  english_name: Bambara
+  iso_639_3: bam
+  id: "514"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_071: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Bahasa indonesia
+  scope: L
+  rfc_3066: 
+  iso_639_1: id
+  iso_639_2: ind
+  english_name: Indonesian
+  iso_639_3: ind
+  id: "2558"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_157: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ty
+  iso_639_2: tah
+  english_name: Tahitian
+  iso_639_3: tah
+  id: "6086"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_129: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: A
+  rfc_3066: 
+  iso_639_1: pi
+  iso_639_2: pli
+  english_name: Pali
+  iso_639_3: pli
+  id: "5176"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_044: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: fj
+  iso_639_2: fij
+  english_name: Fijian
+  iso_639_3: fij
+  id: "1901"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_015: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    0JHQtdC70LDRgNGD0YHQutCw0Y8=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: be
+  iso_639_2: bel
+  english_name: Belarusian
+  iso_639_3: bel
+  id: "614"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_072: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ik
+  iso_639_2: ipk
+  english_name: Inupiaq
+  iso_639_3: ipk
+  id: "2574"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_158: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ta
+  iso_639_2: tam
+  english_name: Tamil
+  iso_639_3: tam
+  id: "6090"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_045: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: suomi
+  scope: L
+  rfc_3066: 
+  iso_639_1: fi
+  iso_639_2: fin
+  english_name: Finnish
+  iso_639_3: fin
+  id: "1903"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_100: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: lg
+  iso_639_2: lug
+  english_name: Ganda
+  iso_639_3: lug
+  id: "3694"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_016: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: bn
+  iso_639_2: ben
+  english_name: Bengali
+  iso_639_3: ben
+  id: "616"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_073: 
+  pluralization: 
+  macro_language: "0"
+  native_name: "\xC3\x8Dslenska"
+  scope: L
+  rfc_3066: 
+  iso_639_1: is
+  iso_639_2: isl
+  english_name: Icelandic
+  iso_639_3: isl
+  id: "2593"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_159: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: tt
+  iso_639_2: tat
+  english_name: Tatar
+  iso_639_3: tat
+  id: "6097"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_017: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: bi
+  iso_639_2: bis
+  english_name: Bislama
+  iso_639_3: bis
+  id: "721"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_074: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: italiano
+  scope: L
+  rfc_3066: 
+  iso_639_1: it
+  iso_639_2: ita
+  english_name: Italian
+  iso_639_3: ita
+  id: "2600"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_130: 
+  pluralization: "c==1 ? 1 : c%10>=2 && c%10<=4 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: Polski
+  scope: L
+  rfc_3066: 
+  iso_639_1: pl
+  iso_639_2: pol
+  english_name: Polish
+  iso_639_3: pol
+  id: "5244"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_101: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: mh
+  iso_639_2: mah
+  english_name: Marshall
+  iso_639_3: mah
+  id: "3732"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_018: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: bo
+  iso_639_2: bod
+  english_name: Tibetan
+  iso_639_3: bod
+  id: "860"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_075: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: jv
+  iso_639_2: jav
+  english_name: Javanese
+  iso_639_3: jav
+  id: "2652"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_046: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: "fran\xC3\xA7ais"
+  scope: L
+  rfc_3066: 
+  iso_639_1: fr
+  iso_639_2: fra
+  english_name: French
+  iso_639_3: fra
+  id: "1930"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_131: 
+  pluralization: "c == 1 ? 1 : 2"
+  macro_language: "0"
+  native_name: "portugu\xC3\xAAs"
+  scope: L
+  rfc_3066: 
+  iso_639_1: pt
+  iso_639_2: por
+  english_name: Portuguese
+  iso_639_3: por
+  id: "5250"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_019: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: bs
+  iso_639_2: bos
+  english_name: Bosnian
+  iso_639_3: bos
+  id: "875"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_076: 
+  pluralization: c = 1
+  macro_language: "0"
+  native_name: !binary |
+    5pel5pys6Kqe
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ja
+  iso_639_2: jpn
+  english_name: Japanese
+  iso_639_3: jpn
+  id: "2723"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_047: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: fy
+  iso_639_2: fry
+  english_name: Frisian
+  iso_639_3: fry
+  id: "1942"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_102: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ml
+  iso_639_2: mal
+  english_name: Malayalam
+  iso_639_3: mal
+  id: "3736"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_160: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    4LCk4LGG4LCy4LGB4LCX4LGB
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: te
+  iso_639_2: tel
+  english_name: Telugu
+  iso_639_3: tel
+  id: "6182"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_132: 
+  pluralization: 
+  macro_language: "1"
+  native_name: !binary |
+    2b7amtiq2Yg=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: ps
+  iso_639_2: pus
+  english_name: Pushto
+  iso_639_3: pus
+  id: "5343"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_077: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: kl
+  iso_639_2: kal
+  english_name: Kalaallisut
+  iso_639_3: kal
+  id: "2763"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_048: 
+  pluralization: 
+  macro_language: "1"
+  native_name: Fulfulde, Pulaar, Pular
+  scope: L
+  rfc_3066: 
+  iso_639_1: ff
+  iso_639_2: ful
+  english_name: Fulah
+  iso_639_3: ful
+  id: "1954"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_103: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: mr
+  iso_639_2: mar
+  english_name: Marathi
+  iso_639_3: mar
+  id: "3740"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_161: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: tg
+  iso_639_2: tgk
+  english_name: Tajik
+  iso_639_3: tgk
+  id: "6210"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_133: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: qu
+  iso_639_2: que
+  english_name: Quechua
+  iso_639_3: que
+  id: "5368"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_078: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    4LKV4LKo4LON4LKo4LKh
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: kn
+  iso_639_2: kan
+  english_name: Kannada
+  iso_639_3: kan
+  id: "2765"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_049: 
+  pluralization: "c==1 ? 1 : c==2 ? 2 : 3"
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: gd
+  iso_639_2: gla
+  english_name: Gaelic
+  iso_639_3: gla
+  id: "2112"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: Scots
+  english_name_modifier: 
+globalize_languages_104: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    0JzQsNC60LXQtNC+0L3RgdC60Lg=
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: mk
+  iso_639_2: mkd
+  english_name: Macedonian
+  iso_639_3: mkd
+  id: "3981"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_162: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: tl
+  iso_639_2: tgl
+  english_name: Tagalog
+  iso_639_3: tgl
+  id: "6211"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_020: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: br
+  iso_639_2: bre
+  english_name: Breton
+  iso_639_3: bre
+  id: "936"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_105: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: mg
+  iso_639_2: mlg
+  english_name: Malagasy
+  iso_639_3: mlg
+  id: "4009"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_163: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    4Lig4Liy4Lip4Liy4LmE4LiX4Lii
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: th
+  iso_639_2: tha
+  english_name: Thai
+  iso_639_3: tha
+  id: "6223"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_134: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: rm
+  iso_639_2: roh
+  english_name: Raeto-Romance
+  iso_639_3: roh
+  id: "5525"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_021: 
+  pluralization: 
+  macro_language: "0"
+  native_name: !binary |
+    0JHRitC70LPQsNGA0YHQutC4
+
+  scope: L
+  rfc_3066: 
+  iso_639_1: bg
+  iso_639_2: bul
+  english_name: Bulgarian
+  iso_639_3: bul
+  id: "1020"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_079: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ks
+  iso_639_2: kas
+  english_name: Kashmiri
+  iso_639_3: kas
+  id: "2769"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_106: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Malti
+  scope: L
+  rfc_3066: 
+  iso_639_1: mt
+  iso_639_2: mlt
+  english_name: Maltese
+  iso_639_3: mlt
+  id: "4022"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_164: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ti
+  iso_639_2: tir
+  english_name: Tigrinya
+  iso_639_3: tir
+  id: "6260"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_135: 
+  pluralization: 
+  macro_language: "0"
+  native_name: "Rom\xC3\xA2n\xC4\x83"
+  scope: L
+  rfc_3066: 
+  iso_639_1: ro
+  iso_639_2: ron
+  english_name: Romanian
+  iso_639_3: ron
+  id: "5528"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_022: 
+  pluralization: 
+  macro_language: "0"
+  native_name: "Catal\xC3\xA0"
+  scope: L
+  rfc_3066: 
+  iso_639_1: ca
+  iso_639_2: cat
+  english_name: Catalan
+  iso_639_3: cat
+  id: "1177"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_107: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: mo
+  iso_639_2: mol
+  english_name: Moldavian
+  iso_639_3: mol
+  id: "4091"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_050: 
+  pluralization: "c==1 ? 1 : c==2 ? 2 : 3"
+  macro_language: "0"
+  native_name: Gaeilge
+  scope: L
+  rfc_3066: 
+  iso_639_1: ga
+  iso_639_2: gle
+  english_name: Irish
+  iso_639_3: gle
+  id: "2115"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_165: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: to
+  iso_639_2: ton
+  english_name: Tonga
+  iso_639_3: ton
+  id: "6383"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: Tonga Islands
+  english_name_modifier: 
+globalize_languages_136: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Kirundi
+  scope: L
+  rfc_3066: 
+  iso_639_1: rn
+  iso_639_2: run
+  english_name: Rundi
+  iso_639_3: run
+  id: "5552"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_023: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c%10>=2 && c%10<=4 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: "\xC4\x8De\xC5\xA1tina"
+  scope: L
+  rfc_3066: 
+  iso_639_1: cs
+  iso_639_2: ces
+  english_name: Czech
+  iso_639_3: ces
+  id: "1233"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_108: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: mn
+  iso_639_2: mon
+  english_name: Mongolian
+  iso_639_3: mon
+  id: "4093"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_051: 
+  pluralization: 
+  macro_language: "0"
+  native_name: Galego
+  scope: L
+  rfc_3066: 
+  iso_639_1: gl
+  iso_639_2: glg
+  english_name: Gallegan
+  iso_639_3: glg
+  id: "2116"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_166: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: tn
+  iso_639_2: tsn
+  english_name: Tswana
+  iso_639_3: tsn
+  id: "6466"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_137: 
+  pluralization: "c%10==1 && c%100!=11 ? 1 : c%10>=2 && c%10<=4 && (c%100<10 || c%100>=20) ? 2 : 3"
+  macro_language: "0"
+  native_name: "Pycc\xC4\xB8\xD0\xB8\xD0\xB9"
+  scope: L
+  rfc_3066: 
+  iso_639_1: ru
+  iso_639_2: rus
+  english_name: Russian
+  iso_639_3: rus
+  id: "5556"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_080: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ka
+  iso_639_2: kat
+  english_name: Georgian
+  iso_639_3: kat
+  id: "2770"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_109: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: mi
+  iso_639_2: mri
+  english_name: Maori
+  iso_639_3: mri
+  id: "4166"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_052: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: E
+  rfc_3066: 
+  iso_639_1: gv
+  iso_639_2: glv
+  english_name: Manx
+  iso_639_3: glv
+  id: "2125"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_138: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: sg
+  iso_639_2: sag
+  english_name: Sango
+  iso_639_3: sag
+  id: "5576"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_081: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: kr
+  iso_639_2: kau
+  english_name: Kanuri
+  iso_639_3: kau
+  id: "2771"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_053: 
+  pluralization: 
+  macro_language: "1"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: gn
+  iso_639_2: grn
+  english_name: Guarani
+  iso_639_3: grn
+  id: "2194"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 
+globalize_languages_024: 
+  pluralization: 
+  macro_language: "0"
+  native_name: 
+  scope: L
+  rfc_3066: 
+  iso_639_1: ch
+  iso_639_2: cha
+  english_name: Chamorro
+  iso_639_3: cha
+  id: "1242"
+  native_name_locale: 
+  native_name_modifier: 
+  direction: ltr
+  english_name_locale: 
+  english_name_modifier: 

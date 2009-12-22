@@ -1,0 +1,33 @@
+<li id="movie_category_<%= category.id %><%= "_vote" if @vote_icons %>">
+  <div class="actions">
+      <div class="small" style="width: 40px; text-align: center;" id="movie_category_votes_<%= category.id %>">
+        <% if @vote_icons -%>
+          <div id="movie_category_activity_indicator_for_<%= category.id %>" style="display: none;"><%= alternative_loading_image %></div>
+          <div id="movie_category_vote_icons_for_<%= category.id %>">
+            <% if has_voted(current_user.id, @movie, category, 1) -%>
+              <div style="width: 20px; float: left;">&nbsp;</div>
+            <% else -%>
+              <%= link_to_remote plus_icon, 
+                              { :url     => { :action => :add_category, :category => category.id },
+                                :loading => "Element.show('movie_category_activity_indicator_for_#{category.id}'); Element.hide('movie_category_vote_icons_for_#{category.id}');" },
+                                :style => 'float: left; padding-right: 2px;' %>
+            <% end -%>
+            <% if not has_voted(current_user.id, @movie, category, -1) %>
+              <%= link_to_remote minus_icon,
+                              { :url => { :action => :delete_category, :category => category.id },
+                                :loading => "Element.show('movie_category_activity_indicator_for_#{category.id}'); Element.hide('movie_category_vote_icons_for_#{category.id}');" } %>
+            <% end -%>
+          </div>
+        <% else -%>
+          <%= category.count_for_movie @movie -%>
+        <% end -%>
+      </div>
+  </div>
+  <% if category.root == Category.plot_keyword %>
+    <%= link_to_object category %>
+  <% else %>
+    <%= category.categories_from_root.collect { |c|
+          link_to_object c
+        }.join(" &gt; ") %>
+  <% end %>
+</li>

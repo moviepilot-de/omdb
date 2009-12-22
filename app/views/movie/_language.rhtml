@@ -1,0 +1,9 @@
+<li id="movie_language_<%= language.id %>" class="language">
+  <div class="handle"><%= sort_icon %></div>
+  <div class="actions">
+      <%= link_to_remote delete_icon,
+            :url => { :action   => "delete_language",
+            :language => language.id } %>
+  </div>
+  <%= language.english_name.t %> 
+</li>

@@ -1,0 +1,23 @@
+<div class="input">
+  <%= edit_freeze_state @cast, :self %>
+  <label for="cast_comment"><%= "Name (original)".t %></label>
+  <% if @cast.attribute_frozen? :self %>
+    <%= @cast.comment %>
+  <% else %>
+    <%= display_attribute :cast, :comment %>
+  <% end %>
+</div>
+
+<div class="input">
+  <label for="cast_alias"><%= "Name (%s)" /  @language.english_name.t %></label>
+  <input id="alias_name" name="alias[name]" size="30" type="text" value="<%= @cast.name_aliases.local(@language).first.name unless @cast.name_aliases.local(@language).empty? %>" />
+  <em>(optional)</em>
+</div>
+
+<% unless @cast.attribute_frozen? :self %>
+<div class="input">
+  <label></label>
+  <%= check_box :cast, :lead %>
+  <label for="cast_lead" style="float:none; display: inline;">Leading Role?</label>
+</div>
+<% end %>

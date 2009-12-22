@@ -1,0 +1,147 @@
+div#content div.list-view-headline {
+  padding-top:              1.5em;
+}
+
+div#content div.list-view-headline h3 {
+  border-bottom:            1px solid #bbc1b5;
+  padding:                  0px;
+  margin:                   0px;
+  padding-bottom:           0.1em;
+  margin-bottom:            0.2em;
+}
+
+div#content.list-view a.edit-button {
+  margin:                   0px;
+  padding:                  0px 5px;
+  margin-left:              1px;
+  margin-top:               4px;
+}
+
+div#content div.list {
+  margin-bottom:            2.5em;
+}
+
+div.list-view-headline div.actions {
+  width:                    20px;
+  background-color:         white;
+}
+
+div.list-view ul {
+  margin:                   0px;
+  padding:                  0px;
+  list-style:               none;
+  line-height:              1.25em;
+}
+
+div.list-view li {
+  padding:                  0.2em 0px;
+  margin:                   0px;
+  display:                  block;
+  background-image:         none;
+  clear:                    left;
+  min-height:               18px;
+}
+
+div.list-view ol li {
+  display:                  list-item;
+}
+
+div#content.list-view li * {
+  font-size:                9pt;
+}
+
+
+
+/* New Cast/Crew Dialog */
+
+div.new-cast {
+  margin-top:               0.5em;
+  margin-bottom:            1em;
+}
+
+div.new-cast div.container {
+  background-image:         url('/images/layout/background-newcrew-left.png');
+}
+
+div.new-cast div.wrapper {
+  background-image:         url('/images/layout/background-newcrew-right.png');
+  background-position:      top right;
+  background-repeat:        no-repeat;
+}
+
+div#content div.new-cast h2 {
+  padding:                  3px 15px;
+  line-height:              30px;
+  height:                   30px;
+  border-bottom:            none;
+}
+
+div#content div.new-cast p {
+  padding:                  0 15px;
+}
+
+div#content div.new-cast div.content {
+  padding:                  0 15px;
+}
+
+div.new-cast div.column {
+  float:                    left;
+  width:                    39%;
+  padding-bottom:           1em;
+}
+
+div.new-cast div.middle-column {
+  width:                    20%;
+  float:                    left;
+  padding-top:              1.3em;
+  text-align:               center;
+}
+
+div.new-cast a.edit {
+  font-size:                8pt;
+  display:                  block;
+  float:                    right;
+}
+
+div.new-cast div.small {
+  padding-top:              1px;
+}
+
+div.new-cast label {
+  font-size:                8pt; 
+  font-weight:              bold; 
+  float:                    none;
+  display:                  inline;
+}
+
+div.new-cast input[type=text] {
+  width:                    98%;
+}
+
+div.new-cast div.button-bar {
+  text-align:               right;
+  background-image:         url('/images/layout/background-newcrew-left.png');
+  background-position:      bottom left;
+}
+
+div.new-cast div.button-bar div.wrapper {
+  background-image:         url('/images/layout/background-newcrew-right.png');
+  background-position:      bottom right;
+  background-repeat:        no-repeat;
+  padding:                  0.5em 15px 20px 15px;
+}
+
+
+
+div.new-cast div#new_crew_activity_indicator,
+div.new-cast div#new_cast_activity_indicator {
+  float:                    right;
+  padding-top:              10px;
+  padding-right:            15px;
+}
+
+div.new-cast div#new_crew_status,
+div.new-cast div#new_cast_status {
+  float:                    left;
+  padding-top:              0.5em;
+}

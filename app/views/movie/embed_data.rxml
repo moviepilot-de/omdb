@@ -1,0 +1,48 @@
+xml.instruct!
+xml.movie :tab_one => "Information".t, :tab_two => "Crew/Cast", :tab_three => "Trailer" do
+  xml.name h( @movie.official_translation( @language ).first.name  ) if @movie.official_translation( @language ).any?
+  xml.name h( @movie.name ) unless @movie.official_translation( @language ).any?
+  xml.date h( @movie.end.year ) unless @movie.end.nil?
+  xml.countries do
+    @movie.countries.each do |c|
+      xml.country h(c.code)
+    end
+  end
+  xml.image @movie.image.nil? ? "/images/misc/no_cover185px.png" : url_for(@movie.image.default_url.update( :action => :embed ) )
+  xml.url url_for(@movie.default_url)
+  xml.abstract @movie.abstract(@language).data
+  xml.trailer do
+    xml.type "YouTube"
+    xml.id h(@movie.trailer(@language).key) unless @movie.trailer(@language).key.empty?
+    xml.id h(@movie.trailer.key) if @movie.trailer(@language).key.empty? and not @movie.trailer.key.empty?    
+  end
+  xml.vote movie_vote(@movie)
+  xml.genres :title => Category.genre.local_name(@language) do
+    @movie.genres.slice(0,3).each do |genre|
+      xml.genre do
+        xml.name genre.local_name(@language)
+        xml.url url_for(genre.default_url)
+      end
+    end
+  end
+  xml.crew do
+    Job::CREW_MEMBERS.each do |member|
+      xml.department :title => member.to_s.humanize do
+        @movie.send(member.to_s.pluralize).each do |cast|
+          xml.person do
+            xml.name cast.person.name.strip
+            xml.url url_for(cast.person.default_url)
+          end
+        end
+      end
+    end
+    xml.department :title => Job.actor.local_name(@language), :with => "with".t  do
+      @movie.actors.slice(0,10).each do |cast|
+        xml.person do
+          xml.name cast.person.name.strip
+          xml.url url_for(cast.person.default_url)
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,13 @@
+<div id="wikitoolbar">
+  <a href="#" onclick="surround('wiki_text', '\n', '\n===\n\n'); return false;"><img src="/images/icons/editor/button_headline1.png" title="<%= "Level 1 Headline".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '\n', '\n---\n\n'); return false;"><img src="/images/icons/editor/button_headline2.png" title="<%= "Level 2 Headline".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '*', '*'); return false;"><img src="/images/icons/editor/button_bold.png" title="<%= "Bold text".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '_', '_'); return false;"><img src="/images/icons/editor/button_italic.png" title="<%= "Italic text".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '> ', ''); return false;"><img src="/images/icons/editor/button_quote.png" title="<%= "Quote text".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '! ', ''); return false;"><img src="/images/icons/editor/button_spoiler.png" title="<%= "Spoiler Warning text".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '#', ''); return false;"><img src="/images/icons/editor/button_ordered.png" title="<%= "Ordered list item".t %>"></a>
+  <a href="#" onclick="surround('wiki_text', '*', ''); return false;"><img src="/images/icons/editor/button_unordered.png" title="<%= "Unordered list item".t %>"></a>
+  <%= link_to_function image_tag("icons/editor/button_link.png"), lightbox( {:controller => "search", :action => "wiki_search", :type => "movies"}, {:draggable => true, :overlay => false} ), :title => "Link to another omdb page".t %>
+  <a href="#" onclick="surround('wiki_text', '[[wp:', ']]'); return false;"><img src="/images/icons/editor/button_wikipedia.png" title="<%= "External Link".t %>"></a>
+  <a href="#" onclick="surround_extlink('wiki_text'); return false;"><img src="/images/icons/editor/button_extlink.png" title="<%= "External Link".t %>"></a>
+</div>

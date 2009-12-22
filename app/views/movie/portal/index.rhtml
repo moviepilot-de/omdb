@@ -1,0 +1,44 @@
+<%= render :partial => '/common/portal_header' %>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  <div class="column-three">
+    <div id="overview-details">
+      <h2 style="border: none;"><%= 'Popular'.t %></h2>
+      <table cellspacing="0">
+        <% Movie.popular.slice(0,10).each_with_index do |movie, index| %>
+          <tr>
+            <td style="border-top: 1px solid #CCC; padding: 3px 0;"><%= index + 1 %>.&nbsp;</td>
+            <td style="border-top: 1px solid #CCC; padding: 3px 0;"><%= link_to_object movie %></td>
+          </tr>
+      <% end %>
+      </table>
+
+      <h2 style="border: none;"><%= 'New'.t %></h2>
+      <table cellspacing="0">
+        <% Movie.recently_added.slice(0,10).each_with_index do |movie, index| %>
+          <tr>
+            <td style="border-top: 1px solid #CCC; padding: 3px 0;"><%= index + 1 %>.&nbsp;</td>
+            <td style="border-top: 1px solid #CCC; padding: 3px 0;"><%= link_to_object movie %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+
+
+  <% unless Movie.of_the_day.nil? %>
+    <%= render :partial => '/movie/portal/portal_movie', :locals => { :title => "Movie of the day".t, :movie => Movie.of_the_day }%>
+  <% end %>
+    
+  <br />
+  
+  <% unless Movie.anniversary.nil? %>
+    <% years = Movie.anniversary.keys.first %>
+    <% movie = Movie.anniversary.values.first %>
+    <%= render :partial => '/movie/portal/portal_movie', :locals => { :title => "Today, %d years ago"/(years), :movie => movie }%>
+  <% else %>
+    <%= render :partial => '/movie/portal/portal_movie', :locals => { :title => "You should see".t, :movie => Movie.must_see_today }%>      
+  <% end %>
+  
+</div>

@@ -1,0 +1,45 @@
+<table class="list-add-box">
+  <tr>
+    <th>
+      <label style="width: auto;" for="filter_languages"><%= "Characters".t %></label>
+      <%= text_field("filter", "characters", :size => 15) %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box one_column">
+        <ul id="searched_characters">
+	  <% if not @characters.nil? and not @characters.empty?%>
+            <% for character in @characters %>
+              <%= render :partial => 'search/character', :locals => { :character => character } %>
+            <% end unless @characters.nil? %>
+          <% else %>
+            <li class="empty">enter a search term to assign an existing character</li>
+          <% end %>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<div style="text-align: right;">
+  <%= button_to_remote "Create new Character: ".t + @cast.comment, :url => { :action => :create_new_character, :id => @cast.id },
+                                                                   :succes => 'box.deactivate();' %>
+</div>
+
+<%= observe_field(:filter_characters,
+                  :frequency => 0.5,
+                  :update    => "searched_characters",
+                  :loading   => "Element.update('searched_characters','<li class=\"empty loading\">&nbsp;</li>')",
+                  :loaded    => "Element.update('ajax-activity-indicator','')",
+                  :url => { :action     => :find_characters, 
+                            :controller => 'search' }) %>
+
+<script>
+  add_character = function(id) {
+    if (confirm("<%= 'Select this Character?'.t %>")) {
+      Element.update('create_character', '<div class="loading">&nbsp;</div>');
+      new Ajax.Request('/cast/<%= @cast.id.to_s %>/assign_character?character=' + id, {asynchronous:true});
+    }
+  }
+</script>

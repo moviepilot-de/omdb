@@ -1,0 +1,19 @@
+<div class="fact">
+  <div class="title"><%= 'Known Movies'.t %>:</div>
+  <div class="value">
+    <%= @character.first_movie.empty? ? "0" :
+              link_to(@character.movies.count.to_s, :action => :portrayed) %> 
+    <% if not @character.first_movie.empty? and not @character.first_movie.first.end.nil? %>
+      <%= " since ".t %>
+      <%= link_to(@character.first_movie.first.end.year.to_s, 
+               :controller => 'year', :id => @character.first_movie.first.end.year) %> 
+    <% end %>
+  </div>
+</div>
+
+<div class="fact">
+  <div class="title"><%= 'Portrayed by'.t %>:</div>
+  <div class="value">
+    <%= link_to "%d Person"/(@character.people.uniq.size), :action => :portrayed %>
+  </div>
+</div>

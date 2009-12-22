@@ -1,0 +1,11 @@
+<ul>
+  <% for result in @results -%>
+    <%= render :partial => "#{@model}/search/autocomplete", :locals => { @model => result } %>
+  <% end -%>
+  <% if @results.empty? -%>
+    <li id="<%= @model %>_autocomplete_0" class="not_found"><span class="informal"><%= "nothing found".t %></span></li>
+  <% end %>
+  <% if @allow_creation -%>
+  <li id="#{@model}_autocomplete_new" class="border-top"><div class="detail-box"><div class="image"><%= thumbnail_image(nil) %><br /></div><h4 class="orange"><%= @filter %></h4><div class="small informal empty"><%= "click here to create this #{@model} if you could not find it in the above list".t %></div></div></li>
+  <% end %>
+</ul>

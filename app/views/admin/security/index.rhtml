@@ -1,0 +1,42 @@
+<% if flash[:notice] -%>
+  <div><%=h flash[:notice] %></div>
+<% end %>
+  <table class="layout" cellspacing="8px">
+  <tr>
+    <td colspan="2">
+      <div class="actions">
+<%      for klass in [Group, User] 
+          if klass == @klass -%>
+          <div><%= klass %>s</div>
+<%        else -%>
+        <%= link_to("#{klass}s", 
+              { :action => "set_klass", :klass => klass },
+              { :class => klass == @klass ? "active" : "" } ) %>
+<%        end
+        end %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+      <div id="list" class="selection_list">
+        <%= render(:partial => "principals") %>  
+      </div>
+      <div class="actions">
+        <%= link_to_remote("Add #{@klass}", :url => { :action => "new"}, :update => "form") %>
+      </div>
+    </td>
+    <td>
+      <div id="form">
+        <%= render(:partial => "principal") %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  </table>
+  <div id="result"> </div>

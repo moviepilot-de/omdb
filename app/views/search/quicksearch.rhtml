@@ -1,0 +1,5 @@
+<%= render_action @search_action %>
+  <label for="search_text"><%= _('SEARCH') %></label>
+  <%= text_field("search", "text") %><br />
+  <p><%= _('ADVANCED_SEARCH') %></p>
+<%= end_form_tag %>

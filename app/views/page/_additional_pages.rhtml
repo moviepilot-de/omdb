@@ -1,0 +1,29 @@
+<%# template fuer 'Additional Pages'-Liste in linker Spalte %>
+<div class="wikilist">
+  <% page_count = additional_pages.size >= 1 ? additional_pages.size - 1 : 0 -%>
+  <h3><%= page_count > 0 ? "%d Additional #{'Article'.pluralize page_count}" / page_count : 'No Additional Articles'.t %></h3>
+  <% if page_count > 0 %>
+  <ul>
+    <% additional_pages.each do |page| -%>
+      <% next if page.page_name == 'index' -%>
+      <li<%= ' class="active"' if @page && @page.id == page.id %>>
+      <%= link_to_page page %>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
+  <%= create_page_link if current_user.may_edit_pages_of_object related_object %>
+</div>
+
+<% if other_languages.any? -%>
+  <br />
+  <div class="wikilist">
+    <h3><%= "In Other Languages".t %></h3>
+    <ul>
+      <% other_languages.each do |lang| -%>
+        <li><%= link_to lang.native_name, :controller => 'session', :action => 'set_language', :language => lang %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end -%>
+

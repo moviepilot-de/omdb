@@ -1,0 +1,45 @@
+<% content_for("title") do %>
+  <%= 'Change Job'.t  %>
+<% end %>
+
+<%= form_remote_tag :url => { :action => "set_job" },
+                    :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                    :success => "box.deactivate()" %>
+
+<div class="content">
+  <p><%= "Please specify the job for %s" / @cast.person.name %></p>
+
+  <%= show_errors %>
+
+  <label for="cast_job_input"><%= 'Job'.t %><br /><br /></label>
+
+  <input name="job" id="cast_job_input" type="string" autocomplete="false" value="<%= @cast.job.local_name(@language) %>" size="30" />
+  <div style="font-size: 8pt;">
+    Selected: <span id="selected_job" style="font-size: 8pt; font-weight: bold;"><%= @cast.job.local_name(@language) %></span>
+    <input type="hidden" name="edit_cast_job" id="edit_cast_job" value="<%= @cast.job.id %>" />
+  </div>
+  <div id="cast_job_auto_complete" class="auto-complete"></div>
+  <label for="cast_comment"><%= "Comment (english)".t %></label>
+  <%= text_field :cast, :comment %>
+  <em>(optional)</em>
+</div>
+
+<div class="button-bar">
+  <%= submit_button %>
+  <%= close_box_button "Cancel" %>
+</div>
+
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  $('cast_job_input').focus();
+
+  setJob = function( txt, selectedListItem ) {
+    var id = selectedListItem.id.split("_").pop();
+    $('edit_cast_job').value = id;
+    $('selected_job').firstChild.nodeValue = txt.value;
+  }
+
+  new Ajax.Autocompleter('cast_job_input', 'cast_job_auto_complete', '/search/job_autocomplete', {afterUpdateElement: setJob});
+  $('cast_job_input').onkeyup = function(){ if (this.value == "") { $('cast_job_input').value = ''; $('selected_job').firstChild.nodeValue = "-" }; }
+</script>

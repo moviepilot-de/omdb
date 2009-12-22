@@ -1,0 +1,12 @@
+<% @category.aliases_by_language.each { |l, a| %>
+<h4><%= l.english_name.t %></h4>
+<ul class="sortable-list" id="name_aliases-category-<%= @category.id %>">
+  <% a.each { |n| %>
+  <li id="name_alias_<%= n.id %>">
+    <%= sort_icon_div %>
+    <%= n.name %>
+  </li>
+  <% } %>
+  </ul> 
+<% } %>
+<%= link_to_remote 'show less aliases'.t, { :url => { :action => :show_less_aliases } }, :class => 'more' %>

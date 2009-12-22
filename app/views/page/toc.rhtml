@@ -1,0 +1,13 @@
+<%= render :partial => 'header' %>
+
+<div id="content" class="wiki-page">
+  <%= render :partial => 'common/views' %>
+  <% related_object.local_pages(@language).each do |page| -%>
+    <% next if page.page_name == "index" -%>
+    <p class="toc-entry"><%= render_wiki_content :content => page, :limit => 350 %></p>
+    <div class="actions">
+      <%= link_to_page page, "more".t %>
+    </div>
+  <% end -%>
+</div>
+

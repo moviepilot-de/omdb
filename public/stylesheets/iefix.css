@@ -1,0 +1,191 @@
+/* CSS Fixed for the Internet Explorer */
+
+div#visual-page-wrapper {
+  width: 61em;
+}
+
+div#column-one div.logo p.logo {
+  margin-top: -21px;
+  width: 203px;
+  height: 130px;
+  /* without alpha-channel */
+  background-image: url(/images/layout/omdb-logo-ie6.png);
+}
+
+ul#main-menu li a {
+  padding-top: 0;
+}
+
+div#image-box {
+  padding-bottom: 1.5em;
+}
+
+div.detail-box {
+  border: 1px solid white;
+}
+
+div.content-box ul {
+  margin-bottom: 3em;
+}
+
+div.content-row {
+  margin-top: -50px;
+}
+
+div.content-box ul ul {
+  margin-bottom: 0;
+}
+
+div#column-two div.content-row {
+  margin-top: 1em;
+}
+
+div#overview-cast,
+div#overview-last-movies {
+  padding-bottom: 2em ! important;
+}
+
+/* Fix for the IE6 Peekaboo Bug */
+div#overview-cast li div div * {
+  height: 1%;
+}
+
+div#column-two div.title-row {
+}
+
+div.minivote div {
+  font-size: 1px;
+}
+
+div#overlay {
+  filter: alpha(opacity=60);
+}
+
+ul.small-tabs {
+  width: 98%;
+}
+
+div.rating_bar span.small {
+  position: absolute;
+  padding-left: 20px;
+}
+
+
+div#overview-votes form input.edit-button {
+  padding: 0;
+  font-weight: normal;
+}
+
+div#new-cast, div#new-crew {
+  min-height: 1.2em;
+  position: relative;
+}
+
+div#new-cast p, div#new-crew p {
+    position: relative;
+}
+
+div#content div.review div.header h3 {
+  height:     41px;
+  margin-right: -3px;
+}
+
+div#content div.review div.content-wrapper div.content {
+  height: 150px;
+  overflow: hidden;
+}
+
+div#ajax-action-box div.input {
+  clear: both;
+}
+
+div.list_select_box li a:hover {
+  background-image:         url("/images/layout/ajax/arrow-left.gif");
+}
+
+div.list_select_box ul.left li a:hover {
+  background-image:         url("/images/layout/ajax/arrow-right.gif");
+}
+
+div.result-box {
+  height:                   252px;
+}
+
+div.result-box div.image {
+  height:                   165px;
+}
+
+div.result-box div.votebar {
+  padding-left:             2px;
+}
+
+div.result-box div.votebar div.mediumvote div {
+  height: 2px
+}
+
+li.disablepage {
+  margin-right:            0.3em;
+}
+
+li.currentpage {
+  padding-right: 0px;
+  margin-right: 0.3em;
+  margin-left: 0.2em;
+}
+
+li.nextpage img {
+  margin-top: 1px;
+  padding: 5px;
+}
+
+table#filmography {
+  width:                    98%;
+}
+
+div#new-cast a.edit-button,
+div#new-crew a.edit-button {
+  display: none;
+}
+
+div#stub {
+  width:                    98%;
+}
+
+div#stub * {
+  height: 1%;
+}
+
+div#stub ol {
+  margin: 1em 0 0 0;
+}
+
+div#stub ol li {
+  padding-left: 2em;
+}
+
+div.statistics,
+div.statistics h2 {
+  width:                    98%;
+}
+
+div.container div.content {
+  height:                   1%;
+}
+
+div.container div.content div.column input {
+  width:                    98%;
+}
+
+div.auto-complete ul li {
+  overflow: auto;
+}
+
+div.auto-complete ul li div {
+  border: none;
+  overflow: auto;
+}
+
+div.auto-complete ul li div h4 {
+  margin-top: 0px;
+  padding-top: 0px;
+}

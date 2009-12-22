@@ -1,0 +1,7 @@
+author: 
+    name: Brian Ford
+    homepage: http://blog.brightredglow.com
+summary: Custom Test::Unit Assertion for cookies
+homepage: http://planetargon.org
+plugin: http://svn.planetargon.org/rails/plugins/assert_cookie
+license: MIT

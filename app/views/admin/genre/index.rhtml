@@ -1,0 +1,29 @@
+<table class="layout" cellspacing="8px">
+<tr>
+  <td class="selection_list">
+    <div id="toplevel">
+      <strong><%= link_to_remote("Genres", :url => {:action => "select" } ) %></strong>
+    </div>
+  </td>
+  <td></td>
+</tr>
+<%= drop_receiving_element("toplevel", 
+       :url => { :action => "toplevel", :parent_id => 0 },
+       :hoverclass => "droppable") %>
+<tr>
+  <td>
+    <div id="list">
+      <%= render(:partial => "genres") %>
+    </div>
+    <div class="actions">
+      <%= link_to_remote("Add Genre", :url => {:action => "new"}, :update => "form") %>
+    </div>
+  </td>
+  <td>
+    <div id="form">
+      <%= render(:partial => "genre") %>
+    </div>
+  </td>
+</tr>
+</table>
+<div id="debug"></div>

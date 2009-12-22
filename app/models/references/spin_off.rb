@@ -1,0 +1,2 @@
+class SpinOff < Reference
+end

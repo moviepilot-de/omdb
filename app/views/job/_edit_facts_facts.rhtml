@@ -1,0 +1,13 @@
+<div class="input">
+  <%= edit_freeze_state @alias, :self %>
+  <label for="alias_name"><%= "Name".t %></label>
+  <%= display_attribute :alias, :name, 'string', :check_status_self => true %>
+</div>
+
+<% if not @language == Locale.base_language -%>
+<div class="input">
+  <%= edit_freeze_state @base_alias, :self %>
+  <label for="base_alias_name"><%= "Name (english)".t %></label>
+  <%= display_attribute :base_alias, :name, 'string', :check_status_self => true %>
+</div>
+<% end -%>

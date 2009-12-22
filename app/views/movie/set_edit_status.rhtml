@@ -1,0 +1,25 @@
+<% content_for("title") do %>
+  <%= 'Set Edit Status'.t %>
+<% end %>
+<%= form_remote_tag :url => { :action => "set_edit_status" } %>
+  <div class="content">
+
+    <p><%= "Please enter the current status for this movie.".t %></p>
+
+    <div id="error-messages" style="display: hidden">
+    </div>
+
+    <label for="movie_edit_status"><%= 'Abstract'.t %></label>
+
+    <% list = [ "Abandoned", "In Progress", "To Check", "Checking", "Done" ] %>
+    <% list << [ "Checking CE", "Approved" ] if admin? %>
+
+    <%= select :movie, :edit_status, list.flatten %>
+  </div>
+
+  <div class="button-bar">
+    <%= submit_tag( 'Okay'.t ) %>
+    <%= close_box_button %>
+  </div>
+
+<%= end_form_tag %>

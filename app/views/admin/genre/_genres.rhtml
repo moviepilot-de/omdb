@@ -1,0 +1,10 @@
+<% for genre in genres 
+    dom_id = "Genre##{genre.id}" %>
+<div id="<%= dom_id %>">
+  <%= render(:partial => "list_genre", :object => genre) %>
+</div>
+<%= draggable_element(dom_id, :revert => true) if @genre == genre %>
+<%= drop_receiving_element(dom_id, 
+      :url => { :action => "parent", :parent_id => genre.id },
+      :hoverclass => "droppable") %>
+<% end %>

@@ -1,0 +1,22 @@
+<% content_for("right_column") do -%>
+<div id="overview-details">
+  <div id="overview-votes">
+  </div>
+  
+  <div class="headline-box">
+    <%= link_to_function 'edit'.t, lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+    <%= link_to 'help'.t, { :controller => 'generic_page', :action => 'page', :page => 'Help:LayoutCountryFacts' }, :class => 'help-button' %>
+    <h3><%= 'Country Facts'.t %></h3>
+  </div>
+  <div id="overview-facts" class="content-box">
+    <%= render :partial => 'overview_facts' %>
+  </div>
+
+  <%= render :partial => 'common/overview_top_movies', :locals => { :object => @country } %>
+
+  <%= render :partial => 'common/overview_last_movies', :locals => { :object => @country } %>
+
+  <%= render :partial => 'common/local_names', :locals => { :object => @country } %>
+
+</div>
+<% end %>

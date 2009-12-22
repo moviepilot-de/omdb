@@ -1,0 +1,4 @@
+page.delay(0.5) do
+  page.call('box.deactivate()')
+end
+page.replace_html 'movie-actors', :collection => @movie.actors, :partial => 'movie/cast'

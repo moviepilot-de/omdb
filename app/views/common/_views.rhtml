@@ -1,0 +1,16 @@
+<ul id="content-menu" class="small-tabs">
+  <% @tabs.each { |a| %>
+    <% if action_equal_to_current_request?(a) %>
+      <li class="active" id="views_tab_<%= action_name(a) %>"><%= render_action(a) %></li>
+    <% else %>
+      <li id="views_tab_<%= action_name(a) %>"><%= render_action(a) %></li>
+    <% end %>
+  <% } %>
+</ul>
+
+<% if request.path_parameters["action"] == "movies" -%>
+  <!-- %= render :partial => 'movie_filter/filter_control' % -->
+  <!-- %= render :partial => 'movie_filter/hide_filter_control' % -->
+  <br />
+<% end -%>
+

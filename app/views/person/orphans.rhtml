@@ -1,0 +1,27 @@
+<% content_for("headline") do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= "Orphans".t %></h2>
+  <h3><%= "People without jobs".t %></h3>
+<% end -%>
+
+<% content_for("title") do -%>
+  <%= "Orphans".t %>
+<% end %>
+
+<% content_for('left_column') do -%>
+  <%= image_tag 'pictures/orphans.jpg' %>
+  <div class="small" style="text-align: center;"><em>Orphans</em>, by Thomas Kennington</div>
+<% end -%>
+
+<div id="content" class="broadpage">
+  <%= render :partial => 'common/views' %>
+  <ul>
+    <% @people.each do |p| %>
+      <li><%= link_to_object p %></li>
+    <% end %>
+  </ul>
+  <hr />
+  <%= pagination_links @person_pages %>
+</div>
+
+<%= button_to( "destroy all orphans".t, { :action => :destroy_orphans }, :class => 'edit-button', :confirm => "Really delete all orphans?".t ) if admin? %>

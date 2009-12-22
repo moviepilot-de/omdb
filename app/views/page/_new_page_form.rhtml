@@ -1,0 +1,15 @@
+<% labelled_remote_form_for :new_page, @new_page, 
+                            :url => { :action => "create_page", 
+                                      :id => related_object.id }, 
+                            :html => { :id => 'newpage-form' } do |f| %>
+<div class="content">
+  <p><%= "You want to add a subpage to the current page. Please refer to the help section for more information.".t %></p>
+  <%= f.text_field :page_name, :label => 'Name' %>
+</div>
+<div class="button-bar">
+  <%= oneshot_submit_tag 'Add', :id => 'add_button',
+                                :disable_with => 'Creating page...' %>
+  <%= close_box_button %>
+</div>
+<% end %>
+

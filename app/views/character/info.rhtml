@@ -1,0 +1,12 @@
+<div class="detail-box">
+  <div class="image">
+    <%= link_to thumbnail_image(@character.image, @size), :action => :index %><br />
+  </div>
+  <div class="details">
+    <h4><%= link_to_object @character %></h4>
+  </div>
+</div>
+
+<% if @wiki_request %>
+ <%= button_to_function "insert".t, "addToEditor('ch_#{@character.id}');" %>
+<% end %>

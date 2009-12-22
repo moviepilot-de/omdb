@@ -1,0 +1,2 @@
+page.replace_html 'list', :partial => 'principals', :object => @principals
+page.replace_html 'form', :partial => 'principal', :object => @principal

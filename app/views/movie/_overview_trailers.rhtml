@@ -1,0 +1,14 @@
+<% trailer = @movie.trailer( language ) %>
+<% unless trailer.new_record? %>
+  <div style="margin: 0 2em;"><%= link_to_function image_tag( 'icons/play'), lightbox( :id => trailer.id, :controller => 'trailer' ), :id => "trailer-#{@language.code}" %></div>
+<% end %>
+
+<% if @movie.trailers.local( language ).empty? %>
+  <div class="empty">
+    <%= "There is no trailer available".t %>
+  </div>
+<% else %>
+  <p class="small" style="padding-top: 0.5em;">
+    <%= link_to "copyright information".t, :controller => 'generic_page', :action => :page, :page => 'Copyright:Trailer' %>
+  </p>
+<% end %>

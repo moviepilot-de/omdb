@@ -1,0 +1,11 @@
+<div class="headline-box">
+  <%= link_to_function 'edit'.t, lightbox( :action => :edit_facts ), :class => 'edit-button' %>
+  <h3><%= title %></h3>
+</div>
+<div class="content-box hierarchy">
+  <% unless object.parent.nil? %><ul><li><%= link_to_object object.parent %><% end %>
+    <ul><li><%= link_to_object object, 'strong' %><ul>
+      <% object.ordered_children( @language ).each do |child| %><li><%= link_to_object child %></li><% end %></ul>
+    </li></ul>
+  <% unless object.parent.nil? %></li></ul><% end %>
+</div>

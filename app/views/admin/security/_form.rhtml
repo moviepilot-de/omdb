@@ -1,0 +1,68 @@
+<table class="form" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <%= error_messages(:principal) %>
+    </td>
+  </tr>
+<% if @principal.new_record? -%>
+  <tr>
+    <th>Name</th>
+    <td><%= text_field(:principal, :name) %></td>
+  </tr>
+<% else -%>
+  <% unless @principal.intrinsic? %>
+  <tr>
+    <th>Active</th>
+    <td><%= check_box(:principal, :active) %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <th>Name</th>
+    <td><%= @principal.name %></td>
+  </tr>
+<% end -%>
+  <tr>
+    <th>Description</th>
+    <td><%= text_field(:principal, :description) %></td>
+  </tr>
+  <% if @klass == User %>
+  <tr>
+    <th>Email</th>
+    <td><%= text_field(:principal, :email) %></td>
+  </tr>
+  <tr>
+    <th>Password</th>
+    <td><%= password_field_tag("principal[password]") %></td>
+  </tr>
+  <tr>
+    <th>(confirm)</th>
+    <td><%= password_field_tag("principal[password_confirmation]") %></td>
+  </tr>
+  <tr>
+    <th>Date of Birth</th>
+    <td><%= date_select(:principal, :date_of_birth,
+                        :start_year => Time.now.year - 100, 
+                        :order => [:day, :month, :year],
+                        :include_blank => true) %></td>
+  </tr>
+  <tr>
+    <th>Country</th>
+    <td><%= collection_select(:principal, :country_id, 
+                              Country.find_all,
+                              :id, :name,
+                              { :include_blank => true },
+                              { :class => "country_select" }) %></td>
+  </tr>
+  <tr>
+    <th>Groups</th>
+    <td>
+      <div id="groups_users" class="association">
+        <%= render( :partial => "groups_users", 
+                    :object => Group.find_all_but_everybody(:order => "concat(description, name)")) %>
+      </div>
+    </td>
+  </tr>
+  
+  <% end %>
+</table>
+

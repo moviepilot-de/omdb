@@ -1,0 +1,15 @@
+<% refs = references_by_type( @movie.referencing_movies ) %>
+<p><%= "This #{@movie.class.to_s.downcase} has been referenced in the following movies:".t %></p>
+<% Reference.valid_types.each do |type| %>
+  <% unless refs[type].empty? %>
+    <h4><%= type.to_s.t %></h4>
+    <ul>
+      <% refs[type].each do |ref| %> 
+        <li>
+	  <% next if ref.movie.nil? %>
+          <%= link_to_object ref.movie %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

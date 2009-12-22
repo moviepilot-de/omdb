@@ -1,0 +1,17 @@
+--- 
+port: "22222"
+timer_sleep: 60
+load_rails: true
+environment: development
+host: localhost
+database_yml: config/database.yml
+acl: 
+  deny: all
+  allow: localhost 127.0.0.1
+  order: deny,allow
+
+autostart:
+  ferret_server:
+    class: 'OMDB::Ferret::FerretServerWorker'
+  page_cache_sweeper:
+    class: 'PageCacheSweeperWorker'

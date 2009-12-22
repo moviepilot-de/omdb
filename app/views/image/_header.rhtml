@@ -1,0 +1,11 @@
+<% content_for("headline") do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= "Image Copyright Information".t %></h2>
+  <div class="small">&nbsp;</div>
+<% end %>
+
+<% content_for('left_column') do -%>
+  <%= thumbnail_image( @image, :default ) %>
+  <br />
+  <br />
+<% end %>

@@ -1,0 +1,13 @@
+<p>
+  <%= "To every role of a film a special character can be created.".t %>
+  <%= "Hence, please limit your choice to these characters of a film which are so important to you that they should be also described on an own site in omdb.".t %>
+  <%= "You can find more infomation about characters at %s" / (link_to "Help:LayoutCharacter", :controller => 'generic_page', :page => 'Help:LayoutCharacter', :action => :page ) %>
+</p>
+
+<div class="input" id="create_character">
+  <div style="text-align: center">
+    <%= button_to_remote 'create or assign a character'.t, :url     => { :action => :create_character, :id => @cast.id }, 
+                                                           :update  => 'create_character',
+                                                           :loading => "Element.update('create_character', '<div class=\"loading\">&nbsp;</div>')" %>
+  </div>
+</div>

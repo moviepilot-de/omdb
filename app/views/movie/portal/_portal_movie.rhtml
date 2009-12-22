@@ -1,0 +1,20 @@
+<% unless movie.nil? %>
+<div class="portal-column-one" style="margin-right: 17.5em;">
+  <div class="review">
+    <div class="header">
+      <div class="author"><%= title %></div>
+      <h3 style="min-height: 40px;padding-bottom: 5px;"><%= link_to_object movie %></h3>
+    </div>
+    <div class="content-wrapper">
+      <div class="content" style="padding-bottom: 5px;">
+        <div class="image" style="float: left; margin-right: 1em;"><%= link_to thumbnail_image( movie.image, :medium ), movie.default_url %></div>
+        <p><%= movie.abstract( @language ).data %></p>
+        <p><%= "with".t %>: <%= movie.actors.slice(0,3).collect{ |a| link_to_object a.person }.join(", ") %></p>
+      </div>
+    </div>
+    <div class="footer" style="padding-top:0; padding-bottom: 5px;">
+      <p>&nbsp;<%= movie.genres.slice(0,4).collect{ |g| link_to_object g }.join(", ") %></p>
+    </div>
+  </div>
+</div>
+<% end %>

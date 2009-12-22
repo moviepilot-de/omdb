@@ -1,0 +1,27 @@
+<%= edit_freeze_state @movie, :references %>
+<p>
+  <%= "This gives you an overview of movies that this movie is referencing to.".t %>
+  <%= "References which are marked with a closed lock have been verified by an administrator and cannot be edited anymore.".t %>
+  <%= "References marked with an open lock could be deleted if unfounded.".t %>
+</p>
+
+<div class="list_select_box big">
+  <ul>
+    <% @movie.references.each { |r| %>
+      <li id="movie-reference-<%= r.id %>" class="actions">
+        <%= edit_freeze_state r, :self %>
+        <div class="action">
+          <%= link_to_remote "delete".t, 
+                { :url       => { :controller => 'reference', 
+                                  :action     => :destroy, 
+                                  :id         => r.id },
+                  :loading   => "Element.update('ajax-activity-indicator','" + loading_image + "')",
+                  :complete  => "Element.update('ajax-activity-indicator','')" },
+                { :class => 'edit-button' } %>
+        </div>
+        <span><%= link_text_for_movie r.referenced_movie %></span>
+      </li>
+    <% } %>
+  </ul>
+</div>
+

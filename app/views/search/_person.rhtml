@@ -1,0 +1,7 @@
+<% htmlId  = "search-person-" + person.id.to_s 
+   options = { :onmouseover =>  "displayPersonInformation(#{person.id});" } %>
+
+<li class="select" id="<%= htmlId %>">
+  <%= link_to_function person.name, "add_person('#{person.id}')", options %>
+  <input type="hidden" name="search_result[]" value="<%= person.id %>" />
+</li>

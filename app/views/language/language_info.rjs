@@ -1,0 +1,3 @@
+page.replace_html 'ajax-help', :partial => 'language_info'
+page.call("movie_selected")
+page.call("check_method")

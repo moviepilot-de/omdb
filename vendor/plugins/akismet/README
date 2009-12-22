@@ -1,0 +1,49 @@
+Akismet
+=======
+
+Allows you to submit arbitrary content to the Akismet spam service.
+
+This plugin is based on David Czarnecki's Akismet.rb (http://www.blojsom.com/blog/david/nerdery/2005/12/02/Akismet-API-in-Ruby.html) found via Soaked and Soaped (http://sas.sparklingstudios.com/articles/2006/10/01/how-to-protect-a-rails-application-against-spam-with-akismet)
+
+I merely pluginized it and refactored the methods to accept a minimal number of parameters. I also changed some of the method names to be a little more Railsy and consistent with the rest of the project I initially implemented this in, but that's just me being persnickety.
+
+Usage:
+
+1) Aquire API key from Wordpress: http://wordpress.com/api-keys/
+		You don't need to sign up for a new blog, just get a username and they'll
+		email you an API key.
+		
+2) Edit vendor/plugins/akismet/lib/akismet.yml
+		Add your freshly acquired API key and the front page/home URL of your site.
+
+3) In your controller: include Akismet
+
+4) Your controller will now have access to 3 Akismet methods:
+	is_spam?() Submits content to Akismet. Returns true if comment_content is spam; 
+				returns false if it is not spam.
+	
+	submit_spam() Submits comments that weren't marked as spam, but should have been.
+	
+	submit_ham() Submits comments that were marked as spam, but should not have been.
+
+5) Minimum usage: 
+is_spam?(:comment_content => content)
+submit_spam(:comment_content => content)
+submit_ham(:comment_content => content)
+
+Other parameters you can pass:
+
+:permalink => Permanent location of the entry the comment was submitted to
+:comment_type => May be blank, comment, trackback, pingback, or a made up value like "registration"
+:comment_author => Name submitted with the comment
+:comment_author_email => Email address submitted with the comment
+:comment_author_url => URL submitted with the comment
+:user_ip => IP address of the comment submitter, defaults to request.remote_ip
+:user_agent => User agent information, defaults to request.env['HTTP_USER_AGENT']
+:blog => home URL of instance making this request, defaults to value set in akismet.yml
+:referrer (note spelling) => HTTP_REFERER header, defaults to request.env['HTTP_REFERER']
+:other => Hash of other server environment variables you may want to pass for Akismet's reference
+
+From the Akismet docs: "In PHP there is an array of environment variables called $_SERVER which contains information about the web server itself as well as a key/value for every HTTP header sent with the request. This data is highly useful to Akismet as how the submitted content interacts with the server can be very telling, so please include as much information as possible.
+
+Almost everything is optional, but performance can drop dramatically if you exclude certain elements. I would recommend erring on the side of too much data, as everything is used as part of the Akismet signature."

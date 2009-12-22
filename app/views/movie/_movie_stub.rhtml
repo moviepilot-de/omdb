@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="content">
+  <em><%= "The information provided is incomplete. You can help OMDB by expanding it.".t %></em>
+  <ol>
+    <% @movie.active_stub_fields.each do |field| %>
+      <%= case field
+            when :end
+              content_tag :li, link_to_function( "enter the opening night".t, lightbox( :action => :edit_facts ) )
+            when :runtime
+              content_tag :li, link_to_function( "enter the original runtime".t, lightbox( :action => :edit_facts ) )
+            when :genres
+              content_tag :li, link_to_function( "assign appropriate genres".t, lightbox( :action => :edit_categories ) )
+            when :plot_keywords
+              content_tag :li, link_to_function( "assign plot keywords".t, lightbox( :action => :edit_keywords ) )
+            when :languages
+              content_tag :li, link_to_function( "enter the languages spoken in the original version".t, lightbox( :action => :edit_facts ) )
+            when :children
+              content_tag :li, link_to_function( "assign children to this %s"/(@movie.class.to_s.underscore), lightbox( :action => :edit_children ) )
+            when :casts
+              content_tag :li, link_to( "enter actors".t, :action => :cast, :edit => :edit_cast )
+            when :crew
+              content_tag :li, link_to( "enter crew members".t, :action => :cast, :edit => :edit_crew )
+            when :parent
+              content_tag :li, link_to( "assign this %s to a parent"/(@movie.class.to_s.underscore), :action => :cast )
+          end %>
+    <% end %>
+    <% if @movie.abstract( @language ).nil? or @movie.abstract( @language ).empty? %>
+      <%= content_tag :li, link_to_function( "enter an abstract for the movie".t, lightbox( :action => 'set_abstract' ) ) %>
+    <% end %>
+    <% if @movie.wiki_index( @language ).nil? or @movie.wiki_index( @language ).empty? %>
+      <%= content_tag :li, edit_link( @movie.wiki_index(@language), "enter the plot of the #{@movie.class.to_s.downcase}".t, nil ) %>
+    <% end %>
+  </ol>
+  </div>
+</div>

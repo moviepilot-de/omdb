@@ -1,0 +1,12 @@
+<div id="main-content">
+
+<% if @flash[:error] -%>
+    <div id="notice"><%= flash[:error] %></div>
+<% end -%>
+
+<%= start_form_tag :action => 'login' %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Login" %>
+<%= end_form_tag %>
+
+</div>

@@ -1,0 +1,9 @@
+<% @people.each { |person,movies| %>
+  <h2><%= person.name %></h2>
+  
+  <table id="filmography">    
+    <% @current_year = 0 %>
+    <%= render :partial => 'person/movie', :collection => movies, :locals => { :type => person } %>
+  </table>
+  
+<% } %>

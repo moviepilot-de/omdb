@@ -1,0 +1,2 @@
+# Can only be called from parts-view of a Series/MovieSeries/Season
+page.replace_html 'content', :partial => 'parts'

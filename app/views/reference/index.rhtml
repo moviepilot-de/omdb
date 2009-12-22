@@ -1,0 +1,54 @@
+<% content_for("headline") do -%>
+  <div class="parent-breadcrumb">&nbsp;</div>
+  <h2><%= "Random Reference".t %></h2>
+<% end %>
+
+<div id="content" class="overview" style="width: 100%; padding-top: 5em; overflow: auto">
+  <div style="float: left; width: 40%; height: 250px;">
+    &nbsp;
+    <div style="float: right;" id="reference">
+      <%= render :partial => 'movie/search_box', :locals => { :search_box => @reference.movie } %>
+    </div>
+  </div>
+  <div style="float: left; width: 20%; text-align:center; padding-top: 80px; height: 250px;">
+    <img src="/images/icons/arrow_right_big.png" /><br />
+    <span id="reference_text"><%= @reference.class.to_s.t %></span>
+  </div>
+  <div style="float: left; width: 38%; height: 250px;">
+    &nbsp;
+    <div id="referencing">
+      <%= render :partial => 'movie/search_box', :locals => { :search_box => @reference.referenced_movie } %>
+    </div>
+  </div>
+</div>
+<br />
+<p class="center">
+  <%= link_to_function "another example please".t, 'random_reference();' %>
+</p>
+
+<script type="text/javascript">
+  random_reference = function(){
+    Effect.Fade('reference');
+    Effect.Fade('referencing');
+    Effect.Fade('reference_text');
+    window.setTimeout( "new Ajax.Request('/reference/random', { onSuccess: replace_movies })", 1000);
+  }
+  
+  replace_movies = function(t){
+    arr = t.responseText.split(';');
+    $('reference_text').innerHTML = arr[1];
+    Effect.Appear('reference_text',{queue: 'end'});
+    new Ajax.Request('/movie/' + arr[0] + '/search_box', { onSuccess: insert_referencing });
+    new Ajax.Request('/movie/' + arr[2] + '/search_box', { onSuccess: insert_reference });
+  }
+  
+  insert_reference = function(t){
+    $('reference').innerHTML = t.responseText;
+    Effect.Appear('reference',{queue: 'end'});
+  }
+  
+  insert_referencing = function(t){
+    $('referencing').innerHTML = t.responseText;
+    Effect.Appear('referencing',{queue: 'end'});
+  }
+</script>

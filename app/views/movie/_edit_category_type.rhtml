@@ -1,0 +1,65 @@
+<script type="text/javascript">
+  var new_<%= type %>_count = 0;
+  <%= create_add_function type %>
+  <%= create_add_new_function type %>
+  <%= create_remove_function type %>
+</script>
+<p><%= description %></p>
+<table class="list-add-box">
+  <tr>
+    <th>
+      <%= text_field("filter", type.to_s.pluralize, :size => 15) %>
+      <div><%= "Search".t %></div>
+    </th>
+    <th>
+      <%= "Selected %s for this movie" / type.to_s.pluralize.humanize.downcase.t %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <div class="list_select_box">
+        <ul id="searched_<%= type.to_s.pluralize %>" class="left">
+          <% if display_options == true %>
+            <%= render :partial => 'search/category', :collection => Category.send( type ).all_children, :locals => { :type => type, :name => type } %>
+          <% else %>
+            <li class="empty"><%= "please enter a search term or ".t + link_to_remote( "load all options".t, 
+                                                                         { :update => "searched_#{type.to_s.pluralize}",
+                                                                           :before    => "Element.update('searched_#{type.to_s.pluralize}', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                                                                           :url => { :controller => "category",
+                                                                                     :action => "all_#{type.to_s.pluralize}",
+                                                                                     :movie  => @movie } },
+                                                                         { :class => 'plain' } ) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <div class="list_select_box">
+        <ul id="selected_<%= type.to_s.pluralize %>" class="right">
+          <% @movie.send(type.to_s.pluralize).each { |c| %>
+            <% if admin? -%>
+              <li id="movie-<%= type.to_s %>-<%= c.id %>">
+              <%= link_to_function c.flattened_name(@language), "remove_#{type.to_s}('#{c.id}')", :class => 'select no-edit' %>
+              <input type="hidden" name="categories[]" value="<%= c.id %>" /></li>
+            <% else -%>
+              <li class="select" id="movie-<%= type.to_s %>-<%= c.id %>"><span><%= c.flattened_name(@language) %></span><input type="hidden" name="categories[]" value="<%= c.id %>" /></li>
+            <% end -%>
+          <% } %>
+        </ul>
+      </div>
+      <% if editor? or type == :plot_keyword %>
+        <%= link_to_function "create new %s"/(type.to_s.humanize.t), "add_new_#{type}();", :class => 'edit-button', :style => 'margin-top: 2px' %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<%= observe_field("filter_#{type.to_s.pluralize}",
+                  :frequency => livesearch_filter_frequency,
+                  :before    => "Element.update('searched_#{type.to_s.pluralize}', '<li class=\"empty\"><div class=\"loading\">&nbsp;</div></li>');",
+                  :update    => "searched_#{type.to_s.pluralize}",
+                  :url       => { :action     => :find_categories, 
+                                  :movie      => @movie.id,
+                                  :name       => type,
+                                  :type       => Category.send(type).id,
+                                  :controller => 'search' }) %>

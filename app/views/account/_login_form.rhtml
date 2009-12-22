@@ -1,0 +1,22 @@
+<div class="tabbed-content">
+<p class="login_text">
+  <%= "If you do not have a login yet, %s"/ link_to("sign up with omdb".t, :action => :signup) %>. <%= "It's free and it's fun.".t %>
+  <%= "If you have already registered, but cannot remember your password, %s" / link_to("simply request a new one".t, :action => :forgot_password) %>.
+</p>
+
+<%= flash_error %>
+
+<div class="center">
+  <div class="inner">
+    <p>
+      <label for="login"><span class="colon">:</span>username</label>
+      <%= text_field_tag "login" %>
+    </p>
+<br />
+    <p>
+      <label for="password"><span class="colon">:</span>password</label>
+      <%= password_field_tag 'password' %>
+    </p>
+  </div>
+</div>
+</div>

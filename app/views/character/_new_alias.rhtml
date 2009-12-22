@@ -1,0 +1,15 @@
+<%= show_errors %>
+
+<p><%= "Please enter the local or alternative Character name.".t %></p>
+
+<label for="alias_name"><%= 'Alternative name'.t %></label>
+<%= text_field("alias", "name") %><br />
+
+<label for="alias_language"><%= 'Language'.t %></label>
+<select name="alias[language]" id="alias_language">
+  <%= options_for_select active_languages_hash, @language.id %>
+</select>
+
+<script type="text/javascript">
+  $('alias_name').focus();
+</script>

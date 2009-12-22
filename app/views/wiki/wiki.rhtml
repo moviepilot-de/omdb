@@ -1,0 +1,42 @@
+<%= render :partial => 'header' if params[:controller] != "content" %>
+
+<% content_for("right_column") do -%>
+  <div id="overview-details">
+    <% if @page.related_object.class.base_class == Movie %>
+      <div id="overview-votes">
+        <%= render :partial => 'overview_votes' %>
+      </div>
+    <% end -%>
+
+    <% if editor? and @page.page_name != 'index' -%>
+      <div class="headline-box">
+        <h3><%= "Administration".t %></h3>
+      </div>
+      <div class="content-box">
+        <% unless @page.new_record? %>
+        <%= button_to_function("Rename Page".t, 
+              lightbox({ :controller => "content", :action => "rename", :id => @page.id }), 
+              :class => "edit-button") if @page.related_object %>
+        <%= button_to "Delete Page".t, 
+              { :controller => "content", :action => "destroy", :id => @page.id }, 
+              { :class => "edit-button"  , :confirm => "Really delete?"} %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<div id="content" class="wiki-page">
+  <%= render :partial => 'common/views' %>
+  
+  <% if @page.new_record? -%>
+    <p><%= 'This page does not exist yet. You may create it by clicking the <em>create page</em> button below.'.t %></p>
+  <% else -%>
+    <%= display_wiki_content @page %>
+  <% end -%>
+</div>
+
+<div id="wiki-actions">
+  <%= render :partial => "wiki/history" unless @page.new_record? %>
+  <%= render_action @edit_wiki_action %>
+</div>

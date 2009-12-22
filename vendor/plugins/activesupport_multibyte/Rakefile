@@ -1,0 +1,46 @@
+require 'rake'
+require 'rake/testtask'
+require 'rake/rdoctask'
+require 'rake/clean'
+
+CLEAN.include ['test/cache', 'tmp', 'doc']
+
+desc 'Default: run unit tests.'
+task :default => :test
+
+desc 'Generate the Unicode tables'
+task :generate do
+  system('ruby lib/active_support/multibyte/generators/generate_tables.rb')
+end
+
+desc 'Run the activesupport tests'
+Rake::TestTask.new(:test) do |t|
+  t.libs = ['test']
+  t.test_files = FileList['test/*_test.rb']
+  t.verbose = true
+end
+
+desc 'Run the conformance tests (these take very long)'
+Rake::TestTask.new(:test_conformance) do |t|
+  t.libs = ['test']
+  t.test_files = FileList['test/multibyte_conformance.rb']
+  t.verbose = true
+end
+
+desc 'Test everything'
+task :test_all => [:test, :test_conformance]
+
+desc 'Generate documentation'
+Rake::RDocTask.new(:doc) do |rdoc|
+  rdoc.rdoc_dir = 'doc'
+  rdoc.title    = 'ActiveSupport::Multibyte'
+  rdoc.options << '--main=README' << '--line-numbers' << '--charset=utf-8'
+  rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.rdoc_files.include('LICENSE')
+  rdoc.rdoc_files.include('README')
+end
+
+desc 'Uploads doc to the server'
+task :upload_doc => [:doc] do
+  `rsync -arvz ./doc/ mstienstra@sugardaddy.dreamhost.com:multibyterails.org/public/documentation/activesupport_multibyte`
+end

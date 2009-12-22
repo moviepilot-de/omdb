@@ -1,0 +1,18 @@
+<li id="cast_<%= actor.id %>">
+  <div class="detail-box">
+    <div class="image">
+        <%= link_to thumbnail_image(actor.person.image, :tiny, 'misc/no-portrait'), :controller => 'person', :action => :overview, :id => actor.person.id %><br />
+    </div>
+    <div class="details">
+      <h4><%= link_to_object actor.person %></h4>
+      <div>
+        <%= "as".t %>
+        <% unless actor.character.nil? -%>
+          <%= link_to_object actor.character %>
+        <% else -%>
+          <%= actor.comment %>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+</li>

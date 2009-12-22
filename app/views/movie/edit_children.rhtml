@@ -1,0 +1,69 @@
+<% content_for("title") do %>
+  <%= "Edit Parts".t %>
+<% end %>
+
+<%= lightbox_form_tag :action => :update_children %>
+  <div class="content">
+    <table class="list-add-box">
+      <tr>
+        <th>
+          <%= "Current Parts".t %>
+        </th>
+        <th>
+          <label for="filter_movies"><%= "Add Part".t %></label>
+          <%= text_field("filter", "movies", :size => 15) %>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <div class="list_select_box">
+            <ul id="selected_movies" class="left">
+              <% @movie.children.each do |m| %>
+                <li id="movie-movie-<%= m.id %>">
+                  <% if m.attribute_frozen? :parent %>
+                    <div class="frozen"><%= title_for_movie( m ) %></div>
+                  <% else %>
+                    <%= link_to_function title_for_movie( m ), "remove_movie('#{m.id}')", :class => 'select' %>
+                  <% end %>
+                  <input type="hidden" name="movies[]" value="<%= m.id %>"/>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="list_select_box">
+            <ul id="searched_movies" class="right">
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="info-bar">
+      <h3 id="more-information-headline" class="closed"><%= link_to_function "More Information".t, 'toggleDetails()' %></h3>
+      <div id="more-information" style="display: none;">
+      </div>
+    </div>
+  </div>
+  
+  <div class="button-bar">
+    <%= submit_tag 'Ok'.t, :disabled => false, :class => 'disabled', :id => 'add_button', :onclick => 'this.disabled = true' %>
+    <%= close_box_button "Cancel" %>
+  </div>
+<%= end_form_tag %>
+
+<script type="text/javascript">
+  <%= create_add_function :movie %>
+  <%= create_remove_function :movie %>
+  $('filter_movies').focus();
+</script>
+
+<%= observe_field('filter_movies',
+                :frequency => livesearch_filter_frequency,
+                :update    => 'searched_movies',
+                :with      => 'query',
+                :loading   => "Element.update('searched_languages', '<li class=\"empty loading\">&nbsp;</li>');",
+                :url       => { :action     => :find_good_children,
+                                :controller => 'search',
+                                :movie      => @movie.id }) %>
