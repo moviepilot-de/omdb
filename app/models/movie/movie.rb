@@ -57,6 +57,7 @@ class Movie < ActiveRecord::Base
   freezable_attribute :companies
   freezable_attribute :references
   freezable_attribute :inherit_cast
+  freezable_attribute :series_type
   
   db_depending_objects
   

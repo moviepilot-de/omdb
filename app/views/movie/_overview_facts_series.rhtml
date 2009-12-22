@@ -3,6 +3,11 @@
   <div class="value"><%= @movie.status %></div>
 </div>
 
+<div class="fact">
+  <div class="title"><%= 'Series-Type'.t %>:</div>
+  <div class="value"><%= @movie.series_type.to_s.t %></div>
+</div>
+
 <% if not @movie.homepage.empty? %>
 <div class="fact">
   <div class="title"><%= 'Official Homepage'.t %>:</div>

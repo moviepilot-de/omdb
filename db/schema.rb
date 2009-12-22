@@ -303,7 +303,7 @@ ActiveRecord::Schema.define(:version => 136) do
     t.column "reviews_count", :integer, :default => 0
     t.column "movie_of_the_day", :date
     t.column "creator_id", :integer
-    t.column "series_type", :string
+    t.column "series_type", :string, :default => "season_based"
   end
 
   add_index "movies", ["movie_of_the_day"], :name => "movies_movie_of_the_day_index"

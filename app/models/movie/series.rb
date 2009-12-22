@@ -35,7 +35,7 @@ class Series < MovieSeries
   end
 
   def self.valid_series_types
-    [ :a, :b ]
+    [ :season_based, :mini_series, :soap ]
   end
 
 end

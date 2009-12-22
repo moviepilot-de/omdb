@@ -99,14 +99,19 @@
 <% end -%>
 
 <% if @movie.class.has_series_type? -%>
-  <% if @movie.attribute_frozen?( :series_type ) %>
-    <span><%= @movie.series_type.to_s.t %></span>
-  <% else %>
-    <select name="movie[series_type]">
-      <%= options_for_select Series.valid_series_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.series_type %>
-    </select>
-  <% end %>  
+  <div class="input">
+    <%= edit_freeze_state @movie, :series_type %>
+    <label for="movie_series_type"><%= "Series-Type".t %></label>
+    <% if @movie.attribute_frozen?( :series_type ) %>
+      <span><%= @movie.series_type.to_s.t %></span>
+    <% else %>
+      <select name="movie[series_type]">
+        <%= options_for_select Series.valid_series_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.series_type %>
+      </select>
+    <% end %>  
+  </div>
 <% end -%>
+
 
 <% if @movie.class.has_inheritable_cast? -%>
 <div class="input">
