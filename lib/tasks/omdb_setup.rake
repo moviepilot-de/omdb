@@ -152,59 +152,6 @@ namespace :omdb do
     end
   end
 
-  desc "export movies - franken"
-  task :export_franken => :environment do
-    export_directory = "/tmp/movies"
-    export_archive   = "#{RAILS_ROOT}/public/mp_movies.tar.gz"
-    FileUtils.rm_rf   export_directory
-    FileUtils.mkdir_p export_directory
-    german = Language.pick('en')
-    Movie.find(:all, :limit => 1000, :conditions => [ 'votes_count > 5 and type in (?)', ['Movie', nil] ], :order => "vote DESC").each do |movie|
-      File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
-	xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
-	xml.instruct!( :xml, :encoding => "UTF-8" )
-	xml.movie do |m|
-	  m.id              movie.id
-	  m.parent_id       movie.parent.id unless movie.parent.nil?
-	  m.part            movie.part_position unless movie.parent.nil?
-	  m.previous_part   movie.previous_part.id  if movie.previous_part and movie.parent
-          m.next_part       movie.next_part.id      if movie.next_part and movie.parent
-	  m.original_title  movie.name
-	  m.title           movie.local_name german
-	  m.production_year movie.production_year.to_s
-	  m.state           movie.status
-	  m.popularity      movie.popularity
-	  m.abstract        movie.abstract(german).data
-	  m.description     movie.page('index', german).data_html
-	  m.runtime         movie.runtime
-	  m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
-	  m.trailer         movie.trailer(german).key unless movie.trailer(german).new_record?
-
-	  m.plot_keywords do |p|
-	    movie.keywords.each do |k|
-	      p.keyword k.local_name(german)
-	    end
-	  end
-	  m.genres do |g|
-	    movie.genres.each do |genre|
-	      g.genre genre.local_name(german)
-	    end
-	  end
-	  m.crew do |crew|
-	    movie.crew.each do |crew_member|
-	      m.member( crew_member.person.name, :person_id => crew_member.person.id, :job_id => crew_member.job.id, :job => crew_member.job.local_name(german) )
-	    end
-	  end
-	  m.cast do |cast|
-            movie.actors.each do |cast_member|
-	      m.member( cast_member.person.name.strip, :person_id => cast_member.person.id, :role => cast_member.comment.strip )
-            end
-          end
-        end
-      end
-    end
-  end
-
   desc "export movies"
   task :export_movies => :environment do
     export_directory = "/tmp/movies"
@@ -214,46 +161,46 @@ namespace :omdb do
     german = Language.pick('de')
     Movie.find(:all, :conditions => "type = 'Movie' OR type is null").each do |movie|
       File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
-	xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
-	xml.instruct!( :xml, :encoding => "UTF-8" )
-	xml.movie do |m|
-	  m.id              movie.id
-	  m.original_title  movie.name
-	  m.title           movie.local_name german
-	  m.production_year movie.production_year.to_s
-	  m.state           movie.status
-	  m.popularity      movie.popularity
-	  m.abstract        movie.abstract(german).data
-	  m.description     movie.page('index', german).data_html
-	  m.runtime         movie.runtime
-	  m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
-	  m.trailer         movie.trailer(german).key unless movie.trailer(german).new_record?
-	  m.genres do |g|
-	    movie.genres.each do |genre|
-	      g.genre genre.id
-	    end
-	  end
-	  m.keywords do |k|
-	    movie.keywords.each do |keyword|
-	      k.keyword keyword.id
-	    end
-	    movie.terms.each do |keyword|
-	      k.keyword keyword.id
-	    end
-	    movie.audiences.each do |keyword|
-	      k.keyword keyword.id
+        xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
+        xml.instruct!( :xml, :encoding => "UTF-8" )
+        xml.movie do |m|
+          m.id              movie.id
+          m.original_title  movie.name
+          m.title           movie.local_name german
+          m.production_year movie.production_year.to_s
+          m.state           movie.status
+          m.popularity      movie.popularity
+          m.abstract        movie.abstract(german).data
+          m.description     movie.page('index', german).data_html
+          m.runtime         movie.runtime
+          m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
+          m.trailer         movie.trailer(german).key unless movie.trailer(german).new_record?
+          m.genres do |g|
+            movie.genres.each do |genre|
+              g.genre genre.id
             end
-	  end
-	  m.crew do |crew|
-	    movie.crew.each do |crew_member|
-	      m.member( crew_member.id, :person_id => crew_member.person.id, :job_id => crew_member.job.id, :position => crew_member.position )
-	    end
-	  end
-	  m.cast do |cast|
+          end
+          m.keywords do |k|
+            movie.keywords.each do |keyword|
+              k.keyword keyword.id
+            end
+            movie.terms.each do |keyword|
+              k.keyword keyword.id
+            end
+            movie.audiences.each do |keyword|
+              k.keyword keyword.id
+            end
+          end
+          m.crew do |crew|
+            movie.crew.each do |crew_member|
+              m.member( crew_member.id, :person_id => crew_member.person.id, :job_id => crew_member.job.id, :position => crew_member.position )
+            end
+          end
+          m.cast do |cast|
             movie.casts.each do |cast_member|
-	      if Department.acting.children.map(&:id).include?(cast_member.job.id)
-		m.member( cast_member.id, :person_id => cast_member.person.id, :job_id => cast_member.job.id, :position => cast_member.position, :name => cast_member.comment.gsub('"', "'"))
-	      end
+              if Department.acting.children.map(&:id).include?(cast_member.job.id)
+                m.member( cast_member.id, :person_id => cast_member.person.id, :job_id => cast_member.job.id, :position => cast_member.position, :name => cast_member.comment.gsub('"', "'"))
+              end
             end
           end
         end
@@ -263,6 +210,47 @@ namespace :omdb do
     Kernel.system "tar czf #{export_archive} #{export_directory}" 
   end
 
+  desc "export movies"
+  task :export_series => :environment do
+    export_directory = "/tmp/series"
+    export_archive   = "#{RAILS_ROOT}/public/mp_series.tar.gz"
+    FileUtils.rm_rf   export_directory
+    FileUtils.mkdir_p export_directory
+    german = Language.pick('de')
+    Series.find(:all).each do |movie|
+      File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
+        xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
+        xml.instruct!( :xml, :encoding => "UTF-8" )
+        xml.series do |m|
+          m.id              movie.id
+          m.title           movie.local_name german
+          m.original_title  movie.name
+          m.series_type     movie.series_type
+          m.abstract        movie.abstract(german).data
+          m.description     movie.page('index', german).data_html
+          m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
+          m.genres do |g|
+            movie.genres.each do |genre|
+              g.genre genre.id
+            end
+          end
+          m.keywords do |k|
+            movie.keywords.each do |keyword|
+              k.keyword keyword.id
+            end
+            movie.terms.each do |keyword|
+              k.keyword keyword.id
+            end
+            movie.audiences.each do |keyword|
+              k.keyword keyword.id
+            end
+          end
+        end
+      end
+    end
+    FileUtils.rm export_archive if File.exists?(export_archive)
+    Kernel.system "tar czf #{export_archive} #{export_directory}" 
+  end
 
 
   desc 'Generate people csv list'
