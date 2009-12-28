@@ -1,2 +1,5 @@
 tmp
 log
+public/sitemap_index.xml
+db/ferret.index.production.offline
+db/ferret.index.production.online
