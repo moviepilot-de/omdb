@@ -76,7 +76,7 @@ class MovieSeries < Movie
     # Changing the :end attribute does not fire a logging, as :end
     # is set to be unloggable for series.
     last = dates.sort.last
-    update_attribute_with_validation_skipping( :end, last ) unless self.attributes["end"] == last
+    update_attribute_with_validation_skipping( :end, last ) unless self.attributes["end"] == last or self.class == Season
     last
   end
   
