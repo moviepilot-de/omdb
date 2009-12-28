@@ -210,7 +210,7 @@ namespace :omdb do
     Kernel.system "tar czf #{export_archive} #{export_directory}" 
   end
 
-  desc "export movies"
+  desc "export tv series"
   task :export_series => :environment do
     export_directory = "/tmp/series"
     export_archive   = "#{RAILS_ROOT}/public/mp_series.tar.gz"
@@ -252,6 +252,34 @@ namespace :omdb do
     Kernel.system "tar czf #{export_archive} #{export_directory}" 
   end
 
+  desc 'export tv seasons'
+  task :export_seasons => :environment do
+    export_directory = "/tmp/seasons"
+    export_archive   = "#{RAILS_ROOT}/public/mp_seasons.tar.gz"
+    FileUtils.rm_rf   export_directory
+    FileUtils.mkdir_p export_directory
+    german = Language.pick('de')
+    Season.find(:all).each do |movie|
+      File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
+        xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
+        xml.instruct!( :xml, :encoding => "UTF-8" )
+        xml.season do |m|
+          m.id              movie.id
+          m.series          movie.parent.id
+          m.title           movie.local_name german
+          m.original_title  movie.name
+          m.state           movie.status
+          m.season_type     movie.season_type
+          m.release_date    movie.end
+          m.abstract        movie.abstract(german).data
+          m.description     movie.page('index', german).data_html
+          m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
+        end
+      end
+    end
+    FileUtils.rm export_archive if File.exists?(export_archive)
+    Kernel.system "tar czf #{export_archive} #{export_directory}" 
+  end
 
   desc 'Generate people csv list'
   task :generate_people_csv => :environment do
