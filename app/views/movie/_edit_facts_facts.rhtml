@@ -128,7 +128,7 @@
       <span><%= @movie.season_type.to_s.t %></span>
     <% else %>
       <select name="movie[season_type]">
-        <%= options_for_select Series.valid_season_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.season_type %>
+        <%= options_for_select Season.valid_season_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.season_type %>
       </select>
     <% end %>  
   </div>
