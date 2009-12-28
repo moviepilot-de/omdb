@@ -61,12 +61,13 @@
 <% if @movie.class.has_date? -%>
 <div class="input">
   <%= edit_freeze_state @movie, :end %>
-  <% case @movie.class %>
-  <% when Season %>
+  <% if @movie.class == Season %>
     <label for="movie_end"><%= "DVD Release".t %></label>
-  <% when Episode %>
+  <% end %>
+  <% if @movie.class == Episode %>
     <label for="movie_end"><%= "Original Airdate".t %></label>
-  <% else %>
+  <% end %>
+  <% if @movie.class == Movie %>
     <label for="movie_end"><%= "Opening Night".t %></label>
   <% end %>
   <%= display_attribute :movie, :end, 'date', :size => 10 %>
