@@ -58,7 +58,6 @@ class Movie < ActiveRecord::Base
   freezable_attribute :references
   freezable_attribute :inherit_cast
   freezable_attribute :series_type
-  freezable_attribute :season_type
   
   db_depending_objects
   
@@ -222,9 +221,7 @@ class Movie < ActiveRecord::Base
                             :countries            => true,
                             :production_companies => true,
                             :budget               => true,
-                            :series_type          => false,
-                            :season_type          => false,
-                            :season_number        => false,
+			    :series_type          => false,
                             :runtime              => true,
                             :date                 => true,
                             :status               => true,

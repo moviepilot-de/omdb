@@ -62,14 +62,7 @@
 <% if @movie.class.has_date? -%>
 <div class="input">
   <%= edit_freeze_state @movie, :end %>
-  <% case @movie.class %>
-  <% when Season %>
-    <label for="movie_end"><%= "DVD Release".t %></label>
-  <% when Episode %>
-    <label for="movie_end"><%= "Original Airdate".t %></label>
-  <% else %>
-    <label for="movie_end"><%= "Opening Night".t %></label>
-  <% end %>
+  <label for="movie_end"><%= "Opening Night".t %></label>
   <%= display_attribute :movie, :end, 'date', :size => 10 %>
   <% if not @movie.attribute_frozen?( :end ) %>
     <a id="movie_end_trigger" class="edit-button calendar-trigger"><%= "calendar".t %></a>
@@ -120,19 +113,6 @@
   </div>
 <% end -%>
 
-<% if @movie.class.has_season_type? -%>
-  <div class="input">
-    <%= edit_freeze_state @movie, :season_type %>
-    <label for="movie_season_type"><%= "Season-Type".t %></label>
-    <% if @movie.attribute_frozen?( :season_type ) %>
-      <span><%= @movie.season_type.to_s.t %></span>
-    <% else %>
-      <select name="movie[season_type]">
-        <%= options_for_select Series.valid_season_types.collect {|t| [ t.to_s.t, t.to_s ] }, @movie.season_type %>
-      </select>
-    <% end %>  
-  </div>
-<% end -%>
 
 <% if @movie.class.has_inheritable_cast? -%>
 <div class="input">
