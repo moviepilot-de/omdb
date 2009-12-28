@@ -48,7 +48,7 @@ class Season < Series
     ( self.next_season.children.empty? ? self.next_season : self.next_season.children.at(pos) ) rescue nil
   end
   
-  def self.valid_series_types
+  def self.valid_season_types
     VALID_SEASON_TYPES
   end
 end
