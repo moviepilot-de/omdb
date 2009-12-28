@@ -9,6 +9,7 @@
   <%= display_attribute :movie, :name %>
 </div>
 
+
 <div class="input">
   <label for="movie_name"><%= "Original Title".t + " " + "(#{@language.english_name.t})" %></label>
   <% if not @movie.official_translation(@language).empty? and @movie.official_translation(@language).first.frozen? %>
