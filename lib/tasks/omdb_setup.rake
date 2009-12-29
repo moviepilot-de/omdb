@@ -289,7 +289,7 @@ namespace :omdb do
     FileUtils.rm_rf   export_directory
     FileUtils.mkdir_p export_directory
     german = Language.pick('de')
-    Season.find(:all).each do |movie|
+    Episode.find(:all).each do |movie|
       File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
         xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
         xml.instruct!( :xml, :encoding => "UTF-8" )
