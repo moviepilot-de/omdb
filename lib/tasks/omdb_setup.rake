@@ -290,19 +290,20 @@ namespace :omdb do
     FileUtils.mkdir_p export_directory
     german = Language.pick('de')
     Episode.find(:all).each do |movie|
+      next if movie.parent.nil?
       File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
         xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
         xml.instruct!( :xml, :encoding => "UTF-8" )
         xml.episode do |m|
-          m.id              movie.id
-          m.season          movie.parent.id
-          m.episode_number  movie.episode_number
-          m.title           movie.local_name german
-          m.original_title  movie.name
-          m.release_date    movie.end
-          m.abstract        movie.abstract(german).data
-          m.description     movie.page('index', german).data_html
-          m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
+          m.id                movie.id
+          m.season            movie.parent.id
+          m.episode_number    movie.episode_number
+          m.title             movie.local_name german
+          m.original_title    movie.name
+          m.original_air_date movie.end
+          m.abstract          movie.abstract(german).data
+          m.description       movie.page('index', german).data_html
+          m.poster            movie.image.filename if movie.image and not movie.image.filename.blank?
           m.keywords do |k|
             movie.keywords.each do |keyword|
               k.keyword keyword.id
