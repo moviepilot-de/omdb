@@ -1,5 +1,7 @@
 class Season < Series
 
+  VALID_SEASON_TYPES = [ :regular, :specials ]
+
   depending_objects [ :self, :parent, :children, :siblings, :people, :categories, :plot_keywords, :characters, :pages, :countries, :characters ]
 
   stub [ :children ], :if => :empty?, :clear => true
@@ -9,6 +11,11 @@ class Season < Series
   MOVIE_CONFIGURATION = self.superclass::MOVIE_CONFIGURATION.merge(
     { :budget               => true,
       :cast                 => true,
+      :status               => true,
+      :date                 => true,
+      :series_type          => false,
+      :season_type          => true,
+      :season_number        => true,
       :production_companies => true,
       :inheritable_cast     => true }
   )
@@ -41,4 +48,7 @@ class Season < Series
     ( self.next_season.children.empty? ? self.next_season : self.next_season.children.at(pos) ) rescue nil
   end
   
+  def self.valid_season_types
+    VALID_SEASON_TYPES
+  end
 end

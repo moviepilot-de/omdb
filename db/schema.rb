@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 136) do
+ActiveRecord::Schema.define(:version => 137) do
 
   create_table "casts", :force => true do |t|
     t.column "movie_id", :integer, :default => 0, :null => false
@@ -304,6 +304,7 @@ ActiveRecord::Schema.define(:version => 136) do
     t.column "movie_of_the_day", :date
     t.column "creator_id", :integer
     t.column "series_type", :string, :default => "season_based"
+    t.column "season_type", :string, :default => "regular"
   end
 
   add_index "movies", ["movie_of_the_day"], :name => "movies_movie_of_the_day_index"

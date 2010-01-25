@@ -78,11 +78,16 @@ Inflector.inflections do |inflect|
    inflect.irregular 'director_of_photography', 'directors_of_photography'
 end
 
-LOCALES = {'en' => 'en-US',
-           'de' => 'de-DE'}.freeze
+LOCALES = { 'en' => 'en-US',
+            'de' => 'de-DE',
+            'fr' => 'fr-FR',
+            'pl' => 'pl-PL',
+	    'es' => 'es-ES' }.freeze
 
 ENV['LC_CTYPE'] = 'en_US.UTF-8'
 Ferret.locale = "en_US.UTF-8"
+
+FULL_POLISH_STOP_WORDS = []
 
 require 'omdb'
 

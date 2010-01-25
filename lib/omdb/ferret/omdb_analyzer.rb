@@ -81,3 +81,5 @@ module Ferret::Analysis
     end
   end
 end
+
+Ferret::Analysis::FULL_POLISH_STOP_WORDS = []
