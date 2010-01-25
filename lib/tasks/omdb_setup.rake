@@ -210,7 +210,7 @@ namespace :omdb do
     Kernel.system "tar czf #{export_archive} #{export_directory}" 
   end
 
-  desc "export movies"
+  desc "export series"
   task :export_series => :environment do
     export_directory = "/tmp/series"
     export_archive   = "#{RAILS_ROOT}/public/mp_series.tar.gz"
