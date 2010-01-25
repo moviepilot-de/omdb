@@ -335,7 +335,7 @@ namespace :omdb do
 
   desc 'Reindex Jobs and Categories'
   task :update_index => :environment do
-    [ Job, Category, Country, Company ].each do |klass|
+    [ Job, Country, Language ].each do |klass|
       klass.find(:all).each do |o|
         Indexer.index_object o.to_hash_args
       end
@@ -344,7 +344,7 @@ namespace :omdb do
 
   desc 'Reindex almost everything'
   task :update_index_daily => :environment do
-    [ Job, Category, Country, Movie, Person ].each do |klass|
+    [ Job, Category, Country, Movie, Person, Company, Movie ].each do |klass|
       klass.find(:all).each do |o|
         Indexer.index_object o.to_hash_args
       end
