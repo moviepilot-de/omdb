@@ -96,6 +96,23 @@ namespace :omdb do
     end
   end
 
+  # MovieMaster braucht id, parent_id, title
+  desc "export jobs"
+  task :export_jobs => :environment do
+    export_file = "#{RAILS_ROOT}/public/mp_jobs.csv"
+    FasterCSV.open(export_file, "w") do |csv|
+      csv << [ :parent_id, :id ] + LOCALES.map{ |code, x| "title_#{code}" }
+      Job.roots.each do |department|
+        next if department.id == 12 # ignore Crew Department
+        csv << [ department.parent_id, department.id ] + LOCALES.map{ |code, x| department.local_name(Language.pick(code)) }
+        department.all_children.each do |job|
+          csv << [ job.parent_id, job.id ] + LOCALES.map{ |code, x| job.local_name(Language.pick(code)) }
+        end
+      end
+    end
+  end
+
+
   desc "export place keywords"
   task :export_place_keywords => :environment do
     export_file = "#{RAILS_ROOT}/public/mp_place.csv"

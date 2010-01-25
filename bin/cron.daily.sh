@@ -22,6 +22,7 @@ rake omdb:export_plot_keywords
 rake omdb:export_place_keywords
 rake omdb:export_time_keywords
 rake omdb:export_emotion_keywords
+rake omdb:export_jobs
 rake omdb:export_audieces
 rake omdb:export_movies
 rake omdb:export_series
