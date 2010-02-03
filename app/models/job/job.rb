@@ -134,7 +134,7 @@ class Job < ActiveRecord::Base
              :order => 'popularity DESC')
   end
   
-  def self.merge_jobs(parent_job, jobs)
+  def self.merge_jobs(surviving_job, jobs_to_be_nuked)
     #error handling:
     #return if cats.empty? or cats.first
     #make the first name_alias really the first one
