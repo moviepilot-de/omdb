@@ -32,7 +32,7 @@ class MovieController < ApplicationController
   history_view_for :movie
 
   before_filter :select_movie, :except => [ :create, :list, :status, :random ]
-  before_filter :login_required, :only => [ :display_category_vote_icons, :display_keyword_vote_icons, :destroy_alias, :new_image, :upload_image ]
+  before_filter :login_required, :only => [ :display_category_vote_icons, :display_keyword_vote_icons, :destroy_alias, :new_image, :upload_image, :set_abstract, :create, :update_facts, :create_reference, :add_new_keyword, :add_category, :assign_child, :assign_parent, :update_children, :update_categories ]
   before_filter :admin_required, :only => [ :destroy ]
 
   refresh_action :movie, :overview_votes

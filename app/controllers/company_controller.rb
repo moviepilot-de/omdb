@@ -20,7 +20,7 @@ class CompanyController < ApplicationController
   movie_list_for   :company  
   
   before_filter :login_required, :only => :destroy_alias
-  before_filter :login_required, :only => [ :new_image, :upload_image ]
+  before_filter :login_required, :only => [ :new_image, :upload_image, :update_facts, :edit_aliases, :set_parents ]
 
   helper :movie
   

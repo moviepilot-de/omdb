@@ -14,7 +14,7 @@ class CountryController < ApplicationController
   history_view_for :country
   movie_list_for   :country
 
-  before_filter :login_required, :only => [ :destroy_alias, :new_image, :upload_image ]
+  before_filter :login_required, :only => [ :destroy_alias, :new_image, :upload_image, :update_facts, :edit_facts ]
 
   include PageActions
 

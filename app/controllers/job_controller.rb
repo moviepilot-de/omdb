@@ -16,7 +16,7 @@ class JobController < ApplicationController
   
   caches_page :index, :people
 
-  before_filter :login_required, :only => [ :destroy_alias ]
+  before_filter :login_required, :only => [ :destroy_alias, :new, :create, :merge_jobs, :edit_facts, :update_facts ]
 
   include PageActions
 
