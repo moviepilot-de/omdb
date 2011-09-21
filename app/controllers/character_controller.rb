@@ -16,7 +16,7 @@ class CharacterController < ApplicationController
   history_view_for :character
   movie_list_for   :character
   
-  before_filter :login_required, :only => [ :new_image, :destroy_alias, :upload_image ]
+  before_filter :login_required, :only => [ :new_image, :destroy_alias, :upload_image, :new, :create, :new_cast, :update_facts ]
 
   include PageActions
 

@@ -21,7 +21,7 @@ class CategoryController < ApplicationController
 
   before_filter :select_category, :except => [ :all_genres, :all_terms, :all_epoches, :create ]
   before_filter :select_category_alias, :except => [ :add_user_vote, :all_genres, :all_terms, :all_epoches, :new, :create ]
-  before_filter :login_required, :only => [ :destroy_alias, :new_image, :upload_image ]
+  before_filter :login_required, :only => [ :destroy_alias, :new_image, :upload_image, :update_facts, :edit_facts ]
   before_filter :admin_required, :only => [ :new, :destroy, :create, :merge ]
 
   caches_page :index, :movies, :statistics

@@ -2,6 +2,7 @@ class ReferenceController < ApplicationController
   include AjaxController
 
   before_filter :select_reference, :except => [ :random ]
+  before_filter :login_required, :only => [ :destroy ]
 
   def random
     @reference = Reference.random
