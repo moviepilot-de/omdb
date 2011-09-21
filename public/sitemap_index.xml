@@ -6,10 +6,10 @@
                       http://www.google.com/schemas/sitemap/0.84/siteindex.xsd">
  <sitemap>
   <loc>http://www.omdb.org/sitemap.xml.gz</loc>
-  <lastmod>2009-12-22T01:34:34Z</lastmod>
+  <lastmod>2010-01-29T01:34:44Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://www.omdb.org/sitemap1.xml.gz</loc>
-  <lastmod>2009-12-22T01:34:34Z</lastmod>
+  <lastmod>2010-01-29T01:34:44Z</lastmod>
  </sitemap>
 </sitemapindex>

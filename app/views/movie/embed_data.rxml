@@ -13,8 +13,8 @@ xml.movie :tab_one => "Information".t, :tab_two => "Crew/Cast", :tab_three => "T
   xml.abstract @movie.abstract(@language).data
   xml.trailer do
     xml.type "YouTube"
-    xml.id h(@movie.trailer(@language).key) unless @movie.trailer(@language).key.empty?
-    xml.id h(@movie.trailer.key) if @movie.trailer(@language).key.empty? and not @movie.trailer.key.empty?    
+    xml.id h(@movie.trailer(@language).key) if @movie.trailer(@language) and not @movie.trailer(@language).key.blank?
+    xml.id h(@movie.trailer.key) if @movie.trailer(@language) and not @movie.trailer.key.blank?    
   end
   xml.vote movie_vote(@movie)
   xml.genres :title => Category.genre.local_name(@language) do

@@ -24,10 +24,10 @@
               content_tag :li, link_to( "assign this %s to a parent"/(@movie.class.to_s.underscore), :action => :cast )
           end %>
     <% end %>
-    <% if @movie.abstract( @language ).nil? or @movie.abstract( @language ).empty? %>
+    <% if @movie.abstract( @language ).nil? or @movie.abstract( @language ).data.blank? %>
       <%= content_tag :li, link_to_function( "enter an abstract for the movie".t, lightbox( :action => 'set_abstract' ) ) %>
     <% end %>
-    <% if @movie.wiki_index( @language ).nil? or @movie.wiki_index( @language ).empty? %>
+    <% if @movie.wiki_index( @language ).nil? or @movie.wiki_index( @language ).data.blank? %>
       <%= content_tag :li, edit_link( @movie.wiki_index(@language), "enter the plot of the #{@movie.class.to_s.downcase}".t, nil ) %>
     <% end %>
   </ol>

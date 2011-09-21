@@ -176,52 +176,62 @@ namespace :omdb do
     FileUtils.rm_rf   export_directory
     FileUtils.mkdir_p export_directory
     german = Language.pick('de')
-    Movie.find(:all, :conditions => "type = 'Movie' OR type is null").each do |movie|
-      File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
-        xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
-        xml.instruct!( :xml, :encoding => "UTF-8" )
-        xml.movie do |m|
-          m.id              movie.id
-          m.original_title  movie.name
-          m.title           movie.local_name german
-          m.production_year movie.production_year.to_s
-          m.state           movie.status
-          m.popularity      movie.popularity
-          m.abstract        movie.abstract(german).data
-          m.description     movie.page('index', german).data_html
-          m.runtime         movie.runtime
-          m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
-          m.trailer         movie.trailer(german).key unless movie.trailer(german).new_record?
-          m.genres do |g|
-            movie.genres.each do |genre|
-              g.genre genre.id
+
+    id = 0
+    
+    while true do
+      still_has_movies = false
+      Movie.find(:all, :conditions => "(type = 'Movie' OR type is null) and id > #{id}", :order => 'id asc', :limit => 10 ).each do |movie|
+        still_has_movies = true
+        puts movie.id
+        File.open("#{export_directory}/#{movie.id}.xml", 'w') do |out|
+          xml = Builder::XmlMarkup.new( :indent => 2, :target => out )
+          xml.instruct!( :xml, :encoding => "UTF-8" )
+          xml.movie do |m|
+            m.id              movie.id
+            m.original_title  movie.name
+            m.title           movie.local_name german
+            m.production_year movie.production_year.to_s
+            m.state           movie.status
+            m.popularity      movie.popularity
+            m.abstract        movie.abstract(german).data
+            m.description     movie.page('index', german).data_html
+            m.runtime         movie.runtime
+            m.poster          movie.image.filename if movie.image and not movie.image.filename.blank?
+            m.trailer         movie.trailer(german).key unless movie.trailer(german).new_record?
+            m.genres do |g|
+              movie.genres.each do |genre|
+                g.genre genre.id
+              end
             end
-          end
-          m.keywords do |k|
-            movie.keywords.each do |keyword|
-              k.keyword keyword.id
+            m.keywords do |k|
+              movie.keywords.each do |keyword|
+                k.keyword keyword.id
+              end
+              movie.terms.each do |keyword|
+                k.keyword keyword.id
+              end
+              movie.audiences.each do |keyword|
+                k.keyword keyword.id
+              end
             end
-            movie.terms.each do |keyword|
-              k.keyword keyword.id
+            m.crew do |crew|
+              movie.crew.each do |crew_member|
+                m.member( crew_member.id, :person_id => crew_member.person.id, :job_id => crew_member.job.id, :position => crew_member.position )
+              end
             end
-            movie.audiences.each do |keyword|
-              k.keyword keyword.id
-            end
-          end
-          m.crew do |crew|
-            movie.crew.each do |crew_member|
-              m.member( crew_member.id, :person_id => crew_member.person.id, :job_id => crew_member.job.id, :position => crew_member.position )
-            end
-          end
-          m.cast do |cast|
-            movie.casts.each do |cast_member|
-              if Department.acting.children.map(&:id).include?(cast_member.job.id)
-                m.member( cast_member.id, :person_id => cast_member.person.id, :job_id => cast_member.job.id, :position => cast_member.position, :name => cast_member.comment.gsub('"', "'"))
+            m.cast do |cast|
+              movie.casts.each do |cast_member|
+                if Department.acting.children.map(&:id).include?(cast_member.job.id)
+                  m.member( cast_member.id, :person_id => cast_member.person.id, :job_id => cast_member.job.id, :position => cast_member.position, :name => cast_member.comment.gsub('"', "'"))
+                end
               end
             end
           end
         end
+        id = movie.id
       end
+      break unless still_has_movies
     end
     FileUtils.rm export_archive if File.exists?(export_archive)
     Kernel.system "tar czf #{export_archive} #{export_directory}" 
@@ -361,7 +371,7 @@ namespace :omdb do
 
   desc 'Reindex almost everything'
   task :update_index_daily => :environment do
-    [ Job, Category, Country, Movie, Person, Company, Movie ].each do |klass|
+    [ Job, Category, Country, Movie, Person, Company, Movie, Character ].each do |klass|
       klass.find(:all).each do |o|
         Indexer.index_object o.to_hash_args
       end

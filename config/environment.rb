@@ -81,9 +81,10 @@ end
 LOCALES = { 'en' => 'en-US',
             'de' => 'de-DE',
             'fr' => 'fr-FR',
-            'pl' => 'pl-PL',
 	    'es' => 'es-ES' }.freeze
 
+#            'pl' => 'pl-PL',
+#
 ENV['LC_CTYPE'] = 'en_US.UTF-8'
 Ferret.locale = "en_US.UTF-8"
 
@@ -104,4 +105,4 @@ memcache_options = {
   :urlencode => false
 }
 CACHE = MemCache.new memcache_options
-CACHE.servers = 'localhost:11211'
+CACHE.servers = 'raisin1.intern:11211'

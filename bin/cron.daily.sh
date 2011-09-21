@@ -18,6 +18,7 @@ rake select_movie_of_the_day
 rake select_person_of_the_day
 
 rake omdb:generate_people_csv
+rake omdb:export_genre_keywords
 rake omdb:export_plot_keywords
 rake omdb:export_place_keywords
 rake omdb:export_time_keywords
@@ -35,7 +36,8 @@ rake omdb:export_seasons
 ./bin/restartMongrel.sh
 
 # and finally, backup the database
-./bin/dailyBackup.sh
+# disabled - normal moviepilot backup applies
+#./bin/dailyBackup.sh
 
 # remove old cached files
 rm -rf ./public/anonymous/en

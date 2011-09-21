@@ -9,7 +9,7 @@
 <div class="fact">
   <div class="title"><%= 'First Movie'.t %>:</div>
   <div class="value">
-    <%= link_to_object @category.chronological_movies.first %> (<%= @category.chronological_movies.first.end.year %>)
+    <%= link_to_object @category.chronological_movies.first %> (<%= @category.chronological_movies.first.end.year if @category.chronological_movies.first.end %>)
   </div>
 </div>
 <% end %>

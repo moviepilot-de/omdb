@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/opt/ruby-1.8.5-pl2/bin/ruby
 
 require 'yaml'
 require 'optparse'

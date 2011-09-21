@@ -12,14 +12,14 @@ class Content < ActiveRecord::Base
     #last_le = log_entries.last
     #return if (last_le && last_le.new_value == version) || !version_condition_met?
 
-    return unless related_object
-    related_object.log_entries << ContentLogEntry.create(:user => user, 
-                                          :ip_address  => user.ip_address, 
-                                          :attribute   => id,
-                                          :comment     => comment,
-                                          :language_id => language_id,
-                                          :old_value   => version-1,
-                                          :new_value   => version) if version_condition_met?
+    return if related_object.nil? or related_object.new_record?
+#     related_object.log_entries << ContentLogEntry.create(:user => user, 
+#                                           :ip_address  => user.ip_address, 
+#                                           :attribute   => id,
+#                                           :comment     => comment,
+#                                           :language_id => language_id,
+#                                           :old_value   => version-1,
+#                                           :new_value   => version) if version_condition_met?
   end
 
   attr_accessor :dont_create_version

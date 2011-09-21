@@ -20,6 +20,6 @@ config.action_controller.perform_caching             = true
 #
 config.action_mailer.delivery_method = :sendmail
 
-ExceptionNotifier.exception_recipients = %w(exceptions@omdb.org)
+ExceptionNotifier.exception_recipients = %w(developers@moviepilot.de)
 ExceptionNotifier.sender_address = %("OMDB Application Error" <exception-notifier@omdb.org>)
 ExceptionNotifier.email_prefix = ""

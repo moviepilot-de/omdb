@@ -27,7 +27,7 @@ module WikiEnabled
     pname = 'index' if pname.to_s.blank?
     page = find_page(pname, lang)
     unless page
-      page = Page.new(:page_name => pname, :language => lang, :name => pname, :related_object => self)
+      page = Page.new(:page_name => pname, :language => lang, :name => pname, :related_object => self, :data => '')
       page.save! if pname == 'index'
     end
     page.display_title = title unless title.to_s.blank?

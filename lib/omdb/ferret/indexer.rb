@@ -206,6 +206,8 @@ module OMDB
 
             self.send(method_name, doc, object)
 
+puts doc.inspect
+
             writer << doc
           end
         end
@@ -566,6 +568,7 @@ module OMDB
         rescue => e
           # wait for whatever is blocking the indexer
           LOGGER.info "Something went wrong while waiting for the index lock.. "
+	  LOGGER.info e.to_s
           LOGGER.info e.backtrace.join("\n")
           sleep 5
           @@iw = IndexWriter.new options
