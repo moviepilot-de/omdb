@@ -17,6 +17,7 @@ class CastController < ApplicationController
   before_filter :select_cast, :except => [ :new, :new_cast, :create, :create_cast, :edit, :update ]
   before_filter :select_movie, :only => [ :new, :new_cast, :create, :create_cast, :edit, :update ]
 
+  before_filter :login_required, :only => [ :new, :new_cast, :create, :create_cast, :edit, :assign_character, :create_new_character, :remove_character, :update, :update_character, :set_alias, :set_job, :create_character ]
   before_filter :editor_required, :only => [ :freeze_attribute, :unfreeze_attribute ]
 
   helper :character

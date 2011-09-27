@@ -5,6 +5,7 @@ class ImageController < ApplicationController
   verify :method => :post, :only => :upload
 
   before_filter :select_image,  :except => [ :upload, :new_image ]
+  before_filter :login_required, :only => [ :edit_facts, :upload ]
   before_filter :editor_required, :only => :history
   
   GEOMETRIES = {

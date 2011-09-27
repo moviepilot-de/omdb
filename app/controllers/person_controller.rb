@@ -18,7 +18,7 @@ class PersonController < ApplicationController
   image_upload_for :person
   history_view_for :person
 
-  before_filter :login_required, :only => [ :destroy_alias, :new_image, :upload_image ]
+  before_filter :login_required, :only => [ :destroy_alias, :new_image, :upload_image, :update_facts ]
   before_filter :admin_required, :only => [ :destroy, :destroy_orphans, :merge ]
 
   caches_page :index, :filmography, :statistics, :history
