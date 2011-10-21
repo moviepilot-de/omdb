@@ -191,8 +191,15 @@ namespace :omdb do
             m.id              movie.id
             m.original_title  movie.name
             m.title           movie.local_name german
+            m.alternate_titles do |m_at|
+              movie.name_aliases.each do |movie_na|
+                m_at.title( movie_na.name ,:locale => Language.find(movie_na.language_id).iso_639_1 )
+              end
+            end
             m.production_year movie.production_year.to_s
             m.state           movie.status
+            m.budget          movie.budget
+            m.revenue         movie.revenue
             m.popularity      movie.popularity
             m.abstract        movie.abstract(german).data
             m.description     movie.page('index', german).data_html
@@ -225,6 +232,11 @@ namespace :omdb do
                 if Department.acting.children.map(&:id).include?(cast_member.job.id)
                   m.member( cast_member.id, :person_id => cast_member.person.id, :job_id => cast_member.job.id, :position => cast_member.position, :name => cast_member.comment.gsub('"', "'"))
                 end
+              end
+            end
+            m.references do |m_ref|
+              movie.references.each do |movie_ref|
+                m_ref.ref movie_ref.referenced_id
               end
             end
           end
