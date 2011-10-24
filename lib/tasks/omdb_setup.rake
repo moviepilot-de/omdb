@@ -193,7 +193,7 @@ namespace :omdb do
             m.title           movie.local_name german
             m.alternate_titles do |m_at|
               movie.name_aliases.each do |movie_na|
-                m_at.title( movie_na.name ,:locale => Language.find(movie_na.language_id).iso_639_1 )
+                m_at.alternate_title( movie_na.name ,:locale => Language.find(movie_na.language_id).iso_639_1 )
               end
             end
             m.production_year movie.production_year.to_s
