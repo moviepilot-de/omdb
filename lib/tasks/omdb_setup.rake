@@ -236,7 +236,10 @@ namespace :omdb do
             end
             m.references do |m_ref|
               movie.references.each do |movie_ref|
-                m_ref.ref movie_ref.referenced_id
+                m_ref.reference do |ref|
+                  ref.referenced_movie movie_ref.referenced_id
+                  ref.reference_type   movie_ref.class.to_s
+                end
               end
             end
           end
